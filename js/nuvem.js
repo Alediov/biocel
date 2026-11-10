@@ -27,13 +27,13 @@ function css() {
 .bc-tela{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:var(--fundo);color:var(--tinta);padding:24px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));overflow:auto}
 .bc-cx{width:min(420px,100%);display:grid;gap:14px;text-align:center}
 .bc-cx h1{margin:0;font-size:1.7rem}.bc-cx p{margin:0;color:var(--tinta-2,var(--tinta));line-height:1.45}
-.bc-cx input{font:inherit;font-size:1.05rem;padding:13px 14px;border-radius:14px;border:2px solid var(--linha);background:var(--superficie);color:var(--tinta);text-align:center}
+.bc-cx input{font:inherit;font-size:1.05rem;padding:13px 14px;border-radius:14px;border:2px solid color-mix(in srgb,var(--tinta) 22%,transparent);background:color-mix(in srgb,var(--tinta) 6%,var(--fundo));color:var(--tinta);text-align:center}
 .bc-cx .botao{width:100%}.bc-erro{color:var(--errado-texto);font-weight:600;min-height:1.2em}
 .bc-google{display:flex;align-items:center;justify-content:center;gap:10px}
 .bc-rank{display:grid;gap:6px;margin:8px 0 0;padding:0;list-style:none;text-align:left;max-height:60vh;overflow:auto}
-.bc-rank li{display:grid;grid-template-columns:2.2em 1fr auto;gap:8px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--superficie);color:var(--tinta);border:1px solid var(--linha)}
+.bc-rank li{display:grid;grid-template-columns:2.2em 1fr auto;gap:8px;align-items:center;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--tinta) 7%,var(--fundo));color:var(--tinta);border:1px solid color-mix(in srgb,var(--tinta) 14%,transparent)}
 .bc-rank li.eu{outline:2px solid var(--acento)}.bc-rank b{font-variant-numeric:tabular-nums}.bc-rank small{color:var(--tinta-2,var(--tinta))}
-.bc-abas{display:flex;gap:6px;justify-content:center}.bc-abas button{font:inherit;padding:6px 12px;border-radius:999px;border:1px solid var(--linha);background:var(--superficie);color:var(--tinta);cursor:pointer}
+.bc-abas{display:flex;gap:6px;justify-content:center}.bc-abas button{font:inherit;padding:6px 12px;border-radius:999px;border:1px solid color-mix(in srgb,var(--tinta) 22%,transparent);background:transparent;color:var(--tinta);cursor:pointer}
 .bc-aviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;padding:12px 14px;border-radius:14px;background:var(--errado-fundo);color:var(--errado-texto);border:1px solid var(--errado);font-size:.9rem}
 .bc-abas button.ativo{background:var(--acento);border-color:var(--acento);color:#fff}`;
   document.head.append(st);
@@ -139,7 +139,7 @@ function telaRanking(lista, aviso) {
     <ol class="bc-rank" id="bc-lista"></ol><p>${esc(aviso)}</p><button class="botao" id="bc-fechar">Fechar</button>`);
   const pintar = () => {
     const l = [...lista].sort((a, b) => (b[por] || 0) - (a[por] || 0));
-    t.querySelector("#bc-lista").innerHTML = l.map((r, i) => `<li class="${membro && r.apelido === membro.apelido ? "eu" : ""}"><b>${i + 1}º</b><span>${esc(r.apelido)}<br><small>${r.licoes} lições · 🔥 ${r.ofensiva}</small></span><b>${por === "ofensiva" ? r.ofensiva + " d" : (r[por] || 0) + " XP"}</b></li>`).join("") || "<li><span></span><span>Ninguém ainda.</span></li>";
+    t.querySelector("#bc-lista").innerHTML = l.map((r, i) => `<li class="${membro && r.apelido === membro.apelido ? "eu" : ""}"><b>${i + 1}º</b><span>${esc(r.apelido)}<br><small>${r.licoes} ${r.licoes === 1 ? "lição" : "lições"} · 🔥 ${r.ofensiva}</small></span><b>${por === "ofensiva" ? r.ofensiva + " d" : (r[por] || 0) + " XP"}</b></li>`).join("") || "<li><span></span><span>Ninguém ainda.</span></li>";
   };
   t.querySelectorAll("[data-por]").forEach(b => b.onclick = () => { por = b.dataset.por; t.querySelectorAll("[data-por]").forEach(x => x.classList.toggle("ativo", x === b)); pintar(); });
   t.querySelector("#bc-fechar").onclick = () => t.remove();
