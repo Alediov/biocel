@@ -1,0 +1,28 @@
+{
+  "versao": 1,
+  "fonte": { "unidade": "c04-02", "pagina": 161, "texto": "Malamed, cap. 4, Tabela 4.4 e Quadros 4.2 e 4.3 (p. 161 a 166 do PDF)" },
+  "volumeTubete": 1.8,
+  "regras": [
+    "Dose máxima (mg) = peso (kg) × dose máxima recomendada (mg/kg), sem passar do teto absoluto em mg, quando ele existe.",
+    "mg por tubete = concentração (%) × 10 × 1,8 mL. Ex.: lidocaína 2% = 20 mg/mL × 1,8 = 36 mg.",
+    "Nº de tubetes = dose máxima ÷ mg por tubete.",
+    "Com dois anestésicos, o total não deve passar da MENOR das duas doses máximas; desconte o que já foi dado.",
+    "A dose calculada deve ser diminuída em idosos, debilitados e pacientes ASA 3 ou 4."
+  ],
+  "farmacos": [
+    { "id": "lido", "nome": "Lidocaína 2% com epinefrina 1:100.000", "curto": "Lidocaína 2%", "mgTubete": 36, "mgKg": 7.0, "maxMg": 500 },
+    { "id": "arti", "nome": "Articaína 4% com epinefrina 1:100.000", "curto": "Articaína 4%", "mgTubete": 72, "mgKg": 7.0, "maxMg": null, "nota": "A FDA não registra teto absoluto em mg para a articaína." },
+    { "id": "mepi3", "nome": "Mepivacaína 3% sem vasoconstritor", "curto": "Mepivacaína 3%", "mgTubete": 54, "mgKg": 6.6, "maxMg": 400 },
+    { "id": "mepi2", "nome": "Mepivacaína 2% com vasoconstritor", "curto": "Mepivacaína 2%", "mgTubete": 36, "mgKg": 6.6, "maxMg": 400 },
+    { "id": "prilo", "nome": "Prilocaína 4% com epinefrina", "curto": "Prilocaína 4%", "mgTubete": 72, "mgKg": 8.0, "maxMg": 600 },
+    { "id": "bupi", "nome": "Bupivacaína 0,5% com epinefrina 1:200.000", "curto": "Bupivacaína 0,5%", "mgTubete": 9, "mgKg": null, "maxMg": 90, "nota": "Nos EUA (FDA) a bupivacaína só tem teto absoluto: 90 mg, independentemente do peso." }
+  ],
+  "pacientes": [
+    { "desc": "Criança de 6 anos, saudável", "kg": [16, 26] },
+    { "desc": "Criança de 9 anos, saudável", "kg": [24, 34] },
+    { "desc": "Adolescente de 14 anos, saudável", "kg": [40, 55] },
+    { "desc": "Adulta de 22 anos, saudável", "kg": [48, 68] },
+    { "desc": "Adulto de 40 anos, saudável", "kg": [70, 100] },
+    { "desc": "Adulto de 35 anos, saudável", "kg": [80, 110] }
+  ]
+}

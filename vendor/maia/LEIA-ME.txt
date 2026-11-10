@@ -1,0 +1,5 @@
+Redes Maia (maia-1100, maia-1500, maia-1900), de "Aligning Superhuman AI with Human Behavior: Chess as a Model
+System" (McIlroy-Young, Sen, Kleinberg, Anderson; KDD 2020), CSSLab/maia-chess, licença GPL-3.0.
+Pesos convertidos do formato do Leela Chess Zero (lczero-common/net.proto, GPL-3.0) para float16, com a normalização
+em lote embutida, por tools/xadrez/maia_exportar.py. mapa.json: policy_index e lc0_az_policy_map do
+LeelaChessZero/lczero-training (GPL-3.0). Uso pessoal no Órbita.

@@ -1,0 +1,56 @@
+{
+ "versao": 1,
+ "id": "receituario-unioeste",
+ "nome": "Receituário da Clínica Odontológica da UNIOESTE",
+ "codigo": "OD-0003",
+ "origem": "Formulário oficial da Clínica Odontológica da UNIOESTE (Cascavel), fotografado pelo Alediov e transcrito em 04/11/2026. O logotipo da universidade não é redesenhado: no app e no PDF vai um cabeçalho só de texto.",
+ "cabecalho": {
+  "instituicao": ["unioeste", "Universidade Estadual do Oeste do Paraná", "Clínica Odontológica", "Rua Arquitetura, s/n - Jardim Universitário"],
+  "titulo": "Receituário"
+ },
+ "corpo": {
+  "para": "Para:",
+  "data": "Data:",
+  "formatoData": "DD/MM/AA"
+ },
+ "rodape": {
+  "clinica": { "titulo": "Clínica Odontológica", "fone": "(45) 3220-3241", "campos": ["Disciplina", "Professor", "Aluno(a)"], "marcar": ["Graduação", "Pós-Graduação"] },
+  "ceo": { "titulo": "Centro de Especialidades Odontológicas", "fone": "(45) 3220-3170", "campos": ["Especialidade", "Profissional"] },
+  "codigo": "Cód: OD-0003"
+ },
+ "blocos": [
+  { "id": "interno", "uso": "Uso Interno", "via": "Via Oral", "quando": "Tudo o que é deglutido: comprimidos, cápsulas, soluções orais, suspensões, xaropes (Andrade, cap. 9, p. 107)." },
+  { "id": "externo", "uso": "Uso Externo", "via": "Bochecho", "quando": "O que não é deglutido: soluções para bochecho, comprimidos sublinguais, pomadas, cremes (Andrade, cap. 9, p. 107)." }
+ ],
+ "linhas": {
+  "bloco": "«Uso …» à esquerda, um traço até a via à direita («Via Oral», «Bochecho»).",
+  "item": "«N| Medicamento concentração» à esquerda, um traço até a quantidade total à direita.",
+  "orientacao": "Embaixo do item, a orientação por extenso, terminada por um traço até o fim da linha.",
+  "data": "No fim do corpo, «Data: DD/MM/AA»."
+ },
+ "regras": [
+  { "id": "numeracao", "texto": "A numeração recomeça em cada bloco de uso: Uso Interno 1, 2, 3…; Uso Externo 1, 2…" },
+  { "id": "zeros", "texto": "Números de um algarismo levam zero à esquerda: 01 cápsula, 08 horas, 07 dias, 01 frasco (como no modelo da clínica)." },
+  { "id": "traco", "texto": "Um traço liga o medicamento à quantidade e fecha o fim da orientação, para não sobrar espaço em branco (Andrade: evitar espaços que permitam adulterar a receita)." },
+  { "id": "quantidade", "texto": "A quantidade à direita é o total do tratamento: doses por dia × dias (+ a dose de ataque). 01 cápsula a cada 08 horas por 07 dias = 21 cápsulas." },
+  { "id": "fracionado", "texto": "Comprimidos e cápsulas vão em unidades (o Andrade aceita «4 comprimidos, 12 cápsulas» quando o medicamento pode ser fracionado); gotas, suspensões e bochechos vão em frascos." },
+  { "id": "bloco", "texto": "Uso Interno é o que é deglutido; bochecho, sublingual e tópico são Uso Externo." },
+  { "id": "bochecho", "texto": "Bochecho depois de cirurgia: «Aguardar 24 horas após o procedimento cirúrgico para iniciar os bochechos.»" },
+  { "id": "extenso", "texto": "Orientação por extenso, sem abreviaturas (nada de «cp», «6/6 h»)." }
+ ],
+ "modelo": {
+  "para": "",
+  "blocos": [
+   { "uso": "Uso Interno", "via": "Via Oral", "itens": [
+    { "n": "1", "med": "Amoxicilina 500 mg", "qtd": "21 cápsulas", "pos": "Tomar 01 cápsula a cada 08 horas, durante 07 dias." },
+    { "n": "2", "med": "Cetoprofeno 100 mg", "qtd": "06 comprimidos", "pos": "Tomar 01 comprimido a cada 12 horas, por 03 dias." },
+    { "n": "3", "med": "Dipirona 1 g", "qtd": "12 comprimidos", "pos": "Tomar 01 comprimido a cada 06 horas, por 03 dias, ou em caso de dor." }
+   ] },
+   { "uso": "Uso Externo", "via": "Bochecho", "itens": [
+    { "n": "1", "med": "Clorexidina 0,12%", "qtd": "01 frasco", "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias. Aguardar 24 horas após o procedimento cirúrgico para iniciar os bochechos." }
+   ] }
+  ],
+  "data": "02/10/25",
+  "nota": "A receita da foto (um exemplo de como a clínica preenche, não um protocolo do Andrade: o livro prefere antibiótico por 3 dias com reavaliação)."
+ }
+}

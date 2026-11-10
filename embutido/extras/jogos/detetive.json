@@ -1,0 +1,1638 @@
+{
+ "versao": 2,
+ "instrucoes": "Casos do jogo Detetive de lesões. Cada caso: diagnostico, opcoes (4, incluindo o diagnóstico), pistas (da mais vaga para a mais específica), explicacao e fonte. Só fatos do Neville. A tarefa da noite acrescenta casos conforme a trilha de Patologia avança.",
+ "casos": [
+  {
+   "id": "det-dentigero",
+   "diagnostico": "Cisto dentígero",
+   "opcoes": [
+    "Cisto dentígero",
+    "Tumor odontogênico adenomatoide",
+    "Ceratocisto odontogênico",
+    "Ameloblastoma"
+   ],
+   "pistas": [
+    "Homem de 22 anos, sem sintomas. A lesão apareceu numa radiografia de rotina.",
+    "O terceiro molar inferior não erupcionou.",
+    "Radiolucidez unilocular bem definida que envolve a COROA do dente incluso.",
+    "A cavidade se prende ao dente na junção amelocementária."
+   ],
+   "explicacao": "O cisto dentígero envolve a coroa de um dente não erupcionado e se prende na junção amelocementária. É o cisto odontogênico de desenvolvimento mais comum, e cerca de 65% envolvem terceiros molares inferiores, mais entre 10 e 30 anos.",
+   "fonte": {
+    "unidade": "n15-01",
+    "pagina": 690
+   }
+  },
+  {
+   "id": "det-ceratocisto",
+   "diagnostico": "Ceratocisto odontogênico",
+   "opcoes": [
+    "Ceratocisto odontogênico",
+    "Cisto dentígero",
+    "Ameloblastoma",
+    "Granuloma central de células gigantes"
+   ],
+   "pistas": [
+    "Homem de 25 anos; lesão achada em radiografia.",
+    "Fica na região posterior do corpo e no ramo da mandíbula.",
+    "Radiolucidez bem definida, de margens corticadas, que cresce no sentido anteroposterior SEM expansão óssea evidente.",
+    "Histologia: epitélio de 4 a 8 camadas, com paraceratina ondulada (corrugada) e camada basal em paliçada."
+   ],
+   "explicacao": "O ceratocisto cresce no sentido anteroposterior dentro da medular, sem expandir muito o osso, ao contrário de cistos dentígeros e radiculares do mesmo tamanho. A paraceratina corrugada e a basal em paliçada são típicas. Múltiplos ceratocistos pedem investigar a síndrome de Gorlin (carcinoma basocelular nevoide).",
+   "fonte": {
+    "unidade": "n15-02",
+    "pagina": 694
+   }
+  },
+  {
+   "id": "det-coc",
+   "diagnostico": "Cisto odontogênico calcificante",
+   "opcoes": [
+    "Cisto odontogênico calcificante",
+    "Tumor odontogênico adenomatoide",
+    "Ameloblastoma",
+    "Fibroma cemento-ossificante"
+   ],
+   "pistas": [
+    "Adulto de 30 anos.",
+    "Região de incisivos e canino.",
+    "Radiolucidez unilocular bem definida com estruturas radiopacas irregulares no interior.",
+    "Histologia: epitélio parecido com o do ameloblastoma, com \"células fantasmas\" eosinofílicas que perdem o núcleo e podem calcificar."
+   ],
+   "explicacao": "O cisto odontogênico calcificante tem média de idade de 30 anos e cerca de 65% ocorrem na região de incisivos e caninos. Em um terço a metade dos casos há calcificações no interior. As células fantasmas são o achado histológico mais característico.",
+   "fonte": {
+    "unidade": "n15-05",
+    "pagina": 706
+   }
+  },
+  {
+   "id": "det-bifurcacao",
+   "diagnostico": "Cisto da bifurcação vestibular",
+   "opcoes": [
+    "Cisto da bifurcação vestibular",
+    "Cisto dentígero",
+    "Ceratocisto odontogênico",
+    "Granuloma central de células gigantes"
+   ],
+   "pistas": [
+    "Criança de 8 anos.",
+    "Sensibilidade e aumento de volume na face vestibular do primeiro molar inferior, que está erupcionando, com secreção de gosto ruim.",
+    "Sondagem com bolsa na vestibular do dente; radiolucidez unilocular sobre a bifurcação e as raízes.",
+    "Em cerca de um terço dos pacientes os dois primeiros molares são afetados."
+   ],
+   "explicacao": "O cisto da bifurcação vestibular ocorre em crianças de 5 a 13 anos, na vestibular do primeiro ou segundo molar inferior. Trata-se com enucleação, sem extrair o dente; em geral cicatriza em até 1 ano.",
+   "fonte": {
+    "unidade": "n15-06",
+    "pagina": 709
+   }
+  },
+  {
+   "id": "det-ameloblastoma",
+   "diagnostico": "Ameloblastoma",
+   "opcoes": [
+    "Ameloblastoma",
+    "Ceratocisto odontogênico",
+    "Granuloma central de células gigantes",
+    "Fibroma cemento-ossificante"
+   ],
+   "pistas": [
+    "Adulto de 45 anos; não há predileção por sexo.",
+    "Aumento de volume indolor na mandíbula, na região de molares e ramo ascendente.",
+    "Radiolucidez multilocular em \"bolhas de sabão\", com expansão das corticais vestibular e lingual.",
+    "Histologia: ilhas epiteliais com centro semelhante ao retículo estrelado e periferia de células colunares com polaridade invertida."
+   ],
+   "explicacao": "O ameloblastoma convencional ocorre da 3ª à 7ª década; 80% a 85% na mandíbula, mais na região de molares e ramo. O aspecto multilocular em bolhas de sabão ou favo de mel e a polaridade invertida (padrão folicular) são clássicos.",
+   "fonte": {
+    "unidade": "n15-07",
+    "pagina": 712
+   }
+  },
+  {
+   "id": "det-toa",
+   "diagnostico": "Tumor odontogênico adenomatoide",
+   "opcoes": [
+    "Tumor odontogênico adenomatoide",
+    "Cisto dentígero",
+    "Cisto odontogênico calcificante",
+    "Ameloblastoma"
+   ],
+   "pistas": [
+    "Garota de 16 anos.",
+    "Região anterior da maxila; o canino não erupcionou.",
+    "Radiolucidez unilocular que envolve a coroa do canino e se estende APICALMENTE, além da junção amelocementária.",
+    "Histologia: células epiteliais fusiformes formando rosetas e estruturas tubulares semelhantes a ductos."
+   ],
+   "explicacao": "O TOA ocorre sobretudo dos 10 aos 19 anos, na região anterior, duas vezes mais na maxila e em mulheres. A extensão apical além da junção amelocementária ajuda a diferenciá-lo do cisto dentígero.",
+   "fonte": {
+    "unidade": "n15-10",
+    "pagina": 723
+   }
+  },
+  {
+   "id": "det-gccg",
+   "diagnostico": "Granuloma central de células gigantes",
+   "opcoes": [
+    "Granuloma central de células gigantes",
+    "Querubismo",
+    "Cisto ósseo aneurismático",
+    "Ameloblastoma"
+   ],
+   "pistas": [
+    "Mulher de 19 anos.",
+    "Lesão na região anterior da mandíbula que cruza a linha média.",
+    "Nas formas agressivas: dor, crescimento rápido, perfuração da cortical e reabsorção de raízes.",
+    "Histologia: muitas células gigantes multinucleadas num fundo de células estromais mononucleares ovoides a fusiformes."
+   ],
+   "explicacao": "Cerca de 70% dos granulomas centrais de células gigantes ocorrem antes dos 30 anos, com predileção feminina; 70% na mandíbula, mais na região anterior, e as lesões mandibulares costumam cruzar a linha média.",
+   "fonte": {
+    "unidade": "n14-05",
+    "pagina": 636
+   }
+  },
+  {
+   "id": "det-querubismo",
+   "diagnostico": "Querubismo",
+   "opcoes": [
+    "Querubismo",
+    "Displasia fibrosa",
+    "Granuloma central de células gigantes",
+    "Doença de Paget"
+   ],
+   "pistas": [
+    "Menino de 6 anos.",
+    "Bochechas cheias \"de querubim\".",
+    "Aumento de volume indolor, BILATERAL e simétrico da mandíbula posterior; ângulos, ramos e coronoides afetados, côndilos poupados.",
+    "Nos casos graves, o envolvimento das órbitas dá o aspecto de \"olhos voltados para o céu\"."
+   ],
+   "explicacao": "O querubismo aparece por volta dos 2 a 9 anos, progride até a puberdade e se estabiliza na adolescência. Casos unilaterais são difíceis de aceitar sem história familiar ou confirmação genética.",
+   "fonte": {
+    "unidade": "n14-06",
+    "pagina": 639
+   }
+  },
+  {
+   "id": "det-coa",
+   "diagnostico": "Cisto ósseo aneurismático",
+   "opcoes": [
+    "Cisto ósseo aneurismático",
+    "Granuloma central de células gigantes",
+    "Ameloblastoma",
+    "Querubismo"
+   ],
+   "pistas": [
+    "Adolescente de 15 anos.",
+    "Região posterior da mandíbula (ramo ascendente e corpo).",
+    "Aumento de volume de crescimento RÁPIDO.",
+    "Histologia: espaços cheios de sangue SEM revestimento endotelial ou epitelial, separados por septos com células fusiformes e células gigantes."
+   ],
+   "explicacao": "Nos maxilares, o cisto ósseo aneurismático afeta jovens (pico na 2ª década), mais a mandíbula posterior, e se manifesta como aumento de volume rápido. Os espaços sanguíneos não têm revestimento.",
+   "fonte": {
+    "unidade": "n14-07",
+    "pagina": 643
+   }
+  },
+  {
+   "id": "det-displasia-fibrosa",
+   "diagnostico": "Displasia fibrosa",
+   "opcoes": [
+    "Displasia fibrosa",
+    "Fibroma cemento-ossificante",
+    "Doença de Paget",
+    "Displasia cemento-óssea florida"
+   ],
+   "pistas": [
+    "Adulto de 28 anos.",
+    "Aumento de volume indolor e unilateral na maxila posterior, de crescimento lento; os dentes deslocados continuam firmes.",
+    "Radiografia: opacificação fina em \"vidro fosco\", de limites mal definidos.",
+    "Histologia: trabéculas de osso imaturo, finas e curvas, como \"letras chinesas\", fundidas ao osso normal sem cápsula."
+   ],
+   "explicacao": "A displasia fibrosa monostótica é a forma mais comum; nos maxilares afeta mais a maxila, na região posterior. O vidro fosco com limites mal definidos e a fusão com o osso normal ajudam a separá-la do fibroma cemento-ossificante, que é bem delimitado.",
+   "fonte": {
+    "unidade": "n14-09",
+    "pagina": 646
+   }
+  },
+  {
+   "id": "det-dco-periapical",
+   "diagnostico": "Displasia cemento-óssea periapical",
+   "opcoes": [
+    "Displasia cemento-óssea periapical",
+    "Cisto periapical",
+    "Fibroma cemento-ossificante",
+    "Cementoblastoma"
+   ],
+   "pistas": [
+    "Mulher negra de 40 anos, sem sintomas.",
+    "Achado radiográfico nos ápices dos dentes anteriores inferiores.",
+    "Os dentes envolvidos são VITAIS e quase não têm restaurações.",
+    "As lesões começam radiolúcidas e mineralizam com o tempo; raramente passam de 1 cm."
+   ],
+   "explicacao": "A displasia cemento-óssea periapical tem forte predileção por mulheres (cerca de 10 a 14 para 1) e por negras, diagnosticada entre 30 e 50 anos. A vitalidade dos dentes a diferencia da lesão inflamatória periapical, com a qual as lesões iniciais se parecem.",
+   "fonte": {
+    "unidade": "n14-10",
+    "pagina": 650
+   }
+  },
+  {
+   "id": "det-paget",
+   "diagnostico": "Doença de Paget do osso",
+   "opcoes": [
+    "Doença de Paget do osso",
+    "Displasia fibrosa",
+    "Displasia cemento-óssea florida",
+    "Querubismo"
+   ],
+   "pistas": [
+    "Homem de 68 anos.",
+    "Dor óssea leve a moderada, que piora em repouso e melhora com o movimento.",
+    "Radiografias com áreas escleróticas confluentes em \"flocos de algodão\" e expansão óssea.",
+    "Os dentes podem mostrar hipercementose generalizada."
+   ],
+   "explicacao": "A doença de Paget afeta pessoas mais velhas (rara antes dos 50 anos), com predileção masculina. Nas fases tardias, a esclerose em flocos de algodão e a hipercementose são típicas.",
+   "fonte": {
+    "unidade": "n14-04",
+    "pagina": 633
+   }
+  },
+  {
+   "id": "det-cementoblastoma",
+   "diagnostico": "Cementoblastoma",
+   "opcoes": [
+    "Cementoblastoma",
+    "Displasia cemento-óssea periapical",
+    "Osteoblastoma",
+    "Fibroma cemento-ossificante"
+   ],
+   "pistas": [
+    "Lesão na mandíbula, região de pré-molares e molares.",
+    "Quase metade dos casos envolve o primeiro molar inferior permanente.",
+    "Massa densamente mineralizada no ápice da raiz, com reabsorção parcial da raiz.",
+    "A massa é FUNDIDA à raiz do dente."
+   ],
+   "explicacao": "O cementoblastoma é considerado a única neoplasia verdadeira do cemento. Por ser histologicamente parecido com o osteoblastoma, o que os separa é justamente a fusão com a raiz.",
+   "fonte": {
+    "unidade": "n14-14",
+    "pagina": 660
+   }
+  },
+  {
+   "id": "det-osteogenese-imperfeita",
+   "diagnostico": "Osteogênese imperfeita",
+   "opcoes": [
+    "Osteogênese imperfeita",
+    "Displasia cleidocraniana",
+    "Osteopetrose",
+    "Doença de Paget"
+   ],
+   "pistas": [
+    "Criança com várias fraturas desde que começou a andar; o pai tem quadro parecido.",
+    "Escleras azuladas e perda auditiva.",
+    "Radiografias: osteopenia, ossos longos arqueados e muitos ossos wormianos no crânio.",
+    "Dentes com translucidez azul, amarela ou marrom, atrição intensa e obliteração pulpar precoce."
+   ],
+   "explicacao": "A osteogênese imperfeita vem de defeitos do colágeno tipo I (cerca de 90% autossômica dominante, COL1A1 ou COL1A2), com osteopenia e fragilidade óssea. Os dentes, iguais aos da dentinogênese imperfeita, devem ser chamados de dentes opalescentes.",
+   "fonte": {
+    "unidade": "n14-01",
+    "pagina": 623
+   }
+  },
+  {
+   "id": "det-osteopetrose",
+   "diagnostico": "Osteopetrose",
+   "opcoes": [
+    "Osteopetrose",
+    "Osteogênese imperfeita",
+    "Doença de Paget",
+    "Displasia fibrosa"
+   ],
+   "pistas": [
+    "Mulher de 31 anos com diagnóstico de doença óssea desde a infância.",
+    "História de várias fraturas e de osteomielite dos maxilares após extração.",
+    "Panorâmica: aumento difuso da densidade óssea, sem distinção entre cortical e medular; raízes difíceis de ver.",
+    "Histologia: osso esclerótico ocupando os espaços medulares; osteoclastos sem lacunas de Howship."
+   ],
+   "explicacao": "Na osteopetrose, a falha dos osteoclastos deixa o osso denso, porém frágil. A osteomielite dos maxilares após extração é uma complicação frequente, e a distinção radiográfica entre cortical e medular se perde.",
+   "fonte": {
+    "unidade": "n14-01",
+    "pagina": 627
+   }
+  },
+  {
+   "id": "det-displasia-cleidocraniana",
+   "diagnostico": "Displasia cleidocraniana",
+   "opcoes": [
+    "Displasia cleidocraniana",
+    "Osteopetrose",
+    "Osteogênese imperfeita",
+    "Querubismo"
+   ],
+   "pistas": [
+    "Menina de 12 anos levada pelos pais porque os dentes permanentes não nascem.",
+    "Ombros estreitos e caídos; ela quase consegue encostar um ombro no outro na frente do peito.",
+    "Crânio grande, com bossa frontal e parietal; suturas com fechamento tardio e ossos wormianos.",
+    "Panorâmica: decíduos retidos e numerosos dentes permanentes não irrompidos e supranumerários."
+   ],
+   "explicacao": "Mutações no RUNX2 causam clavículas hipoplásicas ou ausentes (que permitem aproximar os ombros), alterações do crânio e, na boca, retenção de decíduos com muitos dentes não irrompidos e supranumerários.",
+   "fonte": {
+    "unidade": "n14-02",
+    "pagina": 629
+   }
+  },
+  {
+   "id": "bdet-gengivoestomatite",
+   "livro": "burket",
+   "diagnostico": "Gengivoestomatite herpética primária",
+   "opcoes": [
+    "Gengivoestomatite herpética primária",
+    "Estomatite aftosa recorrente",
+    "Herpangina",
+    "Eritema multiforme"
+   ],
+   "pistas": [
+    "Menino de 3 anos, febre e irritabilidade há 2 dias.",
+    "Surgiram vesículas que se rompem e viram úlceras pequenas, agrupadas.",
+    "A gengiva inteira está vermelha, edemaciada e sangra.",
+    "As lesões aparecem tanto na mucosa queratinizada quanto na não queratinizada."
+   ],
+   "explicacao": "A primoinfecção pelo HSV-1 dá febre e mal-estar antes das lesões, com gengivite generalizada e úlceras em mucosa queratinizada e não queratinizada. O vírus fica latente no gânglio trigeminal.",
+   "fonte": {
+    "unidade": "b03-02",
+    "pagina": 57
+   }
+  },
+  {
+   "id": "bdet-herpes-recorrente",
+   "livro": "burket",
+   "diagnostico": "Herpes recorrente intraoral",
+   "opcoes": [
+    "Herpes recorrente intraoral",
+    "Estomatite aftosa recorrente",
+    "Úlcera traumática",
+    "Pênfigo vulgar"
+   ],
+   "pistas": [
+    "Adulto saudável, dor no palato 2 dias depois de uma anestesia.",
+    "Grupo de pequenas úlceras rasas que se juntam.",
+    "As lesões estão no palato duro, mucosa presa ao osso.",
+    "Já teve 'bolhinhas' no lábio outras vezes."
+   ],
+   "explicacao": "Em imunocompetentes, o herpes recorrente intraoral aparece em mucosa queratinizada presa ao osso (palato duro, gengiva), muitas vezes após trauma como a anestesia. A afta, ao contrário, prefere mucosa não queratinizada.",
+   "fonte": {
+    "unidade": "b03-02",
+    "pagina": 58
+   }
+  },
+  {
+   "id": "bdet-herpangina",
+   "livro": "burket",
+   "diagnostico": "Herpangina",
+   "opcoes": [
+    "Herpangina",
+    "Gengivoestomatite herpética primária",
+    "Doença mão-pé-boca",
+    "Estomatite aftosa recorrente"
+   ],
+   "pistas": [
+    "Criança de 4 anos, febre e dor de garganta no verão.",
+    "Pequenas vesículas e úlceras no palato mole, úvula e pilares amigdalianos.",
+    "A gengiva está normal.",
+    "Não há lesões nas mãos nem nos pés."
+   ],
+   "explicacao": "A herpangina, causada por enterovírus (Coxsackie), dá lesões na parte posterior da boca (palato mole, pilares) sem gengivite. Com lesões em mãos e pés, pensa-se em doença mão-pé-boca.",
+   "fonte": {
+    "unidade": "b03-04",
+    "pagina": 65
+   }
+  },
+  {
+   "id": "bdet-em",
+   "livro": "burket",
+   "diagnostico": "Eritema multiforme",
+   "opcoes": [
+    "Eritema multiforme",
+    "Pênfigo vulgar",
+    "Gengivoestomatite herpética primária",
+    "Líquen plano erosivo"
+   ],
+   "pistas": [
+    "Jovem de 22 anos, início abrupto de dor na boca há 3 dias.",
+    "Os lábios estão inchados, com crostas hemorrágicas.",
+    "Há lesões em alvo (íris) nas palmas das mãos.",
+    "Teve herpes labial há cerca de 10 dias."
+   ],
+   "explicacao": "O eritema multiforme tem início agudo, crostas hemorrágicas nos lábios e lesões em alvo na pele. O herpes simples é o gatilho mais comum, seguido por medicamentos.",
+   "fonte": {
+    "unidade": "b03-05",
+    "pagina": 68
+   }
+  },
+  {
+   "id": "bdet-afta",
+   "livro": "burket",
+   "diagnostico": "Estomatite aftosa recorrente",
+   "opcoes": [
+    "Estomatite aftosa recorrente",
+    "Herpes recorrente intraoral",
+    "Doença de Behçet",
+    "Pênfigo vulgar"
+   ],
+   "pistas": [
+    "Estudante de 19 anos, úlceras na boca que vêm e vão desde a adolescência.",
+    "Úlceras redondas, rasas, com fundo amarelado e halo vermelho.",
+    "Ficam na mucosa jugal e labial, nunca no palato duro nem na gengiva inserida.",
+    "Cicatrizam sozinhas em cerca de 1 a 2 semanas, sem febre nem lesões genitais ou oculares."
+   ],
+   "explicacao": "As aftas menores aparecem em mucosa não queratinizada e cicatrizam em 7 a 14 dias sem cicatriz. Com úlceras genitais e lesões oculares, a suspeita passa a ser Behçet.",
+   "fonte": {
+    "unidade": "b03-07",
+    "pagina": 72
+   }
+  },
+  {
+   "id": "bdet-pv",
+   "livro": "burket",
+   "diagnostico": "Pênfigo vulgar",
+   "opcoes": [
+    "Pênfigo vulgar",
+    "Penfigoide das membranas mucosas",
+    "Líquen plano erosivo",
+    "Eritema multiforme"
+   ],
+   "pistas": [
+    "Mulher de 52 anos, erosões dolorosas na boca há 4 meses, que não cicatrizam.",
+    "Ao friccionar a mucosa normal ao lado, o epitélio descola (Nikolsky positivo).",
+    "Começaram a aparecer bolhas flácidas no tronco.",
+    "A biópsia mostra acantólise com fenda suprabasal."
+   ],
+   "explicacao": "No pênfigo vulgar, autoanticorpos contra desmogleínas separam os queratinócitos (acantólise) acima da camada basal. A boca costuma ser o primeiro local, e a imunofluorescência direta mostra depósito intercelular.",
+   "fonte": {
+    "unidade": "b03-09",
+    "pagina": 77
+   }
+  },
+  {
+   "id": "bdet-mmp",
+   "livro": "burket",
+   "diagnostico": "Penfigoide das membranas mucosas",
+   "opcoes": [
+    "Penfigoide das membranas mucosas",
+    "Pênfigo vulgar",
+    "Líquen plano erosivo",
+    "Eritema multiforme"
+   ],
+   "pistas": [
+    "Mulher de 68 anos, gengiva vermelha e descamando (gengivite descamativa).",
+    "Às vezes aparecem bolhas íntegras, algumas com sangue.",
+    "O oftalmologista notou aderências entre a pálpebra e o olho.",
+    "A imunofluorescência mostra depósito linear na membrana basal."
+   ],
+   "explicacao": "O penfigoide das membranas mucosas forma bolhas subepiteliais, que ficam íntegras mais tempo. O envolvimento ocular pode deixar cicatriz e cegueira.",
+   "fonte": {
+    "unidade": "b03-11",
+    "pagina": 84
+   }
+  },
+  {
+   "id": "bdet-olp",
+   "livro": "burket",
+   "diagnostico": "Líquen plano oral",
+   "opcoes": [
+    "Líquen plano oral",
+    "Leucoplasia",
+    "Candidíase pseudomembranosa",
+    "Lesão liquenoide de contato"
+   ],
+   "pistas": [
+    "Mulher de 50 anos, ardência ao comer temperos.",
+    "Estrias brancas rendilhadas na mucosa jugal, dos dois lados.",
+    "Há áreas avermelhadas e erosivas entre as estrias.",
+    "Tem pápulas violáceas que coçam nos punhos."
+   ],
+   "explicacao": "O líquen plano oral é bilateral e simétrico, com estrias de Wickham, e pode ter formas erosivas. A lesão liquenoide de contato fica restrita à área em contato com uma restauração.",
+   "fonte": {
+    "unidade": "b04-07",
+    "pagina": 126
+   }
+  },
+  {
+   "id": "bdet-candida",
+   "livro": "burket",
+   "diagnostico": "Candidíase pseudomembranosa",
+   "opcoes": [
+    "Candidíase pseudomembranosa",
+    "Leucoplasia",
+    "Líquen plano oral",
+    "Leucoplasia pilosa oral"
+   ],
+   "pistas": [
+    "Homem de 74 anos, usa corticoide inalatório para DPOC.",
+    "Placas brancas cremosas no palato e na mucosa jugal.",
+    "Saem ao raspar com gaze.",
+    "Por baixo, a mucosa fica vermelha."
+   ],
+   "explicacao": "As placas da candidíase pseudomembranosa se removem à raspagem, deixando base eritematosa. Corticoide inalatório, xerostomia e prótese são fatores comuns.",
+   "fonte": {
+    "unidade": "b04-02",
+    "pagina": 109
+   }
+  },
+  {
+   "id": "bdet-olh",
+   "livro": "burket",
+   "diagnostico": "Leucoplasia pilosa oral",
+   "opcoes": [
+    "Leucoplasia pilosa oral",
+    "Candidíase pseudomembranosa",
+    "Leucoplasia",
+    "Líquen plano oral"
+   ],
+   "pistas": [
+    "Homem de 35 anos, com HIV sem tratamento.",
+    "Placa branca na borda lateral da língua, dos dois lados.",
+    "Tem aspecto corrugado, em estrias verticais.",
+    "Não sai à raspagem."
+   ],
+   "explicacao": "A leucoplasia pilosa é causada pelo Epstein-Barr, aparece na borda lateral da língua de imunossuprimidos e não se remove à raspagem.",
+   "fonte": {
+    "unidade": "b04-02",
+    "pagina": 113
+   }
+  },
+  {
+   "id": "bdet-geografica",
+   "livro": "burket",
+   "diagnostico": "Língua geográfica",
+   "opcoes": [
+    "Língua geográfica",
+    "Candidíase eritematosa",
+    "Eritroplasia",
+    "Líquen plano oral"
+   ],
+   "pistas": [
+    "Mulher de 30 anos, ardência na língua com comida ácida.",
+    "Áreas vermelhas sem papilas, cercadas por bordas brancas elevadas.",
+    "As áreas mudam de forma e de lugar em poucos dias.",
+    "A língua também tem fissuras."
+   ],
+   "explicacao": "A glossite migratória benigna tem áreas depapiladas com bordas brancas que migram. Pode haver ardência com alimentos e associação com língua fissurada.",
+   "fonte": {
+    "unidade": "b04-15",
+    "pagina": 149
+   }
+  },
+  {
+   "id": "bdet-eritroplasia",
+   "livro": "burket",
+   "diagnostico": "Eritroplasia",
+   "opcoes": [
+    "Eritroplasia",
+    "Candidíase eritematosa",
+    "Língua geográfica",
+    "Mucosite"
+   ],
+   "pistas": [
+    "Homem de 62 anos, fumante e etilista.",
+    "Mancha vermelha, aveludada e bem delimitada no assoalho bucal.",
+    "Não dói e está ali há meses.",
+    "Não melhora depois de tratar irritações e infecção."
+   ],
+   "explicacao": "A eritroplasia é uma desordem potencialmente maligna: a maioria já mostra displasia grave ou carcinoma na biópsia, que deve ser feita.",
+   "fonte": {
+    "unidade": "b04-05",
+    "pagina": 121
+   }
+  },
+  {
+   "id": "bdet-amalgama",
+   "livro": "burket",
+   "diagnostico": "Tatuagem por amálgama",
+   "opcoes": [
+    "Tatuagem por amálgama",
+    "Melanoma",
+    "Mácula melanótica",
+    "Nevo melanocítico"
+   ],
+   "pistas": [
+    "Mulher de 45 anos, mancha descoberta no exame de rotina.",
+    "Mancha azul-acinzentada na gengiva, sem relevo e sem dor.",
+    "Fica perto de um dente com coroa que teve amálgama.",
+    "A radiografia mostra pontinhos radiopacos no local."
+   ],
+   "explicacao": "A tatuagem por amálgama aparece perto de restaurações de amálgama, retrobturações ou alvéolos cicatrizados. Partículas radiopacas na radiografia ajudam, mas na dúvida faz-se biópsia.",
+   "fonte": {
+    "unidade": "b05-09",
+    "pagina": 181
+   }
+  },
+  {
+   "id": "bdet-melanoma",
+   "livro": "burket",
+   "diagnostico": "Melanoma",
+   "opcoes": [
+    "Melanoma",
+    "Mácula melanótica",
+    "Tatuagem por amálgama",
+    "Pigmentação fisiológica"
+   ],
+   "pistas": [
+    "Homem de 64 anos, mancha escura no palato.",
+    "Tem bordas irregulares e cores variadas, do marrom ao preto.",
+    "Cresceu nos últimos meses.",
+    "Em uma parte, já está elevada."
+   ],
+   "explicacao": "O melanoma oral é raro, mas grave, e aparece sobretudo no palato duro e na gengiva superior. Toda pigmentação nova, irregular ou que cresce deve ser biopsiada.",
+   "fonte": {
+    "unidade": "b05-03",
+    "pagina": 167
+   }
+  },
+  {
+   "id": "bdet-addison",
+   "livro": "burket",
+   "diagnostico": "Doença de Addison",
+   "opcoes": [
+    "Doença de Addison",
+    "Pigmentação fisiológica",
+    "Melanose do fumante",
+    "Pigmentação por medicamento"
+   ],
+   "pistas": [
+    "Mulher de 40 anos, cansaço e perda de peso.",
+    "Manchas acastanhadas difusas na mucosa jugal e na gengiva, recentes.",
+    "A pele está mais bronzeada, mesmo sem sol.",
+    "A pressão está baixa."
+   ],
+   "explicacao": "Na insuficiência adrenal, o ACTH alto estimula os melanócitos, causando pigmentação difusa de pele e mucosas, com fadiga, perda de peso e hipotensão.",
+   "fonte": {
+    "unidade": "b05-05",
+    "pagina": 173
+   }
+  },
+  {
+   "id": "det-defeito-osteoporotico",
+   "diagnostico": "Defeito osteoporótico focal da medula óssea",
+   "opcoes": [
+    "Defeito osteoporótico focal da medula óssea",
+    "Osteosclerose idiopática",
+    "Osteólise maciça",
+    "Osteopetrose"
+   ],
+   "pistas": [
+    "Mulher adulta, sem queixas.",
+    "Achado casual na radiografia, numa área edêntula da mandíbula posterior.",
+    "Radiolucência sem expansão; na periapical, bordas mal definidas e trabeculado central fino.",
+    "Biópsia incisional: medula hematopoiética e adiposa, trabéculas sem atividade anormal."
+   ],
+   "explicacao": "O defeito osteoporótico focal é medula hematopoiética que dá radiolucência; cerca de 75% dos casos são em mulheres adultas e 70% na mandíbula posterior. Feito o diagnóstico, não há tratamento.",
+   "fonte": {
+    "unidade": "n14-03",
+    "pagina": 630
+   }
+  },
+  {
+   "id": "det-osteosclerose-idiopatica",
+   "diagnostico": "Osteosclerose idiopática",
+   "opcoes": [
+    "Osteosclerose idiopática",
+    "Defeito osteoporótico focal da medula óssea",
+    "Osteopetrose",
+    "Doença de Paget do osso"
+   ],
+   "pistas": [
+    "Adolescente sem sintomas.",
+    "Achado casual na radiografia de rotina, na região de molares inferiores.",
+    "Radiopacidade bem definida de cerca de 1 cm entre as raízes, sem halo radiolúcido e sem expansão.",
+    "Os dentes vizinhos são vitais, sem cárie nem restaurações profundas."
+   ],
+   "explicacao": "A osteosclerose idiopática é uma radiopacidade focal de causa desconhecida, ~90% na mandíbula (molares e pré-molares). Dente vital sem cárie a separa da osteíte condensante; no adolescente, acompanhar com radiografias até estabilizar.",
+   "fonte": {
+    "unidade": "n14-03",
+    "pagina": 631
+   }
+  },
+  {
+   "id": "det-osteolise-macica",
+   "diagnostico": "Osteólise maciça (doença de Gorham)",
+   "opcoes": [
+    "Osteólise maciça (doença de Gorham)",
+    "Defeito osteoporótico focal da medula óssea",
+    "Osteogênese imperfeita",
+    "Osteopetrose"
+   ],
+   "pistas": [
+    "Homem de 30 anos.",
+    "Dentes inferiores móveis, dor e desvio da mandíbula.",
+    "Radiolucência mal definida com perda da lâmina dura em dentes vitais, que cresce em meses até uma fratura patológica.",
+    "Biópsia: proliferação vascular de paredes finas, com linfáticos destacados pelo D2-40, sem regeneração óssea."
+   ],
+   "explicacao": "A osteólise maciça destrói o osso de forma espontânea e progressiva, trocando-o por proliferação vascular e depois fibrose. Nos maxilares, a idade média é ~32 anos, com predomínio masculino (1,7:1).",
+   "fonte": {
+    "unidade": "n14-03",
+    "pagina": 632
+   }
+  },
+  {
+   "id": "det-fibroma",
+   "diagnostico": "Fibroma (fibroma de irritação)",
+   "opcoes": [
+    "Fibroma (fibroma de irritação)",
+    "Fibroma de células gigantes",
+    "Épulis fissurada",
+    "Granuloma piogênico"
+   ],
+   "pistas": [
+    "Mulher de 50 anos.",
+    "Nódulo assintomático na mucosa jugal, na linha de mordida; ela conta que morde a bochecha.",
+    "Nódulo liso, séssil, da cor da mucosa, com cerca de 1 cm.",
+    "Biópsia: massa nodular de colágeno denso, sem cápsula, misturando-se ao conjuntivo vizinho; cristas epiteliais atróficas."
+   ],
+   "explicacao": "O fibroma é o \"tumor\" mais comum da boca, mas é uma hiperplasia reativa ao trauma. Mais comum da 4ª à 6ª década, com quase 2 mulheres para cada homem; trata-se com excisão conservadora e recidiva raramente.",
+   "fonte": {
+    "unidade": "n12-01",
+    "pagina": 519
+   }
+  },
+  {
+   "id": "det-fibroma-celulas-gigantes",
+   "diagnostico": "Fibroma de células gigantes",
+   "opcoes": [
+    "Fibroma de células gigantes",
+    "Fibroma (fibroma de irritação)",
+    "Papiloma escamoso",
+    "Granuloma periférico de células gigantes"
+   ],
+   "pistas": [
+    "Paciente de 20 anos.",
+    "Nódulo assintomático na gengiva lingual inferior, sem história de trauma.",
+    "Lesão séssil de menos de 1 cm, com superfície papilar.",
+    "Biópsia: conjuntivo frouxo e vascular com numerosos fibroblastos grandes, estrelados e às vezes multinucleados, logo abaixo do epitélio."
+   ],
+   "explicacao": "O fibroma de células gigantes não parece ligado à irritação crônica, aparece mais cedo (~60% nas três primeiras décadas), metade na gengiva (a inferior duas vezes mais) e pode ser confundido com papiloma pela superfície papilar. A marca são os fibroblastos estrelados.",
+   "fonte": {
+    "unidade": "n12-01",
+    "pagina": 522
+   }
+  },
+  {
+   "id": "det-epulis-fissurada",
+   "diagnostico": "Épulis fissurada (hiperplasia fibrosa inflamatória)",
+   "opcoes": [
+    "Épulis fissurada (hiperplasia fibrosa inflamatória)",
+    "Fibroma (fibroma de irritação)",
+    "Fibroma de células gigantes",
+    "Pólipo fibroepitelial"
+   ],
+   "pistas": [
+    "Mulher de 68 anos.",
+    "Usa prótese total superior antiga, que \"anda solta\".",
+    "Duas dobras firmes de tecido no vestíbulo anterior superior; a borda da prótese encaixa na fenda entre elas.",
+    "Biópsia: dobras de conjuntivo fibroso hiperplásico, epitélio hiperparaceratótico com cristas irregulares e úlceras na base dos sulcos."
+   ],
+   "explicacao": "A épulis fissurada é uma hiperplasia fibrosa ligada à borda de prótese mal adaptada, mais na região anterior e em mulheres (dois terços a três quartos). Remove-se a lesão com exame microscópico e a prótese é refeita ou reembasada.",
+   "fonte": {
+    "unidade": "n12-01",
+    "pagina": 522
+   }
+  },
+  {
+   "id": "det-hiperplasia-papilar",
+   "diagnostico": "Hiperplasia papilar inflamatória",
+   "opcoes": [
+    "Hiperplasia papilar inflamatória",
+    "Épulis fissurada (hiperplasia fibrosa inflamatória)",
+    "Pólipo fibroepitelial",
+    "Histiocitoma fibroso"
+   ],
+   "pistas": [
+    "Homem de 66 anos, sem queixa de dor.",
+    "Usa a mesma prótese total superior há anos, mal adaptada, e dorme com ela.",
+    "Palato duro sob a base da prótese vermelho, com superfície granulosa e papilar.",
+    "Biópsia: projeções papilares de epitélio hiperplásico, às vezes pseudoepiteliomatoso, com linfócitos e plasmócitos."
+   ],
+   "explicacao": "A hiperplasia papilar inflamatória é reativa, ligada a prótese mal adaptada, higiene ruim e uso 24 h por dia (cerca de 20% de quem dorme com a prótese). Lesões iniciais melhoram sem a prótese; as avançadas e colagenizadas são excisadas antes da prótese nova. O epitélio pseudoepiteliomatoso não deve ser confundido com carcinoma.",
+   "fonte": {
+    "unidade": "n12-02",
+    "pagina": 524
+   }
+  },
+  {
+   "id": "det-histiocitoma-fibroso",
+   "diagnostico": "Histiocitoma fibroso",
+   "opcoes": [
+    "Histiocitoma fibroso",
+    "Fibroma (fibroma de irritação)",
+    "Tumor fibroso solitário",
+    "Fibroma de células gigantes"
+   ],
+   "pistas": [
+    "Adulto de meia-idade.",
+    "Nódulo indolor no dorso da língua.",
+    "Na pele, a mesma lesão é comum nas extremidades, com o nome de dermatofibroma.",
+    "Lâmina: células fusiformes de núcleo vesicular em feixes curtos entrecruzados (padrão estoriforme), margens mal definidas."
+   ],
+   "explicacao": "O histiocitoma fibroso é considerado neoplasia verdadeira, raro na boca (orais em adultos de meia-idade e idosos). O padrão estoriforme é a marca da lâmina. Tratamento: excisão local; recidiva incomum, mais nos grandes e profundos.",
+   "fonte": {
+    "unidade": "n12-02",
+    "pagina": 526
+   }
+  },
+  {
+   "id": "det-tumor-fibroso-solitario",
+   "diagnostico": "Tumor fibroso solitário",
+   "opcoes": [
+    "Tumor fibroso solitário",
+    "Histiocitoma fibroso",
+    "Fibroma (fibroma de irritação)",
+    "Hiperplasia papilar inflamatória"
+   ],
+   "pistas": [
+    "Adulto.",
+    "Massa submucosa indolor, de crescimento lento.",
+    "Na mucosa jugal; na cirurgia, sai facilmente dos tecidos vizinhos.",
+    "Lâmina: células ao redor de vasos ramificados em \"chifre de veado\"; imuno-histoquímica CD34, bcl-2 e STAT6 positivos."
+   ],
+   "explicacao": "O tumor fibroso solitário, descrito primeiro na pleura, tem a fusão NAB2-STAT6; na boca, ~45% estão na mucosa jugal. Os orais costumam ser benignos (excisão local), mas até 10% dos extrapleurais já se comportaram como malignos: acompanhamento longo.",
+   "fonte": {
+    "unidade": "n12-02",
+    "pagina": 527
+   }
+  },
+  {
+   "id": "det-granuloma-piogenico",
+   "diagnostico": "Granuloma piogênico",
+   "opcoes": [
+    "Granuloma piogênico",
+    "Mucinose focal oral",
+    "Miofibroma",
+    "Fibromatose"
+   ],
+   "pistas": [
+    "Mulher de 26 anos.",
+    "Massa indolor na gengiva vestibular anterior da maxila, que cresceu rápido.",
+    "Superfície ulcerada e avermelhada, que sangra com facilidade; ela está no sexto mês de gestação.",
+    "Lâmina: proliferação vascular semelhante a tecido de granulação, com vasos cheios de hemácias e membrana fibrinopurulenta na superfície."
+   ],
+   "explicacao": "O granuloma piogênico não é infeccioso nem granuloma verdadeiro: é uma resposta exuberante a irritação, má higiene ou hormônios. A gengiva tem 75%–85% dos casos, e na gestação ele é chamado de tumor gravídico. Excisão conservadora até o periósteo (na gravidez, em geral adiada); recidiva de 3%–15%.",
+   "fonte": {
+    "unidade": "n12-03",
+    "pagina": 531
+   }
+  },
+  {
+   "id": "det-fibromatose",
+   "diagnostico": "Fibromatose (do tipo desmoide)",
+   "opcoes": [
+    "Fibromatose (do tipo desmoide)",
+    "Miofibroma",
+    "Fibroma (fibroma de irritação)",
+    "Histiocitoma fibroso"
+   ],
+   "pistas": [
+    "Adolescente.",
+    "Massa firme e indolor no tecido mole paramandibular, crescendo e deformando a face.",
+    "Imagem: destruição do osso vizinho; o paciente tem síndrome de Gardner.",
+    "Lâmina: células fusiformes em fascículos, sem pleomorfismo, infiltrando os tecidos vizinhos; β-catenina nuclear forte."
+   ],
+   "explicacao": "A fibromatose tem comportamento intermediário entre as lesões fibrosas benignas e o fibrossarcoma; ~85% têm mutação de CTNNB1, e polipose adenomatosa familiar e síndrome de Gardner aumentam muito o risco. Excisão ampla com margem generosa; recidiva de 30%, sem metástase.",
+   "fonte": {
+    "unidade": "n12-03",
+    "pagina": 528
+   }
+  },
+  {
+   "id": "det-miofibroma",
+   "diagnostico": "Miofibroma",
+   "opcoes": [
+    "Miofibroma",
+    "Fibromatose (do tipo desmoide)",
+    "Tumor fibroso solitário",
+    "Histiocitoma fibroso"
+   ],
+   "pistas": [
+    "Homem de 22 anos.",
+    "Massa indolor na mandíbula posterior, que aumentou rápido.",
+    "Tomografia: lesão lítica expansiva, de limites mal definidos.",
+    "Lâmina: feixes de células fusiformes em padrão bifásico, centro semelhante a hemangiopericitoma; actina de músculo liso positiva, desmina e β-catenina negativas."
+   ],
+   "explicacao": "O miofibroma é feito de miofibroblastos, prefere cabeça e pescoço (média de 23 anos; na boca, sobretudo a mandíbula). O solitário é tratado por excisão e recidiva pouco; a miofibromatose multicêntrica de recém-nascidos com vísceras afetadas pode ser fatal.",
+   "fonte": {
+    "unidade": "n12-03",
+    "pagina": 529
+   }
+  },
+  {
+   "id": "det-mucinose-focal-oral",
+   "diagnostico": "Mucinose focal oral",
+   "opcoes": [
+    "Mucinose focal oral",
+    "Granuloma piogênico",
+    "Fibroma (fibroma de irritação)",
+    "Fibroma de células gigantes"
+   ],
+   "pistas": [
+    "Mulher jovem.",
+    "Nódulo séssil e indolor na gengiva, da cor da mucosa, que ela percebeu há anos.",
+    "Superfície lisa, não ulcerada, com cerca de 1 cm.",
+    "Lâmina: área bem localizada, não encapsulada, de conjuntivo mixomatoso frouxo, com poucos capilares; colorações especiais sugerem ácido hialurônico."
+   ],
+   "explicacao": "A mucinose focal oral seria a contraparte oral da mucinose focal cutânea; é 2:1 em mulheres, e a gengiva tem mais da metade dos casos (palato duro em segundo). Excisão cirúrgica, sem tendência a recidivar.",
+   "fonte": {
+    "unidade": "n12-03",
+    "pagina": 530
+   }
+  },
+  {
+   "id": "det-papiloma-escamoso",
+   "diagnostico": "Papiloma escamoso",
+   "opcoes": [
+    "Papiloma escamoso",
+    "Verruga vulgar",
+    "Condiloma acuminado",
+    "Fibroma de células gigantes"
+   ],
+   "pistas": [
+    "Adulto de 40 e poucos anos.",
+    "Nódulo indolor no palato mole, que cresceu rápido e parou em cerca de 0,5 cm.",
+    "Lesão única e pedunculada, com projeções digitiformes esbranquiçadas, em couve-flor.",
+    "Lâmina: epitélio escamoso ceratinizado em projeções digitiformes, cada uma com eixo de conjuntivo fibrovascular; maturação normal."
+   ],
+   "explicacao": "O papiloma escamoso (HPV 6 e 11) é mais diagnosticado entre 30 e 50 anos e é a massa de tecido mole mais comum do palato mole. Geralmente solitário, chega a cerca de 0,5 cm. Excisão conservadora com a base; recidiva improvável.",
+   "fonte": {
+    "unidade": "n10-01",
+    "pagina": 361
+   }
+  },
+  {
+   "id": "det-verruga-vulgar",
+   "diagnostico": "Verruga vulgar",
+   "opcoes": [
+    "Verruga vulgar",
+    "Papiloma escamoso",
+    "Condiloma acuminado",
+    "Hiperplasia epitelial multifocal"
+   ],
+   "pistas": [
+    "Criança.",
+    "Tem várias verrugas nos dedos das mãos.",
+    "Pápula branca, áspera e papilar, menor que 5 mm, no vermelhão do lábio inferior.",
+    "Lâmina: epitélio hiperceratótico com cristas convergindo para o centro, hipergranulose e muitos coilócitos na camada espinhosa superficial."
+   ],
+   "explicacao": "A verruga vulgar (HPV 2) é contagiosa e se espalha por autoinoculação, por exemplo dos dedos para o lábio. Na boca, aparece no vermelhão, na mucosa labial ou na língua anterior, quase sempre branca. Cristas convergentes (\"taça\") e hipergranulose a diferenciam; não tem potencial maligno.",
+   "fonte": {
+    "unidade": "n10-01",
+    "pagina": 363
+   }
+  },
+  {
+   "id": "det-tumor-celulas-gigantes",
+   "diagnostico": "Tumor de células gigantes",
+   "opcoes": [
+    "Tumor de células gigantes",
+    "Granuloma central de células gigantes",
+    "Fibroma não ossificante",
+    "Cisto ósseo aneurismático"
+   ],
+   "pistas": [
+    "Adulto com dor óssea; o paciente é mais velho que o típico das lesões de células gigantes dos maxilares.",
+    "A lesão fica na epífise de um osso longo, e não nos maxilares.",
+    "Histologia: estroma bem celular com células gigantes grandes, distribuídas de modo uniforme e com muitos núcleos.",
+    "Exame genético: mutação somática em H3F3A, gene que codifica uma histona."
+   ],
+   "explicacao": "O tumor de células gigantes extragnático prefere as epífises dos ossos longos, causa mais dor e aparece 1 a 2 décadas mais tarde que as lesões dos maxilares. Tem mutações em H3F3A (menos em IDH1/IDH2), ausentes no granuloma central de células gigantes, recidiva mais após curetagem, e cerca de 2% têm metástases pulmonares (\"implantes pulmonares benignos\") ou transformação maligna.",
+   "fonte": {
+    "unidade": "n14-05",
+    "pagina": 638
+   }
+  },
+  {
+   "id": "det-cisto-osseo-simples",
+   "diagnostico": "Cisto ósseo simples",
+   "opcoes": [
+    "Cisto ósseo simples",
+    "Cisto ósseo aneurismático",
+    "Querubismo",
+    "Granuloma central de células gigantes"
+   ],
+   "pistas": [
+    "Adolescente de 13 anos, sem queixas.",
+    "Achado em radiografia feita por outro motivo, na região de pré-molares e molares inferiores.",
+    "Radiolucência unilocular bem delimitada que sobe em cúpulas (festões) entre as raízes; os dentes são vitais e não estão deslocados.",
+    "Na cirurgia, cavidade com pouco líquido serossanguinolento e quase nenhum tecido; parede fina de conjuntivo vascular, sem epitélio."
+   ],
+   "explicacao": "O cisto ósseo simples é um pseudocisto (sem revestimento epitelial), com pico na 2ª década e forte predomínio na mandíbula. Os festões entre as raízes são muito sugestivos, mas não diagnósticos; a exploração cirúrgica com curetagem confirma e costuma curar (recidiva de cerca de 1% a 2%).",
+   "fonte": {
+    "unidade": "n14-06",
+    "pagina": 641
+   }
+  },
+  {
+   "id": "det-cisto-osseo-aneurismatico",
+   "diagnostico": "Cisto ósseo aneurismático",
+   "opcoes": [
+    "Cisto ósseo aneurismático",
+    "Cisto ósseo simples",
+    "Querubismo",
+    "Tumor de células gigantes"
+   ],
+   "pistas": [
+    "Jovem na 2ª década de vida.",
+    "Aumento de volume que cresceu rápido no ramo da mandíbula.",
+    "Radiolucência multilocular com o osso distendido \"em balão\" (blow-out).",
+    "Na cirurgia, sangramento venoso escuro, como uma esponja embebida em sangue; na lâmina, espaços de sangue sem endotélio, com septos de células fusiformes e gigantes."
+   ],
+   "explicacao": "O cisto ósseo aneurismático é um pseudocisto de espaços cheios de sangue. Nos maxilares (só cerca de 2% dos casos), prefere jovens e os segmentos posteriores da mandíbula. Pode ser primário (translocações do USP6) ou secundário a outra lesão. Trata-se com curetagem ou enucleação; recidiva de 3% a 23%.",
+   "fonte": {
+    "unidade": "n14-07",
+    "pagina": 644
+   }
+  },
+  {
+   "id": "det-xantoma-central",
+   "diagnostico": "Xantoma central dos maxilares",
+   "opcoes": [
+    "Xantoma central dos maxilares",
+    "Granuloma central de células gigantes",
+    "Cisto ósseo simples",
+    "Displasia fibrosa"
+   ],
+   "pistas": [
+    "Adulto jovem, na 3ª década, sem hiperlipidemia nem diabetes.",
+    "Sem sintomas: a lesão apareceu numa radiografia feita por outro motivo.",
+    "Radiografia: radiolucência solitária e unilocular na região posterior da mandíbula.",
+    "Na cirurgia, massa mole e amarela; na lâmina, lençóis de células ovoides de citoplasma espumoso, CD68 positivas e S-100 negativas."
+   ],
+   "explicacao": "O xantoma central dos maxilares é raro, formado por macrófagos cheios de lipídios (células espumosas). Pico na 2ª e 3ª décadas, sem predileção por sexo, muito mais na mandíbula posterior e sem ligação próxima com distúrbios metabólicos. Trata-se com curetagem, enucleação ou excisão parcial; recidiva é rara.",
+   "fonte": {
+    "unidade": "n14-08",
+    "pagina": 645
+   }
+  },
+  {
+   "id": "det-dco-florida",
+   "diagnostico": "Displasia cemento-óssea florida",
+   "opcoes": [
+    "Displasia cemento-óssea florida",
+    "Cementoma gigantiforme familiar",
+    "Doença de Paget do osso",
+    "Displasia fibrosa"
+   ],
+   "pistas": [
+    "Mulher negra de meia-idade.",
+    "Às vezes sem sintomas; em outros casos, dor surda e fístulas alveolares.",
+    "Panorâmica: várias lesões mistas, radiolúcidas e radiopacas, bilaterais e quase simétricas na mandíbula, inclusive em áreas posteriores.",
+    "As radiopacidades ficam separadas dos dentes por um ligamento periodontal intacto e têm um halo radiolúcido fino; há osso amarelado e avascular exposto na boca."
+   ],
+   "explicacao": "A displasia cemento-óssea florida é multifocal, não se limita à mandíbula anterior e predomina em mulheres negras (mais de 90% em algumas séries) de meia-idade a idosas. As lesões amadurecem de radiolúcidas a radiopacas; na fase esclerótica são hipovasculares e infeccionam com facilidade, por isso biópsia e extrações eletivas são evitadas.",
+   "fonte": {
+    "unidade": "n14-10",
+    "pagina": 652
+   }
+  },
+  {
+   "id": "det-cementoma-gigantiforme",
+   "diagnostico": "Cementoma gigantiforme familiar",
+   "opcoes": [
+    "Cementoma gigantiforme familiar",
+    "Displasia cemento-óssea florida",
+    "Querubismo",
+    "Displasia fibrosa"
+   ],
+   "pistas": [
+    "Adolescente; a mãe e um tio tiveram o mesmo problema nos maxilares.",
+    "As alterações radiográficas começaram ainda na 1ª década de vida.",
+    "Expansão evidente dos maxilares em vários quadrantes, na maxila e na mandíbula, com dentes impactados e má oclusão.",
+    "Lesões que começaram como radiolucências periapicais múltiplas e ficaram mistas; histologia semelhante à da displasia cemento-óssea florida e à do fibroma cemento-ossificante."
+   ],
+   "explicacao": "O cementoma gigantiforme familiar é extremamente raro, autossômico dominante (alta penetrância, expressividade variável), sem predileção por sexo nem por negros. Começa cedo e causa expansão maciça; o desgaste cirúrgico costuma falhar porque o tecido volta a crescer, e a ressecção completa com reconstrução é recomendada quando possível.",
+   "fonte": {
+    "unidade": "n14-11",
+    "pagina": 656
+   }
+  },
+  {
+   "id": "det-fibroma-cemento-ossificante",
+   "diagnostico": "Fibroma cemento-ossificante",
+   "opcoes": [
+    "Fibroma cemento-ossificante",
+    "Displasia cemento-óssea focal",
+    "Displasia fibrosa",
+    "Fibroma ossificante juvenil"
+   ],
+   "pistas": [
+    "Mulher de 34 anos.",
+    "Aumento de volume indolor e lento na mandíbula posterior, na região de pré-molares e molares.",
+    "Radiografia: lesão mista bem definida, com expansão vestibulolingual, cortical inferior arqueada para baixo e divergência das raízes vizinhas.",
+    "Na cirurgia, a lesão se separa do osso e sai inteira; na lâmina, estroma fibroso celular com osso e esférulas semelhantes a cemento com bordas em escova."
+   ],
+   "explicacao": "O fibroma cemento-ossificante é uma neoplasia verdadeira, com pico na 3ª e 4ª décadas, predileção feminina e pela mandíbula posterior. Expande o osso e arqueia a cortical inferior, sai facilmente do osso e mostra produto mineralizado heterogêneo (osso e esférulas tipo cemento), diferente do padrão uniforme da displasia fibrosa. Enucleação ou curetagem; recidiva média de ~10%.",
+   "fonte": {
+    "unidade": "n14-12",
+    "pagina": 658
+   }
+  },
+  {
+   "id": "det-fibroma-ossificante-juvenil",
+   "diagnostico": "Fibroma ossificante juvenil",
+   "opcoes": [
+    "Fibroma ossificante juvenil",
+    "Fibroma cemento-ossificante",
+    "Osteoma",
+    "Displasia fibrosa"
+   ],
+   "pistas": [
+    "Menina de 12 anos.",
+    "Aumento de volume na maxila que cresceu rapidamente nos últimos meses, com obstrução nasal.",
+    "Tomografia: tumor grande e bem circunscrito na maxila e no seio maxilar, com áreas em vidro fosco e afinamento da cortical.",
+    "Na lâmina: estroma fibroso hipercelular com ossículos esféricos de centro basofílico e borda eosinofílica (padrão psamomatoide)."
+   ],
+   "explicacao": "O fibroma ossificante juvenil acomete sobretudo crianças, adolescentes e adultos jovens e pode crescer de forma rápida e agressiva. A variante psamomatoide prefere seios paranasais e órbita e tem ossículos concêntricos; a trabecular, faixas de osteoide celular. Recidiva geral de 21%, sem transformação maligna documentada.",
+   "fonte": {
+    "unidade": "n14-12",
+    "pagina": 659
+   }
+  },
+  {
+   "id": "det-osteoma",
+   "diagnostico": "Osteoma",
+   "opcoes": [
+    "Osteoma",
+    "Osteosclerose idiopática",
+    "Displasia cemento-óssea focal",
+    "Fibroma cemento-ossificante"
+   ],
+   "pistas": [
+    "Adulto sem queixas, achado em exame de rotina.",
+    "Massa dura, de crescimento muito lento, na face lingual do corpo da mandíbula, perto dos molares.",
+    "Radiografia: massa esclerótica circunscrita, uniforme, presa à superfície do osso.",
+    "Na lâmina: osso denso de aspecto normal, com mínimos elementos de medula (tipo compacto ou ebúrneo)."
+   ],
+   "explicacao": "O osteoma é um tumor benigno de osso maduro, compacto ou esponjoso, periosteal (na superfície) ou endosteal. Nos maxilares, prefere o corpo da mandíbula (muitas vezes na lingual de pré-molares e molares) e o côndilo. Os pequenos e assintomáticos podem só ser acompanhados; recidiva após excisão é extremamente rara. Osteomas múltiplos levantam a suspeita de síndrome de Gardner.",
+   "fonte": {
+    "unidade": "n14-13",
+    "pagina": 660
+   }
+  },
+  {
+   "id": "det-sindrome-gardner",
+   "diagnostico": "Síndrome de Gardner",
+   "opcoes": [
+    "Síndrome de Gardner",
+    "Displasia cleidocraniana",
+    "Displasia cemento-óssea florida",
+    "Síndrome de McCune-Albright"
+   ],
+   "pistas": [
+    "Rapaz de 15 anos, perto da puberdade.",
+    "Vários nódulos na pele que correspondem a cistos epidermoides.",
+    "Panorâmica: várias radiopacidades nos maxilares, uma delas no ângulo da mandíbula, além de dentes impactados e um odontoma.",
+    "Colonoscopia: centenas de pólipos adenomatosos colorretais; mutação no gene APC (5q21)."
+   ],
+   "explicacao": "A síndrome de Gardner é uma variante da polipose adenomatosa familiar (autossômica dominante, gene APC). Os osteomas costumam aparecer perto da puberdade, muitas vezes antes dos pólipos, e podem dar o diagnóstico precoce. Há anomalias dentárias em 22%–30% (odontomas, supranumerários, impactados) e cistos epidermoides. Sem tratamento, ~50% terão câncer colorretal aos 30 anos: costuma-se indicar colectomia profilática.",
+   "fonte": {
+    "unidade": "n14-13",
+    "pagina": 662
+   }
+  },
+  {
+   "id": "det-osteoblastoma",
+   "diagnostico": "Osteoblastoma",
+   "opcoes": [
+    "Osteoblastoma",
+    "Osteoma osteoide",
+    "Cementoblastoma",
+    "Fibroma condromixoide"
+   ],
+   "pistas": [
+    "Mulher de 22 anos.",
+    "Dor surda, sensibilidade e aumento de volume na região posterior da mandíbula; os AINEs não aliviam a dor.",
+    "Radiografia: radiolucidez arredondada de 3 cm, com áreas de mineralização em manchas, pouca esclerose em volta e sem fusão com as raízes.",
+    "Histologia: trabéculas irregulares de osteoide e osso imaturo com borda de osteoblastos, osteoclastos esparsos e estroma frouxo bem vascularizado."
+   ],
+   "explicacao": "O osteoblastoma é raro (~1% dos tumores ósseos primários); nos maxilares prefere a mandíbula posterior, e ~85% dos casos gnáticos ocorrem antes dos 30 anos. Em geral mede 2 a 4 cm, e a dor costuma não ceder aos AINEs, ao contrário do osteoma osteoide (< 1,5–2 cm, dor noturna aliviada por AINEs). Não é fundido à raiz, como o cementoblastoma. Tratamento: excisão local ou curetagem.",
+   "fonte": {
+    "unidade": "n14-14",
+    "pagina": 663
+   }
+  },
+  {
+   "id": "det-osteoma-osteoide",
+   "diagnostico": "Osteoma osteoide",
+   "opcoes": [
+    "Osteoma osteoide",
+    "Osteoblastoma",
+    "Cementoblastoma",
+    "Osteosclerose idiopática"
+   ],
+   "pistas": [
+    "Homem de 19 anos.",
+    "Dor surda que piora à noite e melhora com AAS.",
+    "Radiografia: lesão circunscrita de menos de 1,5 cm perto do ápice da raiz mesial do 1º molar inferior, radiolúcida com um ponto opaco central e esclerose em volta.",
+    "Histologia: nicho de trabéculas de osteoide com muitos osteoblastos, cercado por uma zona marcada de osso denso e esclerótico."
+   ],
+   "explicacao": "O osteoma osteoide é raro nos maxilares (é mais comum no fêmur e na tíbia). A dor noturna aliviada por AINEs se explica pelo nicho rico em nervos e prostaglandinas. Na radiografia, o nicho radiolúcido < 1,5 cm com ponto opaco central dá o aspecto de alvo. Separa-se do osteoblastoma pelo tamanho; não se funde à raiz. Tratamento: excisão local ou curetagem.",
+   "fonte": {
+    "unidade": "n14-14",
+    "pagina": 664
+   }
+  },
+  {
+   "id": "det-condroma",
+   "diagnostico": "Condroma",
+   "opcoes": [
+    "Condroma",
+    "Condromatose sinovial",
+    "Fibroma condromixoide",
+    "Osteoblastoma"
+   ],
+   "pistas": [
+    "Adulto de 35 anos.",
+    "Aumento de volume indolor e de crescimento lento na maxila anterior.",
+    "Radiografia: radiolucidez bem definida com opacificação central.",
+    "Histologia: massa lobular bem circunscrita de cartilagem hialina madura, com condrócitos pequenos em lacunas bem formadas; mutação em IDH1."
+   ],
+   "explicacao": "O condroma é um tumor benigno de cartilagem hialina madura, comum nos ossos pequenos das mãos e dos pés. Nos maxilares (côndilo, maxila anterior, sínfise, processo coronoide) o diagnóstico deve ser visto com muita desconfiança, porque muitos casos recidivaram como condrossarcoma: trate-o como condrossarcoma em potencial, com remoção cirúrgica completa.",
+   "fonte": {
+    "unidade": "n14-15",
+    "pagina": 666
+   }
+  },
+  {
+   "id": "det-fibroma-condromixoide",
+   "diagnostico": "Fibroma condromixoide",
+   "opcoes": [
+    "Fibroma condromixoide",
+    "Condroma",
+    "Cementoblastoma",
+    "Osteoblastoma"
+   ],
+   "pistas": [
+    "Adulto jovem de 28 anos.",
+    "Aumento de volume e dor na mandíbula.",
+    "Radiografia: radiolucidez bem circunscrita de 3 cm, com margens escleróticas festonadas e afinamento da cortical em forma de mordida.",
+    "Histologia: lóbulos de células fusiformes e estreladas em matriz mixoide e condroide, mais celulares na periferia, com células gigantes entre os lóbulos."
+   ],
+   "explicacao": "O fibroma condromixoide é um tumor cartilaginoso benigno raro (< 1% dos tumores ósseos), ligado ao gene GRM1 (6q24.3). Só ~2% são craniofaciais; nos maxilares a média é ~28 anos e a mandíbula é mais afetada. Lesões pequenas: enucleação ou curetagem; grandes: ressecção. Radioterapia é contraindicada. Recidiva nos maxilares < 10%.",
+   "fonte": {
+    "unidade": "n14-15",
+    "pagina": 667
+   }
+  },
+  {
+   "id": "det-condromatose-sinovial",
+   "diagnostico": "Condromatose sinovial",
+   "opcoes": [
+    "Condromatose sinovial",
+    "Condroma",
+    "Osteoblastoma",
+    "Fibroma condromixoide"
+   ],
+   "pistas": [
+    "Mulher de 47 anos.",
+    "Aumento de volume em frente à orelha, dor e crepitação ao abrir a boca.",
+    "Abertura bucal limitada e desvio da mandíbula; o quadro foi tratado como disfunção da ATM por muito tempo.",
+    "TC: várias opacidades de tamanhos diferentes dentro da ATM; na cirurgia, nódulos de cartilagem hialina soltos na articulação."
+   ],
+   "explicacao": "A condromatose sinovial forma nódulos de cartilagem na membrana sinovial que se soltam como corpos livres (\"ratos articulares\"). Na ATM tem predileção feminina e média de 40–50 anos, com quadro inespecífico (por isso o diagnóstico demora). TC e RM são mais sensíveis que a radiografia. Tratamento: sinovectomia e remoção de todos os corpos livres; prognóstico bom.",
+   "fonte": {
+    "unidade": "n14-15",
+    "pagina": 667
+   }
+  },
+  {
+   "id": "det-fibroma-desmoplasico",
+   "diagnostico": "Fibroma desmoplásico",
+   "opcoes": [
+    "Fibroma desmoplásico",
+    "Osteossarcoma",
+    "Fibroma ossificante juvenil",
+    "Granuloma central de células gigantes"
+   ],
+   "pistas": [
+    "Menino de 13 anos.",
+    "Aumento de volume indolor no ângulo da mandíbula, crescendo há alguns meses.",
+    "Radiografia: radiolucidez multilocular com expansão do osso e afinamento da cortical.",
+    "Biópsia do centro da lesão: fibroblastos pequenos e alongados, sem atipia, com colágeno abundante e mitoses raras; Ki-67 abaixo de 5%."
+   ],
+   "explicacao": "O fibroma desmoplásico do osso é benigno, mas localmente agressivo: é a contraparte óssea da fibromatose (tumor desmoide). Nos maxilares, a média é ~14 anos e mais de 80% estão na mandíbula posterior. A biópsia deve ser do centro, porque o osso reativo da periferia confunde com lesão fibro-óssea ou osteossarcoma de baixo grau. A maioria vai para ressecção (recidiva ~5%; 30% após enucleação e até 70% após curetagem), com acompanhamento de pelo menos 3 anos.",
+   "fonte": {
+    "unidade": "n14-16",
+    "pagina": 669
+   }
+  },
+  {
+   "id": "det-osteossarcoma",
+   "diagnostico": "Osteossarcoma",
+   "opcoes": [
+    "Osteossarcoma",
+    "Fibroma desmoplásico",
+    "Osteoblastoma",
+    "Displasia fibrosa"
+   ],
+   "pistas": [
+    "Mulher de 38 anos.",
+    "Aumento de volume firme e doloroso na mandíbula, com mobilidade dentária e parestesia do lábio.",
+    "Radiografia: lesão mista de limites mal definidos, com destruição cortical, raios de sol e alargamento simétrico do espaço do ligamento periodontal.",
+    "Histologia: células mesenquimais malignas, pleomórficas, produzindo osteoide diretamente."
+   ],
+   "explicacao": "O osteossarcoma é a malignidade primária mais comum do osso (fora as hematológicas). Nos maxilares (~6%), a média é de 35 a 41 anos. Pistas: raios de sol (~25%), triângulo de Codman, reabsorção radicular em ponta e o sinal de Garrington. O critério é a produção direta de osteoide pelas células malignas. Tratamento: ressecção cirúrgica ampla; o fator prognóstico mais importante é a remoção completa inicial.",
+   "fonte": {
+    "unidade": "n14-16",
+    "pagina": 670
+   }
+  },
+  {
+   "id": "det-condrossarcoma",
+   "diagnostico": "Condrossarcoma",
+   "opcoes": [
+    "Condrossarcoma",
+    "Osteossarcoma",
+    "Condroma",
+    "Sarcoma de Ewing"
+   ],
+   "pistas": [
+    "Adulto de cerca de 30 anos, sem história de radioterapia.",
+    "Aumento de volume e dor na maxila anterior, com assimetria facial e obstrução nasal.",
+    "Radiografia: radiolucidez mal definida com focos radiopacos e alargamento simétrico do espaço do ligamento periodontal.",
+    "Histologia: lóbulos de cartilagem com lacunas, centro mais maduro, células com núcleos duplos e sem produção de osteoide."
+   ],
+   "explicacao": "No condrossarcoma, as células tumorais formam cartilagem, mas não osso. Nos maxilares, prefere a maxila anterior e, na mandíbula, a região posterior. Os focos radiopacos são matriz calcificada ou ossificada. O tratamento se baseia na ressecção cirúrgica, com acompanhamento por toda a vida.",
+   "fonte": {
+    "unidade": "n14-17",
+    "pagina": 674
+   }
+  },
+  {
+   "id": "det-condrossarcoma-mesenquimal",
+   "diagnostico": "Condrossarcoma mesenquimal",
+   "opcoes": [
+    "Condrossarcoma mesenquimal",
+    "Condrossarcoma de células claras",
+    "Osteossarcoma condroblástico",
+    "Condroma"
+   ],
+   "pistas": [
+    "Paciente de 22 anos.",
+    "Aumento de volume e dor nos maxilares, de duração relativamente curta.",
+    "Radiografia: radiolucidez mal definida, com calcificações pontilhadas e reabsorção radicular.",
+    "Histologia: padrão bifásico, com nódulos de cartilagem bem diferenciada e lâminas de pequenas células indiferenciadas; fusão HEY1-NCOA2."
+   ],
+   "explicacao": "Variante agressiva, considerada de alto grau pelo comportamento clínico. Foge da regra do condrossarcoma: afeta mais a 2ª e a 3ª décadas e surge mais nos maxilares, sem mutações de IDH1. Tratamento: excisão com margens amplas e acompanhamento longo, pois recorrência e metástases podem surgir após mais de 20 anos.",
+   "fonte": {
+    "unidade": "n14-17",
+    "pagina": 676
+   }
+  },
+  {
+   "id": "det-sarcoma-pos-irradiacao",
+   "diagnostico": "Sarcoma ósseo pós-irradiação",
+   "opcoes": [
+    "Sarcoma ósseo pós-irradiação",
+    "Osteorradionecrose",
+    "Displasia fibrosa",
+    "Osteomielite crônica"
+   ],
+   "pistas": [
+    "Paciente que tratou câncer de nasofaringe com radioterapia há 12 anos.",
+    "Lesão nova e crescente na mandíbula, dentro da área antes irradiada.",
+    "Radiografia: lesão destrutiva mal definida.",
+    "Histologia: tumor maligno pouco diferenciado, com células formando osteoide."
+   ],
+   "explicacao": "Sarcoma em osso previamente irradiado: relatado de 3 a 55 anos após a exposição. O osteossarcoma é o tipo mais comum (49% a 85%), e o câncer de nasofaringe é o primário mais associado na cabeça e no pescoço. As lesões tendem a ser pouco diferenciadas, com prognóstico geralmente ruim.",
+   "fonte": {
+    "unidade": "n14-17",
+    "pagina": 674
+   }
+  },
+  {
+   "id": "det-sarcoma-ewing",
+   "diagnostico": "Sarcoma de Ewing",
+   "opcoes": [
+    "Sarcoma de Ewing",
+    "Osteomielite",
+    "Osteossarcoma",
+    "Linfoma maligno"
+   ],
+   "pistas": [
+    "Adolescente de 15 anos.",
+    "Dor e aumento de volume de crescimento rápido na mandíbula, com mobilidade dentária; às vezes há febre e leucocitose.",
+    "Radiografia: radiolucidez mal definida, com destruição cortical, e massa de tecido mole sobre o osso.",
+    "Histologia: lâminas de pequenas células redondas, PAS-positivas, CD99 de membrana e NKX2.2 nuclear; t(11;22)."
+   ],
+   "explicacao": "Neoplasia maligna de pequenas células redondas, definida por fusões como EWS::FLI1. Só 1% a 2% dos casos ficam nos ossos gnáticos ou craniofaciais, e a reação em casca de cebola raramente aparece nos maxilares. O quadro pode ser confundido com infecção odontogênica ou osteomielite. Tratamento: quimioterapia com múltiplos fármacos, com cirurgia e/ou radioterapia.",
+   "fonte": {
+    "unidade": "n14-18",
+    "pagina": 677
+   }
+  },
+  {
+   "id": "det-carcinoma-metastatico",
+   "diagnostico": "Carcinoma metastático para os maxilares",
+   "opcoes": [
+    "Carcinoma metastático para os maxilares",
+    "Osteomielite",
+    "Mieloma múltiplo",
+    "Cisto periapical"
+   ],
+   "pistas": [
+    "Adulto de cerca de 50 anos.",
+    "Dor na mandíbula, mobilidade dentária e parestesia do lábio inferior e do queixo.",
+    "Radiografia: radiolucidez “roída de traça” na região de molares e alvéolo de extração que não cicatriza.",
+    "Histologia: ilhas de células malignas enchendo os espaços medulares."
+   ],
+   "explicacao": "Carcinomas de mama, pulmão, tireoide, próstata e rim são as principais fontes de metástase óssea, que chega aos maxilares pela via hematogênica. A síndrome do queixo dormente indica envolvimento do nervo mentual. Pode ser a primeira pista de um tumor primário oculto. É doença em estágio IV: a maioria dos pacientes vive menos de 1 ano.",
+   "fonte": {
+    "unidade": "n14-19",
+    "pagina": 678
+   }
+  },
+  {
+   "id": "det-cisto-periapical",
+   "diagnostico": "Cisto periapical",
+   "opcoes": [
+    "Cisto periapical",
+    "Cisto periodontal lateral",
+    "Displasia cemento-óssea periapical",
+    "Cementoblastoma"
+   ],
+   "pistas": [
+    "Adulto sem queixas; achado em radiografia de rotina.",
+    "Dente anterior superior restaurado, que não responde ao frio nem ao teste elétrico.",
+    "Radiografia: radiolucidez arredondada, bem delimitada, no ápice, com perda da lâmina dura.",
+    "Histologia: cavidade revestida por epitélio escamoso estratificado, parede fibrosa com infiltrado crônico e fendas de colesterol."
+   ],
+   "explicacao": "O cisto periapical nasce no ápice de um dente sem vitalidade, em geral dos restos de Malassez. A imagem é idêntica à do granuloma periapical, e o tamanho não dá o diagnóstico. O dente costuma receber endodontia; a cirurgia periapical fica para lesões acima de 2 cm, dentes sem condição ou falha do retratamento. Controle mínimo em 1 e 2 anos.",
+   "fonte": {
+    "unidade": "n03-03",
+    "pagina": 131
+   }
+  },
+  {
+   "id": "det-cisto-erupcao",
+   "diagnostico": "Cisto de erupção",
+   "opcoes": [
+    "Cisto de erupção",
+    "Cisto dentígero",
+    "Cisto gengival do adulto",
+    "Ceratocisto odontogênico"
+   ],
+   "pistas": [
+    "Criança de 6 anos, levada pela mãe por um 'caroço' na gengiva.",
+    "Aumento de volume mole, na gengiva sobre a coroa de um primeiro molar permanente que está irrompendo.",
+    "Depois de um trauma ao mastigar, a lesão ficou azul-arroxeada, com sangue no conteúdo.",
+    "Na peça do teto removido: mucosa oral por cima e, no fundo, fina camada de epitélio escamoso não queratinizado."
+   ],
+   "explicacao": "O cisto de erupção é o análogo do cisto dentígero no tecido mole, sobre um dente em erupção, mais em crianças com menos de 10 anos, sobre incisivos centrais e primeiros molares. Com sangue, chama-se hematoma de erupção. Costuma romper sozinho; se não romper, a excisão do teto deixa o dente irromper.",
+   "fonte": {
+    "unidade": "n15-01",
+    "pagina": 693
+   }
+  },
+  {
+   "id": "det-cisto-ortoceratinizado",
+   "diagnostico": "Cisto odontogênico ortoceratinizado",
+   "opcoes": [
+    "Cisto odontogênico ortoceratinizado",
+    "Ceratocisto odontogênico",
+    "Cisto dentígero",
+    "Cisto periodontal lateral"
+   ],
+   "pistas": [
+    "Homem de 28 anos; lesão achada numa panorâmica de rotina.",
+    "Radiolucidez unilocular na região posterior da mandíbula.",
+    "Envolve a coroa de um terceiro molar inferior incluso, com aspecto de cisto dentígero.",
+    "Histologia: epitélio fino com camada espessa de ortoceratina e grânulos de querato-hialina, SEM camada basal em paliçada."
+   ],
+   "explicacao": "O cisto ortoceratinizado não tem quadro clínico nem radiográfico próprio: dois terços parecem um cisto dentígero de terceiro molar inferior. É mais comum em adultos jovens, homens (2,6:1) e na mandíbula (3:1). A ortoceratina sem basal em paliçada o separa do ceratocisto. Trata-se com enucleação e curetagem; recidiva em cerca de 2% (30% ou mais no ceratocisto) e, em geral, não se associa à síndrome de Gorlin.",
+   "fonte": {
+    "unidade": "n15-03",
+    "pagina": 699
+   }
+  },
+  {
+   "id": "det-sindrome-gorlin",
+   "diagnostico": "Síndrome do carcinoma nevoide basocelular (Gorlin)",
+   "opcoes": [
+    "Síndrome do carcinoma nevoide basocelular (Gorlin)",
+    "Ceratocisto odontogênico isolado",
+    "Cisto odontogênico ortoceratinizado",
+    "Cisto dentígero"
+   ],
+   "pistas": [
+    "Menina de 11 anos, com olhos afastados (hipertelorismo) e aumento de volume na mandíbula.",
+    "Panorâmica: cistos grandes nas regiões de molares inferiores dos dois lados e um menor no canino superior.",
+    "Depressões puntiformes nas palmas e nas plantas; a radiografia de tórax mostra costelas bífidas.",
+    "Os cistos removidos são ceratocistos com muitos cistos satélites; a radiografia AP do crânio mostra calcificação lamelar da foice do cérebro."
+   ],
+   "explicacao": "Ceratocistos múltiplos numa criança com depressões palmares e plantares, costela bífida e foice do cérebro calcificada fecham a síndrome de Gorlin (autossômica dominante, gene PTCH). Ceratocisto e foice calcificada já são dois critérios maiores. Os cistos aparecem em 90% dos pacientes, muitas vezes múltiplos, com o primeiro removido antes dos 19 anos. O prognóstico depende dos carcinomas basocelulares: evitar sol e radioterapia.",
+   "fonte": {
+    "unidade": "n15-03",
+    "pagina": 701
+   }
+  },
+  {
+   "id": "det-cisto-gengival-rn",
+   "diagnostico": "Cisto gengival do recém-nascido",
+   "opcoes": [
+    "Cisto gengival do recém-nascido",
+    "Cisto de erupção",
+    "Cisto gengival do adulto",
+    "Cisto odontogênico calcificante periférico"
+   ],
+   "pistas": [
+    "Bebê de 3 semanas, levado pela mãe por 'pontinhos brancos' na boca.",
+    "Várias pápulas esbranquiçadas, pequenas, na mucosa do rebordo alveolar.",
+    "Cada uma com no máximo 2 a 3 mm; o rebordo superior é o mais atingido.",
+    "Num cisto intacto: epitélio fino e achatado, paraceratótico, com debris de queratina na luz."
+   ],
+   "explicacao": "Os cistos gengivais do recém-nascido vêm de restos da lâmina dentária e aparecem em 25% a 53% dos recém-nascidos. Não precisam de tratamento: rompem sozinhos e raramente são vistos depois dos 3 meses de idade.",
+   "fonte": {
+    "unidade": "n15-04",
+    "pagina": 703
+   }
+  },
+  {
+   "id": "det-cisto-gengival-adulto",
+   "diagnostico": "Cisto gengival do adulto",
+   "opcoes": [
+    "Cisto gengival do adulto",
+    "Cisto periodontal lateral",
+    "Cisto odontogênico calcificante periférico",
+    "Cisto de erupção"
+   ],
+   "pistas": [
+    "Mulher de 55 anos, sem dor.",
+    "Aumento em domo, tenso, azulado, menor que 0,5 cm, na gengiva vestibular.",
+    "Fica na região de canino e pré-molar inferiores; a radiografia não mostra lesão óssea.",
+    "Histologia: cisto de epitélio fino e achatado, com placas focais de células claras ricas em glicogênio."
+   ],
+   "explicacao": "O cisto gengival do adulto é a contraparte de tecido mole do cisto periodontal lateral (restos de Serres), com 60% a 75% dos casos na região de canino e pré-molares inferiores, da 5ª à 7ª década. Excisão simples; prognóstico excelente.",
+   "fonte": {
+    "unidade": "n15-04",
+    "pagina": 703
+   }
+  },
+  {
+   "id": "det-cisto-periodontal-lateral",
+   "diagnostico": "Cisto periodontal lateral",
+   "opcoes": [
+    "Cisto periodontal lateral",
+    "Ceratocisto odontogênico",
+    "Cisto gengival do adulto",
+    "Cisto odontogênico glandular"
+   ],
+   "pistas": [
+    "Homem de 52 anos, sem sintomas.",
+    "Achado em radiografia de rotina, na região de canino e pré-molar inferiores.",
+    "Radiolucidez bem circunscrita, menor que 1 cm, ao lado das raízes de dentes com vitalidade pulpar.",
+    "Histologia: epitélio de 1 a 3 células, com espessamentos nodulares de células claras ricas em glicogênio."
+   ],
+   "explicacao": "O cisto periodontal lateral ocorre mais da 5ª à 7ª década, com 75% a 80% na região de pré-molar, canino e incisivo lateral inferiores. A imagem não é diagnóstica (o ceratocisto pode ser idêntico). Enucleação conservadora; recidiva rara, mais na variante botrioide.",
+   "fonte": {
+    "unidade": "n15-04",
+    "pagina": 705
+   }
+  },
+  {
+   "id": "det-cisto-glandular",
+   "diagnostico": "Cisto odontogênico glandular",
+   "opcoes": [
+    "Cisto odontogênico glandular",
+    "Ameloblastoma",
+    "Ceratocisto odontogênico",
+    "Cisto periodontal lateral"
+   ],
+   "pistas": [
+    "Paciente de 47 anos.",
+    "Aumento de volume na mandíbula anterior, às vezes com dor ou parestesia.",
+    "Radiolucidez multilocular de margens bem definidas e corticadas, que cruza a linha média.",
+    "Histologia: epitélio escamoso com superfície em cabeça de prego, células caliciformes, cílios e espaços ductiformes com fluido mucicarmim-positivo."
+   ],
+   "explicacao": "O cisto odontogênico glandular é raro e pode ser agressivo. Média de 46 a 48 anos, 68% a 75% na mandíbula, com forte preferência pela região anterior e muitos cruzando a linha média. As características glandulares indicariam a pluripotencialidade do epitélio odontogênico.",
+   "fonte": {
+    "unidade": "n15-05",
+    "pagina": 708
+   }
+  },
+  {
+   "id": "det-tumor-dentinogenico",
+   "diagnostico": "Tumor dentinogênico de células fantasmas",
+   "opcoes": [
+    "Tumor dentinogênico de células fantasmas",
+    "Ameloblastoma",
+    "Cisto odontogênico calcificante",
+    "Carcinoma odontogênico de células fantasmas"
+   ],
+   "pistas": [
+    "Adulto de 40 anos.",
+    "Lesão intraóssea na região posterior dos maxilares.",
+    "Tumor sólido, mais agressivo que o cisto calcificante: reabsorção radicular, perfuração da cortical ou destruição do seio.",
+    "Histologia: ilhas de epitélio odontogênico parecidas com ameloblastoma, com ninhos de células fantasmas e dentinoide justaepitelial, sem pleomorfismo nem mitoses aumentadas."
+   ],
+   "explicacao": "O tumor dentinogênico de células fantasmas intraósseo ocorre mais da 3ª à 5ª década, na região posterior. É potencialmente agressivo: um estudo mostrou recidiva de 73% com enucleação ou curetagem e de 33% com ressecção. As células fantasmas e o dentinoide o distinguem do ameloblastoma.",
+   "fonte": {
+    "unidade": "n15-05",
+    "pagina": 708
+   }
+  }
+ ]
+}

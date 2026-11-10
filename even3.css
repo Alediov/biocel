@@ -1,0 +1,39 @@
+/* Even3 de amanhã (even3.js, 03/11/2026): o cartão recolhível da Agenda, os de Odontologia em destaque */
+.e3-sec { --e3-odonto: #0E9F9A; --e3-odonto-fundo: color-mix(in srgb, #0E9F9A 11%, var(--superficie)); }
+:root[data-tema="escuro"] .e3-sec { --e3-odonto: #3CCFC8; --e3-odonto-fundo: color-mix(in srgb, #3CCFC8 12%, var(--superficie)); }
+
+.e3 { background: var(--superficie); border: 2px solid var(--linha); border-radius: var(--raio); box-shadow: var(--sombra); overflow: hidden; }
+.e3 > summary { list-style: none; display: flex; align-items: center; gap: 8px; padding: 13px 14px; cursor: pointer; }
+.e3 > summary::-webkit-details-marker { display: none; }
+.e3 > summary::after { content: ""; width: 9px; height: 9px; border: solid var(--tinta-2); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg) translateY(-2px); transition: transform .2s; flex: none; margin-left: 2px; }
+.e3[open] > summary::after { transform: rotate(-135deg) translateY(-2px); }
+.e3-tit { font: 800 17px var(--display); flex: 1; min-width: 0; }
+.e3-cont { font-size: 13px; color: var(--tinta-2); white-space: nowrap; }
+.e3-cont b { color: var(--e3-odonto); }
+.e3-corpo { padding: 0 12px 12px; display: flex; flex-direction: column; gap: 10px; }
+
+.e3-ev { border: 2px solid var(--linha); border-radius: 14px; padding: 11px 12px 12px; background: var(--fundo); transition: opacity .22s, transform .22s; }
+.e3-ev.saindo { opacity: 0; transform: translateX(24px); }
+.e3-ev.e3-odonto { border-color: color-mix(in srgb, var(--e3-odonto) 65%, transparent); background: var(--e3-odonto-fundo); box-shadow: 0 3px 0 color-mix(in srgb, var(--e3-odonto) 30%, transparent); }
+.e3-ev.e3-na-agenda { opacity: .82; }
+.e3-selo { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 12px; font-weight: 800; color: var(--e3-odonto); text-transform: uppercase; letter-spacing: .3px; margin-bottom: 4px; }
+.e3-selo small { font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--tinta-2); font-size: 12px; }
+.e3-ev h3 { margin: 0 0 4px; font: 700 15.5px/1.3 var(--texto); overflow-wrap: anywhere; }
+.e3-tag { display: inline-block; margin-left: 6px; font-size: 11.5px; font-weight: 700; color: var(--tinta-2); background: var(--superficie-2); border-radius: 99px; padding: 1px 8px; vertical-align: 1px; }
+.e3-info { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 6px; }
+.e3-info span { font-size: 12.5px; font-weight: 600; background: var(--superficie); border: 1.5px solid var(--linha); border-radius: 99px; padding: 2px 9px; color: var(--tinta); }
+.e3-resumo { margin: 0 0 6px; font-size: 13.5px; color: var(--tinta-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.e3-cert { margin: 0 0 8px; font-size: 12.5px; color: var(--tinta-2); font-style: italic; overflow-wrap: anywhere; }
+.e3-botoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; }
+.e3-botoes .botao { padding: 9px 10px; font-size: 14px; border-radius: 12px; text-align: center; text-decoration: none; }
+.e3-botoes .botao:not(.secundario) { box-shadow: 0 3px 0 var(--acento-escuro); }
+.e3-botoes .botao.secundario { box-shadow: 0 0 0 2px var(--linha) inset, 0 3px 0 var(--linha); }
+
+.e3-outros, .e3-recusados { border-top: 1.5px dashed var(--linha); padding-top: 8px; }
+.e3-outros > summary, .e3-recusados > summary { cursor: pointer; font-weight: 700; font-size: 14px; color: var(--tinta-2); padding: 4px 0 6px; }
+.e3-outros > summary small, .e3-recusados > summary small { font-weight: 600; background: var(--superficie-2); border-radius: 99px; padding: 1px 8px; margin-left: 4px; }
+.e3-outros[open] > .e3-ev + .e3-ev, .e3-recusados[open] > .e3-ev + .e3-ev { margin-top: 10px; }
+.e3-recusados .e3-ev { opacity: .7; }
+.e3-erro { margin: 0; font-size: 13px; color: var(--errado-texto); background: var(--errado-fundo); border-radius: 12px; padding: 8px 10px; }
+.e3-rodape { margin: 0; font-size: 11.5px; color: var(--tinta-2); }
+@media (prefers-reduced-motion: reduce) { .e3-ev { transition: none; } }

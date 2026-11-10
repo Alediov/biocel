@@ -1,0 +1,1 @@
+{"name": "BioCel", "short_name": "BioCel", "start_url": "./", "display": "standalone", "background_color": "#F5F6FB", "theme_color": "#2F6BFF", "lang": "pt-BR", "icons": [{"src": "icone.png", "sizes": "512x512", "type": "image/png"}]}

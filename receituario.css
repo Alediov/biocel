@@ -1,0 +1,95 @@
+/* Receituário da Clínica Odontológica da UNIOESTE (jogos/receituario.js, 04/11/2026): o formulário OD-0003 na tinta
+   azul do impresso, com a "caneta" azul-escura por cima; tema claro e AMOLED. Carregado pelo garantirCss(). */
+.receituario {
+  --ru-papel: #FFFEF8; --ru-impresso: #1F4FA8; --ru-impresso-2: #5D7DBE; --ru-caneta: #12306F; --ru-linha: #C9D5EE;
+  --ru-mao: "Segoe Print", "Bradley Hand", "Noteworthy", "Comic Neue", var(--texto);
+  position: relative; background: var(--ru-papel); color: var(--ru-impresso); border: 1.5px solid var(--ru-impresso);
+  border-radius: 6px; padding: 8px; display: flex; flex-direction: column; gap: 6px;
+  box-shadow: 0 3px 0 rgba(27, 35, 64, .1), 0 10px 24px -14px rgba(27, 35, 64, .35);
+  font-family: var(--texto); font-size: 14px; line-height: 1.35; overflow: hidden;
+}
+:root[data-tema="escuro"] .receituario { --ru-papel: #070A14; --ru-impresso: #7EA6F2; --ru-impresso-2: #5B77B2; --ru-caneta: #D3E2FF; --ru-linha: #1E2A47; box-shadow: 0 0 0 1px #121A30; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .receituario { --ru-papel: #070A14; --ru-impresso: #7EA6F2; --ru-impresso-2: #5B77B2; --ru-caneta: #D3E2FF; --ru-linha: #1E2A47; box-shadow: 0 0 0 1px #121A30; }
+}
+.ru-folha { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+
+/* cabeçalho: texto da instituição à esquerda (sem o logotipo) e "Receituário" à direita */
+.ru-cab { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); border: 1.2px solid var(--ru-impresso); border-radius: 3px; }
+.ru-inst { display: flex; flex-direction: column; padding: 6px 8px; border-right: 1.2px solid var(--ru-impresso); font-size: 10px; line-height: 1.25; min-width: 0; }
+.ru-sigla { font: 800 18px/1 var(--display); letter-spacing: -.2px; margin-bottom: 2px; }
+.ru-inst .ru-cl { font-weight: 700; }
+.ru-tit { display: grid; place-items: center; font: 800 min(22px, 5.4vw)/1 var(--display); letter-spacing: .2px; padding: 6px 4px; text-align: center; }
+
+/* corpo, com a escrita à mão */
+.ru-corpo { border: 1.2px solid var(--ru-impresso); border-radius: 3px; padding: 8px 10px 6px; display: flex; flex-direction: column; min-height: 180px; }
+.ru-rot { font-weight: 700; color: var(--ru-impresso); }
+.ru-tinta { font-family: var(--ru-mao); color: var(--ru-caneta); font-weight: 500; }
+.ru-l { display: flex; align-items: baseline; gap: 0; min-height: 28px; padding: 3px 2px; min-width: 0; }
+.ru-para { gap: 6px; flex-wrap: wrap; }
+.ru-extra { font-size: 12.5px; }
+.ru-data { margin-top: auto; padding-top: 10px; gap: 6px; }
+.ru-bloco { margin-top: 4px; font-weight: 700; }
+.ru-bloco .ru-tinta { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.ru-traco { flex: 1 1 auto; min-width: 14px; align-self: center; margin: 0 6px; border-bottom: 1.6px solid var(--ru-caneta); transform: translateY(2px); }
+.ru-item { border-radius: 6px; }
+/* o item: medicamento à esquerda e a quantidade à direita, com o traço depois da última palavra (mesmo quando o nome
+   quebra em duas linhas) */
+.ru-linha-med { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; padding-bottom: 0; }
+.ru-med { min-width: 0; overflow: hidden; overflow-wrap: anywhere; padding-right: 6px; }
+.ru-med .ru-tinta::after, .ru-pos .ru-tinta::after { content: ""; display: inline-block; vertical-align: middle; width: 100vw; margin: 0 -100vw 0 6px; border-bottom: 1.6px solid var(--ru-caneta); }
+.ru-n { font-weight: 800; margin-right: 1px; }
+.ru-qtd { flex: none; white-space: nowrap; padding-left: 6px; }
+.ru-falta { opacity: .5; }
+/* a orientação termina num traço até o fim da linha (o traço fica depois da última palavra) */
+.ru-pos { display: block; padding: 0 2px 4px 20px; overflow: hidden; font-size: 13.5px; }
+.ru-vazio i { display: block; height: 26px; border-bottom: 1px dashed var(--ru-linha); }
+.ru-rascunho { background: color-mix(in srgb, var(--acento) 10%, transparent); outline: 2px dashed color-mix(in srgb, var(--acento) 70%, transparent); outline-offset: 1px; }
+.ru-rascunho .ru-tinta { opacity: .85; }
+
+/* rodapé: Clínica Odontológica | CEO */
+.ru-rod { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px; }
+.ru-caixa { display: flex; flex-direction: column; gap: 3px; border: 1.2px solid var(--ru-impresso); border-radius: 3px; padding: 5px 7px 6px; font-size: 10.5px; min-width: 0; }
+.ru-caixa > b { font-size: 11px; line-height: 1.2; }
+.ru-caixa > small { color: var(--ru-impresso-2); font-size: 10px; }
+.ru-campo { display: flex; align-items: baseline; gap: 4px; border-bottom: 1px solid var(--ru-impresso-2); min-height: 17px; min-width: 0; }
+.ru-campo > span:first-child { flex: none; }
+.ru-campo .ru-tinta { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ru-marcar { display: flex; flex-wrap: wrap; gap: 2px 10px; margin-top: 2px; }
+.ru-cod { font-size: 10px; font-weight: 700; padding-left: 2px; }
+@media (max-width: 340px) { .ru-rod { grid-template-columns: minmax(0, 1fr); } }
+
+/* documento (fora do formulário) */
+.ru-doc { align-self: flex-start; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--tinta-2); background: var(--superficie-2); border-radius: 99px; padding: 4px 11px; max-width: 100%; text-align: left; }
+
+/* pedaços tocáveis (Ache o erro) */
+.ru-toque { font: inherit; color: inherit; background: none; border: 0; margin: 0; text-align: left; cursor: pointer; border-radius: 6px; transition: background .15s; -webkit-tap-highlight-color: transparent; }
+.ru-toque.ru-l, .ru-toque.ru-pos { width: 100%; }
+.ru-toque.ru-doc { background: var(--superficie-2); }
+.ru-toque:active:not(:disabled) { background: color-mix(in srgb, var(--acento) 18%, transparent); }
+.ru-toque:disabled { cursor: default; opacity: 1; }
+.ru-toque.errada-certa { background: color-mix(in srgb, var(--errado) 18%, transparent); outline: 2px solid var(--errado); }
+.ru-toque.escolha-errada { background: color-mix(in srgb, var(--ouro) 22%, transparent); outline: 2px dashed #B97B0C; }
+
+/* carimbo de receita completa */
+.receituario.carimbo::after { content: "RECEITA OK"; position: absolute; right: 16px; top: 44%; transform: rotate(-12deg); border: 3px solid var(--certo); color: var(--certo); font: 800 15px var(--display); letter-spacing: .08em; padding: 3px 9px; border-radius: 8px; opacity: .85; animation: carimba .45s cubic-bezier(.2, .9, .3, 1.4) both; pointer-events: none; }
+@keyframes carimba { from { transform: rotate(-12deg) scale(2.2); opacity: 0; } to { transform: rotate(-12deg) scale(1); opacity: .85; } }
+
+/* editor de um item */
+.ru-jogo-corpo { gap: 10px; }
+.ru-ed { gap: 8px; }
+.ru-ed-tit { font: 700 17px var(--display); }
+.ru-frase { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 15px; }
+.ru-frase .pos-chips { display: inline-flex; }
+.ru-num { width: 58px; padding: 7px 4px; text-align: center; font: 700 18px var(--display); color: var(--tinta); background: var(--superficie); border: 2px solid var(--linha); border-radius: 10px; }
+.ru-num:focus { outline: none; border-color: var(--acento); box-shadow: 0 0 0 3px color-mix(in srgb, var(--acento) 25%, transparent); }
+.ru-num:disabled { opacity: .8; }
+.ru-un { color: var(--tinta-2); font-weight: 600; }
+.ru-ori .pos-chips { margin-top: 2px; }
+.ru-atq, .ru-max, .ru-uni { padding: 8px; border-radius: 12px; background: var(--superficie-2); }
+.ru-uni small { display: block; font-size: 12px; font-weight: 800; color: var(--tinta-2); margin-bottom: 5px; }
+.ru-check li { display: flex; gap: 6px; align-items: flex-start; }
+.ru-check li span { min-width: 0; }
+.ru-check li small { display: block; font-size: 12.5px; color: var(--tinta-2); font-weight: 500; margin-top: 1px; }
+[hidden].chip-pos, .ru-frase[hidden], .pos-chips[hidden], .ru-uni[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { .receituario.carimbo::after { animation: none; } }

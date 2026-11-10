@@ -1,0 +1,67 @@
+/* Ferramentas das lições (ferramentasLicao.js, 02/11/2026): barrinha com calculadora, caderno, marca-texto e caneta;
+   painel embaixo (doca) e a camada de desenho por cima do exercício. */
+.camada-licao .licao-corpo { position: relative; }
+/* o corpo posicionado passava por cima do rodapé (não posicionado) e cortava o alto do personagem do retorno, que
+   sobe 24 px para fora do painel (.reacao); só aparecia inteiro durante o pulo/tremida (03/11/2026) */
+.camada-licao > .licao-rodape, .camada-licao > .feedback { position: relative; z-index: 7; }
+.fl-barra { display: flex; flex-direction: column; gap: 6px; padding: 0 16px 4px; }
+.fl-barra[hidden] { display: none; }
+.fl-principais { display: flex; justify-content: flex-end; gap: 6px; }
+.fl-bt { width: 36px; height: 32px; display: grid; place-items: center; border-radius: 10px; background: var(--superficie); border: 2px solid var(--linha); color: var(--tinta-2); transition: background .15s, color .15s, border-color .15s; }
+.fl-bt[hidden] { display: none; }
+.fl-bt svg, .fl-chip svg, .fl-doca-x svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fl-bt.on { background: var(--acento-suave); border-color: var(--acento); color: var(--acento-texto); }
+.fl-sub { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 6px; animation: fl-desce .18s ease-out; }
+.fl-sub[hidden] { display: none; }
+@keyframes fl-desce { from { opacity: 0; transform: translateY(-4px); } }
+.fl-chip { height: 30px; min-width: 32px; padding: 0 10px; border-radius: 999px; background: var(--superficie); border: 2px solid var(--linha); color: var(--tinta); font-size: 13px; font-weight: 700; display: inline-grid; place-items: center; }
+.fl-chip.fl-ico { padding: 0 6px; color: var(--tinta-2); }
+.fl-chip.on { border-color: var(--acento); background: var(--acento-suave); color: var(--acento-texto); }
+.fl-dica { flex-basis: 100%; text-align: right; font-size: 11.5px; color: var(--tinta-2); }
+.fl-amostra-marca { background: rgba(255, 214, 10, .6); color: #1B2340; border-radius: 3px; padding: 0 3px; }
+.fl-amostra-sub { text-decoration: underline 2.5px #E5484D; text-underline-offset: 3px; }
+.fl-cor { width: 28px; height: 28px; border-radius: 50%; background: var(--c); border: 3px solid var(--superficie); box-shadow: 0 0 0 2px var(--linha); }
+.fl-cor.on { box-shadow: 0 0 0 2px var(--acento); transform: scale(1.12); }
+
+/* painel (calculadora ou caderno) entre o exercício e o rodapé: os dois continuam visíveis */
+.fl-doca { flex: none; background: var(--superficie); border-top: 2px solid var(--linha); border-radius: 18px 18px 0 0; padding: 6px 12px 10px; box-shadow: 0 -4px 14px rgba(0, 0, 0, .07); animation: sobe .2s ease-out; }
+.fl-doca[hidden] { display: none; }
+.fl-doca-topo { display: flex; align-items: center; justify-content: space-between; font-size: 13px; min-height: 28px; }
+.fl-doca-topo small { color: var(--tinta-2); font-weight: 500; }
+.fl-doca-x { width: 30px; height: 30px; display: grid; place-items: center; color: var(--tinta-2); }
+.fl-calc .calc-visor { margin-top: 2px; }
+.fl-calc .calc-k { height: 38px; }
+.fl-caderno-texto { width: 100%; height: 148px; resize: none; font: inherit; font-size: 15px; line-height: 1.4; padding: 10px 12px; border-radius: 12px; border: 2px solid var(--linha); background: var(--fundo); color: var(--tinta); -webkit-user-select: text; user-select: text; }
+.fl-caderno-texto:focus { outline: none; border-color: var(--acento); }
+.fl-caderno-pe { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 4px; }
+.fl-caderno-pe small { color: var(--tinta-2); font-size: 11.5px; line-height: 1.25; }
+@media (max-height: 700px) { .fl-calc .calc-k { height: 32px; } .fl-caderno-texto { height: 104px; } }
+
+/* marca-texto: as marcas pela CSS Custom Highlight API (sem mexer no DOM) ou, sem ela, por <span> */
+::highlight(fl-marca) { background-color: rgba(255, 214, 10, .55); color: #1B2340; }
+::highlight(fl-sub) { text-decoration-line: underline; text-decoration-color: #E5484D; text-decoration-thickness: 2.5px; }
+::highlight(fl-previa) { background-color: color-mix(in srgb, var(--acento) 28%, transparent); }
+.fl-m-marca { background: rgba(255, 214, 10, .55); color: #1B2340; border-radius: 2px; }
+.fl-m-sub { text-decoration: underline 2.5px #E5484D; text-underline-offset: 3px; }
+/* com o marca-texto ligado: o arrasto na horizontal marca, na vertical rola */
+.fl-marcando .licao-corpo, .fl-marcando .licao-rodape { touch-action: pan-y; cursor: text; }
+.fl-marcando .licao-corpo :is(.opcao, .palavra, .cesto, .item-cat, .lacuna, .par) { cursor: text; }
+.fl-marcando .licao-corpo .opcao:active, .fl-marcando .licao-corpo .palavra:active, .fl-marcando .licao-corpo .cesto:active { transform: none; }
+
+/* caneta: a camada rola junto com o exercício; só pega o toque com a caneta ligada */
+.fl-tela { position: absolute; left: 0; top: 0; z-index: 6; pointer-events: none; touch-action: none; }
+.fl-desenhando .fl-tela { cursor: crosshair; }
+.fl-desenhando .licao-corpo { box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--acento) 35%, transparent); border-radius: 12px; }
+
+/* minijogos de dose: a calculadora ganhou a aba do caderno (jogos.js) */
+.calc-abas { display: flex; gap: 6px; }
+.calc-aba { padding: 4px 10px; border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--tinta-2); border: 2px solid transparent; }
+.calc-aba.on { color: var(--acento-texto); background: var(--acento-suave); border-color: var(--acento); }
+.calc.mini .calc-corpo { display: none; }
+
+/* tablet deitado e notebook: sobra espaço dos lados da lição, então o painel fica ao lado, sem apertar o exercício */
+@media (min-width: 1000px) and (min-aspect-ratio: 4/3) {
+  .fl-doca { position: absolute; left: calc(100% + 10px); top: 96px; width: 228px; border: 2px solid var(--linha); border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, .1); animation: fl-desce .2s ease-out; }
+  .fl-doca .calc-k { height: 40px; }
+  .fl-caderno-texto { height: 260px; }
+}

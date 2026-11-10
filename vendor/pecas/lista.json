@@ -1,0 +1,206 @@
+{
+ "pecas2d": {
+  "alpha": "Alpha",
+  "anarcandy": "Anarcandy",
+  "caliente": "Caliente",
+  "california": "California",
+  "cardinal": "Cardinal",
+  "celtic": "Celta",
+  "chess7": "Chess7",
+  "chessnut": "Chessnut",
+  "cburnett": "Clássicas",
+  "companion": "Companion",
+  "cooke": "Cooke",
+  "dubrovny": "Dubrovny",
+  "spatial": "Espacial",
+  "fantasy": "Fantasia",
+  "firi": "Firi",
+  "shapes": "Formas",
+  "fresca": "Fresca",
+  "gioco": "Gioco",
+  "governor": "Governor",
+  "horsey": "Horsey",
+  "icpieces": "IC Pieces",
+  "kiwen-suwi": "Kiwen-suwi",
+  "kosal": "Kosal",
+  "leipzig": "Leipzig",
+  "letter": "Letras",
+  "maestro": "Maestro",
+  "merida": "Merida",
+  "minimal-warmth": "Minimal Warmth",
+  "monarchy": "Monarchy",
+  "mpchess": "MPChess",
+  "papercut": "Papercut",
+  "pirouetti": "Pirouetti",
+  "pixel": "Pixel",
+  "reillycraig": "Reilly Craig",
+  "rhosgfx": "RhosGFX",
+  "riohacha": "Riohacha",
+  "shahi-ivory-brown": "Şahî marfim",
+  "staunty": "Staunty",
+  "tatiana": "Tatiana",
+  "totoy": "Totoy",
+  "xkcd": "xkcd"
+ },
+ "cegas": {
+  "disguised": "Disfarçadas",
+  "mono": "Sem cor"
+ },
+ "pecas3d": {
+  "aparadas": "Aparadas",
+  "cubos": "Cubos",
+  "experimental": "Experimental",
+  "jade": "Jade",
+  "madeira": "Madeira",
+  "madeira-moderna": "Madeira moderna",
+  "metal": "Metal",
+  "plastico": "Plástico",
+  "staunton": "Staunton",
+  "vermelho-azul": "Vermelho × azul",
+  "vidro": "Vidro"
+ },
+ "cores": {
+  "anil": [
+   "Anil",
+   "#BBCFFF",
+   "#5477CA"
+  ],
+  "azul": [
+   "Azul",
+   "#DEE3E6",
+   "#8CA2AD"
+  ],
+  "cinza": [
+   "Cinza",
+   "#E3E3E3",
+   "#A5A5A5"
+  ],
+  "coral": [
+   "Coral",
+   "#F5E1D9",
+   "#D98B73"
+  ],
+  "creme": [
+   "Creme",
+   "#ECECEC",
+   "#C1C18E"
+  ],
+  "lilas": [
+   "Lilás",
+   "#9F90B0",
+   "#7D4A8D"
+  ],
+  "marrom": [
+   "Marrom",
+   "#F0D9B5",
+   "#B58863"
+  ],
+  "noite": [
+   "Noite",
+   "#7C8494",
+   "#4A505E"
+  ],
+  "oceano": [
+   "Oceano",
+   "#D6E9F2",
+   "#4E8BB0"
+  ],
+  "roxo": [
+   "Roxo",
+   "#EFE6FA",
+   "#9C7CC9"
+  ],
+  "verde": [
+   "Verde",
+   "#EEEED2",
+   "#769656"
+  ],
+  "verde-suave": [
+   "Verde suave",
+   "#FFFFDD",
+   "#86A666"
+  ]
+ },
+ "tabuleiros": {
+  "azul-acinzentado": [
+   "Azul acinzentado",
+   ".jpg"
+  ],
+  "azul-brilhante": [
+   "Azul brilhante",
+   ".jpg"
+  ],
+  "bordo": [
+   "Bordo",
+   ".jpg"
+  ],
+  "bordo-vermelho": [
+   "Bordo vermelho",
+   ".jpg"
+  ],
+  "cinza-texturizado": [
+   "Cinza texturizado",
+   ".jpg"
+  ],
+  "couro": [
+   "Couro",
+   ".jpg"
+  ],
+  "horsey": [
+   "Horsey",
+   ".jpg"
+  ],
+  "jornal": [
+   "Jornal",
+   ".svg"
+  ],
+  "madeira": [
+   "Madeira",
+   ".jpg"
+  ],
+  "madeira-antiga": [
+   "Madeira antiga",
+   ".jpg"
+  ],
+  "madeira-clara": [
+   "Madeira clara",
+   ".jpg"
+  ],
+  "madeira-escura": [
+   "Madeira escura",
+   ".jpg"
+  ],
+  "metal": [
+   "Metal",
+   ".jpg"
+  ],
+  "marmore": [
+   "Mármore",
+   ".jpg"
+  ],
+  "marmore-azul": [
+   "Mármore azul",
+   ".jpg"
+  ],
+  "oliva": [
+   "Oliva",
+   ".jpg"
+  ],
+  "plastico-verde": [
+   "Plástico verde",
+   ".png"
+  ],
+  "rosa": [
+   "Rosa",
+   ".png"
+  ],
+  "roxo-listrado": [
+   "Roxo listrado",
+   ".png"
+  ],
+  "tela": [
+   "Tela",
+   ".jpg"
+  ]
+ }
+}

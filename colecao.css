@@ -1,0 +1,107 @@
+/* Filtros da Coleção e do Jardim, nível de colecionador e abertura automática dos baús (02/11/2026). */
+
+/* ---------- barra de filtros (filtros.js) ---------- */
+.fil-barra { margin: 14px 0 4px; }
+.fil-rapidos { display: flex; gap: 6px; overflow-x: auto; margin: 0 -16px 8px; padding: 2px 16px; scrollbar-width: none; }
+.fil-rapidos::-webkit-scrollbar { display: none; }
+.fil-linha { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fil-botao { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; border: 2px solid var(--linha); background: var(--superficie); font: inherit; font-size: 13px; font-weight: 700; color: var(--tinta-2); }
+.fil-botao svg { width: 16px; height: 16px; }
+.fil-botao b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--acento); color: #fff; font-size: 11px; display: inline-grid; place-items: center; }
+.fil-botao.on { border-color: var(--acento); color: var(--acento-tinta); background: var(--acento-suave); }
+.fil-ordem { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--tinta-2); font-weight: 700; min-width: 0; }
+.fil-ordem select { font: inherit; font-size: 13px; padding: 6px 8px; border-radius: 12px; border: 2px solid var(--linha); background: var(--superficie); color: var(--tinta); max-width: 52vw; }
+.fil-limpar { font: inherit; font-size: 13px; font-weight: 700; color: var(--acento-tinta); background: none; border: 0; padding: 6px 2px; }
+.fil-conta { margin-left: auto; color: var(--tinta-2); font-size: 12px; }
+.fil-vazio { grid-column: 1 / -1; text-align: center; color: var(--tinta-2); padding: 26px 8px; }
+.fil-vazio .ico3d { width: 48px; height: 48px; }
+.fil-vazio p { margin: 6px 0 0; }
+.lista-colecao .secao h2 small { font-size: 13px; font-weight: 700; }
+
+/* folha de baixo com todos os filtros */
+.fil-fundo { position: fixed; inset: 0; z-index: 45; background: rgba(10, 14, 30, .55); display: grid; place-items: end center; animation: fil-entra .18s ease-out; }
+.fil-fundo.saindo { opacity: 0; transition: opacity .18s; }
+.fil-folha { background: var(--superficie); width: 100%; max-width: 560px; max-height: 86vh; overflow-y: auto; border-radius: 24px 24px 0 0; padding: 10px 18px calc(18px + env(safe-area-inset-bottom)); animation: sobe .22s ease-out; }
+.fil-alca { width: 44px; height: 5px; border-radius: 3px; background: var(--linha); margin: 0 auto 10px; }
+.fil-folha h2 { font-size: 20px; margin: 0 0 6px; }
+.fil-grupo h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); margin: 14px 0 8px; }
+.fil-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.fil-acoes { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; margin-top: 18px; position: sticky; bottom: 0; background: var(--superficie); padding-top: 8px; }
+.fil-acoes .botao + .botao { margin-top: 0; }
+@keyframes fil-entra { from { opacity: 0; } }
+
+/* filtros dentro do "O que plantar?" */
+.plantar-filtros .fil-barra { margin: 0 0 8px; text-align: left; }
+.plantar-filtros .fil-rapidos { margin: 0 0 8px; padding: 2px 0; }
+.escolha-planta { position: relative; border-color: color-mix(in srgb, var(--cor, var(--linha)) 45%, var(--linha)); }
+.escolha-planta .ep-hora { display: inline-flex; align-items: center; gap: 3px; margin-top: 2px; font-weight: 700; color: var(--tinta); }
+.escolha-planta .ep-hora .ico-inline { width: 14px; height: 14px; }
+.planta-prod { position: absolute; left: 4px; top: 4px; width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: rgba(255, 255, 255, .85); }
+.planta-prod .ico-inline { width: 16px; height: 16px; }
+
+/* detalhe de uma carta ou planta não encontrada */
+.detalhe-carta.bloq .onde-vem { display: flex; gap: 6px; align-items: flex-start; justify-content: center; text-align: left; margin-top: 10px; }
+.detalhe-carta.bloq .onde-vem .ico-inline { flex: none; width: 20px; height: 20px; }
+.silhueta-grande { margin: 0 auto; }
+
+/* ---------- nível de colecionador ---------- */
+.col-cartao { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; margin-top: 10px; position: relative; font: inherit; color: inherit; }
+.col-cartao.tem-premio { border-color: var(--ouro); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ouro) 25%, transparent); }
+.col-txt { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.col-txt small { color: var(--tinta-2); font-size: 12px; }
+.col-txt .nivel-barra, .col-heroi .nivel-barra { height: 9px; margin-top: 6px; display: block; }
+.col-cartao .nivel-barra > span, .col-heroi .nivel-barra > span { display: block; height: 100%; border-radius: 8px; background: linear-gradient(90deg, #9B5CF6, #F28A1E); }
+.col-selo { flex: none; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; transform: rotate(45deg); background: linear-gradient(135deg, #9B5CF6, #5B2DB0); border: 3px solid #1B2340; box-shadow: inset 0 3px 0 rgba(255, 255, 255, .35); }
+.col-selo b { transform: rotate(-45deg); color: #fff; font-family: var(--display); font-size: 18px; text-shadow: 0 1px 0 #1B2340; }
+.col-selo.grande { width: 72px; height: 72px; border-radius: 20px; margin: 10px auto 14px; }
+.col-selo.grande b { font-size: 28px; }
+.col-heroi .col-selo.grande { margin: 8px 6px; }
+.col-badge { position: absolute; top: -6px; right: -6px; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 12px; background: var(--errado); color: #fff; font-weight: 800; font-size: 13px; display: grid; place-items: center; animation: col-pulsa 1.6s ease-in-out infinite; }
+@keyframes col-pulsa { 50% { transform: scale(1.12); } }
+.col-heroi { display: flex; align-items: center; gap: 16px; margin: 6px 0 10px; }
+.col-heroi > div { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.col-heroi > div > b { font-family: var(--display); font-size: 22px; }
+.col-heroi small { color: var(--tinta-2); font-size: 12px; margin-top: 2px; }
+.col-resgatar-tudo { margin: 4px 0 6px; }
+.col-niveis { display: flex; flex-direction: column; gap: 8px; }
+.col-nivel { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 16px; border: 2px solid var(--linha); background: var(--superficie); }
+.col-nivel.pronto { border-color: var(--ouro); background: color-mix(in srgb, var(--ouro) 10%, var(--superficie)); }
+.col-nivel.feito { opacity: .62; }
+.col-nivel.bloq .col-premios { opacity: .75; }
+.col-num { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font-family: var(--display); font-weight: 800; background: var(--superficie-2); }
+.col-nivel.pronto .col-num { background: var(--ouro); color: #1B2340; }
+.col-premios { display: flex; flex-wrap: wrap; gap: 4px 10px; flex: 1; min-width: 0; font-size: 12.5px; }
+.modal-caixa .col-premios { justify-content: center; margin-bottom: 8px; }
+.col-premio { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; }
+.col-premio .ico-inline { width: 18px; height: 18px; }
+.col-premio.carta, .col-premio.titulo { color: var(--acento-tinta); font-weight: 800; }
+.col-resg { flex: none; width: auto; padding: 8px 12px; font-size: 13px; }
+.col-ok .ico-inline { width: 24px; height: 24px; }
+.col-falta { flex: none; color: var(--tinta-2); font-size: 11.5px; font-weight: 700; }
+.col-origem > div { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--linha); }
+.col-origem > div:last-child { border-bottom: 0; }
+.col-origem span { flex: 1; min-width: 0; }
+.col-origem small { color: var(--tinta-2); }
+.col-origem .bolinha-rar { flex: none; width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+/* ---------- abertura automática dos baús ---------- */
+.auto-baus { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 8px; padding: 7px 12px; border-radius: 12px; border: 2px dashed var(--linha); background: transparent; font: inherit; font-size: 12.5px; color: var(--tinta-2); text-align: left; }
+.auto-baus.ligado { border-style: solid; border-color: color-mix(in srgb, var(--certo) 50%, var(--linha)); color: var(--certo-texto); }
+.auto-baus .ico-inline { width: 18px; height: 18px; flex: none; }
+.auto-baus.ligado .ico-inline { animation: auto-gira 6s linear infinite; }
+@keyframes auto-gira { to { transform: rotate(360deg); } }
+.item-loja.upgrade-auto { grid-column: 1 / -1; }
+.upgrade-auto .ups-opcoes { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; text-align: left; }
+.ups-seg { display: flex; gap: 6px; flex-wrap: wrap; }
+.ups-seg .chip-filtro { font: inherit; font-size: 12.5px; font-weight: 700; }
+.ups-rotulo { font-size: 12px; font-weight: 700; color: var(--tinta-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  .col-badge, .auto-baus.ligado .ico-inline, .fil-fundo, .fil-folha { animation: none; }
+}
+
+/* tablet (tablet.js): a folha dos filtros fica no <body>, fora do #app, e leva o zoom como os modais */
+html.tablet .fil-folha { zoom: var(--z, 1); }
+.plantar-tit { font-size: 22px; margin: 0 0 10px; }
+.auto-cfg h2 { font-size: 22px; margin: 0 0 6px; }
+.auto-cfg { margin-bottom: 14px; }

@@ -1,0 +1,114 @@
+/* Simulado impresso: a dificuldade, o resumo da tela Todos e as fotos enviadas (pedidos do Alediov, 09/11/2026;
+   app/js/simulado.js e app/js/simuladoFotos.js). O resto do simulado está em estilo.css (.sim-…). */
+
+/* Fácil · Média · Difícil */
+.sim-dif { display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)); align-items: center; gap: 4px; padding: 4px; border-radius: 14px; background: var(--superficie-2); }
+.sim-dif-rot { padding: 0 6px 0 8px; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); }
+.sim-dif button { min-width: 0; padding: 7px 4px; border: 0; border-radius: 10px; background: transparent; color: var(--tinta-2); font: 700 13.5px/1.1 var(--texto); cursor: pointer; transition: background .15s, color .15s; }
+.sim-dif button.on { background: var(--superficie); color: var(--tinta); box-shadow: 0 1px 0 var(--linha), 0 0 0 2px var(--dif, var(--acento)) inset; }
+.sim-dif button[data-n="facil"] { --dif: var(--certo); }
+.sim-dif button[data-n="media"] { --dif: var(--acento); }
+.sim-dif button[data-n="dificil"] { --dif: var(--errado, #D64545); }
+.sim-dif-tag { font-style: normal; font-size: 11px; font-weight: 800; padding: 1px 7px; border-radius: 99px; margin-left: 4px; white-space: nowrap; background: var(--superficie-2); color: var(--tinta-2); }
+.sim-dif-tag.facil { background: color-mix(in srgb, var(--certo) 16%, var(--superficie)); color: var(--certo); }
+.sim-dif-tag.dificil { background: color-mix(in srgb, var(--errado, #D64545) 14%, var(--superficie)); color: var(--errado, #D64545); }
+
+/* tela Todos: o resumo no alto */
+.sim-resumo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.sim-resumo span { display: grid; justify-items: center; gap: 2px; padding: 10px 6px; border-radius: 16px; background: var(--superficie); border: 2px solid var(--linha); min-width: 0; }
+.sim-resumo b { font-family: var(--display); font-size: 22px; line-height: 1; }
+.sim-resumo small { font-size: 11.5px; color: var(--tinta-2); text-align: center; line-height: 1.2; }
+.sim-r-media b { color: var(--acento-texto, var(--acento)); }
+.sim-item-meio .sim-item-env, .sim-ver-fotos { padding: 2px 0; font-size: 12.5px; text-align: left; text-decoration: underline; text-underline-offset: 2px; }
+.sim-item-meio .sim-item-env { display: block; }
+
+/* fotos enviadas */
+.sim-fotos .sim-t-rol { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+.sf-estado { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.sf-cont { font-size: 14px; color: var(--tinta-2); }
+.sf-cont b { font-family: var(--display); font-size: 18px; color: var(--tinta); }
+.sf-sit { font-size: 11.5px; font-weight: 800; padding: 3px 9px; border-radius: 99px; }
+.sf-sit.edita { background: var(--acento-suave); color: var(--acento-texto, var(--acento)); }
+.sf-sit.ver { background: color-mix(in srgb, var(--certo) 14%, var(--superficie)); color: var(--certo); }
+.sf-estado .link { margin-left: auto; padding: 4px 0; }
+.sf-aviso { flex-basis: 100%; color: var(--tinta-2); font-size: 12.5px; }
+.sf-carregando { color: var(--tinta-2); font-size: 13px; }
+.sf-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(150px, 42vw), 1fr)); gap: 12px; }
+.sf-foto { margin: 0; display: grid; gap: 6px; min-width: 0; animation: sf-entra .25s ease-out both; }
+.sf-img { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 2px solid var(--linha); border-radius: 14px; overflow: hidden; background: var(--superficie-2); cursor: zoom-in; }
+.sf-ph { position: absolute; inset: 0; background: center / cover no-repeat; transition: transform .25s cubic-bezier(.2, .8, .2, 1); }
+.sf-ph.pdf { display: grid; place-items: center; font: 800 20px var(--display); color: var(--tinta-2); }
+.sf-ph.falta { background: repeating-linear-gradient(45deg, var(--superficie-2) 0 8px, var(--superficie) 8px 16px); }
+.sf-n { position: absolute; z-index: 1; top: 6px; left: 6px; min-width: 26px; height: 26px; padding: 0 6px; border-radius: 9px; display: grid; place-items: center; background: var(--tinta); color: var(--superficie); font: 800 14px var(--display); box-shadow: 0 1px 4px rgba(0, 0, 0, .25); }
+.sf-ferr { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+.sf-ferr button { height: 36px; border: 0; border-radius: 10px; background: var(--superficie-2); color: var(--tinta); display: grid; place-items: center; cursor: pointer; }
+.sf-ferr button:disabled { opacity: .3; cursor: default; }
+.sf-ferr button[data-a="lixo"] { color: var(--errado, #D64545); }
+.sf-ferr svg { width: 20px; height: 20px; }
+.sf-barra { position: absolute; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--superficie); border-top: 1px solid var(--linha); box-shadow: 0 -6px 18px rgba(0, 0, 0, .08); animation: sf-sobe .2s ease-out; }
+.sf-barra[hidden] { display: none; }
+.sf-visor { position: absolute; inset: 0; z-index: 3; background: #000; display: grid; place-items: center; padding: 56px 12px 24px; }
+.sf-visor img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform .2s; }
+.sf-visor img.deitada { max-width: 80vh; max-height: 92vw; }
+.sf-v-x, .sf-v-esq, .sf-v-dir { position: absolute; border: 0; border-radius: 50%; width: 44px; height: 44px; display: grid; place-items: center; background: rgba(30, 30, 30, .72); box-shadow: 0 0 0 1px rgba(255, 255, 255, .35); color: #fff; font-size: 18px; cursor: pointer; }
+.sf-v-x { top: calc(10px + env(safe-area-inset-top)); right: 12px; }
+.sf-v-esq, .sf-v-dir { top: 50%; transform: translateY(-50%); }
+.sf-v-esq { left: 8px; } .sf-v-dir { right: 8px; }
+.sf-v-esq[hidden], .sf-v-dir[hidden] { display: none; }
+.sf-v-esq svg, .sf-v-dir svg { width: 24px; height: 24px; }
+.sf-v-n { position: absolute; top: calc(20px + env(safe-area-inset-top)); left: 16px; color: #ddd; font-size: 13px; font-weight: 700; }
+@keyframes sf-entra { from { opacity: 0; transform: translateY(6px); } }
+@keyframes sf-sobe { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) { .sf-foto, .sf-barra { animation: none; } .sf-ph { transition: none; } }
+
+/* Caderno do Dia (pedido do Alediov, 09/11/2026): o mapa de domínio dos temas, a correção por seção e o raciocínio.
+   Cores das etapas: Resumo (cinza), Prática (azul do app), Prova (âmbar), Firme (verde). */
+.cad-mapa, .cad-mapa-tela { --e-resumo: color-mix(in srgb, var(--tinta-2) 55%, var(--superficie)); --e-pratica: var(--acento); --e-prova: #E0A100; --e-firme: var(--certo); }
+.cad-mapa .sim-ico { color: var(--acento-texto, var(--acento)); }
+.cad-barra { display: flex; height: 12px; border-radius: 99px; overflow: hidden; background: var(--superficie-2); gap: 2px; }
+.cad-barra span { min-width: 6px; }
+.cad-barra .e-resumo, .cad-legenda .e-resumo i { background: var(--e-resumo); }
+.cad-barra .e-pratica, .cad-legenda .e-pratica i { background: var(--e-pratica); }
+.cad-barra .e-prova, .cad-legenda .e-prova i { background: var(--e-prova); }
+.cad-barra .e-firme, .cad-legenda .e-firme i { background: var(--e-firme); }
+.cad-legenda { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--tinta-2); }
+.cad-legenda span { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.cad-legenda i { width: 9px; height: 9px; border-radius: 3px; }
+.cad-legenda b { color: var(--tinta); }
+.cad-lista { display: grid; gap: 6px; min-width: 0; }
+.cad-tema { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 14px; background: var(--superficie-2); border-left: 4px solid var(--e, var(--linha)); min-width: 0; }
+.cad-tema.e-resumo { --e: var(--e-resumo); } .cad-tema.e-pratica { --e: var(--e-pratica); } .cad-tema.e-prova { --e: var(--e-prova); } .cad-tema.e-firme { --e: var(--e-firme); }
+.cad-et { min-width: 62px; text-align: center; font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; padding: 3px 7px; border-radius: 99px; color: var(--e); background: color-mix(in srgb, var(--e) 15%, var(--superficie)); white-space: nowrap; }
+.cad-tit { min-width: 0; display: grid; }
+.cad-tit b { font-size: 13.5px; line-height: 1.25; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.cad-tit small { font-size: 11.5px; color: var(--tinta-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cad-nota { font: 800 15px var(--display); display: inline-flex; align-items: center; gap: 3px; white-space: nowrap; }
+.cad-nota.boa { color: var(--certo); } .cad-nota.ruim { color: var(--errado, #D64545); } .cad-nota.vazia { color: var(--tinta-2); font-weight: 600; }
+.cad-tend { font-style: normal; font-size: 14px; }
+.cad-tend.sobe { color: var(--certo); } .cad-tend.desce { color: var(--errado, #D64545); } .cad-tend.igual { color: var(--tinta-2); }
+.cad-ver { justify-self: start; padding: 2px 0; text-decoration: underline; text-underline-offset: 2px; }
+.cad-filtros { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.cad-grupos { display: grid; gap: 8px; }
+.cad-grupos .sim-mes small { font-weight: 600; color: var(--tinta-2); }
+.cad-resumo-linha b { color: var(--tinta); }
+/* correção do caderno */
+.cad-sec { display: flex; align-items: baseline; gap: 8px; margin: 10px 0 2px; font-family: var(--display); font-size: 17px; }
+.cad-sec small { font: 600 12px var(--texto); color: var(--tinta-2); }
+.cad-sec b { margin-left: auto; font-size: 15px; }
+.cad-sec.pratica span { color: var(--acento-texto, var(--acento)); }
+.cad-sec.prova span { color: #B07E00; }
+.cad-q-tema { display: block; font-style: normal; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; color: var(--tinta-2); margin-bottom: 1px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cad-raciocinio { border-left: 3px solid var(--acento); padding-left: 10px; }
+.cad-resumo-app { border-radius: 16px; background: var(--superficie); border: 2px solid var(--linha); padding: 10px 12px; }
+.cad-resumo-app summary { display: flex; gap: 10px; align-items: center; cursor: pointer; list-style: none; }
+.cad-resumo-app summary::-webkit-details-marker { display: none; }
+.cad-resumo-app summary span { display: grid; min-width: 0; }
+.cad-resumo-app summary small { color: var(--tinta-2); font-size: 12.5px; }
+.cad-ico-livro { width: 22px; height: 22px; flex: none; color: var(--acento-texto, var(--acento)); }
+.cad-rs h4 { margin: 10px 0 4px; font-size: 15px; }
+.cad-rs ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; font-size: 14px; line-height: 1.4; }
+.cad-cai small { display: block; font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--tinta-2); }
+:root[data-tema="escuro"] .cad-sec.prova span { color: #F0BE3C; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .cad-sec.prova span { color: #F0BE3C; } }
+/* a coluna da tela não cresce pelo conteúdo (o tema da questão é uma linha só, com reticências) */
+.sim-t-rol { grid-template-columns: minmax(0, 1fr); }

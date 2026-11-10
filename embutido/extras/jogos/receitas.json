@@ -1,0 +1,2045 @@
+{
+ "versao": 3,
+ "fonte": "Andrade, E. D. Terapêutica Medicamentosa em Odontologia, 3ª ed. (2013)",
+ "formulario": "receituario-unioeste",
+ "aviso": "As normas seguem o livro (2013). A Anvisa atualiza as regras de vez em quando; confira a versão vigente na prática clínica. O formulário é o receituário da Clínica Odontológica da UNIOESTE (Cód. OD-0003).",
+ "documentos": [
+  "Receita comum",
+  "Receita comum em 2 vias, com idade e sexo do paciente",
+  "Receita de controle especial, em 2 vias",
+  "Receita comum + Notificação de Receita B (azul)"
+ ],
+ "classes": {
+  "analgesico": "Analgésicos",
+  "antiinflamatorio": "Anti-inflamatórios",
+  "antibiotico": "Antibióticos",
+  "antisseptico": "Antissépticos",
+  "ansiolitico": "Ansiolíticos",
+  "opioide": "Opioides"
+ },
+ "medicamentos": [
+  {
+   "id": "dipirona",
+   "nome": "Dipirona sódica",
+   "classe": "analgesico",
+   "apr": [
+    {
+     "id": "dip-500",
+     "rot": "Dipirona sódica 500 mg",
+     "txt": "500 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "dip-1g",
+     "rot": "Dipirona sódica 1 g",
+     "txt": "1 g · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "dip-gotas",
+     "rot": "Dipirona sódica 500 mg/mL (gotas)",
+     "txt": "500 mg/mL · gotas",
+     "forma": "solução oral “gotas”",
+     "un": "gota",
+     "frasco": true
+    }
+   ]
+  },
+  {
+   "id": "paracetamol",
+   "nome": "Paracetamol",
+   "classe": "analgesico",
+   "apr": [
+    {
+     "id": "para-500",
+     "rot": "Paracetamol 500 mg",
+     "txt": "500 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "para-750",
+     "rot": "Paracetamol 750 mg",
+     "txt": "750 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "para-gotas",
+     "rot": "Paracetamol 200 mg/mL (gotas)",
+     "txt": "200 mg/mL · gotas",
+     "forma": "solução oral “gotas”",
+     "un": "gota",
+     "frasco": true
+    }
+   ]
+  },
+  {
+   "id": "ibuprofeno",
+   "nome": "Ibuprofeno",
+   "classe": "antiinflamatorio",
+   "apr": [
+    {
+     "id": "ibu-200",
+     "rot": "Ibuprofeno 200 mg",
+     "txt": "200 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "ibu-600",
+     "rot": "Ibuprofeno 600 mg",
+     "txt": "600 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "ibu-gotas50",
+     "rot": "Ibuprofeno 50 mg/mL (gotas)",
+     "txt": "50 mg/mL · gotas",
+     "forma": "solução oral “gotas”",
+     "un": "gota",
+     "frasco": true
+    },
+    {
+     "id": "ibu-gotas100",
+     "rot": "Ibuprofeno 100 mg/mL (gotas)",
+     "txt": "100 mg/mL · gotas",
+     "forma": "solução oral “gotas”",
+     "un": "gota",
+     "frasco": true
+    }
+   ]
+  },
+  {
+   "id": "nimesulida",
+   "nome": "Nimesulida",
+   "classe": "antiinflamatorio",
+   "apr": [
+    {
+     "id": "nime-100",
+     "rot": "Nimesulida 100 mg",
+     "txt": "100 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    }
+   ]
+  },
+  {
+   "id": "celecoxibe",
+   "nome": "Celecoxibe",
+   "classe": "antiinflamatorio",
+   "apr": [
+    {
+     "id": "cele-100",
+     "rot": "Celecoxibe 100 mg",
+     "txt": "100 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    },
+    {
+     "id": "cele-200",
+     "rot": "Celecoxibe 200 mg",
+     "txt": "200 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    }
+   ]
+  },
+  {
+   "id": "dexametasona",
+   "nome": "Dexametasona",
+   "classe": "antiinflamatorio",
+   "apr": [
+    {
+     "id": "dexa-05",
+     "rot": "Dexametasona 0,5 mg",
+     "txt": "0,5 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "dexa-4",
+     "rot": "Dexametasona 4 mg",
+     "txt": "4 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    }
+   ]
+  },
+  {
+   "id": "betametasona",
+   "nome": "Betametasona",
+   "classe": "antiinflamatorio",
+   "apr": [
+    {
+     "id": "beta-gotas",
+     "rot": "Betametasona 0,5 mg/mL (gotas)",
+     "txt": "0,5 mg/mL · gotas",
+     "forma": "solução oral “gotas”",
+     "un": "gota",
+     "frasco": true
+    }
+   ]
+  },
+  {
+   "id": "amoxicilina",
+   "nome": "Amoxicilina",
+   "classe": "antibiotico",
+   "apr": [
+    {
+     "id": "amox-500",
+     "rot": "Amoxicilina 500 mg",
+     "txt": "500 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    },
+    {
+     "id": "amox-875",
+     "rot": "Amoxicilina 875 mg",
+     "txt": "875 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "amox-susp125",
+     "rot": "Amoxicilina suspensão 125 mg/5 mL",
+     "txt": "125 mg/5 mL · suspensão",
+     "forma": "suspensão oral",
+     "un": "mL",
+     "frasco": true
+    },
+    {
+     "id": "amox-susp250",
+     "rot": "Amoxicilina suspensão 250 mg/5 mL",
+     "txt": "250 mg/5 mL · suspensão",
+     "forma": "suspensão oral",
+     "un": "mL",
+     "frasco": true
+    },
+    {
+     "id": "amox-susp500",
+     "rot": "Amoxicilina suspensão 500 mg/5 mL",
+     "txt": "500 mg/5 mL · suspensão",
+     "forma": "suspensão oral",
+     "un": "mL",
+     "frasco": true
+    }
+   ]
+  },
+  {
+   "id": "metronidazol",
+   "nome": "Metronidazol",
+   "classe": "antibiotico",
+   "apr": [
+    {
+     "id": "metro-250",
+     "rot": "Metronidazol 250 mg",
+     "txt": "250 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "metro-400",
+     "rot": "Metronidazol 400 mg",
+     "txt": "400 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    }
+   ]
+  },
+  {
+   "id": "clindamicina",
+   "nome": "Clindamicina",
+   "classe": "antibiotico",
+   "apr": [
+    {
+     "id": "clinda-150",
+     "rot": "Clindamicina 150 mg",
+     "txt": "150 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    },
+    {
+     "id": "clinda-300",
+     "rot": "Clindamicina 300 mg",
+     "txt": "300 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    }
+   ]
+  },
+  {
+   "id": "cefalexina",
+   "nome": "Cefalexina",
+   "classe": "antibiotico",
+   "apr": [
+    {
+     "id": "cefa-500",
+     "rot": "Cefalexina 500 mg",
+     "txt": "500 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    }
+   ]
+  },
+  {
+   "id": "claritromicina",
+   "nome": "Claritromicina",
+   "classe": "antibiotico",
+   "apr": [
+    {
+     "id": "clari-500",
+     "rot": "Claritromicina 500 mg",
+     "txt": "500 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    }
+   ]
+  },
+  {
+   "id": "clorexidina",
+   "nome": "Digluconato de clorexidina",
+   "classe": "antisseptico",
+   "apr": [
+    {
+     "id": "clx-012",
+     "rot": "Clorexidina 0,12%",
+     "txt": "0,12% · bochecho",
+     "forma": "solução para bochecho",
+     "un": "mL",
+     "frasco": true,
+     "bochecho": true
+    },
+    {
+     "id": "clx-2",
+     "rot": "Clorexidina 2%",
+     "txt": "2% · antissepsia extrabucal",
+     "forma": "solução aquosa",
+     "un": "mL",
+     "frasco": true,
+     "bochecho": true
+    }
+   ]
+  },
+  {
+   "id": "midazolam",
+   "nome": "Midazolam",
+   "classe": "ansiolitico",
+   "apr": [
+    {
+     "id": "mida-75",
+     "rot": "Midazolam 7,5 mg",
+     "txt": "7,5 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    },
+    {
+     "id": "mida-15",
+     "rot": "Midazolam 15 mg",
+     "txt": "15 mg · comprimido",
+     "forma": "comprimido",
+     "un": "comprimido"
+    }
+   ]
+  },
+  {
+   "id": "tramadol",
+   "nome": "Cloridrato de tramadol",
+   "classe": "opioide",
+   "apr": [
+    {
+     "id": "trama-50",
+     "rot": "Cloridrato de tramadol 50 mg",
+     "txt": "50 mg · cápsula",
+     "forma": "cápsula",
+     "un": "cápsula"
+    }
+   ]
+  }
+ ],
+ "momentos": [
+  "30 minutos antes do atendimento",
+  "30 a 45 minutos antes do atendimento",
+  "30 a 60 minutos antes do atendimento",
+  "1 hora antes do atendimento",
+  "Logo após o atendimento"
+ ],
+ "intervalos": [
+  4,
+  6,
+  8,
+  12,
+  24
+ ],
+ "casos": [
+  {
+   "id": "exo-simples",
+   "titulo": "Exodontia simples",
+   "paciente": {
+    "nome": "Ana Lima",
+    "idade": 34,
+    "sexo": "F"
+   },
+   "contexto": "Ana, 34 anos, saudável. Exodontia simples de um pré-molar, com expectativa de dor leve. Você prescreve a manutenção da dipirona por 24 horas.",
+   "fonte": {
+    "unidade": "f10-01",
+    "pagina": 114
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Dipirona não é antimicrobiano nem substância controlada: basta a receita comum."
+   },
+   "rx": [
+    {
+     "med": "dipirona",
+     "apr": "dip-gotas",
+     "bloco": "interno",
+     "dose": [
+      20,
+      40
+     ],
+     "intervalo": 4,
+     "duracao": {
+      "n": 24,
+      "un": "horas"
+     },
+     "explic": "A inscrição traz o nome genérico, a forma farmacêutica e a quantidade (1 frasco). Orientação por extenso, sem abreviaturas. No protocolo, a dipirona (500 mg a 1 g = 20 a 40 gotas) segue a cada 4 h por 24 h."
+    }
+   ]
+  },
+  {
+   "id": "terceiro-molar",
+   "titulo": "Terceiro molar incluso",
+   "paciente": {
+    "nome": "Bruno Alves",
+    "idade": 22,
+    "sexo": "M"
+   },
+   "contexto": "Bruno, 22 anos, saudável. Remoção de terceiro molar inferior incluso. O livro indica analgesia perioperatória com dexametasona antes da cirurgia.",
+   "fonte": {
+    "unidade": "f10-01",
+    "pagina": 115
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Corticoide não é controlado: receita comum."
+   },
+   "rx": [
+    {
+     "med": "dexametasona",
+     "apr": "dexa-4",
+     "bloco": "interno",
+     "dose": [
+      1,
+      2
+     ],
+     "intervalo": 0,
+     "momento": [
+      "1 hora antes do atendimento"
+     ],
+     "explic": "Dose de 4 a 8 mg (1 a 2 comprimidos de 4 mg). Quando dá para fracionar, a quantidade vai em unidades. Dose única, 1 h antes: o corticoide precisa de tempo para agir (analgesia preemptiva)."
+    }
+   ]
+  },
+  {
+   "id": "pericoronarite",
+   "titulo": "Pericoronarite com disseminação",
+   "paciente": {
+    "nome": "Carla Mendes",
+    "idade": 25,
+    "sexo": "F"
+   },
+   "contexto": "Carla, 25 anos, saudável. Pericoronarite do 38 com linfadenite e limitação de abertura bucal. Depois da descontaminação local, você prescreve amoxicilina e metronidazol, sem dose de ataque.",
+   "fonte": {
+    "unidade": "f10-02",
+    "pagina": 120
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 1,
+    "explic": "Antimicrobiano (RDC 20/2011): receituário do próprio dentista, em 2 vias (a 2ª fica na farmácia), com idade e sexo no cabeçalho. Vale por 10 dias.",
+    "explicAtual": "Antimicrobiano (RDC 471/2021, que substituiu a RDC 20/2011): receituário do próprio dentista, sem modelo específico, em 2 vias (a 2ª fica na farmácia), com nome completo, idade e sexo do paciente e a quantidade em algarismos arábicos. Vale por 10 dias. Pela RDC 1.000/2025, também pode ser eletrônica (nato-digital, com assinatura avançada gov.br ou qualificada)."
+   },
+   "rx": [
+    {
+     "med": "amoxicilina",
+     "apr": "amox-500",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 8,
+     "duracao": {
+      "n": 3,
+      "un": "dias"
+     },
+     "ataque": null,
+     "explic": "Regime do livro para adultos: amoxicilina 500 mg + metronidazol 250 mg a cada 8 h, prescritos inicialmente por 3 dias (9 doses). Clindamicina ou claritromicina só para alérgicos. Reavalia-se antes de completar 72 h; a duração raramente passa de 5 dias. A menor duração possível reduz a resistência bacteriana."
+    },
+    {
+     "med": "metronidazol",
+     "apr": "metro-250",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 8,
+     "duracao": {
+      "n": 3,
+      "un": "dias"
+     },
+     "ataque": null
+    }
+   ]
+  },
+  {
+   "id": "abscesso-perio",
+   "titulo": "Abscesso periodontal",
+   "paciente": {
+    "nome": "Diego Rocha",
+    "idade": 41,
+    "sexo": "M"
+   },
+   "contexto": "Diego, 41 anos, saudável. Abscesso periodontal com edema e febre. Dose de ataque antes da drenagem e manutenção depois.",
+   "fonte": {
+    "unidade": "f11-01",
+    "pagina": 125
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 1,
+    "explic": "Antimicrobiano (RDC 20/2011): receituário do próprio dentista, em 2 vias (a 2ª fica na farmácia), com idade e sexo no cabeçalho. Vale por 10 dias.",
+    "explicAtual": "Antimicrobiano (RDC 471/2021, que substituiu a RDC 20/2011): receituário do próprio dentista, sem modelo específico, em 2 vias (a 2ª fica na farmácia), com nome completo, idade e sexo do paciente e a quantidade em algarismos arábicos. Vale por 10 dias. Pela RDC 1.000/2025, também pode ser eletrônica (nato-digital, com assinatura avançada gov.br ou qualificada)."
+   },
+   "rx": [
+    {
+     "med": "amoxicilina",
+     "apr": "amox-500",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 8,
+     "duracao": {
+      "n": 3,
+      "un": "dias"
+     },
+     "ataque": {
+      "dose": 2,
+      "momento": [
+       "30 a 45 minutos antes do atendimento"
+      ]
+     },
+     "explic": "Ataque de 1 g (2 cápsulas) + manutenção de 500 mg a cada 8 h por 3 dias (9 cápsulas) = 11 cápsulas. Dose de ataque de 1 g 30 a 45 min antes da drenagem; manutenção inicialmente por 3 dias, com reavaliação antes de 72 h."
+    }
+   ]
+  },
+  {
+   "id": "clorexidina",
+   "titulo": "Bochecho pós-cirúrgico",
+   "paciente": {
+    "nome": "Eva Prado",
+    "idade": 30,
+    "sexo": "F"
+   },
+   "contexto": "Eva, 30 anos. Depois de uma cirurgia periodontal, você quer bochechos de clorexidina 0,12% pela manhã e à noite (a cada 12 h) por 7 dias, até a remoção da sutura.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 108
+   },
+   "cirurgico": true,
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Clorexidina não é controlada: receita comum."
+   },
+   "rx": [
+    {
+     "med": "clorexidina",
+     "apr": "clx-012",
+     "bloco": "externo",
+     "dose": 15,
+     "intervalo": 12,
+     "duracao": {
+      "n": 7,
+      "un": "dias"
+     },
+     "espera24": true,
+     "explic": "Concentração de 0,12% para bochecho. A solução a 2% é a de antissepsia extrabucal. Modelo do livro: 15 mL não diluídos, ~1 min, manhã e noite, após a higiene. Avisar para não deglutir."
+    }
+   ]
+  },
+  {
+   "id": "midazolam",
+   "titulo": "Sedação mínima",
+   "paciente": {
+    "nome": "Fábio Nunes",
+    "idade": 45,
+    "sexo": "M"
+   },
+   "contexto": "Fábio, 45 anos, saudável e muito ansioso. Exodontia sob sedação mínima com midazolam 7,5 mg, 30 minutos antes.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 108
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum + Notificação de Receita B (azul)",
+     "Receita comum",
+     "Receita de controle especial, em 2 vias",
+     "Notificação de Receita A (amarela)"
+    ],
+    "certa": 0,
+    "explic": "Benzodiazepínicos estão na lista B1: a receita comum vai acompanhada da Notificação de Receita B, de cor azul.",
+    "explicAtual": "Benzodiazepínico (lista B1 da Portaria 344/98): Notificação de Receita B, azul, junto com a receita. Desde a RDC 1.000/2025, o formulário traz o CPF do paciente (ou “não possui”), e a notificação também pode ser eletrônica: nato-digital, com assinatura qualificada (ICP-Brasil), em sistema integrado ao SNCR.",
+    "controlado": true
+   },
+   "rx": [
+    {
+     "med": "midazolam",
+     "apr": "mida-75",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 0,
+     "momento": [
+      "30 minutos antes do atendimento"
+     ],
+     "explic": "Dose do protocolo: 7,5 mg em dose única. Na notificação, a quantidade vai em algarismos e por extenso. 30 min antes do atendimento. Nas orientações pré-operatórias do livro: chegar com acompanhante, que deve dirigir."
+    }
+   ]
+  },
+  {
+   "id": "tramadol",
+   "titulo": "Dor que não cede",
+   "paciente": {
+    "nome": "Gilberto Reis",
+    "idade": 50,
+    "sexo": "M"
+   },
+   "contexto": "Gilberto, 50 anos. Dor moderada a intensa após uma cirurgia extensa, sem resposta à dipirona. Você opta pelo tramadol 50 mg por tempo curto.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 109
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita de controle especial, em 2 vias",
+     "Notificação de Receita A (amarela)",
+     "Receita comum",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Codeína e tramadol estão na lista A2, mas, com até 100 mg por unidade posológica, basta a receita de controle especial em 2 vias.",
+    "explicAtual": "Tramadol e codeína (até 100 mg por unidade posológica): receita de controle especial em 2 vias, válida por 30 dias. Desde a RDC 1.000/2025, com o CPF do paciente (ou “não possui”); se for eletrônica, nato-digital e com assinatura qualificada (ICP-Brasil).",
+    "controlado": true
+   },
+   "rx": [
+    {
+     "med": "tramadol",
+     "apr": "trama-50",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 8,
+     "duracao": {
+      "n": 2,
+      "un": "dias"
+     },
+     "explic": "Dose usual de 50 mg a cada 8 h (Tabela 6.4); 6 cápsulas cobrem 2 dias. Intervalo de 8 h e tempo curto: náusea, sonolência e depressão respiratória limitam o uso."
+    }
+   ]
+  },
+  {
+   "id": "amox-crianca",
+   "titulo": "Criança com abscesso",
+   "paciente": {
+    "nome": "Helena Costa (menor)",
+    "idade": 6,
+    "sexo": "F",
+    "peso": 20
+   },
+   "contexto": "Helena, 6 anos, 20 kg. Abscesso de origem endodôntica em fase inicial, com sinais de disseminação; o atendimento já foi feito. Manutenção: amoxicilina suspensão 250 mg/5 mL, 15 a 20 mg/kg a cada 8 h, por 3 dias.",
+   "fonte": {
+    "unidade": "f14-03",
+    "pagina": 160
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 1,
+    "explic": "Antimicrobiano (RDC 20/2011): receituário do próprio dentista, em 2 vias (a 2ª fica na farmácia), com idade e sexo no cabeçalho. Vale por 10 dias.",
+    "explicAtual": "Antimicrobiano (RDC 471/2021, que substituiu a RDC 20/2011): receituário do próprio dentista, sem modelo específico, em 2 vias (a 2ª fica na farmácia), com nome completo, idade e sexo do paciente e a quantidade em algarismos arábicos. Vale por 10 dias. Pela RDC 1.000/2025, também pode ser eletrônica (nato-digital, com assinatura avançada gov.br ou qualificada)."
+   },
+   "rx": [
+    {
+     "med": "amoxicilina",
+     "apr": "amox-susp250",
+     "bloco": "interno",
+     "dose": [
+      6,
+      8
+     ],
+     "intervalo": 8,
+     "duracao": {
+      "n": 3,
+      "un": "dias"
+     },
+     "ataque": null,
+     "explic": "Na suspensão de amoxicilina a concentração é obrigatória: existem 125, 200, 250, 400 e 500 mg/5 mL. Para criança, suspensão em vez de cápsulas. 20 kg × 15 a 20 mg/kg = 300 a 400 mg. A suspensão de 250 mg/5 mL tem 50 mg/mL: 6 a 8 mL. 7 mL = 350 mg."
+    }
+   ]
+  },
+  {
+   "id": "gestante",
+   "titulo": "Gestante com dor",
+   "paciente": {
+    "nome": "Isabela Martins",
+    "idade": 28,
+    "sexo": "F"
+   },
+   "contexto": "Isabela, 28 anos, no 1º trimestre de gestação, com dor após uma pulpectomia. Precisa de analgésico por tempo restrito.",
+   "fonte": {
+    "unidade": "f17-02",
+    "pagina": 182
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Analgésico comum: receita comum."
+   },
+   "rx": [
+    {
+     "med": "paracetamol",
+     "apr": "para-750",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 6,
+     "duracao": {
+      "n": 2,
+      "un": "dias"
+     },
+     "maxDia": 3,
+     "explic": "O paracetamol é o de escolha em qualquer período da gestação. Dipirona deve ser evitada no 1º trimestre e nas últimas 6 semanas; AINEs também devem ser evitados. Na gestante: 500 a 750 mg a cada 6 h, respeitando o máximo de 3 doses diárias, por tempo restrito."
+    }
+   ]
+  },
+  {
+   "id": "profilaxia-ei",
+   "titulo": "Profilaxia da endocardite",
+   "paciente": {
+    "nome": "João Ferreira",
+    "idade": 60,
+    "sexo": "M"
+   },
+   "contexto": "João, 60 anos, com prótese valvar cardíaca (alto risco de endocardite infecciosa). Exodontia agendada; o cardiologista concorda com a profilaxia. Não é alérgico.",
+   "fonte": {
+    "unidade": "f18-03",
+    "pagina": 199
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 1,
+    "explic": "Antimicrobiano (RDC 20/2011): receituário do próprio dentista, em 2 vias (a 2ª fica na farmácia), com idade e sexo no cabeçalho. Vale por 10 dias.",
+    "explicAtual": "Antimicrobiano (RDC 471/2021, que substituiu a RDC 20/2011): receituário do próprio dentista, sem modelo específico, em 2 vias (a 2ª fica na farmácia), com nome completo, idade e sexo do paciente e a quantidade em algarismos arábicos. Vale por 10 dias. Pela RDC 1.000/2025, também pode ser eletrônica (nato-digital, com assinatura avançada gov.br ou qualificada)."
+   },
+   "rx": [
+    {
+     "med": "amoxicilina",
+     "apr": "amox-500",
+     "bloco": "interno",
+     "dose": 4,
+     "intervalo": 0,
+     "momento": [
+      "30 a 60 minutos antes do atendimento",
+      "1 hora antes do atendimento",
+      "30 minutos antes do atendimento"
+     ],
+     "explic": "Regime padrão: amoxicilina 2 g (4 × 500 mg). Cefalexina e clindamicina são para alérgicos às penicilinas. Dose única de 2 g, 30 a 60 min antes do procedimento."
+    }
+   ]
+  },
+  {
+   "id": "dipirona-crianca",
+   "titulo": "Criança sem balança",
+   "paciente": {
+    "nome": "Lucas Souza (menor)",
+    "idade": 7,
+    "sexo": "M"
+   },
+   "contexto": "Lucas, 7 anos, sem balança no consultório (peso ≈ idade × 2 + 9). Dor depois da drenagem de um abscesso. Dipirona “gotas”: ½ gota por kg.",
+   "fonte": {
+    "unidade": "f14-03",
+    "pagina": 161
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Analgésico comum: receita comum."
+   },
+   "rx": [
+    {
+     "med": "dipirona",
+     "apr": "dip-gotas",
+     "bloco": "interno",
+     "dose": [
+      11,
+      12
+     ],
+     "intervalo": 4,
+     "duracao": {
+      "n": 24,
+      "un": "horas"
+     },
+     "explic": "Para criança, solução oral “gotas”. Peso ≈ 7 × 2 + 9 = 23 kg; ½ gota/kg ≈ 11 gotas, a cada 4 h, por no máximo 24 h."
+    }
+   ]
+  },
+  {
+   "id": "coxibe",
+   "titulo": "Risco de sangramento gástrico",
+   "paciente": {
+    "nome": "Marta Dias",
+    "idade": 38,
+    "sexo": "F"
+   },
+   "contexto": "Marta, 38 anos, com história de sangramento gastrintestinal e sem risco cardiovascular. Após uma cirurgia com descolamento extenso, você opta por celecoxibe 200 mg.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 109
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita de controle especial, em 2 vias",
+     "Receita comum",
+     "Receita comum + Notificação de Receita B (azul)",
+     "Notificação de Receita A (amarela)"
+    ],
+    "certa": 0,
+    "explic": "Celecoxibe e etoricoxibe estão na lista C1 da Portaria 344/98: receita de controle especial em 2 vias.",
+    "explicAtual": "Celecoxibe e etoricoxibe (lista C1 da Portaria 344/98): receita de controle especial em 2 vias, válida por 30 dias. Desde a RDC 1.000/2025, com o CPF do paciente (ou “não possui”).",
+    "controlado": true
+   },
+   "rx": [
+    {
+     "med": "celecoxibe",
+     "apr": "cele-200",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 12,
+     "duracao": {
+      "n": 2,
+      "un": "dias"
+     },
+     "explic": "Celecoxibe 200 mg a cada 12 a 24 h; com 12 h por 48 h são 4 cápsulas. Os coxibes são reservados a quem tem risco de sangramento gastrintestinal sem risco cardiovascular. AINE por no máximo 48 a 72 h: não há justificativa para uso crônico em procedimentos eletivos."
+    }
+   ]
+  },
+  {
+   "id": "terceiro-molar-completo",
+   "titulo": "Terceiro molar: pré e pós",
+   "paciente": {
+    "nome": "Rafael Torres",
+    "idade": 23,
+    "sexo": "M"
+   },
+   "contexto": "Rafael, 23 anos, saudável. Remoção do 48 incluso, com ostectomia e odontossecção. Prescreva a dexametasona 1 h antes, a manutenção da dipirona (500 mg, comprimidos) depois e os bochechos de clorexidina 0,12% a cada 12 h por 7 dias.",
+   "fonte": {
+    "unidade": "f10-01",
+    "pagina": 115
+   },
+   "cirurgico": true,
+   "clinica": "Cirurgia",
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Nada controlado nem antimicrobiano: receita comum."
+   },
+   "rx": [
+    {
+     "med": "dexametasona",
+     "apr": "dexa-4",
+     "bloco": "interno",
+     "dose": [
+      1,
+      2
+     ],
+     "intervalo": 0,
+     "momento": [
+      "1 hora antes do atendimento"
+     ],
+     "explic": "Analgesia perioperatória: 4 a 8 mg de dexametasona (1 a 2 comprimidos de 4 mg), 1 h antes."
+    },
+    {
+     "med": "dipirona",
+     "apr": "dip-500",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 4,
+     "duracao": {
+      "n": 24,
+      "un": "horas"
+     },
+     "explic": "A 1ª dose (1 g) é dada no consultório logo após a cirurgia; a receita leva a manutenção de 500 mg a cada 4 h por 24 h: 06 comprimidos."
+    },
+    {
+     "med": "clorexidina",
+     "apr": "clx-012",
+     "bloco": "externo",
+     "dose": 15,
+     "intervalo": 12,
+     "duracao": {
+      "n": 7,
+      "un": "dias"
+     },
+     "espera24": true,
+     "explic": "Bochecho de 15 mL de clorexidina 0,12% pela manhã e à noite até a remoção da sutura (~5 a 7 dias), começando depois das primeiras 24 h."
+    }
+   ]
+  },
+  {
+   "id": "pericoronarite-alergico",
+   "titulo": "Pericoronarite em alérgico",
+   "paciente": {
+    "nome": "Juliana Prates",
+    "idade": 21,
+    "sexo": "F"
+   },
+   "contexto": "Juliana, 21 anos, alérgica à penicilina. Pericoronarite do 48 com linfadenite e trismo leve. Depois da irrigação, você prescreve clindamicina, sem dose de ataque.",
+   "fonte": {
+    "unidade": "f10-02",
+    "pagina": 119
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 1,
+    "explic": "Antimicrobiano (RDC 20/2011): receituário do próprio dentista, em 2 vias (a 2ª fica na farmácia), com idade e sexo no cabeçalho. Vale por 10 dias.",
+    "explicAtual": "Antimicrobiano (RDC 471/2021, que substituiu a RDC 20/2011): receituário do próprio dentista, sem modelo específico, em 2 vias (a 2ª fica na farmácia), com nome completo, idade e sexo do paciente e a quantidade em algarismos arábicos. Vale por 10 dias. Pela RDC 1.000/2025, também pode ser eletrônica (nato-digital, com assinatura avançada gov.br ou qualificada)."
+   },
+   "rx": [
+    {
+     "med": "clindamicina",
+     "apr": "clinda-300",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 8,
+     "duracao": {
+      "n": 3,
+      "un": "dias"
+     },
+     "ataque": null,
+     "explic": "Alérgicos às penicilinas: clindamicina 300 mg a cada 8 h (ou claritromicina 500 mg a cada 12 h), por 3 dias, com reavaliação antes de 72 h: 09 cápsulas."
+    }
+   ]
+  },
+  {
+   "id": "implante-enxerto",
+   "titulo": "Implante com enxerto",
+   "paciente": {
+    "nome": "Sônia Ribeiro",
+    "idade": 52,
+    "sexo": "F"
+   },
+   "contexto": "Sônia, 52 anos, saudável, não alérgica. Implante com enxerto de biomaterial. Prescreva a amoxicilina (1 g 1 h antes e 500 mg a cada 8 h por 3 dias), a dexametasona 1 h antes, a dipirona 500 mg (comprimidos) a cada 4 h por 24 h e os bochechos de clorexidina 0,12% a cada 12 h por 7 dias.",
+   "fonte": {
+    "unidade": "f13-02",
+    "pagina": 147
+   },
+   "cirurgico": true,
+   "clinica": "Implantodontia",
+   "duvida": "O texto extraído do cap. 13 mistura as colunas: a clorexidina pós-operatória foi conferida no protocolo do implante vizinho (p. 147).",
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 1,
+    "explic": "Antimicrobiano (RDC 20/2011): receituário do próprio dentista, em 2 vias (a 2ª fica na farmácia), com idade e sexo no cabeçalho. Vale por 10 dias.",
+    "explicAtual": "Antimicrobiano (RDC 471/2021, que substituiu a RDC 20/2011): receituário do próprio dentista, sem modelo específico, em 2 vias (a 2ª fica na farmácia), com nome completo, idade e sexo do paciente e a quantidade em algarismos arábicos. Vale por 10 dias. Pela RDC 1.000/2025, também pode ser eletrônica (nato-digital, com assinatura avançada gov.br ou qualificada)."
+   },
+   "rx": [
+    {
+     "med": "amoxicilina",
+     "apr": "amox-500",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 8,
+     "duracao": {
+      "n": 3,
+      "un": "dias"
+     },
+     "ataque": {
+      "dose": 2,
+      "momento": [
+       "1 hora antes do atendimento"
+      ]
+     },
+     "explic": "Profilaxia cirúrgica: 1 g (02 cápsulas) 1 h antes e 500 mg a cada 8 h por 3 dias: 02 + 09 = 11 cápsulas."
+    },
+    {
+     "med": "dexametasona",
+     "apr": "dexa-4",
+     "bloco": "interno",
+     "dose": [
+      1,
+      2
+     ],
+     "intervalo": 0,
+     "momento": [
+      "1 hora antes do atendimento"
+     ],
+     "explic": "Dexametasona 4 a 8 mg (1 a 2 comprimidos), 1 h antes."
+    },
+    {
+     "med": "dipirona",
+     "apr": "dip-500",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 4,
+     "duracao": {
+      "n": 24,
+      "un": "horas"
+     },
+     "explic": "Dipirona 500 mg a cada 4 h por 24 h depois da 1ª dose no consultório: 06 comprimidos."
+    },
+    {
+     "med": "clorexidina",
+     "apr": "clx-012",
+     "bloco": "externo",
+     "dose": 15,
+     "intervalo": 12,
+     "duracao": {
+      "n": 7,
+      "un": "dias"
+     },
+     "espera24": true,
+     "explic": "Bochecho de clorexidina 0,12% pela manhã e à noite até a remoção da sutura."
+    }
+   ]
+  },
+  {
+   "id": "nimesulida-persistente",
+   "titulo": "Dor que persiste",
+   "paciente": {
+    "nome": "Otávio Lins",
+    "idade": 37,
+    "sexo": "M"
+   },
+   "contexto": "Otávio, 37 anos, saudável. Removeu um incluso ontem e tomou dipirona por 24 h, mas a dor continua. Você prescreve nimesulida 100 mg pelo tempo máximo do protocolo.",
+   "fonte": {
+    "unidade": "f10-01",
+    "pagina": 115
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Nimesulida não é coxibe nem controlada: receita comum."
+   },
+   "rx": [
+    {
+     "med": "nimesulida",
+     "apr": "nime-100",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 12,
+     "duracao": {
+      "n": 2,
+      "un": "dias"
+     },
+     "explic": "Se a dor persistir depois das 24 h de dipirona: nimesulida 100 mg (ou cetorolaco 10 mg sublingual) a cada 12 h, por no máximo 48 h: 04 comprimidos."
+    }
+   ]
+  },
+  {
+   "id": "paracetamol-intolerancia",
+   "titulo": "Intolerância à dipirona",
+   "paciente": {
+    "nome": "Vera Antunes",
+    "idade": 44,
+    "sexo": "F"
+   },
+   "contexto": "Vera, 44 anos, intolerante à dipirona. Exodontia simples; dor leve esperada. Prescreva o paracetamol 750 mg para as 24 h depois do procedimento.",
+   "fonte": {
+    "unidade": "f10-01",
+    "pagina": 114
+   },
+   "doc": {
+    "pergunta": "Qual documento usar?",
+    "opcoes": [
+     "Receita comum",
+     "Receita comum em 2 vias, com idade e sexo do paciente",
+     "Receita de controle especial, em 2 vias",
+     "Receita comum + Notificação de Receita B (azul)"
+    ],
+    "certa": 0,
+    "explic": "Analgésico comum: receita comum."
+   },
+   "rx": [
+    {
+     "med": "paracetamol",
+     "apr": "para-750",
+     "bloco": "interno",
+     "dose": 1,
+     "intervalo": 6,
+     "duracao": {
+      "n": 24,
+      "un": "horas"
+     },
+     "explic": "Alternativa à dipirona: paracetamol 750 mg a cada 6 h por 24 h: 04 comprimidos."
+    }
+   ]
+  }
+ ],
+ "erros": [
+  {
+   "id": "susp-sem-conc",
+   "documento": "Receita comum · 2 vias",
+   "para": "Pedro Silva (menor)",
+   "paraExtra": "8 anos · masculino · 25 kg",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Amoxicilina suspensão oral",
+       "qtd": "01 frasco",
+       "pos": "Tomar 08 mL a cada 08 horas, durante 03 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "Falta a concentração: a suspensão de amoxicilina existe em 125, 200, 250, 400 e 500 mg/5 mL.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "clx-interno",
+   "documento": "Receita comum · 1 via",
+   "para": "Eva Prado",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Clorexidina 0,12%",
+       "qtd": "01 frasco",
+       "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias. Não engolir."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0",
+   "explic": "Bochecho não é deglutido: vai no bloco Uso Externo · Bochecho, não em Uso Interno · Via Oral.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "abreviado",
+   "documento": "Receita comum · 1 via",
+   "para": "Rui Matos",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Paracetamol 750 mg",
+       "qtd": "08 comprimidos",
+       "pos": "Tomar 1 cp de 6/6 h."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0p",
+   "explic": "A orientação vai por extenso, sem abreviaturas: «Tomar 01 comprimido a cada 06 horas, durante 02 dias».",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "bzd-sem-b",
+   "documento": "Receita comum · 1 via (sem outros documentos)",
+   "para": "Fábio Nunes",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Midazolam 7,5 mg",
+       "qtd": "01 comprimido",
+       "pos": "Tomar 01 comprimido, em dose única, 30 minutos antes do atendimento."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "doc",
+   "explic": "Benzodiazepínico exige a Notificação de Receita B (azul) junto com a receita comum.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 108
+   }
+  },
+  {
+   "id": "tramadol-comum",
+   "documento": "Receita comum · 1 via",
+   "para": "Gilberto Reis",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Cloridrato de tramadol 50 mg",
+       "qtd": "06 cápsulas",
+       "pos": "Tomar 01 cápsula a cada 08 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "doc",
+   "explic": "Tramadol (até 100 mg por unidade) exige receita de controle especial em 2 vias.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 109
+   }
+  },
+  {
+   "id": "atb-sem-idade",
+   "documento": "Receita comum · 2 vias",
+   "para": "Maria Souza",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Amoxicilina 500 mg",
+       "qtd": "09 cápsulas",
+       "pos": "Tomar 01 cápsula a cada 08 horas, durante 03 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "para",
+   "explic": "Na receita de antimicrobiano, o cabeçalho precisa trazer a idade e o sexo do paciente (RDC 20/2011).",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 109
+   }
+  },
+  {
+   "id": "sublingual",
+   "documento": "Receita comum · 1 via",
+   "para": "Tânia Lopes",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Cetorolaco de trometamina 10 mg sublingual",
+       "qtd": "04 comprimidos",
+       "pos": "Dissolver 01 comprimido sob a língua a cada 12 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0",
+   "explic": "Comprimido sublingual não é deglutido: é Uso Externo, não Uso Interno · Via Oral.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "analgesico-7dias",
+   "documento": "Receita comum · 1 via",
+   "para": "Ana Lima",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dipirona sódica 500 mg/mL (gotas)",
+       "qtd": "01 frasco",
+       "pos": "Tomar 30 gotas, diluídas em água, a cada 04 horas, durante 07 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0p",
+   "explic": "Analgésicos na clínica odontológica são usados por tempo curto (cerca de 24 a 48 h). O protocolo da exodontia prevê 24 h.",
+   "fonte": {
+    "unidade": "f06-03",
+    "pagina": 66
+   }
+  },
+  {
+   "id": "ibu-ulcera",
+   "documento": "Receita comum · 1 via",
+   "para": "Sérgio Ramos",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Ibuprofeno 200 mg",
+       "qtd": "08 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 06 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "O ibuprofeno é contraindicado para quem tem gastrite ou úlcera péptica. A dipirona ou o paracetamol seriam opções.",
+   "fonte": {
+    "unidade": "f06-03",
+    "pagina": 66
+   },
+   "nota": "Paciente com úlcera péptica."
+  },
+  {
+   "id": "carimbo",
+   "documento": "Receita comum · 1 via",
+   "para": "Olga Pires",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dexametasona 4 mg",
+       "qtd": "02 comprimidos",
+       "pos": "Tomar 02 comprimidos juntos, em dose única, 1 hora antes do atendimento."
+      }
+     ]
+    }
+   ],
+   "data": "[carimbo impresso]",
+   "errada": "data",
+   "explic": "A data e a assinatura devem ser de próprio punho, à tinta.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 108
+   }
+  },
+  {
+   "id": "atb-10dias",
+   "documento": "Receita comum · 2 vias",
+   "para": "Diego Rocha",
+   "paraExtra": "41 anos · masculino",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Amoxicilina 500 mg",
+       "qtd": "30 cápsulas",
+       "pos": "Tomar 01 cápsula a cada 08 horas, durante 10 dias, até acabar, mesmo sem sintomas."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0p",
+   "explic": "Nas infecções agudas, a duração deve ser a menor possível: prescreve-se por 3 dias e reavalia-se antes de 72 h (raramente passa de 5 dias).",
+   "fonte": {
+    "unidade": "f07-05",
+    "pagina": 85
+   }
+  },
+  {
+   "id": "cefalo-anafilaxia",
+   "documento": "Receita comum · 2 vias",
+   "para": "Laura Reis",
+   "paraExtra": "55 anos · feminino",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Cefalexina 500 mg",
+       "qtd": "04 cápsulas",
+       "pos": "Tomar 04 cápsulas juntas, em dose única, 30 a 60 minutos antes do atendimento."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "Cefalosporinas não devem ser usadas em quem teve anafilaxia, angioedema ou urticária com penicilinas. Opções: clindamicina 600 mg ou azitromicina/claritromicina 500 mg.",
+   "fonte": {
+    "unidade": "f18-03",
+    "pagina": 199
+   },
+   "nota": "Paciente de alto risco para endocardite, com história de anafilaxia às penicilinas."
+  },
+  {
+   "id": "paracetamol-varfarina",
+   "documento": "Receita comum · 1 via",
+   "para": "Hélio Prado",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Paracetamol 750 mg",
+       "qtd": "08 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 06 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "Pelo livro, o paracetamol é contraindicado para quem usa varfarina: pode aumentar o efeito anticoagulante e causar hemorragia.",
+   "fonte": {
+    "unidade": "f06-03",
+    "pagina": 66
+   },
+   "nota": "Paciente em uso contínuo de varfarina."
+  },
+  {
+   "id": "dipirona-gestante",
+   "documento": "Receita comum · 1 via",
+   "para": "Isabela Martins",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dipirona sódica 500 mg",
+       "qtd": "08 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 06 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "A dipirona deve ser evitada nos três primeiros meses e nas últimas seis semanas da gestação. O paracetamol é o analgésico de escolha.",
+   "fonte": {
+    "unidade": "f17-02",
+    "pagina": 182
+   },
+   "nota": "Gestante no 1º trimestre."
+  },
+  {
+   "id": "tramadol-crianca",
+   "documento": "Receita de controle especial · 2 vias",
+   "para": "Davi Lima (menor)",
+   "paraExtra": "9 anos · 30 kg",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Cloridrato de tramadol (gotas)",
+       "qtd": "01 frasco",
+       "pos": "Tomar 10 gotas a cada 08 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "Codeína e tramadol não são recomendados para crianças. Em crianças: dipirona, paracetamol ou ibuprofeno em gotas.",
+   "fonte": {
+    "unidade": "f06-03",
+    "pagina": 67
+   }
+  },
+  {
+   "id": "magistral",
+   "documento": "Receita comum · uma folha só",
+   "para": "Eva Prado",
+   "blocos": [
+    {
+     "uso": "Uso Externo",
+     "via": "Bochecho",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Preparar: digluconato de clorexidina 0,12%, água mentolada q.s.p. 250 mL",
+       "qtd": "01 frasco",
+       "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "doc",
+   "explic": "Formulação magistral vai em duas folhas separadas: uma só com o pedido ao farmacêutico e outra com a orientação ao paciente.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 108
+   }
+  },
+  {
+   "id": "atb-vencida",
+   "documento": "Receita comum · 2 vias",
+   "para": "Clara Nunes",
+   "paraExtra": "33 anos · feminino",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Amoxicilina 500 mg",
+       "qtd": "09 cápsulas",
+       "pos": "Tomar 01 cápsula a cada 08 horas, durante 03 dias."
+      }
+     ]
+    }
+   ],
+   "data": "01/10/26",
+   "errada": "data",
+   "explic": "A receita de antimicrobiano vale por 10 dias a contar da emissão: emitida em 1º/10, já venceu.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 109
+   },
+   "nota": "A paciente leva esta receita à farmácia hoje, 18/10/2026."
+  },
+  {
+   "id": "sem-zero",
+   "documento": "Receita comum · 2 vias",
+   "para": "Paula Gomes",
+   "paraExtra": "29 anos · feminino",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Amoxicilina 500 mg",
+       "qtd": "09 cápsulas",
+       "pos": "Tomar 1 cápsula a cada 8 horas, durante 3 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0p",
+   "explic": "No receituário da clínica, número de um algarismo leva zero à esquerda: «Tomar 01 cápsula a cada 08 horas, durante 03 dias». É a convenção do modelo da UNIOESTE (não uma norma do livro): como o traço, não deixa espaço para acrescentar um algarismo.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 108
+   }
+  },
+  {
+   "id": "total-errado",
+   "documento": "Receita comum · 1 via",
+   "para": "Rui Matos",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Paracetamol 750 mg",
+       "qtd": "08 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 06 horas, durante 03 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0q",
+   "explic": "A quantidade é o total do tratamento: 01 comprimido × 4 por dia (a cada 6 h) × 03 dias = 12 comprimidos, não 08.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "ataque-fora",
+   "documento": "Receita comum · 2 vias",
+   "para": "Diego Rocha",
+   "paraExtra": "41 anos · masculino",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Amoxicilina 500 mg",
+       "qtd": "09 cápsulas",
+       "pos": "Tomar 02 cápsulas 30 a 45 minutos antes do atendimento. Depois, 01 cápsula a cada 08 horas, durante 03 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0q",
+   "explic": "Faltou somar a dose de ataque: 02 + (01 × 3 por dia × 03 dias) = 11 cápsulas. Nas provas, 21 em vez de 23 (ataque + 7 dias) já foi visto em gabarito de aluno.",
+   "fonte": {
+    "unidade": "f11-01",
+    "pagina": 125
+   }
+  },
+  {
+   "id": "numeracao-seguida",
+   "documento": "Receita comum · 1 via",
+   "para": "Rafael Torres",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dexametasona 4 mg",
+       "qtd": "02 comprimidos",
+       "pos": "Tomar 02 comprimidos juntos, em dose única, 1 hora antes do atendimento."
+      },
+      {
+       "n": "2",
+       "med": "Dipirona sódica 500 mg",
+       "qtd": "06 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 04 horas, durante 24 horas."
+      }
+     ]
+    },
+    {
+     "uso": "Uso Externo",
+     "via": "Bochecho",
+     "itens": [
+      {
+       "n": "3",
+       "med": "Clorexidina 0,12%",
+       "qtd": "01 frasco",
+       "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias. Aguardar 24 horas após o procedimento cirúrgico para iniciar os bochechos."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b1i0m",
+   "explic": "A numeração recomeça em cada bloco: a clorexidina é o 1| do Uso Externo, não o 3|.",
+   "fonte": {
+    "unidade": "f10-01",
+    "pagina": 115
+   }
+  },
+  {
+   "id": "interno-no-externo",
+   "documento": "Receita comum · 1 via",
+   "para": "Bruno Alves",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dexametasona 4 mg",
+       "qtd": "02 comprimidos",
+       "pos": "Tomar 02 comprimidos juntos, em dose única, 1 hora antes do atendimento."
+      }
+     ]
+    },
+    {
+     "uso": "Uso Externo",
+     "via": "Bochecho",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Clorexidina 0,12%",
+       "qtd": "01 frasco",
+       "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias. Aguardar 24 horas após o procedimento cirúrgico para iniciar os bochechos."
+      },
+      {
+       "n": "2",
+       "med": "Dipirona sódica 500 mg",
+       "qtd": "06 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 04 horas, durante 24 horas."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b1i1m",
+   "explic": "Comprimido de dipirona é engolido: é Uso Interno (seria o 2| do Uso Interno), não Uso Externo · Bochecho.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "bochecho-sem-espera",
+   "documento": "Receita comum · 1 via",
+   "para": "Bruno Alves",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dipirona sódica 500 mg",
+       "qtd": "06 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 04 horas, durante 24 horas."
+      }
+     ]
+    },
+    {
+     "uso": "Uso Externo",
+     "via": "Bochecho",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Clorexidina 0,12%",
+       "qtd": "01 frasco",
+       "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b1i0p",
+   "explic": "Receita de pós-operatório: nada de bochechos nas primeiras 24 h. No modelo da clínica, a orientação termina com «Aguardar 24 horas após o procedimento cirúrgico para iniciar os bochechos.» (o Andrade põe esse cuidado numa folha à parte).",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   },
+   "nota": "Receita do pós-operatório de uma exodontia feita hoje."
+  },
+  {
+   "id": "quantidade-abreviada",
+   "documento": "Receita comum · 2 vias",
+   "para": "Carla Mendes",
+   "paraExtra": "25 anos · feminino",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Clindamicina 300 mg",
+       "qtd": "09 caps.",
+       "pos": "Tomar 01 cápsula a cada 08 horas, durante 03 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0q",
+   "explic": "Sem abreviaturas também na quantidade: «09 cápsulas».",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "sem-concentracao",
+   "documento": "Receita comum · 1 via",
+   "para": "Otávio Lins",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Nimesulida",
+       "qtd": "04 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 12 horas, durante 02 dias."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b0i0m",
+   "explic": "Falta a concentração: «Nimesulida 100 mg». A inscrição traz o medicamento com a concentração (quando ela não é a única) e a forma.",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  },
+  {
+   "id": "via-errada-bochecho",
+   "documento": "Receita comum · 1 via",
+   "para": "Eva Prado",
+   "blocos": [
+    {
+     "uso": "Uso Interno",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Dipirona sódica 500 mg",
+       "qtd": "06 comprimidos",
+       "pos": "Tomar 01 comprimido a cada 04 horas, durante 24 horas."
+      }
+     ]
+    },
+    {
+     "uso": "Uso Externo",
+     "via": "Via Oral",
+     "itens": [
+      {
+       "n": "1",
+       "med": "Clorexidina 0,12%",
+       "qtd": "01 frasco",
+       "pos": "Bochechar 15 mL por 1 minuto, a cada 12 horas, durante 07 dias. Aguardar 24 horas após o procedimento cirúrgico para iniciar os bochechos."
+      }
+     ]
+    }
+   ],
+   "data": "18/10/26",
+   "errada": "b1",
+   "explic": "No bloco do Uso Externo a via é «Bochecho», não «Via Oral» (a solução não é engolida).",
+   "fonte": {
+    "unidade": "f09-01",
+    "pagina": 107
+   }
+  }
+ ],
+ "atual": {
+  "nome": "Legislação atual (2026)",
+  "aviso": "Versão atualizada com a RDC 471/2021 (antimicrobianos) e a RDC 1.000/2025 (receituário de controlados e receitas eletrônicas, em vigor desde fevereiro de 2026), além da Portaria 344/98. Normas mudam: confira sempre a versão vigente.",
+  "substituir": [
+   [
+    "(RDC 20/2011)",
+    "(RDC 471/2021)"
+   ],
+   [
+    "RDC 20/2011",
+    "RDC 471/2021"
+   ]
+  ],
+  "lembrete": [
+   "Antimicrobiano (RDC 471/2021): 2 vias, nome completo, idade e sexo, quantidade em algarismos arábicos; vale por 10 dias (uso contínuo: até 90 dias, com a quantidade para cada 30 dias).",
+   "Controle especial e notificações (Portaria 344/98 + RDC 1.000/2025): CPF do paciente (ou “não possui”); validade de 30 dias.",
+   "Receita eletrônica só vale se for nato-digital: foto, escaneamento ou PDF de receita em papel não valem.",
+   "Assinatura eletrônica: qualificada (ICP-Brasil) para controlados e notificações; avançada (gov.br) também serve para antimicrobianos.",
+   "O papel continua valendo: a receita eletrônica não é obrigatória."
+  ],
+  "erros": [
+   {
+    "id": "atb-foto",
+    "documento": "Foto da receita enviada pelo WhatsApp",
+    "para": "Diego Rocha",
+    "paraExtra": "41 anos · masculino",
+    "blocos": [
+     {
+      "uso": "Uso Interno",
+      "via": "Via Oral",
+      "itens": [
+       {
+        "n": "1",
+        "med": "Amoxicilina 500 mg",
+        "qtd": "09 (nove) cápsulas",
+        "pos": "Tomar 01 cápsula a cada 08 horas, durante 03 dias."
+       }
+      ]
+     }
+    ],
+    "data": "18/10/26",
+    "errada": "doc",
+    "explic": "Foto, escaneamento ou PDF de receita em papel não valem como receita eletrônica (RDC 1.000/2025). Vale a receita em papel, em 2 vias, ou uma eletrônica nato-digital, assinada no sistema.",
+    "fonte": {
+     "lei": "RDC 1.000/2025"
+    }
+   },
+   {
+    "id": "controle-sem-cpf",
+    "documento": "Receita de controle especial · 2 vias",
+    "para": "Gilberto Reis",
+    "blocos": [
+     {
+      "uso": "Uso Interno",
+      "via": "Via Oral",
+      "itens": [
+       {
+        "n": "1",
+        "med": "Cloridrato de tramadol 50 mg",
+        "qtd": "06 (seis) cápsulas",
+        "pos": "Tomar 01 cápsula a cada 08 horas, durante 02 dias."
+       }
+      ]
+     }
+    ],
+    "data": "18/10/26",
+    "errada": "para",
+    "explic": "Desde a RDC 1.000/2025, receitas de controle especial e notificações trazem o CPF do paciente (ou “não possui”, para quem não tem).",
+    "fonte": {
+     "lei": "RDC 1.000/2025"
+    }
+   },
+   {
+    "id": "atb-so-extenso",
+    "documento": "Receita comum · 2 vias",
+    "para": "Paula Gomes",
+    "paraExtra": "29 anos · feminino",
+    "blocos": [
+     {
+      "uso": "Uso Interno",
+      "via": "Via Oral",
+      "itens": [
+       {
+        "n": "1",
+        "med": "Amoxicilina 500 mg",
+        "qtd": "nove cápsulas",
+        "pos": "Tomar 01 cápsula a cada 08 horas, durante 03 dias."
+       }
+      ]
+     }
+    ],
+    "data": "18/10/26",
+    "errada": "b0i0q",
+    "explic": "A RDC 471/2021 pede a quantidade em algarismos arábicos, por exemplo “9 (nove) cápsulas”.",
+    "fonte": {
+     "lei": "RDC 471/2021, art. 6º"
+    }
+   },
+   {
+    "id": "notif-b-pdf",
+    "documento": "Notificação de Receita B em PDF, escaneada e assinada",
+    "para": "Fábio Nunes",
+    "paraExtra": "CPF 000.000.000-00",
+    "blocos": [
+     {
+      "uso": "Uso Interno",
+      "via": "Via Oral",
+      "itens": [
+       {
+        "n": "1",
+        "med": "Midazolam 7,5 mg",
+        "qtd": "01 (um) comprimido",
+        "pos": "Tomar 01 comprimido, em dose única, 30 minutos antes do atendimento."
+       }
+      ]
+     }
+    ],
+    "data": "18/10/26",
+    "errada": "doc",
+    "explic": "Notificação eletrônica precisa ser nato-digital, com assinatura qualificada (ICP-Brasil) e numeração do SNCR. Um PDF escaneado de papel não vale.",
+    "fonte": {
+     "lei": "RDC 1.000/2025"
+    }
+   }
+  ]
+ }
+}

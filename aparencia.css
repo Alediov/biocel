@@ -1,0 +1,123 @@
+/* ======================= Aparência (aparencia.js + aparenciaComum.js + particulas.js) =======================
+   Comum a todas as variações do Órbita (02/11/2026): o Órbita carrega pelo index.html e o OdontoScan.html do
+   computador leva dentro (tools/montar_odontoscan.py). Antes (29/10/2026) ficava no fim do estilo.css.
+   Fundo igual em todos os subapps: liso (o tema claro ou AMOLED) ou uma imagem com um véu na cor do tema, e as
+   partículas (bolhas, corações, estrelas…). A raiz de cada área (o body nos Estudos, a camada nas outras, o .os no
+   OdontoScan.html) recebe .com-imagem (e --fundo-img) ou .sem-imagem. Com imagem, --fundo vira vidro (os topos,
+   campos e faixas deixam a imagem aparecer) e as camadas de tela cheia de dentro (lição, jogo, simulado, as do
+   Xadrez) levam a mesma imagem; os cartões continuam opacos, para a leitura. */
+:root { --fundo-solido: var(--fundo); --veu-img: rgba(245, 247, 251, .66); }
+:root[data-tema="escuro"] { --veu-img: rgba(0, 0, 0, .6); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) { --veu-img: rgba(0, 0, 0, .6); } }
+.sem-imagem { --fundo: var(--fundo-solido); --fundo-camada: var(--fundo-solido); }
+.com-imagem {
+  --fundo-camada: linear-gradient(var(--veu-img), var(--veu-img)), var(--fundo-img) center / cover no-repeat, var(--fundo-solido);
+  --fundo: color-mix(in srgb, var(--fundo-solido) 58%, transparent);
+}
+body.com-imagem, .com-imagem:is(.camada-home, .camada-scan, .camada-musicas, .camada-leitura, .camada-xadrez, .camada-financas, .camada-clima) { background: var(--fundo-camada); }
+body.com-imagem { background-attachment: fixed; }
+.com-imagem :is(.camada-licao, .jogo-camada, .sim-tela, .xz-camada) { background: var(--fundo-camada); }
+.com-imagem .xz-atalhos { background: var(--fundo); box-shadow: none; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.com-imagem .topo { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+/* o texto do leitor e os campos seguem opacos */
+.com-imagem .le-leitor:not([data-tema="papel"]):not([data-tema="sepia"]):not([data-tema="escuro"]) { --le-fundo: var(--fundo-solido); }
+.com-imagem :is(input, textarea, select) { background-color: var(--fundo-solido); }
+
+/* o Scanner (no app, a .camada-scan é o próprio .os; no OdontoScan.html, o #odontoscan): a cor lisa é a dele, e com
+   imagem o fundo dele (os degradês, também os do AMOLED) dá lugar à imagem com o véu */
+.os { --fundo-solido: var(--os-fundo); }
+.os.com-imagem, :root .os.os-amoled.com-imagem, .camada-scan.com-imagem .os { background: var(--fundo-camada); }
+.camada-scan.com-imagem .os.os-amoled { background: transparent; }
+.os.com-imagem:not(.camada-scan) { background-attachment: fixed; }
+.os.com-imagem { --veu-img: rgba(242, 246, 248, .68); }
+.os.com-imagem.os-amoled { --veu-img: rgba(0, 0, 0, .62); }
+
+/* partículas: o canvas de particulas.js, atrás do conteúdo de cada área (a raiz isola a pilha) */
+.orb-bolhas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+body > .orb-bolhas { z-index: -1; }
+:is(.camada-home, .camada-leitura, .camada-xadrez, .camada-financas, .camada-musicas, .camada-clima) { isolation: isolate; }
+/* as Músicas têm as bolhas próprias; com outras partículas (ou sem nenhuma), o canvas comum no lugar delas
+   (as da tela Tocando ficam) */
+.camada-musicas[data-bolhas="nao"] .mu-bolhas, .camada-musicas[data-proprias="nao"] > .mu-bolhas { display: none; }
+
+/* a lição (02/11/2026): um fundo de tela cheia atrás da coluna, com a imagem e as partículas; a coluna fica
+   transparente (no tablet a imagem não vira um quadro só no meio). Véu um pouco mais forte, para o enunciado */
+.orb-fundo-licao { position: fixed; inset: 0; z-index: 19; isolation: isolate; pointer-events: none; background: var(--fundo-camada, var(--fundo-solido)); }
+.orb-fundo-licao[hidden] { display: none; }
+.orb-fundo-licao.com-imagem { --veu-img: rgba(245, 247, 251, .74); }
+:root[data-tema="escuro"] .orb-fundo-licao.com-imagem { --veu-img: rgba(0, 0, 0, .66); }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .orb-fundo-licao.com-imagem { --veu-img: rgba(0, 0, 0, .66); } }
+.orb-fundo-licao:not([hidden]) + .camada-licao { background: transparent; }
+/* com imagem: as opções e as ferramentas quase opacas (a imagem mal passa) */
+.orb-fundo-licao.com-imagem:not([hidden]) + .camada-licao :is(.opcao:not(.marcada):not(.correta):not(.incorreta), .fl-bt:not(.on), .palavra, .cesto, .lacuna) { background-color: color-mix(in srgb, var(--superficie) 93%, transparent); }
+
+/* ---------- a folha ---------- */
+.ap { text-align: left; }
+.ap h2 { margin-bottom: 4px; }
+.ap h3 { font-size: 15px; margin: 16px 0 8px; color: var(--tinta-2); font-family: var(--texto); font-weight: 700; }
+.ap-seg { display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: var(--superficie-2); }
+.ap-seg button { flex: 1; padding: 9px 6px; border-radius: 11px; font-weight: 700; font-size: 14px; color: var(--tinta-2); }
+.ap-seg button.on { background: var(--superficie); color: var(--acento-tinta); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.ap-tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.ap-tile { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0; }
+.ap-tile img, .ap-liso { width: 100%; aspect-ratio: 1; border-radius: 14px; object-fit: cover; display: block; box-shadow: 0 0 0 2px var(--linha); }
+.ap-liso { background: linear-gradient(135deg, #F5F7FB 50%, #000 50%); }
+.ap-tile small { font-size: 11.5px; color: var(--tinta-2); font-weight: 600; }
+.ap-tile.on img, .ap-tile.on .ap-liso { box-shadow: 0 0 0 3px var(--acento); }
+.ap-tile.on small { color: var(--acento-tinta); }
+.ap-linha { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+.ap-linha > span { flex: 1; font-weight: 700; }
+.ap-linha small { display: block; font-weight: 400; font-size: 12px; color: var(--tinta-2); }
+/* as partículas: um chip por tipo, escolha múltipla (pelo menos um) */
+.ap-parts-cab { display: flex; align-items: center; justify-content: space-between; margin: 12px 0 6px; font-size: 13.5px; color: var(--tinta-2); }
+.ap-todas { padding: 4px 10px; border-radius: 99px; font-weight: 700; font-size: 12.5px; color: var(--acento-tinta); background: var(--superficie-2); }
+.ap-parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
+.ap-part { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 7px 2px 5px; border-radius: 14px; color: var(--tinta-2); background: var(--superficie-2); box-shadow: inset 0 0 0 2px transparent; transition: background .15s, color .15s, box-shadow .15s, opacity .15s; }
+.ap-part svg { width: 26px; height: 26px; display: block; }
+.ap-part small { font-size: 10.5px; font-weight: 700; line-height: 1.1; white-space: nowrap; }
+.ap-part.on { color: var(--acento-tinta); background: color-mix(in srgb, var(--acento) 14%, var(--superficie)); box-shadow: inset 0 0 0 2px var(--acento); }
+.ap-part.treme { animation: ap-treme .3s; }
+@keyframes ap-treme { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.ap-parts.desligadas, .ap-parts-cab.desligadas { opacity: .45; }
+.ap-nota { margin: 6px 0 0; font-size: 12px; color: var(--tinta-2); }
+.ap-areas { margin-top: 14px; }
+.ap-areas summary { font-weight: 700; cursor: pointer; padding: 6px 0; }
+.ap-area { display: grid; grid-template-columns: 1fr 1.2fr 1.2fr; gap: 6px; align-items: center; margin-top: 8px; font-size: 14px; }
+.ap-area select { font: inherit; font-size: 13px; padding: 7px 6px; border-radius: 10px; border: 2px solid var(--linha); background: var(--fundo-solido); color: var(--tinta); min-width: 0; }
+.ap-area .ap-parts.mini { grid-column: 1 / -1; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 4px; margin-bottom: 4px; }
+.ap-area .ap-parts.mini[hidden] { display: none; }
+.ap-parts.mini .ap-part { padding: 5px 2px; }
+.ap-parts.mini .ap-part small { display: none; }
+.ap-parts.mini .ap-part svg { width: 22px; height: 22px; }
+@media (prefers-reduced-motion: reduce) { .ap-part.treme { animation: none; } }
+
+/* ---------- a folha nas variações avulsas (aparenciaComum.js abrirAparenciaAvulsa; o OdontoScan.html) ----------
+   As cores do app vêm das do Scanner, e a chave e os botões, que lá não existem, têm o desenho aqui */
+.ap-avulsa { position: fixed; inset: 0; z-index: 80; display: flex; align-items: flex-end; justify-content: center; padding: 16px; background: rgba(6, 12, 16, .45); animation: ap-aparece .18s ease-out; }
+.ap-avulsa.saindo { opacity: 0; transition: opacity .18s; }
+@media (min-width: 700px) { .ap-avulsa { align-items: center; } }
+.ap-avulsa-caixa { width: min(520px, 100%); max-height: calc(100% - 8px); overflow-y: auto; padding: 18px 18px 16px; border-radius: 22px; background: var(--superficie); color: var(--tinta); box-shadow: 0 18px 50px rgba(0, 0, 0, .3); animation: ap-sobe .22s cubic-bezier(.2, .8, .2, 1); }
+.ap-avulsa button { font: inherit; border: 0; cursor: pointer; background: none; color: inherit; }
+.ap-avulsa .ap-seg button { padding: 9px 6px; }
+.ap-avulsa h2 { font-size: 21px; margin: 0 0 4px; }
+.ap-avulsa .ap-sub { font-size: 13.5px; color: var(--tinta-2); margin: 0 0 6px; }
+.ap-avulsa .ap-todas { font-size: 12.5px; font-weight: 700; color: var(--acento-tinta); background: var(--superficie-2); }
+.ap-avulsa .ap-part { background: var(--superficie-2); }
+.ap-avulsa .ap-part.on { background: color-mix(in srgb, var(--acento) 14%, var(--superficie)); }
+.ap-avulsa .ap-seg button.on { background: var(--superficie); }
+.ap-pronto { display: block; width: 100%; margin-top: 16px; padding: 12px; border-radius: 14px; font-weight: 700 !important; background: var(--acento) !important; color: #fff !important; }
+.os.os-amoled .ap-pronto { color: #00110D !important; }
+.ap-chave { width: 52px; height: 30px; border-radius: 15px; background: var(--linha); position: relative; transition: background .2s; flex: none; padding: 0; }
+.ap-chave::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: #fff; transition: left .2s; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+.ap-chave.on { background: var(--certo, #1C9A55); }
+.ap-chave.on::after { left: 25px; }
+.os .ap-avulsa { --superficie: var(--os-sup); --superficie-2: var(--os-sup2); --tinta: var(--os-tinta); --tinta-2: var(--os-tinta2); --linha: var(--os-linha);
+  --acento: var(--os-acento); --acento-tinta: var(--os-acento2); --certo: var(--os-ok); --fundo-solido: var(--os-fundo); font-family: "Lexend", system-ui, sans-serif; }
+.os.os-amoled .ap-avulsa { --acento-tinta: var(--os-acento); }
+@keyframes ap-aparece { from { opacity: 0; } }
+@keyframes ap-sobe { from { transform: translateY(24px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .ap-avulsa, .ap-avulsa-caixa { animation: none; } }
+/* o botão da paleta no topo do Scanner (ao lado da lupa, no mesmo desenho) */
+.os-aparencia { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; border: 0; color: var(--os-tinta2); background: var(--os-sup2); cursor: pointer; transition: transform .15s, color .15s; }
+.os-aparencia svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.os-aparencia:hover { color: var(--os-acento2); transform: scale(1.06); }

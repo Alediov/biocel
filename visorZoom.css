@@ -1,0 +1,24 @@
+/* Visor de imagem com zoom das lições e dos jogos (js/visorZoom.js). Fica no <body>, fora do zoom do tablet. */
+.vz { position: fixed; inset: 0; z-index: 400; display: flex; flex-direction: column; background: rgba(0, 0, 0, 0); transition: background .2s; touch-action: none; }
+.vz.aberto { background: rgba(0, 0, 0, .94); }
+.vz.clara.aberto { background: rgba(250, 250, 248, .98); }
+.vz-area { flex: 1; min-height: 0; display: grid; place-items: center; overflow: hidden; touch-action: none; opacity: 0; transform: scale(.95); transition: opacity .2s, transform .2s; cursor: zoom-in; }
+.vz.aberto .vz-area { opacity: 1; transform: none; }
+.vz.ampliada .vz-area { cursor: grab; }
+.vz.travado .vz-area { cursor: default; }
+.vz-palco { max-width: 100%; max-height: 100%; display: grid; place-items: center; transform-origin: center; will-change: transform; }
+.vz-giro { display: grid; place-items: center; max-width: 100%; max-height: 100%; }
+.vz-palco img { max-width: 100vw; max-height: calc(100vh - 120px); object-fit: contain; display: block; user-select: none; -webkit-user-drag: none; pointer-events: none; background: transparent; }
+/* recorte do modo difícil das lâminas: quadro com a proporção do exercício, sem zoom */
+.vz-palco.vz-quadro { width: min(96vw, calc((100vh - 140px) * 1)); overflow: hidden; border-radius: 12px; background: #000; display: block; }
+.vz-palco.vz-quadro img { width: 100%; height: 100%; max-width: none; max-height: none; }
+.vz-x { position: absolute; top: calc(10px + env(safe-area-inset-top)); right: 10px; z-index: 2; width: 44px; height: 44px; border: 0; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .18); color: #fff; font: 700 26px/1 system-ui, sans-serif; }
+.vz.clara .vz-x { background: rgba(0, 0, 0, .55); }
+.vz-ctl { position: absolute; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom)); transform: translateX(-50%); display: flex; gap: 6px; padding: 4px; border-radius: 999px; background: rgba(0, 0, 0, .5); z-index: 2; }
+.vz-leg ~ .vz-ctl { bottom: auto; top: calc(14px + env(safe-area-inset-top)); }
+.vz-ctl button { min-width: 40px; height: 40px; border: 0; border-radius: 999px; background: transparent; color: #fff; font: 700 20px/1 system-ui, sans-serif; }
+.vz-ctl .vz-nivel { font-size: 13px; min-width: 48px; }
+.vz-leg { margin: 0; padding: 10px 16px calc(14px + env(safe-area-inset-bottom)); color: #ddd; font-size: 13.5px; line-height: 1.45; max-height: 30vh; overflow-y: auto; touch-action: pan-y; }
+.vz.clara .vz-leg { color: #333; }
+.vz-aviso { position: absolute; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom)); margin: 0; text-align: center; color: #bbb; font-size: 12.5px; }
+@media (prefers-reduced-motion: reduce) { .vz, .vz-area, .vz-palco { transition: none !important; } }

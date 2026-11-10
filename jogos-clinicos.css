@@ -1,0 +1,112 @@
+/* Jogos clínicos de 04/11/2026: Estágio e Grau (periograma), Escolha o Anestésico e Lesões Fundamentais.
+   As cores vêm das variáveis do tema (claro e AMOLED). */
+
+/* motor de casos (casoClinico.js) */
+.cc-etapas span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cc-porque { font-weight: 700; }
+.cc-fonte { font-size: 11.5px !important; color: var(--tinta-2); line-height: 1.35; }
+.cc-aviso { margin: 0 0 6px; padding: 10px 12px; border-radius: 12px; background: var(--parcial-fundo); color: var(--parcial-texto); font-size: 13.5px; line-height: 1.4; }
+.cc-ref h3 { margin: 14px 0 4px; font-size: 15px; }
+.cc-ref-item p { margin: 8px 0 6px; line-height: 1.45; font-size: 14.5px; }
+.cc-ref-item summary { cursor: pointer; }
+
+/* periograma */
+.pg { margin-top: 8px; border-top: 1px dashed var(--linha); padding-top: 8px; }
+.pg-titulo { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--tinta-2); margin-bottom: 4px; }
+.pg-grade { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+@media (min-width: 720px) { .pg-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.pg-q { margin: 0; min-width: 0; }
+.pg-q figcaption { font-size: 11px; font-weight: 700; color: var(--tinta-2); margin: 0 0 1px 2px; }
+.pg-svg { width: 100%; height: auto; display: block; font-family: var(--texto); }
+.pg-dente { fill: var(--superficie-2); }
+.pg-dente.par { fill: color-mix(in srgb, var(--superficie-2) 55%, var(--superficie)); }
+.pg-num { font-size: 10.5px; font-weight: 800; text-anchor: middle; fill: var(--tinta); }
+.pg-lado { font-size: 7px; text-anchor: middle; fill: var(--tinta-2); }
+.pg-rot { font-size: 9.5px; font-weight: 800; fill: var(--tinta-2); }
+.pg-v { font-size: 12px; font-weight: 700; text-anchor: middle; fill: var(--tinta); font-variant-numeric: tabular-nums; }
+.pg-v.fundo { fill: var(--errado); font-weight: 900; }
+.pg-mg { fill: var(--tinta-2); font-size: 11px; }
+.pg-ss { fill: var(--errado); }
+.pg-sem { fill: var(--linha); }
+.pg-ausente { font-size: 18px; text-anchor: middle; fill: var(--tinta-2); opacity: .7; }
+.pg-legenda { margin-top: 4px; font-size: 12.5px; color: var(--tinta-2); }
+.pg-legenda summary { cursor: pointer; font-weight: 700; }
+.pg-legenda p { margin: 4px 0 0; line-height: 1.4; }
+
+/* Lesões Fundamentais */
+.lf-desc { padding: 14px 16px; border-radius: 16px; background: var(--superficie); border: 2px solid var(--linha); font-size: 16px; line-height: 1.5; box-shadow: 0 3px 0 var(--linha); }
+.lf-foto { cursor: default; }
+.lf-leg { margin: 0; font-size: 13px; color: var(--tinta-2); font-style: italic; }
+
+/* Prova Prática (pratica.js, 04/11/2026): escolha das técnicas, ficha do Malamed com agulha e volume no alto */
+.cc-etapas.cc-muitas { grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); }
+.cc-etapas.cc-muitas span { font-size: 9.5px; }
+.cc-multi { display: grid; gap: 10px; margin: 6px 0 10px; }
+.cc-grupo > b { display: block; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); margin: 0 0 5px 2px; }
+.cc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.cc-chip { min-width: 0; max-width: 100%; padding: 8px 11px; border-radius: 999px; border: 2px solid var(--linha); border-bottom-width: 3px; background: var(--superficie); color: var(--tinta); font: 700 13.5px var(--texto); cursor: pointer; overflow-wrap: anywhere; text-align: left; }
+.cc-chip.on { border-color: var(--acento); background: var(--acento-suave); color: var(--acento-tinta, var(--tinta)); }
+.cc-chip.correta { border-color: var(--certo, #2E9E5B); background: var(--certo-fundo); color: var(--certo-texto); }
+.cc-chip.incorreta { border-color: var(--errado, #D64545); background: var(--errado-fundo); color: var(--errado-texto); text-decoration: line-through; }
+.cc-chip.faltou { border-style: dashed; border-color: var(--certo, #2E9E5B); color: var(--certo-texto); }
+.cc-chip:disabled { cursor: default; }
+.cc-conferir { width: 100%; }
+.pt-nota { font-size: 13.5px !important; padding: 6px 10px; border-radius: 10px; background: var(--parcial-fundo); color: var(--parcial-texto) !important; }
+.pt-tambem { font-size: 13.5px !important; font-weight: 700; }
+.pt-ver { margin-top: 8px; width: 100%; }
+.pt-prova { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--acento-suave); font-size: 14px; line-height: 1.4; }
+.pt-dominio { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.pt-dominio div { text-align: center; padding: 8px 2px; border-radius: 12px; background: var(--superficie-2); }
+.pt-dominio b { display: block; font-family: var(--display); font-size: 18px; }
+.pt-dominio small { color: var(--tinta-2); font-size: 11.5px; }
+.pt-fracas { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pt-fracas small { color: var(--tinta-2); }
+.pt-chip-t { border: 2px solid var(--linha); border-radius: 999px; padding: 5px 10px; background: var(--superficie); color: var(--tinta); font: 700 12.5px var(--texto); cursor: pointer; }
+.pt-lista h3 { margin: 12px 0 2px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); }
+.pt-linha { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 10px 12px; border-radius: 14px; border: 2px solid var(--linha); border-bottom-width: 3px; background: var(--superficie); color: var(--tinta); font: inherit; cursor: pointer; }
+.pt-linha span { flex: 1; min-width: 0; }
+.pt-linha b { display: block; font-size: 14.5px; }
+.pt-linha small { display: block; color: var(--tinta-2); font-size: 12px; }
+.pt-linha em { font-style: normal; font-weight: 800; font-size: 13px; padding: 2px 8px; border-radius: 999px; }
+.pt-linha em.boa { background: var(--certo-fundo); color: var(--certo-texto); }
+.pt-linha em.fraca { background: var(--errado-fundo); color: var(--errado-texto); }
+.pt-ficha { display: grid; gap: 10px; min-width: 0; }
+.pt-ficha h2 { margin: 0; font-size: 20px; line-height: 1.2; }
+.pt-cab { display: block; }
+.pt-cab small { display: block; margin-top: 4px; color: var(--tinta-2); }
+.pt-p { white-space: nowrap; font-size: 11px; font-weight: 700; color: var(--tinta-2); }
+.pt-destaque { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+@media (min-width: 640px) { .pt-destaque { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.pt-d { padding: 12px 14px; border-radius: 16px; border: 2px solid; min-width: 0; }
+.pt-d > span { font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.pt-d > b { display: block; font-family: var(--display); font-size: 19px; line-height: 1.2; margin: 2px 0 4px; }
+.pt-d p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.4; }
+.pt-d small { display: block; margin-top: 4px; font-size: 12px; color: var(--tinta-2); }
+.pt-agulha { border-color: color-mix(in srgb, #2F6BFF 55%, var(--linha)); background: color-mix(in srgb, #2F6BFF 9%, var(--superficie)); }
+.pt-agulha > span { color: color-mix(in srgb, #2F6BFF 80%, var(--tinta)); }
+.pt-volume { border-color: color-mix(in srgb, #12A37A 55%, var(--linha)); background: color-mix(in srgb, #12A37A 9%, var(--superficie)); }
+.pt-volume > span { color: color-mix(in srgb, #12A37A 80%, var(--tinta)); }
+.pt-livro { font-style: italic; }
+.pt-resumo { margin: 0; display: grid; gap: 1px; border-radius: 14px; overflow: hidden; background: var(--linha); }
+.pt-r { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px; padding: 8px 10px; background: var(--superficie); }
+.pt-r dt { font-size: 11.5px; font-weight: 800; color: var(--tinta-2); text-transform: uppercase; letter-spacing: .03em; }
+.pt-r dd { margin: 0; font-size: 13.5px; line-height: 1.4; overflow-wrap: anywhere; }
+.pt-figs { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 4px; }
+.pt-fig { flex: 0 0 auto; margin: 0; scroll-snap-align: start; cursor: zoom-in; }
+.pt-fig img { height: 140px; width: auto; max-width: 260px; object-fit: contain; border-radius: 10px; background: #fff; display: block; }
+.pt-fig figcaption { font-size: 11px; color: var(--tinta-2); margin-top: 2px; }
+.pt-zoom-leg { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 10px 14px 16px; background: rgba(0, 0, 0, .75); color: #fff; font-size: 13px; line-height: 1.4; }
+.pt-indice { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+.pt-indice button { flex: 0 0 auto; border: 1px solid var(--linha); border-radius: 999px; padding: 4px 10px; background: var(--superficie-2); color: var(--tinta); font: 600 12px var(--texto); cursor: pointer; }
+.pt-sobre { font-size: 13.5px; line-height: 1.45; }
+.pt-sobre summary { cursor: pointer; font-weight: 700; }
+.pt-sec h3 { margin: 6px 0 4px; font-size: 15.5px; }
+.pt-sec ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.pt-sec li { font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+.pt-sec li i { font-style: normal; font-weight: 800; color: var(--tinta-2); }
+.pt-sec li.pt-n2 { margin-left: 14px; } .pt-sec li.pt-n3 { margin-left: 28px; } .pt-sec li.pt-n4 { margin-left: 40px; }
+.pt-sec-tecnica { padding: 10px 12px; border-radius: 14px; background: var(--superficie-2); }
+.pt-folha { position: absolute; inset: 0; z-index: 30; display: flex; flex-direction: column; background: var(--fundo, var(--superficie)); }
+.pt-folha-topo { padding: 8px 14px; border-bottom: 1px solid var(--linha); }
+.pt-folha-corpo { flex: 1; overflow-y: auto; padding: 12px 16px 40px; }
+.pt-cartao { border-color: color-mix(in srgb, #2F6BFF 45%, var(--linha)); background: color-mix(in srgb, #2F6BFF 9%, var(--superficie)); }

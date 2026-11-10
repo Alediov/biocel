@@ -1,0 +1,233 @@
+/* Clima do Órbita (clima/telaClima.js, pedido do Alediov em 02/11/2026): o céu de agora no alto (muda com o tempo e a
+   hora) e os cartões nas cores do app (tema claro/AMOLED, Aparência). */
+.camada-clima { position: fixed; inset: 0; z-index: 30; display: flex; flex-direction: column; background: var(--fundo); color: var(--tinta); font-family: var(--texto); overflow: hidden; isolation: isolate; animation: cl-abre .32s cubic-bezier(.2,.8,.2,1) both; }
+.camada-clima.com-imagem { background: var(--fundo-camada); }
+@keyframes cl-abre { from { opacity: 0; transform: translateY(14px); } }
+:where(.cl) :where(button) { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; text-align: left; padding: 0; }
+:where(.cl) :where(svg) { width: 22px; height: 22px; flex: none; }
+.cl ul { list-style: none; margin: 0; padding: 0; }
+
+/* o que fica coberto não pinta nem anima (como nas Finanças): os Estudos atrás, e o Clima com a Home por cima */
+html.cl-cobre body > #app { visibility: hidden; transition: visibility 0s .35s; }
+html.cl-cobre body > #app *, html.cl-cobre body > #app *::before, html.cl-cobre body > #app *::after { animation-play-state: paused !important; }
+.cl-parado *, .cl-parado *::before, .cl-parado *::after { animation-play-state: paused !important; }
+/* tablet: a camada inteira cresce (tablet.js) */
+html.tablet .camada-clima { zoom: var(--z, 1); }
+body:has(.camada-clima) .foco-pilula, body:has(.camada-clima) .grav-pilula { bottom: calc(env(safe-area-inset-bottom) + 16px); }
+
+.cl-tela { flex: 1; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; padding-bottom: calc(24px + env(safe-area-inset-bottom)); -webkit-overflow-scrolling: touch; }
+.cl-vazio { margin: 40px 20px; padding: 24px; border-radius: 22px; text-align: center; color: var(--tinta-2); background: var(--superficie); box-shadow: inset 0 0 0 2px var(--linha); }
+
+/* ---------- o céu ---------- */
+.cl-ceu { position: relative; overflow: hidden; color: #fff; padding: env(safe-area-inset-top) 16px 20px; border-radius: 0 0 32px 32px;
+  --c1: #2B7FDB; --c2: #4FA8F0; --c3: #9AD6FF; background: linear-gradient(180deg, var(--c1) 0%, var(--c2) 55%, var(--c3) 100%); transition: --c1 1s, --c2 1s, --c3 1s; }
+.cl-ceu[data-tempo="nuvens"] { --c1: #4F6E99; --c2: #7893B7; --c3: #A9BCD4; }
+.cl-ceu[data-tempo="chuva"] { --c1: #3A4C69; --c2: #5B708F; --c3: #8597B0; }
+.cl-ceu[data-tempo="tempestade"] { --c1: #1E2236; --c2: #363C5C; --c3: #575D80; }
+.cl-ceu[data-tempo="neblina"] { --c1: #7D8BA0; --c2: #A3AEBE; --c3: #C8D0DB; }
+.cl-ceu[data-periodo="aurora"] { --c1: #3B57B4; --c2: #E48C7A; --c3: #FFD29A; }
+.cl-ceu[data-periodo="crepusculo"] { --c1: #2E2B74; --c2: #B9527A; --c3: #FFA266; }
+.cl-ceu[data-periodo="aurora"]:not([data-tempo="limpo"]), .cl-ceu[data-periodo="crepusculo"]:not([data-tempo="limpo"]) { --c1: #3D3F6E; --c2: #7C6787; --c3: #B48C8C; }
+.cl-ceu[data-periodo="noite"] { --c1: #050A24; --c2: #132260; --c3: #22377E; }
+.cl-ceu[data-periodo="noite"]:not([data-tempo="limpo"]) { --c1: #070B1A; --c2: #171E36; --c3: #2B3452; }
+.cl-ceu > *:not(.cl-deco) { position: relative; z-index: 1; }
+.cl-deco { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.cl-luz { position: absolute; right: -70px; top: -90px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 244, 196, .65), rgba(255, 244, 196, 0)); animation: cl-pulsa 7s ease-in-out infinite; }
+@keyframes cl-pulsa { 50% { transform: scale(1.1); opacity: .8; } }
+.cl-estrelas i { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: .7; animation: cl-pisca 3.2s ease-in-out var(--d) infinite; }
+@keyframes cl-pisca { 50% { opacity: .15; } }
+.cl-nuvens i { position: absolute; left: 0; width: 240px; height: 74px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .26), rgba(255, 255, 255, 0)); animation: cl-passa 70s linear infinite; }
+.cl-nuvens i:nth-child(1) { top: 14%; animation-delay: -12s; }
+.cl-nuvens i:nth-child(2) { top: 44%; width: 320px; height: 90px; animation-duration: 95s; animation-delay: -60s; }
+.cl-nuvens i:nth-child(3) { top: 70%; width: 200px; animation-duration: 80s; animation-delay: -35s; }
+@keyframes cl-passa { from { transform: translateX(-340px); } to { transform: translateX(110vw); } }
+.cl-chuva { position: absolute; inset: 0; opacity: .55; animation: cl-cai .7s linear infinite;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><g stroke='white' stroke-opacity='.55' stroke-width='1.4' stroke-linecap='round'><path d='M12 4l-3 12M47 30l-3 12M78 10l-3 12M30 58l-3 12M66 66l-3 12'/></g></svg>"); background-size: 90px 90px; }
+@keyframes cl-cai { to { background-position: -22px 90px; } }
+.cl-clarao { position: absolute; inset: 0; background: #fff; opacity: 0; animation: cl-clarao 8s linear infinite; }
+@keyframes cl-clarao { 0%, 90% { opacity: 0; } 91% { opacity: .32; } 92.5% { opacity: 0; } 94% { opacity: .2; } 96% { opacity: 0; } }
+
+/* topo dentro do céu */
+.cl-topo { display: flex; align-items: center; gap: 8px; padding-top: 10px; }
+.cl-area { display: flex; align-items: center; gap: 10px; margin-right: auto; padding: 4px 6px 4px 2px; border-radius: 14px; min-width: 0; }
+.cl-area b { display: block; font-family: var(--display); font-size: 22px; line-height: 1.05; }
+.cl-area small { font-size: 12.5px; opacity: .85; }
+.cl-logo svg { width: 40px; height: 40px; filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .25)); }
+.cl-lugar { display: inline-flex; align-items: center; gap: 5px; min-width: 0; max-width: 46%; padding: 7px 12px 7px 9px; border-radius: 99px; font-weight: 700; font-size: 13.5px;
+  background: rgba(255, 255, 255, .16); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .24); }
+.cl-lugar span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cl-lugar svg { width: 17px; height: 17px; }
+.cl-ler { width: 40px; height: 40px; border-radius: 50%; display: grid !important; place-items: center; flex: none; background: rgba(255, 255, 255, .16); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .24); }
+.cl-ler svg { width: 20px; height: 20px; }
+.cl-ler.girando svg { animation: cl-gira .9s linear infinite; }
+@keyframes cl-gira { to { transform: rotate(360deg); } }
+
+.cl-agora, .cl-idade-linha, .cl-avisos { max-width: 560px; margin-inline: auto; }
+.cl-agora { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 14px; }
+.cl-agora-ico .tp-ico { width: 138px; height: 138px; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .18)); }
+.cl-agora-tx { min-width: 0; }
+.cl-temp { display: flex; align-items: flex-start; font: 800 80px/.95 var(--display); letter-spacing: -.03em; text-shadow: 0 3px 18px rgba(0, 0, 0, .18); }
+.cl-temp span { font-size: 26px; margin: 8px 0 0 2px; opacity: .9; letter-spacing: 0; }
+.cl-agora-tx b { display: block; margin-top: 4px; font: 800 19px var(--display); }
+.cl-agora-tx small { display: block; margin-top: 2px; font-size: 14px; opacity: .92; }
+.cl-agora-tx small span { white-space: nowrap; }
+.cl-idade-linha { margin-top: 10px; margin-bottom: 0; text-align: center; font-size: 12.5px; opacity: .82; }
+.cl-ceu .cl-avisos { display: grid; gap: 8px; margin: 14px auto 0; }
+.cl-aviso { display: flex; align-items: center; gap: 10px; padding: 9px 12px 9px 9px; border-radius: 16px; font-size: 14px; font-weight: 600; line-height: 1.3;
+  background: rgba(255, 255, 255, .16); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .22); }
+.cl-av-ico { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border-radius: 12px; background: rgba(255, 255, 255, .2); }
+.cl-av-ico svg, .cl-av-ico .ico3d { width: 26px; height: 26px; }
+.cl-aviso.chuva .cl-av-ico, .cl-aviso.tempestade .cl-av-ico { background: rgba(61, 139, 255, .45); }
+.cl-aviso.tempestade { background: rgba(255, 196, 61, .22); box-shadow: inset 0 0 0 1.5px rgba(255, 214, 102, .55); }
+
+/* ---------- os cartões ---------- */
+.cl-corpo, .cl-detalhes, .cl-rodape { max-width: 600px; margin-inline: auto; }
+.cl-corpo { display: grid; gap: 14px; padding: 14px 16px 0; }
+.cl-col { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.cl-cartao { min-width: 0; padding: 14px 14px 12px; border-radius: 22px; background: var(--superficie); box-shadow: inset 0 0 0 2px var(--linha); }
+.cl-cartao h3 { margin: 0 0 10px; font: 800 13px var(--texto); text-transform: uppercase; letter-spacing: .05em; color: var(--tinta-2); }
+.cl-detalhes { width: calc(100% - 32px); max-width: 568px; margin-top: 14px; }
+
+/* próximas horas */
+.cl-horas { display: flex; gap: 2px; overflow-x: auto; scroll-snap-type: x proximity; margin: 0 -8px; padding: 0 4px 4px; scrollbar-width: none; }
+.cl-horas::-webkit-scrollbar { display: none; }
+.cl-hora { flex: none; width: 58px; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 8px 2px 6px; border-radius: 16px; scroll-snap-align: start; }
+.cl-hora:first-child { background: var(--superficie-2); }
+.cl-hora small { font-size: 12.5px; font-weight: 700; color: var(--tinta-2); }
+.cl-hora.meia small { color: var(--acento-tinta, var(--acento)); }
+.cl-hora .tp-ico { width: 38px; height: 38px; }
+.cl-hora b { font: 800 16px var(--display); }
+.cl-hora.sol-ev b { font: 700 11.5px var(--texto); color: var(--tinta-2); }
+.cl-prob { display: inline-flex; align-items: center; gap: 1px; min-height: 16px; font-size: 11.5px; font-weight: 700; color: #3D8BFF; white-space: nowrap; }
+.cl-prob.forte { color: #2F6BFF; }
+.cl-prob svg { width: 11px; height: 11px; }
+:root[data-tema="escuro"] .cl-prob { color: #7EB0FF; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .cl-prob { color: #7EB0FF; } }
+
+/* gráfico */
+.cl-graf { display: block; width: 100%; height: auto; }
+.cl-g-linha { fill: none; stroke: #FF8A3D; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.cl-g-ponto { fill: var(--superficie); stroke: #FF8A3D; stroke-width: 3; }
+.cl-g-valor { font: 800 19px var(--display); fill: var(--tinta); }
+.cl-g-eixo { font: 600 15px var(--texto); fill: var(--tinta-2); }
+.cl-g-barra { fill: #3D8BFF; }
+.cl-g-base, .cl-g-meia { stroke: var(--linha); stroke-width: 1.5; }
+.cl-g-meia { stroke-dasharray: 4 5; }
+.cl-legenda { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 6px 2px 0; font-size: 12.5px; color: var(--tinta-2); }
+.cl-legenda span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.cl-leg { display: inline-block; width: 14px; height: 4px; border-radius: 3px; }
+.cl-leg.t { background: #FF8A3D; } .cl-leg.c { background: #3D8BFF; height: 9px; width: 9px; }
+
+/* próximos dias */
+.cl-dias li + li { border-top: 1px solid var(--linha); }
+.cl-dia { width: 100%; display: grid; grid-template-columns: 64px 36px 46px 32px minmax(40px, 1fr) 34px; align-items: center; column-gap: 6px; padding: 7px 2px; }
+.cl-dia-nome { font-weight: 700; font-size: 14.5px; white-space: nowrap; }
+.cl-dia-ico .tp-ico { width: 34px; height: 34px; display: block; }
+.cl-min, .cl-max { font: 800 15px var(--display); text-align: right; }
+.cl-min { color: var(--tinta-2); }
+.cl-faixa { position: relative; height: 7px; border-radius: 9px; background: var(--superficie-2); }
+.cl-faixa > i { position: absolute; top: 0; bottom: 0; border-radius: 9px; }
+.cl-ponto { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2.5px var(--tinta); }
+.cl-dia-mais { grid-column: 1 / -1; display: none; margin-top: 6px; padding: 8px 10px; border-radius: 12px; font-size: 13px; line-height: 1.4; color: var(--tinta-2); background: var(--superficie-2); }
+.cl-dia.aberto .cl-dia-mais { display: block; }
+
+/* detalhes */
+.cl-grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.cl-lad { min-width: 0; padding: 12px; border-radius: 18px; background: var(--superficie-2); }
+.cl-lad.largo { grid-column: span 2; }
+.cl-lad h4 { display: flex; align-items: center; gap: 6px; margin: 0 0 6px; font: 700 12.5px var(--texto); text-transform: uppercase; letter-spacing: .04em; color: var(--tinta-2); }
+.cl-lad h4 svg { width: 16px; height: 16px; }
+.cl-lad strong { display: block; font: 800 28px/1.1 var(--display); }
+.cl-lad strong small { font: 700 13px var(--texto); color: var(--tinta-2); }
+.cl-lad p { margin: 5px 0 0; font-size: 12.5px; line-height: 1.35; color: var(--tinta-2); }
+.cl-barra { height: 7px; margin-top: 8px; border-radius: 9px; background: var(--fundo); overflow: hidden; }
+.cl-barra i { display: block; height: 100%; border-radius: 9px; background: linear-gradient(90deg, #7EC8FF, #2F6BFF); }
+.cl-escala { position: relative; height: 8px; margin: 10px 4px 2px; border-radius: 9px; }
+.cl-escala.uv { background: linear-gradient(90deg, #3BC46C, #F5D63D 25%, #FF9A3C 50%, #F0544F 75%, #9B5CF6); }
+.cl-escala.ar { background: linear-gradient(90deg, #3BC46C, #F5D63D 17%, #FF9A3C 33%, #F0544F 50%, #9B5CF6 67%, #7A1F3D); }
+.cl-escala i { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 2.5px var(--tinta); }
+.cl-vento { display: flex; align-items: center; gap: 14px; }
+.cl-rosa { width: 104px !important; height: 104px !important; }
+.cl-rosa .aro { fill: var(--superficie); stroke: var(--linha); stroke-width: 2; }
+.cl-rosa .M { stroke: var(--tinta); stroke-width: 2.2; stroke-linecap: round; }
+.cl-rosa .m { stroke: var(--tinta-2); stroke-width: 1.2; opacity: .6; }
+.cl-rosa text { font: 800 10.5px var(--texto); fill: var(--tinta-2); }
+.cl-rosa .seta { fill: var(--acento); }
+.cl-rosa .eixo { fill: var(--superficie); stroke: var(--acento); stroke-width: 2.5; }
+.cl-medidor { display: block; width: 100% !important; max-width: 150px; height: auto !important; margin: 0 auto; }
+.cl-medidor .num { font: 800 19px var(--display); fill: var(--tinta); }
+.cl-medidor .trilho { fill: none; stroke: var(--fundo); stroke-width: 9; stroke-linecap: round; }
+.cl-medidor .valor { fill: none; stroke: #8A7CF6; stroke-width: 9; stroke-linecap: round; }
+.cl-medidor .ponta { fill: #fff; stroke: #5B4BD6; stroke-width: 2.5; }
+.cl-medidor text { font: 600 9px var(--texto); fill: var(--tinta-2); }
+.cl-lad.pressao p { text-align: center; }
+.cl-sol svg { display: block; width: 100% !important; height: auto !important; max-height: 110px; }
+.cl-sol .arco { fill: none; stroke: var(--tinta-2); stroke-width: 1.6; stroke-dasharray: 4 5; opacity: .6; }
+.cl-sol .feito { fill: none; stroke: #FFB627; stroke-width: 3.5; stroke-linecap: round; }
+.cl-sol .horizonte { stroke: var(--linha); stroke-width: 2; }
+.cl-sol .astro { fill: #FFC93C; stroke: #F29B0C; stroke-width: 2; }
+.cl-sol .astro.posto { fill: var(--tinta-2); stroke: none; opacity: .45; }
+.cl-sol-tx { display: flex; justify-content: space-between; gap: 8px; margin-top: 2px; }
+.cl-sol-tx span { display: flex; flex-direction: column; }
+.cl-sol-tx span:last-child { text-align: right; }
+.cl-sol-tx .meio { text-align: center; }
+.cl-sol-tx small { font-size: 12px; color: var(--tinta-2); }
+.cl-sol-tx b { font: 800 17px var(--display); }
+.cl-rodape { margin-top: 14px; padding: 0 20px; font-size: 11.5px; line-height: 1.4; color: var(--tinta-2); text-align: center; }
+.cl-rodape a { color: inherit; }
+
+/* a folha da cidade (dentro do #modal) */
+.cl-folha { text-align: left; }
+.cl-folha h2 { margin: 0 0 12px; font: 800 20px var(--display); text-align: center; }
+.cl-folha h4 { margin: 14px 2px 6px; font: 700 12.5px var(--texto); text-transform: uppercase; letter-spacing: .05em; color: var(--tinta-2); }
+.cl-busca { display: flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 14px; background: var(--superficie-2); box-shadow: inset 0 0 0 2px var(--linha); color: var(--tinta-2); }
+.cl-busca svg { width: 20px; height: 20px; flex: none; }
+.cl-busca input { flex: 1; min-width: 0; padding: 12px 0; border: 0; outline: 0; font: 600 16px var(--texto); color: var(--tinta); background: transparent; }
+.cl-res { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; max-height: 40vh; overflow-y: auto; }
+.cl-res button { width: 100%; display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 12px; border: 0; background: none; color: var(--tinta); font: inherit; text-align: left; cursor: pointer; }
+.cl-res button:active, .cl-res button.on { background: var(--superficie-2); }
+.cl-res button svg { width: 18px; height: 18px; flex: none; color: var(--tinta-2); }
+.cl-res button span { flex: 1; min-width: 0; }
+.cl-res b, .cl-res small { display: block; }
+.cl-res small { font-size: 12.5px; color: var(--tinta-2); }
+.cl-res em { font-style: normal; font-size: 12px; font-weight: 700; color: var(--acento-tinta, var(--acento)); }
+.cl-res-msg { padding: 10px; font-size: 13.5px; color: var(--tinta-2); }
+.cl-folha-dica { margin: 12px 2px 4px; font-size: 12.5px; color: var(--tinta-2); }
+
+/* tablet deitado: as horas e o gráfico à esquerda, os dias à direita; os detalhes em 4 colunas */
+@media (min-width: 1000px) {
+  .cl-corpo { max-width: 1100px; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+  .cl-detalhes { max-width: 1068px; }
+  .cl-rodape { max-width: 1100px; }
+  .cl-grade { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cl-agora, .cl-idade-linha, .cl-avisos { max-width: 760px; }
+}
+@media (min-width: 700px) and (max-width: 999px) { .cl-grade { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .camada-clima, .camada-clima *, .camada-clima *::before { animation: none !important; transition: none !important; }
+  .cl-chuva, .cl-clarao { display: none; }
+}
+
+/* opções: o aviso de chuva no caminho às 6h (03/11/2026) */
+.cl-opcoes { width: calc(100% - 32px); max-width: 568px; margin: 12px auto 0; }
+.cl-troca { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 14.5px; }
+.cl-troca input { width: 20px; height: 20px; accent-color: var(--acento); margin-top: 2px; flex: none; }
+.cl-troca span { display: flex; flex-direction: column; gap: 2px; }
+.cl-troca small { color: var(--tinta-2); font-size: 12.5px; line-height: 1.35; }
+.cl-op-prox { display: flex; align-items: flex-start; gap: 8px; margin: 10px 0 0; padding: 8px 10px; border-radius: 12px; background: color-mix(in srgb, var(--acento) 10%, var(--superficie)); font-size: 13px; line-height: 1.35; }
+.cl-op-prox svg { width: 18px; height: 18px; flex: none; color: var(--acento); }
+@media (min-width: 1000px) { .cl-opcoes { max-width: 1068px; } }
+
+/* Casa / Faculdade / HUOP (03/11/2026): o seletor no alto e as folhas dos lugares */
+.cl-quais { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 10px 0 0; }
+.cl-quais button { padding: 6px 14px; border-radius: 99px; font-weight: 700; font-size: 13.5px; background: rgba(255, 255, 255, .12); box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .22); }
+.cl-quais button.on { background: rgba(255, 255, 255, .9); color: #1E1559; box-shadow: none; }
+.cl-quais small { flex-basis: 100%; font-size: 11.5px; opacity: .8; }
+.cl-res em { font-style: normal; font-size: 12.5px; font-weight: 700; color: var(--acento); }
+.cl-folha .botao { width: 100%; margin-top: 10px; }
+.cl-folha-ponto .cl-res { max-height: 32vh; }
+/* sem previsão ainda, o seletor fica fora do céu: nas cores do app */
+.cl-tela > .cl-quais { padding: 0 16px; }
+.cl-tela > .cl-quais button { color: var(--tinta); background: var(--superficie-2); box-shadow: inset 0 0 0 1.5px var(--linha); }
+.cl-tela > .cl-quais button.on { color: #fff; background: var(--acento); box-shadow: none; }

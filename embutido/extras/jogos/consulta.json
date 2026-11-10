@@ -1,0 +1,863 @@
+{
+ "versao": 1,
+ "condutas": [
+  "Atender normalmente",
+  "Atender com cuidados",
+  "Adiar o eletivo e encaminhar ao médico",
+  "Só em ambiente hospitalar"
+ ],
+ "fonte": "Glick M. et al. Burket's Oral Medicine, 13th ed. (2021)",
+ "casos": [
+  {
+   "id": "has-crise",
+   "titulo": "Pressão alta no dia",
+   "sistema": "Cardiovascular",
+   "paciente": "Marta, 58 anos, hipertensa em tratamento, sem queixas. Mediu a pressão duas vezes, em repouso.",
+   "sinais": [
+    "PA 186/104 mmHg",
+    "Sem dor no peito",
+    "Sem cefaleia"
+   ],
+   "procedimento": "Restauração eletiva de um pré-molar.",
+   "conduta": {
+    "certa": 2,
+    "explic": "O eletivo deve ser evitado com sistólica acima de 180 ou diastólica acima de 100 mmHg, ou bem acima do habitual do paciente."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Remarcar e encaminhar ao médico",
+     "Se houver dor ou infecção, controlar com medicamentos até a pressão baixar",
+     "Fazer a restauração sem vasoconstritor",
+     "Dar um ansiolítico e atender mesmo assim",
+     "Medir a pressão de novo nas próximas consultas"
+    ],
+    "certos": [
+     0,
+     1,
+     4
+    ],
+    "explic": "Com a pressão muito alta, a dor e a infecção costumam ser controladas com medicamentos até a pressão ser controlada. A anestesia pode até baixar a pressão, mas isso é imprevisível."
+   },
+   "pergunta": {
+    "enunciado": "Com a pressão menos elevada, o que também cancela o eletivo?",
+    "opcoes": [
+     "Dor no peito, cefaleia ou sintomas neurológicos focais",
+     "Frequência cardíaca de 80 bpm",
+     "Ter tomado o anti-hipertensivo de manhã",
+     "Ansiedade antes da consulta"
+    ],
+    "certa": 0,
+    "explic": "Sintomas que podem ter relação com a hipertensão, como dor no peito, cefaleia ou sintomas neurológicos focais, cancelam os procedimentos eletivos."
+   },
+   "fonte": {
+    "unidade": "b14-04",
+    "pagina": 532
+   }
+  },
+  {
+   "id": "iam-recente",
+   "titulo": "Infarto há duas semanas",
+   "sistema": "Cardiovascular",
+   "paciente": "José, 64 anos, teve um infarto há 2 semanas. Está estável e toma AAS e clopidogrel.",
+   "sinais": [
+    "IAM há 14 dias",
+    "AAS + clopidogrel",
+    "Sem insuficiência cardíaca"
+   ],
+   "procedimento": "Raspagem e restaurações eletivas.",
+   "conduta": {
+    "certa": 2,
+    "explic": "Procedimentos eletivos devem esperar pelo menos um mês depois de um infarto, porque há um pequeno aumento do risco de reinfarto. Protocolos recentes permitem tratar no consultório 30 dias após o IAM, se não houver insuficiência cardíaca descompensada."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Quando voltar, não interromper os antiplaquetários",
+     "Deixar a nitroglicerina do paciente à mão",
+     "Usar protocolos para reduzir a ansiedade",
+     "Esperar obrigatoriamente 6 meses",
+     "Suspender o clopidogrel 7 dias antes"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "O tratamento pode ser feito desde que o paciente continue os antitrombóticos sem interrupção. A nitroglicerina deve ficar disponível e o estresse deve ser reduzido."
+   },
+   "pergunta": {
+    "enunciado": "O que o livro diz da regra de esperar 6 meses após o infarto?",
+    "opcoes": [
+     "É um dogma que vem de uma interpretação errada de um estudo com anestesia geral",
+     "É a regra atual da AHA",
+     "Vale só para restaurações",
+     "Vale só para quem usa varfarina"
+    ],
+    "certa": 0,
+    "explic": "A regra dos 6 meses se baseia na leitura errada de um estudo de cirurgias não cardíacas sob anestesia geral. Um estudo com pacientes tratados 30 a 180 dias após um evento isquêmico não mostrou aumento de risco."
+   },
+   "fonte": {
+    "unidade": "b14-07",
+    "pagina": 539
+   }
+  },
+  {
+   "id": "stent-dapt",
+   "titulo": "Stent há três meses",
+   "sistema": "Cardiovascular",
+   "paciente": "Ana, 57 anos, colocou um stent farmacológico há 3 meses e usa AAS e clopidogrel.",
+   "sinais": [
+    "Stent farmacológico há 3 meses",
+    "Dupla antiagregação"
+   ],
+   "procedimento": "Exodontia de um molar com dor.",
+   "conduta": {
+    "certa": 1,
+    "explic": "Depois de 4 semanas, se o procedimento pode ser feito sem interromper a dupla antiagregação, é razoável seguir em frente."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Manter o AAS e o clopidogrel",
+     "Medidas hemostáticas locais",
+     "Suspender o clopidogrel 5 dias antes por conta própria",
+     "Adiar por 12 meses",
+     "Sutura e compressão com gaze"
+    ],
+    "certos": [
+     0,
+     1,
+     4
+    ],
+    "explic": "Interromper cedo a dupla antiagregação está ligado a infarto e morte. Se o procedimento não puder ser feito com ela, a decisão é tomada junto com o cardiologista."
+   },
+   "pergunta": {
+    "enunciado": "Por que não interromper a dupla antiagregação logo após o stent?",
+    "opcoes": [
+     "O stent ainda não está endotelizado e pode trombosar",
+     "O clopidogrel causa hiperplasia gengival",
+     "O AAS potencializa o anestésico",
+     "Para não atrasar a cicatrização"
+    ],
+    "certa": 0,
+    "explic": "No início, o stent ainda não está coberto por endotélio e é muito suscetível à trombose sem os dois antiplaquetários."
+   },
+   "fonte": {
+    "unidade": "b14-07",
+    "pagina": 540
+   }
+  },
+  {
+   "id": "angina-instavel",
+   "titulo": "A angina mudou",
+   "sistema": "Cardiovascular",
+   "paciente": "Carlos, 61 anos, tem angina há anos. Nas últimas semanas, as crises ficaram mais frequentes, ele usa mais nitroglicerina e sente dor com menos esforço.",
+   "sinais": [
+    "Crises mais frequentes",
+    "Mais nitroglicerina sublingual"
+   ],
+   "procedimento": "Restauração eletiva.",
+   "conduta": {
+    "certa": 2,
+    "explic": "Mudança no padrão da angina sugere angina instável: o eletivo deve ser evitado e o paciente encaminhado com urgência ao cardiologista."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Encaminhar com urgência ao cardiologista",
+     "Evitar depressores respiratórios (opioides, barbitúricos)",
+     "Atender com anestésico sem vasoconstritor",
+     "Pedir que use a nitroglicerina antes e atender"
+    ],
+    "certos": [
+     0,
+     1
+    ],
+    "explic": "Eletivo é razoável só com angina estável, sem mudança de intensidade ou frequência por vários meses. Opioides, barbitúricos e outros sedativos podem piorar o quadro cardiovascular."
+   },
+   "pergunta": {
+    "enunciado": "A angina pode chegar ao dentista disfarçada de:",
+    "opcoes": [
+     "Desconforto na mandíbula, muitas vezes do lado esquerdo",
+     "Dor de dente que melhora com frio",
+     "Ardência na língua",
+     "Estalido na ATM"
+    ],
+    "certa": 0,
+    "explic": "O dentista deve saber que a angina pode se apresentar como desconforto na mandíbula, muitas vezes à esquerda."
+   },
+   "fonte": {
+    "unidade": "b14-08",
+    "pagina": 540
+   }
+  },
+  {
+   "id": "protese-valvar",
+   "titulo": "Prótese valvar",
+   "sistema": "Cardiovascular",
+   "paciente": "Lúcia, 70 anos, tem prótese valvar aórtica biológica. Não é alérgica a nenhum medicamento.",
+   "sinais": [
+    "Prótese valvar",
+    "Sem alergias"
+   ],
+   "procedimento": "Exodontia.",
+   "conduta": {
+    "certa": 1,
+    "explic": "Prótese valvar está entre as condições de maior risco de mau desfecho na endocardite, em que a profilaxia antibiótica é razoável."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Amoxicilina 2 g, dose única, 30 a 60 min antes",
+     "Amoxicilina por 7 dias depois",
+     "Reforçar a higiene oral e tratar a inflamação periodontal",
+     "Clindamicina 600 mg antes"
+    ],
+    "certos": [
+     0,
+     2
+    ],
+    "explic": "O esquema é dose única 30 a 60 min antes. Clindamicina é para alérgicos. O livro enfatiza a higiene oral, porque a bacteremia do dia a dia (escovação) pesa mais que a do consultório."
+   },
+   "pergunta": {
+    "enunciado": "Se ela tivesse tido urticária com penicilina, qual NÃO usar?",
+    "opcoes": [
+     "Cefalexina",
+     "Azitromicina",
+     "Claritromicina",
+     "Clindamicina"
+    ],
+    "certa": 0,
+    "explic": "Cefalosporinas não devem ser usadas em quem teve anafilaxia, angioedema ou urticária com penicilinas."
+   },
+   "fonte": {
+    "unidade": "b14-10",
+    "pagina": 546
+   }
+  },
+  {
+   "id": "civ-corrigida",
+   "titulo": "Cardiopatia corrigida",
+   "sistema": "Cardiovascular",
+   "paciente": "Pedro, 19 anos, teve a comunicação interventricular corrigida com patch há 4 anos, sem defeito residual.",
+   "sinais": [
+    "Correção há 4 anos",
+    "Sem defeito residual"
+   ],
+   "procedimento": "Exodontia de um terceiro molar.",
+   "conduta": {
+    "certa": 0,
+    "explic": "Fora das condições de maior risco, a profilaxia não é mais recomendada para cardiopatias congênitas. O defeito corrigido com material protético só entra na lista nos primeiros 6 meses."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Sem profilaxia antibiótica",
+     "Amoxicilina 2 g antes",
+     "Manter a boa higiene oral",
+     "Pedir ecocardiograma antes"
+    ],
+    "certos": [
+     0,
+     2
+    ],
+    "explic": "A profilaxia é razoável apenas nas condições da Tabela 14-10."
+   },
+   "pergunta": {
+    "enunciado": "Por que a correção com material protético conta só nos primeiros 6 meses?",
+    "opcoes": [
+     "Porque nesse prazo o material é endotelizado",
+     "Porque o paciente para o anticoagulante",
+     "Porque a bacteremia some",
+     "Porque o patch é reabsorvido"
+    ],
+    "certa": 0,
+    "explic": "A profilaxia é razoável nesse período porque a endotelização do material protético ocorre em até 6 meses."
+   },
+   "fonte": {
+    "unidade": "b14-10",
+    "pagina": 546
+   }
+  },
+  {
+   "id": "varfarina-ok",
+   "titulo": "Varfarina com INR no alvo",
+   "sistema": "Hemostasia",
+   "paciente": "Helena, 72 anos, usa varfarina por fibrilação atrial. O INR de ontem foi 2,6.",
+   "sinais": [
+    "INR 2,6 (ontem)",
+    "Varfarina"
+   ],
+   "procedimento": "Exodontia de um molar.",
+   "conduta": {
+    "certa": 1,
+    "explic": "Com INR abaixo de 3,5 há pouca ou nenhuma indicação de mexer na varfarina antes de cirurgias orais de rotina: o sangramento costuma ceder com medidas locais, e um AVC embólico seria muito pior."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Manter a varfarina",
+     "Medidas hemostáticas locais (sutura, colágeno, celulose)",
+     "Bochecho de ácido tranexâmico",
+     "Suspender a varfarina 5 dias antes",
+     "Associar um antibiótico 'por precaução'"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "O ácido tranexâmico em bochecho controla bem o sangramento com INR de 2,1 a 4,8. Medicamentos que interagem com a varfarina devem ser evitados."
+   },
+   "pergunta": {
+    "enunciado": "Se o médico decidir reduzir a varfarina, com quanto tempo de antecedência?",
+    "opcoes": [
+     "Cerca de 2 dias, pela meia-vida de 42 horas",
+     "1 hora antes",
+     "2 semanas antes",
+     "Não há meia-vida relevante"
+    ],
+    "certa": 0,
+    "explic": "A meia-vida da varfarina é de 42 horas, então a redução ou suspensão é feita 2 dias antes, quando indicada pelo médico."
+   },
+   "fonte": {
+    "unidade": "b18-10",
+    "pagina": 712
+   }
+  },
+  {
+   "id": "varfarina-alta",
+   "titulo": "INR acima do alvo",
+   "sistema": "Hemostasia",
+   "paciente": "Roberto, 68 anos, usa varfarina por uma prótese valvar mecânica. O INR de hoje veio 4,3.",
+   "sinais": [
+    "INR 4,3",
+    "Varfarina"
+   ],
+   "procedimento": "Quatro exodontias.",
+   "conduta": {
+    "certa": 2,
+    "explic": "Com INR acima de 3,5 a 4,0, a cirurgia é adiada, a dose é ajustada ou o procedimento é feito com precauções (em hospital, com apoio médico)."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Conversar com o médico sobre o ajuste",
+     "Repetir o INR antes de remarcar",
+     "Extrair mesmo assim, com gaze",
+     "Suspender a varfarina por conta própria"
+    ],
+    "certos": [
+     0,
+     1
+    ],
+    "explic": "A decisão pesa o risco hemorrágico e o tromboembólico, e é tomada com o médico do paciente."
+   },
+   "pergunta": {
+    "enunciado": "Com INR no alvo, quando o sangramento esperado é maior (vários dentes, terceiros molares):",
+    "opcoes": [
+     "Medidas locais e, junto com o médico, considerar reduzir o INR",
+     "Suspender a varfarina sempre",
+     "Fazer em 1 sessão só",
+     "Dispensar medidas locais"
+    ],
+    "certa": 0,
+    "explic": "Para sangramento moderado a significativo, usam-se medidas locais e pode-se considerar reduzir o INR em consulta com o médico."
+   },
+   "fonte": {
+    "unidade": "b18-10",
+    "pagina": 712
+   }
+  },
+  {
+   "id": "doac",
+   "titulo": "Apixabana e cirurgia extensa",
+   "sistema": "Hemostasia",
+   "paciente": "Sônia, 66 anos, usa apixabana duas vezes ao dia por fibrilação atrial.",
+   "sinais": [
+    "Apixabana 2×/dia"
+   ],
+   "procedimento": "Quatro exodontias com retalho.",
+   "conduta": {
+    "certa": 1,
+    "explic": "Para procedimentos de alto risco de sangramento, considera-se uma interrupção curta do anticoagulante oral direto, combinada com o médico."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Atender de manhã cedo",
+     "Com o médico, pular a dose da manhã e retomar a da noite",
+     "Começar por 1 ou 2 dentes e reavaliar a hemostasia",
+     "Medidas hemostáticas locais",
+     "Suspender a apixabana por 7 dias",
+     "Fazer ponte com heparina"
+    ],
+    "certos": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "explic": "Pela meia-vida curta, o atendimento é de manhã, a dose da manhã é pulada e retomada à noite. Uma revisão de 2019 não achou diferença de sangramento entre continuar e suspender."
+   },
+   "pergunta": {
+    "enunciado": "Qual destes é um procedimento de alto risco de sangramento?",
+    "opcoes": [
+     "Mais de 3 exodontias, retalho ou biópsia",
+     "Restauração classe I",
+     "Profilaxia supragengival",
+     "Moldagem"
+    ],
+    "certa": 0,
+    "explic": "O guia escocês de 2015 cita mais de 3 exodontias, cirurgia com retalho, cirurgia periodontal, aumento de coroa e biópsias."
+   },
+   "fonte": {
+    "unidade": "b18-10",
+    "pagina": 712
+   }
+  },
+  {
+   "id": "dialise",
+   "titulo": "Hemodiálise",
+   "sistema": "Renal",
+   "paciente": "Antônio, 55 anos, faz hemodiálise às segundas, quartas e sextas.",
+   "sinais": [
+    "Hemodiálise 3×/semana",
+    "Heparina na diálise"
+   ],
+   "procedimento": "Exodontia.",
+   "conduta": {
+    "certa": 1,
+    "explic": "O tratamento é possível, com o planejamento feito junto com a equipe de nefrologia."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Atender num dia sem diálise",
+     "Evitar AINEs",
+     "Ajustar a dose dos medicamentos à função renal",
+     "Atender logo depois da sessão de diálise"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "Procedimentos ficam nos dias alternados à diálise, pela heparina e pelos metabólitos urêmicos. AINEs devem ser evitados, sobretudo com TFG abaixo de 10 mL/min."
+   },
+   "pergunta": {
+    "enunciado": "Por que evitar o dia da diálise para procedimentos invasivos?",
+    "opcoes": [
+     "Pela heparina usada na sessão e pelos metabólitos urêmicos",
+     "Porque o paciente está desidratado demais para anestesia",
+     "Porque a diálise remove o anestésico",
+     "Por falta de tempo"
+    ],
+    "certa": 0,
+    "explic": "A recomendação evita o sangramento pelo anticoagulante e os efeitos dos metabólitos urêmicos. Do ponto de vista da coagulação, 6 horas depois já seria seguro, mas na prática o dia seguinte é melhor."
+   },
+   "fonte": {
+    "unidade": "b16-12",
+    "pagina": 624
+   }
+  },
+  {
+   "id": "hipoglicemia",
+   "titulo": "Diabética em jejum",
+   "sistema": "Endócrino",
+   "paciente": "Beatriz, 30 anos, tem diabetes tipo 1 e usa insulina. Veio em jejum porque achou que precisava. No meio do atendimento fica suada, trêmula e um pouco confusa, mas consciente.",
+   "sinais": [
+    "Insulina",
+    "Jejum",
+    "Sudorese e tremor"
+   ],
+   "procedimento": "Exodontia (em andamento).",
+   "conduta": {
+    "opcoes": [
+     "Parar, dar açúcar por via oral e conferir a glicemia",
+     "Aplicar glucagon 1 mg IM",
+     "Continuar: é ansiedade",
+     "Aplicar insulina"
+    ],
+    "certa": 0,
+    "explic": "Hipoglicemia em paciente consciente: repor açúcar por via oral (bebida com glicose, 2 colheres de chá de açúcar) e conferir a recuperação e a glicemia. O glucagon IM fica para quem está perdendo a consciência."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Orientar a comer normalmente antes das consultas",
+     "Medir a glicemia com glicosímetro antes de cirurgias invasivas",
+     "Pedir que pule a insulina no dia",
+     "Tratar infecções odontogênicas sem demora"
+    ],
+    "certos": [
+     0,
+     1,
+     3
+    ],
+    "explic": "A complicação mais provável é a hipoglicemia de quem toma a insulina e não come, por dor ou pela crença de que precisa de jejum. Infecções odontogênicas podem desencadear cetoacidose."
+   },
+   "pergunta": {
+    "enunciado": "Qual exame mostra o controle glicêmico dos últimos ~3 meses?",
+    "opcoes": [
+     "Hemoglobina glicada (HbA1c)",
+     "Glicemia capilar do dia",
+     "INR",
+     "Creatinina"
+    ],
+    "certa": 0,
+    "explic": "A HbA1c reflete a glicemia dos últimos 30 a 90 dias. A meta da ADA é abaixo de 7%; acima de 8% sugere mudar o manejo."
+   },
+   "fonte": {
+    "unidade": "b22-16",
+    "pagina": 883
+   }
+  },
+  {
+   "id": "corticoide",
+   "titulo": "Corticoide há anos",
+   "sistema": "Endócrino",
+   "paciente": "Rita, 45 anos, tem lúpus e toma prednisona 10 mg por dia há 3 anos.",
+   "sinais": [
+    "Prednisona 10 mg/dia",
+    "Anestesia local"
+   ],
+   "procedimento": "Restaurações e uma exodontia simples.",
+   "conduta": {
+    "certa": 0,
+    "explic": "As evidências mostram que corticoide suplementar não é indicado para procedimentos na cadeira com anestesia local."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Não precisa de corticoide suplementar",
+     "Monitorar a pressão arterial",
+     "Dobrar a prednisona no dia (\"regra dos dois\")",
+     "Encaminhar para anestesia geral"
+    ],
+    "certos": [
+     0,
+     1
+    ],
+    "explic": "A antiga \"regra dos dois\" foi superada. A Tabela 22-16 recomenda monitorar a PA e reserva a cobertura para cirurgias maiores."
+   },
+   "pergunta": {
+    "enunciado": "Quando o livro considera dar hidrocortisona extra?",
+    "opcoes": [
+     "Cirurgia maior: múltiplas exodontias, mais de 60 min, sangramento grande ou anestesia geral",
+     "Toda exodontia",
+     "Toda anestesia com vasoconstritor",
+     "Nunca"
+    ],
+    "certa": 0,
+    "explic": "Para cirurgias maiores, a tabela traz hidrocortisona 50 a 100 mg no dia e nas 24 h seguintes, mas a evidência é no máximo equívoca."
+   },
+   "fonte": {
+    "unidade": "b22-11",
+    "pagina": 871
+   }
+  },
+  {
+   "id": "zoledronato",
+   "titulo": "Vai começar o zoledronato",
+   "sistema": "Endócrino",
+   "paciente": "Laura, 63 anos, tem câncer de mama com metástase óssea. O oncologista vai começar ácido zoledrônico 4 mg a cada 3 semanas. Ela tem um molar sem condições de ser restaurado.",
+   "sinais": [
+    "Metástase óssea",
+    "Zoledronato (alta dose)"
+   ],
+   "procedimento": "Exodontia do molar.",
+   "conduta": {
+    "certa": 1,
+    "explic": "O plano odontológico é coordenado com o oncologista antes do início do antirreabsortivo: os procedimentos invasivos são feitos logo, para deixar a boca saudável."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Extrair agora, antes ou logo no início do tratamento",
+     "Combinar o plano com o oncologista",
+     "Deixar a extração para depois de 1 ano de tratamento",
+     "Eliminar focos de infecção e traumas de prótese"
+    ],
+    "certos": [
+     0,
+     1,
+     3
+    ],
+    "explic": "A janela de baixo risco na alta dose é de até ~3 meses. Infecção e trauma (inclusive de prótese mal adaptada) são fatores de risco."
+   },
+   "pergunta": {
+    "enunciado": "Por que o risco de osteonecrose é maior no câncer?",
+    "opcoes": [
+     "Pela dose cumulativa: 20 mg de zoledronato em ~15 semanas",
+     "Porque a quimioterapia dissolve o osso",
+     "Porque o câncer de mama vai para a mandíbula",
+     "Não é maior"
+    ],
+    "certa": 0,
+    "explic": "90% dos casos ocorrem em pacientes com câncer em alta dose. Os 20 mg equivalem a 4 anos de dose para osteoporose."
+   },
+   "fonte": {
+    "unidade": "b22-24",
+    "pagina": 907
+   }
+  },
+  {
+   "id": "alendronato",
+   "titulo": "Alendronato para osteoporose",
+   "sistema": "Endócrino",
+   "paciente": "Teresa, 66 anos, toma alendronato oral há 2 anos, por osteoporose.",
+   "sinais": [
+    "Alendronato oral há 2 anos"
+   ],
+   "procedimento": "Exodontia de um pré-molar.",
+   "conduta": {
+    "certa": 0,
+    "explic": "Até cerca de 4 anos de antirreabsortivo em baixa dose, o risco de osteonecrose é muito baixo, mesmo com exodontias."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Explicar que o risco é baixo e seguir",
+     "Aproveitar para deixar a dentição saudável e fácil de manter",
+     "Suspender o alendronato 3 meses antes",
+     "Contraindicar a exodontia"
+    ],
+    "certos": [
+     0,
+     1
+    ],
+    "explic": "Esse é o período para deixar a paciente com uma dentição sustentável, que evite exodontias no futuro."
+   },
+   "pergunta": {
+    "enunciado": "Qual é o risco estimado de osteonecrose após exodontia com bisfosfonato oral para osteoporose?",
+    "opcoes": [
+     "Cerca de 1 em 200 (0,5%)",
+     "Cerca de 1 em 2",
+     "Cerca de 10%",
+     "Zero"
+    ],
+    "certa": 0,
+    "explic": "O risco geral é de ~0,1%, e após exodontia estima-se 1 em 200."
+   },
+   "fonte": {
+    "unidade": "b22-24",
+    "pagina": 907
+   }
+  },
+  {
+   "id": "pre-radio",
+   "titulo": "Antes da radioterapia",
+   "sistema": "Oncologia",
+   "paciente": "Marcos, 59 anos, vai começar radioterapia de cabeça e pescoço em 3 semanas. Dois molares inferiores têm prognóstico ruim e ficam no campo de alta dose.",
+   "sinais": [
+    "RT em 3 semanas",
+    "Molares no campo"
+   ],
+   "procedimento": "Exodontias.",
+   "conduta": {
+    "certa": 1,
+    "explic": "Dentes com prognóstico ruim no campo de alta dose são extraídos antes da radioterapia, para prevenir a osteorradionecrose."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Extrair já, com técnica atraumática",
+     "Fechamento primário da ferida",
+     "Dar de 7 a 14 dias de cicatrização antes da radioterapia",
+     "Deixar para extrair depois da radioterapia"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "A prevenção da osteorradionecrose começa com o cuidado odontológico completo antes da radioterapia e segue com acompanhamento depois."
+   },
+   "pergunta": {
+    "enunciado": "Qual osso a osteorradionecrose atinge com mais frequência?",
+    "opcoes": [
+     "Mandíbula",
+     "Maxila",
+     "Osso hioide",
+     "Os dois igualmente"
+    ],
+    "certa": 0,
+    "explic": "A ORN acomete mais a mandíbula que a maxila. O risco é para a vida toda e tem relação com a dose no osso."
+   },
+   "fonte": {
+    "unidade": "b08-03",
+    "pagina": 283
+   }
+  },
+  {
+   "id": "asma",
+   "titulo": "Asma e anti-inflamatório",
+   "sistema": "Respiratório",
+   "paciente": "Paula, 28 anos, tem asma controlada e usa salbutamol. Conta que já teve chiado depois de tomar aspirina.",
+   "sinais": [
+    "Asma controlada",
+    "Chiado com aspirina"
+   ],
+   "procedimento": "Exodontia com dor pós-operatória esperada.",
+   "conduta": {
+    "certa": 1,
+    "explic": "Eletivo só em quem tem a asma bem controlada, com algumas precauções."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Trazer a bombinha e ter broncodilatador e oxigênio à mão",
+     "Agendar no fim da manhã ou à tarde",
+     "Evitar aspirina e AINEs",
+     "Evitar barbitúricos e opioides na sedação",
+     "Proibir anestésico com epinefrina",
+     "Proibir óxido nitroso"
+    ],
+    "certos": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "explic": "7 a 14% dos asmáticos adultos têm alergia a aspirina e AINEs. Não há contraindicação ao anestésico com epinefrina (atenção ao metabissulfito), e o óxido nitroso só é evitado na asma grave."
+   },
+   "pergunta": {
+    "enunciado": "Que cuidado ajuda a prevenir candidíase em quem usa corticoide inalatório?",
+    "opcoes": [
+     "Bochechar água depois de usar a bombinha",
+     "Escovar antes de usar",
+     "Usar a bombinha só à noite",
+     "Trocar por comprimido"
+    ],
+    "certa": 0,
+    "explic": "O paciente deve bochechar água depois de usar o inalador; antifúngicos ficam para quando precisar."
+   },
+   "fonte": {
+    "unidade": "b13-08",
+    "pagina": 510
+   }
+  },
+  {
+   "id": "neutropenia",
+   "titulo": "Neutrófilos muito baixos",
+   "sistema": "Hematologia",
+   "paciente": "Léo, 9 anos, está em quimioterapia para leucemia linfoblástica aguda.",
+   "sinais": [
+    "Neutrófilos (ANC) 400/µL"
+   ],
+   "procedimento": "Restaurações eletivas.",
+   "conduta": {
+    "certa": 2,
+    "explic": "Com neutropenia grave (ANC abaixo de 500/µL), o tratamento eletivo deve ser adiado."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Combinar o momento com o oncologista",
+     "Se for urgente com ANC abaixo de 1.000, considerar antibiótico pré ou pós-operatório",
+     "Manter a higiene oral ótima",
+     "Fazer todas as restaurações hoje"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "Com ANC abaixo de 1.000/µL e urgência, antibióticos podem ser iniciados após conversa com o médico sobre o risco de infecção."
+   },
+   "pergunta": {
+    "enunciado": "Quais manifestações orais são típicas da LLA?",
+    "opcoes": [
+     "Sangramento gengival, úlceras e aumento gengival",
+     "Língua geográfica",
+     "Tórus palatino",
+     "Fluorose"
+    ],
+    "certa": 0,
+    "explic": "As manifestações orais da LLA incluem sangramento gengival, úlceras e aumento gengival."
+   },
+   "fonte": {
+    "unidade": "b17-09",
+    "pagina": 666
+   }
+  },
+  {
+   "id": "plaquetas",
+   "titulo": "Plaquetas baixas",
+   "sistema": "Hematologia",
+   "paciente": "Ivo, 70 anos, tem leucemia linfocítica crônica avançada.",
+   "sinais": [
+    "Plaquetas 35.000/µL"
+   ],
+   "procedimento": "Exodontia.",
+   "conduta": {
+    "opcoes": [
+     "Extrair com medidas locais",
+     "Planejar com o hematologista a reposição de plaquetas antes",
+     "Contraindicar qualquer exodontia",
+     "Extrair e prescrever AAS para a dor"
+    ],
+    "certa": 1,
+    "explic": "Com trombocitopenia grave (abaixo de 50.000/µL), deve-se considerar a reposição de plaquetas antes da cirurgia."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Evitar AAS e AINEs",
+     "Medidas hemostáticas locais",
+     "Combinar com o hematologista",
+     "Usar bloqueio do alveolar inferior sem avaliar"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "A LLC costuma permitir um planejamento odontológico quase normal; o cuidado é maior na doença avançada."
+   },
+   "pergunta": {
+    "enunciado": "Na LLC, as manifestações orais ao diagnóstico são:",
+    "opcoes": [
+     "Pouco frequentes, geralmente sangramento ou infecção",
+     "Sempre úlceras extensas",
+     "Aumento das parótidas",
+     "Pigmentação gengival"
+    ],
+    "certa": 0,
+    "explic": "Na LLC, as manifestações orais no diagnóstico são pouco frequentes e envolvem sangramento ou infecção."
+   },
+   "fonte": {
+    "unidade": "b17-09",
+    "pagina": 671
+   }
+  },
+  {
+   "id": "cirrose",
+   "titulo": "Cirrose hepática",
+   "sistema": "Gastro e fígado",
+   "paciente": "Nelson, 60 anos, tem cirrose. Está com ascite leve.",
+   "sinais": [
+    "Cirrose",
+    "Ascite"
+   ],
+   "procedimento": "Exodontia.",
+   "conduta": {
+    "certa": 1,
+    "explic": "O paciente com cirrose costuma poder receber tratamento de rotina, com as precauções combinadas com o médico."
+   },
+   "cuidados": {
+    "opcoes": [
+     "Checar a coagulação e as plaquetas antes da cirurgia",
+     "Lembrar que os fármacos podem se acumular",
+     "Não reclinar totalmente a cadeira se a ascite incomodar",
+     "Prescrever paracetamol em dose alta"
+    ],
+    "certos": [
+     0,
+     1,
+     2
+    ],
+    "explic": "Há defeitos de hemostasia (fatores de coagulação e plaquetopenia), menor capacidade de desintoxicar fármacos e a ascite dificulta deitar."
+   },
+   "pergunta": {
+    "enunciado": "Por que o cirrótico sangra mais?",
+    "opcoes": [
+     "Não sintetiza fatores de coagulação e tem plaquetopenia secundária",
+     "Pelo excesso de vitamina K",
+     "Pela pressão alta",
+     "Pelo uso de insulina"
+    ],
+    "certa": 0,
+    "explic": "O fígado deixa de sintetizar os fatores de coagulação, e há plaquetopenia secundária. Pode ser preciso plasma fresco ou plaquetas antes da cirurgia."
+   },
+   "fonte": {
+    "unidade": "b15-09",
+    "pagina": 589
+   }
+  }
+ ]
+}

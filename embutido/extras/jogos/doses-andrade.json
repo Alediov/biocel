@@ -1,0 +1,172 @@
+{
+ "versao": 1,
+ "fonte": {
+  "unidade": "f05-02",
+  "pagina": 50,
+  "texto": "Andrade, cap. 5, Tabela 5.2 e Quadro 5.1 (p. 50 e 51 do PDF); cap. 6 (p. 67) e cap. 14 (p. 160 e 161)"
+ },
+ "volumeTubete": 1.8,
+ "regras": [
+  "Doses conservadoras do Andrade (ADA): lidocaína e mepivacaína 4,4 mg/kg (máx. 300 mg); articaína 7 mg/kg (máx. 500 mg); prilocaína 6 mg/kg (máx. 400 mg); bupivacaína 1,3 mg/kg (máx. 90 mg).",
+  "Dose máxima (mg) = peso (kg) × mg/kg, sem passar do máximo absoluto.",
+  "mg por tubete: 0,5% = 9 mg; 2% = 36 mg; 3% = 54 mg; 4% = 72 mg (tubete de 1,8 mL).",
+  "Com dois anestésicos, vale a MENOR das doses máximas, descontando o que já foi dado.",
+  "Gotas: dipirona (500 mg/mL) ½ a 1 gota/kg a cada 4 h (20 gotas = 500 mg); paracetamol (200 mg/mL) 1 gota/kg a cada 6 h; ibuprofeno (50 mg/mL) 1 gota/kg a cada 6 h (10 gotas = 50 mg).",
+  "Amoxicilina em crianças: ataque 30 a 40 mg/kg; manutenção 15 a 20 mg/kg a cada 8 h. Sem balança: peso ≈ idade × 2 + 9."
+ ],
+ "farmacos": [
+  {
+   "id": "lido",
+   "nome": "Lidocaína 2% com epinefrina 1:100.000",
+   "curto": "Lidocaína 2%",
+   "mgTubete": 36,
+   "mgKg": 4.4,
+   "maxMg": 300
+  },
+  {
+   "id": "mepi2",
+   "nome": "Mepivacaína 2% com epinefrina 1:100.000",
+   "curto": "Mepivacaína 2%",
+   "mgTubete": 36,
+   "mgKg": 4.4,
+   "maxMg": 300
+  },
+  {
+   "id": "mepi3",
+   "nome": "Mepivacaína 3% sem vasoconstritor",
+   "curto": "Mepivacaína 3%",
+   "mgTubete": 54,
+   "mgKg": 4.4,
+   "maxMg": 300
+  },
+  {
+   "id": "arti",
+   "nome": "Articaína 4% com epinefrina 1:100.000",
+   "curto": "Articaína 4%",
+   "mgTubete": 72,
+   "mgKg": 7,
+   "maxMg": 500
+  },
+  {
+   "id": "pril",
+   "nome": "Prilocaína 3% com felipressina 0,03 UI/mL",
+   "curto": "Prilocaína 3%",
+   "mgTubete": 54,
+   "mgKg": 6,
+   "maxMg": 400
+  },
+  {
+   "id": "bupi",
+   "nome": "Bupivacaína 0,5% com epinefrina 1:200.000",
+   "curto": "Bupivacaína 0,5%",
+   "mgTubete": 9,
+   "mgKg": 1.3,
+   "maxMg": 90,
+   "nota": "Na prática, o livro diz que não é preciso passar de 2 a 3 tubetes de bupivacaína."
+  }
+ ],
+ "pacientes": [
+  {
+   "desc": "Criança de 6 anos, saudável",
+   "kg": [
+    16,
+    26
+   ]
+  },
+  {
+   "desc": "Criança de 9 anos, saudável",
+   "kg": [
+    24,
+    34
+   ]
+  },
+  {
+   "desc": "Adolescente de 14 anos, saudável",
+   "kg": [
+    40,
+    55
+   ]
+  },
+  {
+   "desc": "Adulta de 22 anos, saudável",
+   "kg": [
+    48,
+    68
+   ]
+  },
+  {
+   "desc": "Adulto de 40 anos, saudável",
+   "kg": [
+    70,
+    100
+   ]
+  },
+  {
+   "desc": "Adulto de 35 anos, saudável",
+   "kg": [
+    80,
+    110
+   ]
+  }
+ ],
+ "criancas": {
+  "fonte": {
+   "unidade": "f14-03",
+   "pagina": 161,
+   "texto": "Andrade, cap. 6 (Tabela 6.4, p. 67) e cap. 14 (p. 157, 160 e 161 do PDF)"
+  },
+  "gotas": [
+   {
+    "id": "dipirona",
+    "nome": "Dipirona sódica solução oral “gotas” (500 mg/mL)",
+    "curto": "dipirona",
+    "gotaKg": 0.5,
+    "mgGota": 25,
+    "intervalo": "a cada 4 h",
+    "obs": "O protocolo infantil do livro usa ½ gota por kg (a faixa geral é 0,5 a 1 gota/kg). 20 gotas = 500 mg."
+   },
+   {
+    "id": "paracetamol",
+    "nome": "Paracetamol solução oral “gotas” (200 mg/mL)",
+    "curto": "paracetamol",
+    "gotaKg": 1,
+    "mgGota": null,
+    "intervalo": "a cada 6 h"
+   },
+   {
+    "id": "ibuprofeno",
+    "nome": "Ibuprofeno solução oral “gotas” (50 mg/mL)",
+    "curto": "ibuprofeno",
+    "gotaKg": 1,
+    "mgGota": 5,
+    "intervalo": "a cada 6 h",
+    "obs": "Pelo livro, 10 gotas da solução de 50 mg/mL contêm 50 mg (5 mg por gota)."
+   },
+   {
+    "id": "betametasona",
+    "nome": "Betametasona solução oral “gotas” (0,5 mg/mL)",
+    "curto": "betametasona",
+    "gotaKg": 1,
+    "mgGota": null,
+    "intervalo": "dose única, 1 h antes",
+    "obs": "Usada antes de intervenções mais invasivas em crianças."
+   }
+  ],
+  "amoxicilina": {
+   "ataque": [
+    30,
+    40
+   ],
+   "manutencao": [
+    15,
+    20
+   ],
+   "intervalo": "a cada 8 h",
+   "suspensoes": [
+    125,
+    250,
+    500
+   ]
+  }
+ }
+}

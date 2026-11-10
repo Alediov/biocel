@@ -1,0 +1,1146 @@
+{
+ "fonte": "Malamed, Manual de Anestesia Local, 7ª ed., caps. 13 (maxila) e 14 (mandíbula). Páginas do PDF.",
+ "pontos": {
+  "inc": {
+   "nome": "Sulco sobre o incisivo lateral",
+   "desc": "Sulco mucovestibular sobre o incisivo lateral: ponto da injeção supraperiosteal desse dente."
+  },
+  "asa": {
+   "nome": "Sulco sobre o 1º pré-molar",
+   "desc": "Sulco mucovestibular sobre o 1º pré-molar: o caminho mais curto até o forame infraorbital (bloqueio do ASA)."
+  },
+  "asm": {
+   "nome": "Sulco sobre o 2º pré-molar",
+   "desc": "Sulco mucovestibular acima do 2º pré-molar: ponto do bloqueio do ASM."
+  },
+  "asp": {
+   "nome": "Sulco sobre o 2º molar",
+   "desc": "Sulco mucovestibular sobre o 2º molar: ponto do bloqueio do ASP."
+  },
+  "tuber": {
+   "nome": "Sulco na distal do 2º molar",
+   "desc": "Sulco mucovestibular na distal do 2º molar, junto à tuberosidade: entrada do bloqueio do nervo maxilar (V2) pelo alto da tuberosidade."
+  },
+  "pm": {
+   "nome": "Palato, à frente do forame palatino maior",
+   "desc": "Tecido mole 1 a 2 mm anterior ao forame palatino maior, na junção do processo alveolar com o palato: bloqueio do palatino maior."
+  },
+  "papila": {
+   "nome": "Ao lado da papila incisiva",
+   "desc": "Mucosa palatina lateral à papila incisiva: entrada do nasopalatino (até 5 mm) e do P-ASA (6 a 10 mm, no canal)."
+  },
+  "amsa": {
+   "nome": "Meio do palato, entre os pré-molares",
+   "desc": "Metade da linha entre a sutura palatina mediana e a margem gengival, no contato entre 1º e 2º pré-molares: AMSA."
+  },
+  "rafe": {
+   "nome": "Sobre a rafe palatina",
+   "desc": "Sobre a rafe palatina mediana: mucosa fina e aderida, sem nervo-alvo para bloqueio. Doloroso e inútil aqui."
+  },
+  "palmole": {
+   "nome": "Palato mole",
+   "desc": "Palato mole: nenhuma técnica maxilar entra aqui, e a injeção pode provocar engasgo."
+  },
+  "bnai": {
+   "nome": "3/4 da incisura à rafe, 6 a 10 mm acima do plano oclusal",
+   "desc": "Mucosa medial do ramo, a 3/4 da distância da incisura coronoide até a rafe pterigomandibular e 6 a 10 mm acima do plano oclusal: BNAI."
+  },
+  "bnai_baixo": {
+   "nome": "Na altura do plano oclusal inferior",
+   "desc": "Baixo demais: o anestésico fica abaixo do forame mandibular e o BNAI falha (causa mais comum de falha)."
+  },
+  "bnai_ant": {
+   "nome": "Sobre a incisura coronoide",
+   "desc": "Anterior (lateral) demais no ramo: a agulha toca o osso cedo, longe do nervo. Corrige-se levando a seringa para o canino ou o incisivo lateral."
+  },
+  "bnai_med": {
+   "nome": "Atrás (medial) da rafe pterigomandibular",
+   "desc": "Posterior (medial) demais: a agulha passa sem tocar o ramo e pode chegar à parótida, perto do nervo facial. Nunca injetar sem contato ósseo."
+  },
+  "gg": {
+   "nome": "Distal ao 2º molar superior, na altura da cúspide mesiopalatina",
+   "desc": "Mucosa mesial do ramo, distal ao 2º molar superior, na altura da sua cúspide mesiopalatina: Gow-Gates."
+  },
+  "va": {
+   "nome": "Junto à tuberosidade, na junção mucogengival dos molares superiores",
+   "desc": "Tecido sobre a borda medial do ramo, junto à tuberosidade, na altura da junção mucogengival do 3º molar superior: Vazirani-Akinosi (boca fechada)."
+  },
+  "bucal": {
+   "nome": "Distal e vestibular ao último molar inferior",
+   "desc": "Mucosa distal e vestibular ao último molar: bloqueio do nervo bucal."
+  },
+  "mentual": {
+   "nome": "Sulco entre os pré-molares inferiores",
+   "desc": "Sulco mucovestibular no forame mentual ou à frente dele (entre os ápices dos pré-molares): mentual e incisivo."
+  }
+ },
+ "tecnicas": [
+  {
+   "id": "sup",
+   "nome": "Injeção supraperiosteal (incisivo lateral superior)",
+   "vista": "maxila",
+   "ponto": "inc",
+   "pagina": 575,
+   "unidade": "c13-02",
+   "contexto": "Restauração em um único dente: o incisivo lateral superior direito.",
+   "seringa": [
+    88,
+    -4
+   ],
+   "direcao": {
+    "opcoes": [
+     "Paralela ao longo eixo do dente, bisel voltado para o osso",
+     "Perpendicular ao osso, entrando de frente",
+     "Para cima, para dentro e para trás, a 45°"
+    ],
+    "certa": 0,
+    "explic": "A seringa fica paralela ao longo eixo do dente, com a agulha no sulco mucovestibular acima do ápice e o bisel voltado para o osso."
+   },
+   "prof": {
+    "min": 1,
+    "max": 6,
+    "agulha": 20,
+    "explic": "Na maioria dos casos, a penetração é de apenas alguns milímetros: o alvo é a região apical, logo acima.",
+    "raso": "Ainda na mucosa: a solução não chega à região apical.",
+    "fundo": "Fundo demais para uma infiltração: a ponta passa da região apical."
+   },
+   "pergunta": {
+    "enunciado": "Por que a supraperiosteal não é boa para grandes áreas?",
+    "opcoes": [
+     "Exige muitas punções e mais volume de anestésico",
+     "Não anestesia a polpa",
+     "Tem aspiração positiva em 30% dos casos"
+    ],
+    "certa": 0,
+    "explic": "Para vários dentes, o bloqueio regional usa menos punções e menos volume. A supraperiosteal é a escolha para um ou dois dentes."
+   },
+   "volume": {
+    "min": 0.5,
+    "max": 0.7,
+    "explic": "Cerca de 0,6 mL (um terço do tubete), devagar, em uns 20 segundos."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "Plexo dentário (ramos terminais)"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     1
+    ],
+    "regiao": "vestAnt"
+   }
+  },
+  {
+   "id": "asp",
+   "nome": "Bloqueio do nervo alveolar superior posterior (ASP)",
+   "vista": "maxila",
+   "ponto": "asp",
+   "pagina": 584,
+   "unidade": "c13-03",
+   "contexto": "Tratamento de canal no 2º molar superior direito.",
+   "seringa": [
+    12,
+    72
+   ],
+   "direcao": {
+    "opcoes": [
+     "Para cima, para dentro e para trás, 45° em cada eixo, num só movimento",
+     "Paralela ao longo eixo do 2º molar, só para cima",
+     "Para dentro, em 90°, direto para a linha média"
+    ],
+    "certa": 0,
+    "explic": "Para cima (45° com o plano oclusal), para dentro (45° com o plano oclusal) e para trás (45° com o longo eixo do 2º molar). Se tocar osso, o ângulo para a linha média está grande demais: aproxime a seringa do plano oclusal."
+   },
+   "prof": {
+    "min": 14,
+    "max": 18,
+    "agulha": 20,
+    "explic": "16 mm no adulto de estatura média (10 a 14 mm em crânios menores). Com agulha curta, sobram cerca de 4 mm visíveis.",
+    "raso": "A ponta não chega perto dos forames do ASP: anestesia falha.",
+    "fundo": "Inserção excessiva: risco de hematoma no plexo venoso pterigóideo (por isso a agulha curta)."
+   },
+   "pergunta": {
+    "enunciado": "Em quantos bloqueios do ASP a raiz mesiovestibular do 1º molar fica sem anestesia?",
+    "opcoes": [
+     "Cerca de 28%",
+     "Cerca de 5%",
+     "Cerca de 72%"
+    ],
+    "certa": 0,
+    "explic": "Em 28% dos casos o ASM inerva a raiz mesiovestibular do 1º molar. Se o 1º molar não pegar, faz-se uma supraperiosteal complementar."
+   },
+   "volume": {
+    "min": 0.9,
+    "max": 1.8,
+    "explic": "De 0,9 a 1,8 mL, em 30 a 60 segundos, aspirando várias vezes."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "ASP"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     5,
+     6,
+     7
+    ],
+    "regiao": "vestPost"
+   }
+  },
+  {
+   "id": "asm",
+   "nome": "Bloqueio do nervo alveolar superior médio (ASM)",
+   "vista": "maxila",
+   "ponto": "asm",
+   "pagina": 595,
+   "unidade": "c13-04",
+   "contexto": "Procedimento só nos pré-molares superiores direitos.",
+   "seringa": [
+    10,
+    80
+   ],
+   "direcao": {
+    "opcoes": [
+     "Paralela ao longo eixo, subindo até acima do ápice do 2º pré-molar, bisel para o osso",
+     "Para cima, para dentro e para trás, como no ASP",
+     "Do lado oposto da boca, em ângulo reto"
+    ],
+    "certa": 0,
+    "explic": "Área-alvo: osso maxilar acima do ápice do 2º pré-molar, com o bisel voltado para o osso."
+   },
+   "profTexto": {
+    "opcoes": [
+     "Até a ponta ficar bem acima do ápice do 2º pré-molar",
+     "16 mm, como no ASP",
+     "Até entrar no forame infraorbital"
+    ],
+    "certa": 0,
+    "explic": "O depósito é no osso acima do ápice do 2º pré-molar. Os 16 mm valem para o ASP e para o ASA, não aqui."
+   },
+   "pergunta": {
+    "enunciado": "Em quanto da população o nervo ASM está presente?",
+    "opcoes": [
+     "Cerca de 28%",
+     "Cerca de 90%",
+     "Em todas as pessoas"
+    ],
+    "certa": 0,
+    "explic": "O ASM existe em cerca de 28% das pessoas, o que limita a utilidade clínica do bloqueio. Ele é indicado quando o ASA não anestesia distal ao canino."
+   },
+   "volume": {
+    "min": 0.9,
+    "max": 1.2,
+    "explic": "De 0,9 a 1,2 mL (metade a dois terços do tubete), em 30 a 40 segundos."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "ASM"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     3,
+     4
+    ],
+    "parciais": [
+     5
+    ]
+   }
+  },
+  {
+   "id": "asa",
+   "nome": "Bloqueio do nervo alveolar superior anterior (infraorbital)",
+   "vista": "maxila",
+   "ponto": "asa",
+   "pagina": 602,
+   "unidade": "c13-05",
+   "contexto": "Procedimento do incisivo central ao canino superior direito.",
+   "seringa": [
+    18,
+    40
+   ],
+   "direcao": {
+    "opcoes": [
+     "Paralela ao longo eixo do dente, rumo ao forame infraorbital (dedo sobre o forame)",
+     "Para cima, para dentro e para trás, a 45°",
+     "Perpendicular à face, em direção ao nariz"
+    ],
+    "certa": 0,
+    "explic": "Avança-se paralelo ao longo eixo do dente, para não tocar o osso antes da hora, em direção ao forame infraorbital, mantendo o dedo sobre ele."
+   },
+   "prof": {
+    "min": 14,
+    "max": 18,
+    "agulha": 32,
+    "explic": "A média é de 16 mm (cerca de metade de uma agulha longa). Ela varia com o paciente; estime antes de injetar.",
+    "raso": "Antes do forame: a solução fica no caminho e a anestesia é incompleta.",
+    "fundo": "Inserção excessiva: risco de chegar perto da órbita. Estime a profundidade antes, pelo dedo sobre o forame."
+   },
+   "pergunta": {
+    "enunciado": "Além dos dentes anteriores, o que mais fica anestesiado no bloqueio do ASA?",
+    "opcoes": [
+     "Pálpebra inferior, lateral do nariz e lábio superior",
+     "Palato duro até a linha média",
+     "Os dois terços anteriores da língua"
+    ],
+    "certa": 0,
+    "explic": "Os ramos do infraorbital (palpebral inferior, nasal lateral e labial superior) também são anestesiados."
+   },
+   "volume": {
+    "min": 0.9,
+    "max": 1.2,
+    "explic": "De 0,9 a 1,2 mL, contra 3 mL se fossem supraperiosteais nos mesmos dentes."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "ASA",
+     "ASM",
+     "Infraorbital"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2
+    ],
+    "parciais": [
+     3,
+     4
+    ],
+    "regiao": "face"
+   }
+  },
+  {
+   "id": "pm",
+   "nome": "Bloqueio do nervo palatino maior",
+   "vista": "maxila",
+   "ponto": "pm",
+   "pagina": 619,
+   "unidade": "c13-07",
+   "contexto": "Cirurgia periodontal no palato, do 1º pré-molar ao 3º molar direito.",
+   "seringa": [
+    250,
+    150
+   ],
+   "direcao": {
+    "opcoes": [
+     "Vinda do lado oposto da boca, em ângulo reto com a área-alvo",
+     "Do mesmo lado, paralela ao palato",
+     "De frente, pelos incisivos, em 45°"
+    ],
+    "certa": 0,
+    "explic": "A seringa avança do lado oposto da boca, em ângulo reto com a área-alvo, com o bisel voltado para os tecidos moles palatinos."
+   },
+   "prof": {
+    "min": 4,
+    "max": 6,
+    "agulha": 20,
+    "explic": "Avança-se até tocar o osso palatino, geralmente cerca de 5 mm.",
+    "raso": "Ainda na mucosa: a solução sai pelo local da punção.",
+    "fundo": "Não existe tanto tecido aqui: a agulha já teria tocado o osso por volta de 5 mm."
+   },
+   "pergunta": {
+    "enunciado": "Onde fica o forame palatino maior na maioria dos crânios?",
+    "opcoes": [
+     "Na metade anterior do 3º molar (cerca de 50%)",
+     "Na metade anterior do 2º molar",
+     "Entre os pré-molares"
+    ],
+    "certa": 0,
+    "explic": "Em 158 crânios: metade posterior do 2º molar, 40%; metade anterior do 3º molar, 51%; metade anterior do 2º molar, 0%. Procure com o aplicador a partir do 1º molar, indo para distal."
+   },
+   "volume": {
+    "min": 0.45,
+    "max": 0.6,
+    "explic": "Não mais que 1/4 a 1/3 de tubete (0,45 a 0,6 mL): volumes mínimos já dão anestesia profunda."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "Palatino maior"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "regiao": "palPost"
+   }
+  },
+  {
+   "id": "np",
+   "nome": "Bloqueio do nervo nasopalatino",
+   "vista": "maxila",
+   "ponto": "papila",
+   "pagina": 632,
+   "unidade": "c13-08",
+   "contexto": "Procedimento no palato anterior, de canino a canino.",
+   "seringa": [
+    205,
+    150
+   ],
+   "direcao": {
+    "opcoes": [
+     "Em 45° em direção à papila incisiva",
+     "Perpendicular à papila, entrando de frente",
+     "Paralela ao palato, de trás para a frente"
+    ],
+    "certa": 0,
+    "explic": "Entra-se lateral à papila, aproximando-se a 45° em direção a ela, com pressão do aplicador (anestesia por pressão)."
+   },
+   "prof": {
+    "min": 2,
+    "max": 5,
+    "agulha": 20,
+    "explic": "A penetração normalmente não passa de 5 mm. Ao tocar o osso, recua-se 1 mm.",
+    "raso": "A solução não chega ao forame incisivo.",
+    "fundo": "Mais de 5 mm no canal incisivo pode chegar ao assoalho do nariz e causar infecção."
+   },
+   "pergunta": {
+    "enunciado": "Qual é a área anestesiada pelo nasopalatino?",
+    "opcoes": [
+     "Palato anterior, da mesial do 1º pré-molar direito à do esquerdo (bilateral)",
+     "Só o lado da injeção, até o 2º molar",
+     "Lábio superior e lateral do nariz"
+    ],
+    "certa": 0,
+    "explic": "Os dois nervos nasopalatinos são anestesiados: palato anterior, bilateralmente, de 1º pré-molar a 1º pré-molar."
+   },
+   "volume": {
+    "min": 0.3,
+    "max": 0.45,
+    "explic": "Não mais que 1/4 de tubete (0,45 mL); às vezes é difícil depositar tudo."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "Nasopalatino"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "regiao": "palAnt"
+   }
+  },
+  {
+   "id": "amsa",
+   "nome": "Bloqueio dos nervos alveolares superiores médio e anterior (AMSA)",
+   "vista": "maxila",
+   "ponto": "amsa",
+   "pagina": 652,
+   "unidade": "c13-10",
+   "contexto": "Estética nos dentes anteriores e pré-molares, sem anestesiar lábio e face.",
+   "seringa": [
+    250,
+    125
+   ],
+   "direcao": {
+    "opcoes": [
+     "Dos pré-molares do lado oposto, cerca de 45° com o palato, bisel contra o epitélio",
+     "Do mesmo lado, perpendicular ao palato",
+     "Dos incisivos, paralela à rafe palatina"
+    ],
+    "certa": 0,
+    "explic": "A seringa vem dos pré-molares contralaterais, a cerca de 45° com o palato. O bisel fica 'para baixo', contra o epitélio, na técnica de pré-punção."
+   },
+   "profTexto": {
+    "opcoes": [
+     "Devagar (1 a 2 mm a cada 4 a 6 s) até tocar o osso palatino",
+     "Rápido, até 16 mm",
+     "Só 1 mm, sem tocar o osso"
+    ],
+    "certa": 0,
+    "explic": "Avança-se lentamente injetando, até o contato com o osso, que deve ser mantido."
+   },
+   "pergunta": {
+    "enunciado": "Qual é a grande vantagem do AMSA?",
+    "opcoes": [
+     "Anestesia polpas de incisivos a pré-molares sem dormência no lábio e na face",
+     "Anestesia toda a hemiarcada inferior",
+     "Dispensa anestésico tópico"
+    ],
+    "certa": 0,
+    "explic": "Ele pega os nervos ASA e ASM (e o plexo subneural) sem os tecidos moles da face, ótimo para estética do sorriso."
+   },
+   "volume": {
+    "min": 1.4,
+    "max": 1.8,
+    "explic": "De 1,4 a 1,8 mL, bem devagar (cerca de 0,5 mL por minuto)."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)"
+    ],
+    "certos": [
+     "ASA",
+     "ASM"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "regiao": "palMeio"
+   }
+  },
+  {
+   "id": "pasa",
+   "nome": "Abordagem palatina do ASA (P-ASA)",
+   "vista": "maxila",
+   "ponto": "papila",
+   "pagina": 664,
+   "unidade": "c13-11",
+   "contexto": "Procedimento em incisivos superiores, anestesiando o vestibular e o palatino com uma só punção.",
+   "seringa": [
+    215,
+    140
+   ],
+   "direcao": {
+    "opcoes": [
+     "Lateral à papila, a 45° com o palato, entrando no canal nasopalatino",
+     "Perpendicular à papila, só na superfície",
+     "Pelo vestíbulo, sobre o canino"
+    ],
+    "certa": 0,
+    "explic": "A entrada é no sulco papilar, lateral à papila, com a agulha a 45° com o palato, avançando para o canal nasopalatino."
+   },
+   "prof": {
+    "min": 6,
+    "max": 10,
+    "agulha": 20,
+    "explic": "No P-ASA, a agulha avança de 6 a 10 mm no canal nasopalatino (mais fundo que no nasopalatino simples).",
+    "raso": "Isso é só um nasopalatino: falta entrar no canal para pegar os ramos do ASA.",
+    "fundo": "Não force: se encontrar resistência antes, não empurre a agulha."
+   },
+   "pergunta": {
+    "enunciado": "Quais polpas o P-ASA anestesia?",
+    "opcoes": [
+     "Incisivos centrais e laterais e, em menor grau, os caninos",
+     "Todos os dentes superiores do lado",
+     "Pré-molares e 1º molar"
+    ],
+    "certa": 0,
+    "explic": "Nasopalatino + ramos anteriores do ASA: incisivos centrais e laterais e, em menor grau, os caninos."
+   },
+   "volume": {
+    "min": 1.4,
+    "max": 1.8,
+    "explic": "De 1,4 a 1,8 mL, a cerca de 0,5 mL por minuto."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "Nasopalatino",
+     "ASA"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1
+    ],
+    "parciais": [
+     2
+    ],
+    "regiao": "palAnt"
+   }
+  },
+  {
+   "id": "v2",
+   "nome": "Bloqueio do nervo maxilar (V2), pelo alto da tuberosidade",
+   "vista": "maxila",
+   "ponto": "tuber",
+   "pagina": 672,
+   "unidade": "c13-12",
+   "contexto": "Cirurgia extensa em toda a hemiarcada superior direita.",
+   "seringa": [
+    12,
+    96
+   ],
+   "direcao": {
+    "opcoes": [
+     "Para cima, para dentro e para trás, como no ASP",
+     "Paralela ao longo eixo do 2º molar",
+     "Do lado oposto, em ângulo reto"
+    ],
+    "certa": 0,
+    "explic": "O trajeto é o do ASP, só que mais fundo: a ponta vai para a fossa pterigopalatina, acima e medial ao alvo do ASP."
+   },
+   "prof": {
+    "min": 28,
+    "max": 32,
+    "agulha": 32,
+    "explic": "30 mm: a ponta fica na fossa pterigopalatina, perto do nervo maxilar. Não deve haver resistência.",
+    "raso": "Com 16 mm você fez um ASP: só os molares ficam anestesiados.",
+    "fundo": "Além de 30 mm não há ganho, só risco de hematoma e de atingir estruturas da fossa."
+   },
+   "pergunta": {
+    "enunciado": "O que o bloqueio do V2 anestesia?",
+    "opcoes": [
+     "Polpas superiores do lado, vestibular, palato duro e parte do mole até a linha média, e pele da face",
+     "Só os molares superiores",
+     "Palato dos dois lados"
+    ],
+    "certa": 0,
+    "explic": "Toda a divisão maxilar do lado: dentes, vestibular, palato até a linha média e a pele da pálpebra inferior, do nariz, da bochecha e do lábio superior."
+   },
+   "volume": {
+    "min": 1.7,
+    "max": 1.9,
+    "explic": "1,8 mL (um tubete), devagar, em pelo menos 1 minuto."
+   },
+   "nervos": {
+    "opcoes": [
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino",
+     "Divisão maxilar (V2)",
+     "Plexo dentário (ramos terminais)"
+    ],
+    "certos": [
+     "Divisão maxilar (V2)",
+     "ASP",
+     "ASM",
+     "ASA",
+     "Infraorbital",
+     "Palatino maior",
+     "Nasopalatino"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "regiao": "hemiPal"
+   }
+  },
+  {
+   "id": "bnai",
+   "nome": "Bloqueio do nervo alveolar inferior (BNAI)",
+   "vista": "boca",
+   "ponto": "bnai",
+   "pagina": 699,
+   "unidade": "c14-03",
+   "contexto": "Restauração no 1º molar inferior direito.",
+   "seringa": [
+    270,
+    215
+   ],
+   "direcao": {
+    "opcoes": [
+     "Corpo da seringa no canto da boca contralateral, sobre os pré-molares",
+     "Sobre os molares do mesmo lado, paralela ao plano oclusal",
+     "Sobre os incisivos do mesmo lado"
+    ],
+    "certa": 0,
+    "explic": "A seringa fica no canto da boca do lado oposto, sobre os pré-molares, paralela ao plano oclusal. Se tocar osso cedo, leve-a para o canino; se não tocar, para os molares."
+   },
+   "prof": {
+    "min": 20,
+    "max": 25,
+    "agulha": 32,
+    "explic": "20 a 25 mm até tocar o osso (2/3 a 3/4 de uma agulha longa). Ao tocar, recuar 1 mm e aspirar.",
+    "raso": "Contato ósseo cedo: a agulha está anterior no ramo, longe do forame.",
+    "fundo": "Sem contato ósseo além de 25 mm: a ponta pode estar na parótida, perto do nervo facial. Não injete: retire e reposicione."
+   },
+   "pergunta": {
+    "enunciado": "Qual sinal indica que o nervo alveolar inferior pegou?",
+    "opcoes": [
+     "Formigamento ou dormência do lábio inferior",
+     "Dormência na ponta da língua",
+     "Lacrimejamento do lado da injeção"
+    ],
+    "certa": 0,
+    "explic": "O lábio inferior (nervo mentual, ramo do alveolar inferior) é o sinal do BNAI. A língua indica o nervo lingual, que pode pegar sem o alveolar inferior."
+   },
+   "volume": {
+    "min": 1.4,
+    "max": 1.7,
+    "explic": "Cerca de 1,5 mL em pelo menos 60 segundos; na saída, uns 0,2 mL para o lingual."
+   },
+   "nervos": {
+    "opcoes": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Bucal",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "certos": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "regiao": "linguaLabio"
+   }
+  },
+  {
+   "id": "bucal",
+   "nome": "Bloqueio do nervo bucal",
+   "vista": "boca",
+   "ponto": "bucal",
+   "pagina": 719,
+   "unidade": "c14-05",
+   "contexto": "Extração do 1º molar inferior: falta o tecido mole vestibular.",
+   "seringa": [
+    40,
+    250
+   ],
+   "direcao": {
+    "opcoes": [
+     "Paralela ao plano oclusal, do lado da injeção, vestibular aos dentes",
+     "Do canto oposto, sobre os pré-molares",
+     "Perpendicular à bochecha"
+    ],
+    "certa": 0,
+    "explic": "Corpo da seringa paralelo ao plano oclusal, do mesmo lado, mas vestibular a ele, mirando distal e vestibular ao último molar."
+   },
+   "prof": {
+    "min": 1,
+    "max": 4,
+    "agulha": 32,
+    "explic": "Raramente passa de 2 a 4 mm (normalmente 1 a 2 mm). A agulha longa é usada só por ser logo depois do BNAI.",
+    "raso": "Apenas encostou na mucosa.",
+    "fundo": "Fundo demais: o nervo bucal passa logo abaixo da mucosa, sobre a borda anterior do ramo."
+   },
+   "pergunta": {
+    "enunciado": "O que o nervo bucal anestesia?",
+    "opcoes": [
+     "Tecidos moles e periósteo vestibulares dos molares inferiores",
+     "A polpa dos molares inferiores",
+     "A língua do lado da injeção"
+    ],
+    "certa": 0,
+    "explic": "É um nervo só de tecido mole vestibular dos molares; não anestesia polpa."
+   },
+   "volume": {
+    "min": 0.2,
+    "max": 0.4,
+    "explic": "Só 0,3 mL (cerca de 1/8 do tubete), em 10 segundos."
+   },
+   "nervos": {
+    "opcoes": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Bucal",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "certos": [
+     "Bucal"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "regiao": "bochecha"
+   }
+  },
+  {
+   "id": "gg",
+   "nome": "Bloqueio do nervo mandibular: técnica de Gow-Gates",
+   "vista": "boca",
+   "ponto": "gg",
+   "pagina": 727,
+   "unidade": "c14-06",
+   "contexto": "Vários procedimentos no quadrante inferior direito, em paciente com BNAI que falhou antes.",
+   "seringa": [
+    272,
+    205
+   ],
+   "direcao": {
+    "opcoes": [
+     "Do canto oposto da boca, paralela à linha canto da boca–incisura intertrágica",
+     "Paralela ao plano oclusal inferior, como no BNAI",
+     "Do mesmo lado, sobre os molares"
+    ],
+    "certa": 0,
+    "explic": "A seringa vem do canto da boca contralateral (sobre os pré-molares, variando com a divergência do ramo), alinhada à linha que vai do canto da boca à incisura intertrágica."
+   },
+   "prof": {
+    "min": 23,
+    "max": 27,
+    "agulha": 32,
+    "explic": "Em média 25 mm até o osso (colo do côndilo). Recua-se 1 mm e aspira-se. O paciente fica de boca aberta por 1 a 2 minutos.",
+    "raso": "Ainda não chegou ao colo do côndilo.",
+    "fundo": "Sem contato ósseo: não injete. Retire um pouco e redirecione."
+   },
+   "pergunta": {
+    "enunciado": "Qual nervo o Gow-Gates pega e o BNAI geralmente não?",
+    "opcoes": [
+     "Bucal (em cerca de 75%), auriculotemporal e milo-hióideo",
+     "Infraorbital",
+     "Nasopalatino"
+    ],
+    "certa": 0,
+    "explic": "Por ser alto (colo do côndilo), o Gow-Gates anestesia quase todo o V3: alveolar inferior, lingual, milo-hióideo, auriculotemporal e o bucal em 75%."
+   },
+   "volume": {
+    "min": 1.7,
+    "max": 1.9,
+    "explic": "1,8 mL em 60 a 90 segundos (a técnica original falava em 3 mL); se pegar parcial, mais até 1,2 mL."
+   },
+   "nervos": {
+    "opcoes": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Bucal",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "certos": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "opcionais": [
+     "Bucal"
+    ]
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "regiao": "linguaLabioBochecha"
+   }
+  },
+  {
+   "id": "va",
+   "nome": "Bloqueio de Vazirani-Akinosi (boca fechada)",
+   "vista": "boca",
+   "ponto": "va",
+   "pagina": 744,
+   "unidade": "c14-07",
+   "contexto": "Paciente com trismo, que não consegue abrir a boca.",
+   "seringa": [
+    30,
+    95
+   ],
+   "direcao": {
+    "opcoes": [
+     "Paralela ao plano oclusal superior, boca fechada, bisel para longe do ramo (rumo à linha média)",
+     "Boca bem aberta, sobre os pré-molares opostos",
+     "Perpendicular ao ramo, bisel para o osso"
+    ],
+    "certa": 0,
+    "explic": "Com os dentes em oclusão, a seringa fica paralela ao plano oclusal superior, na junção mucogengival dos molares superiores. O bisel fica longe do ramo, para a agulha desviar para medial."
+   },
+   "prof": {
+    "min": 23,
+    "max": 25,
+    "agulha": 32,
+    "explic": "25 mm a partir da tuberosidade, no adulto médio (menos em pacientes menores). Não há contato ósseo, então a medida é a referência.",
+    "raso": "Antes da região dos nervos: anestesia incompleta.",
+    "fundo": "Não inserir mais de 25 mm: risco de atingir a parótida e o nervo facial."
+   },
+   "pergunta": {
+    "enunciado": "Qual é a principal indicação do Vazirani-Akinosi?",
+    "opcoes": [
+     "Abertura bucal limitada (trismo)",
+     "Anestesia do palato",
+     "Crianças pequenas com dentes decíduos"
+    ],
+    "certa": 0,
+    "explic": "Como é feito de boca fechada, é a técnica de escolha quando o paciente não consegue abrir a boca."
+   },
+   "volume": {
+    "min": 1.5,
+    "max": 1.8,
+    "explic": "De 1,5 a 1,8 mL em cerca de 60 segundos."
+   },
+   "nervos": {
+    "opcoes": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Bucal",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "certos": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Milo-hióideo"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "regiao": "linguaLabio"
+   }
+  },
+  {
+   "id": "mentual",
+   "nome": "Bloqueio do nervo mentual",
+   "vista": "boca",
+   "ponto": "mentual",
+   "pagina": 752,
+   "unidade": "c14-08",
+   "contexto": "Biópsia no lábio inferior direito.",
+   "seringa": [
+    150,
+    300
+   ],
+   "direcao": {
+    "opcoes": [
+     "Rumo ao forame mentual, entre os ápices dos pré-molares, bisel para o osso",
+     "Rumo à rafe pterigomandibular",
+     "Paralela ao plano oclusal, pela distal do molar"
+    ],
+    "certa": 0,
+    "explic": "A agulha vai ao forame mentual, geralmente entre os ápices do 1º e do 2º pré-molar. Palpe o forame antes, com o dedo."
+   },
+   "prof": {
+    "min": 5,
+    "max": 6,
+    "agulha": 20,
+    "explic": "A penetração é de 5 a 6 mm.",
+    "raso": "A solução fica superficial, longe do forame.",
+    "fundo": "Fundo demais: atingir o periósteo causa desconforto. Evite o contato ou deposite um pouco de solução antes."
+   },
+   "pergunta": {
+    "enunciado": "O que o bloqueio do mentual anestesia?",
+    "opcoes": [
+     "Mucosa vestibular à frente do forame, lábio inferior e queixo",
+     "A polpa de incisivos a pré-molares",
+     "A língua"
+    ],
+    "certa": 0,
+    "explic": "Só tecidos moles: mucosa vestibular anterior ao forame até a linha média, lábio inferior e pele do queixo. A polpa é do incisivo."
+   },
+   "volume": {
+    "min": 0.5,
+    "max": 0.7,
+    "explic": "0,6 mL (cerca de 1/3 do tubete), em 20 segundos."
+   },
+   "nervos": {
+    "opcoes": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Bucal",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "certos": [
+     "Mentual"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "regiao": "labio"
+   }
+  },
+  {
+   "id": "incisivo",
+   "nome": "Bloqueio do nervo incisivo",
+   "vista": "boca",
+   "ponto": "mentual",
+   "pagina": 760,
+   "unidade": "c14-09",
+   "contexto": "Restaurações de canino a 1º pré-molar inferior, sem precisar do BNAI.",
+   "seringa": [
+    150,
+    300
+   ],
+   "direcao": {
+    "opcoes": [
+     "Rumo ao forame mentual, bisel para o osso, e depois pressão sobre o forame",
+     "Rumo à rafe pterigomandibular",
+     "Pela distal do último molar"
+    ],
+    "certa": 0,
+    "explic": "A entrada é igual à do mentual, mas depois do depósito faz-se pressão sobre o forame (cerca de 2 minutos) para a solução entrar e pegar o nervo incisivo."
+   },
+   "prof": {
+    "min": 5,
+    "max": 6,
+    "agulha": 20,
+    "explic": "5 a 6 mm, como no mentual. A diferença está na pressão posterior sobre o forame.",
+    "raso": "Superficial: nem o mentual pega direito.",
+    "fundo": "O anestésico é depositado fora do forame mentual e levado para dentro sob pressão; não é preciso enfiar a agulha nele."
+   },
+   "pergunta": {
+    "enunciado": "O que diferencia o incisivo do mentual?",
+    "opcoes": [
+     "Anestesia também a polpa de pré-molares, canino e incisivos",
+     "Anestesia a língua",
+     "É feito por palatino"
+    ],
+    "certa": 0,
+    "explic": "Com a solução dentro do forame, o nervo incisivo leva anestesia às polpas de pré-molares, canino e incisivos daquele lado."
+   },
+   "volume": {
+    "min": 0.5,
+    "max": 0.7,
+    "explic": "0,6 mL (1/3 do tubete), depois pressão sobre o forame por 2 minutos."
+   },
+   "nervos": {
+    "opcoes": [
+     "Alveolar inferior",
+     "Incisivo",
+     "Mentual",
+     "Lingual",
+     "Bucal",
+     "Milo-hióideo",
+     "Auriculotemporal"
+    ],
+    "certos": [
+     "Mentual",
+     "Incisivo"
+    ],
+    "opcionais": []
+   },
+   "area": {
+    "dentes": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "regiao": "labio"
+   }
+  }
+ ],
+ "nervosDesc": {
+  "Infraorbital": "Infraorbital (palpebral inferior, nasal lateral e labial superior)"
+ }
+}

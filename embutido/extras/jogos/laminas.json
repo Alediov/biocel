@@ -1,0 +1,536 @@
+{
+ "versao": 1,
+ "prova": "2026-12-01",
+ "titulo": "Prova prática de lâminas (Patologia)",
+ "livro": "Neville, Oral and Maxillofacial Pathology, 5ª ed.",
+ "lesoes": [
+  {
+   "id": "granuloma",
+   "nome": "Granuloma piogênico",
+   "en": "Pyogenic granuloma (lobular capillary hemangioma)",
+   "unidade": "n12-03",
+   "pista": "Muitos vasos cheios de hemácias + úlcera + inflamação: parece tecido de granulação exuberante.",
+   "criterios": [
+    "Proliferação muito vascular, parecida com tecido de granulação.",
+    "Muitos canais pequenos e grandes revestidos por endotélio e cheios de hemácias.",
+    "Em alguns casos os vasos se agrupam em lóbulos (por isso o nome hemangioma capilar lobular).",
+    "Superfície em geral ulcerada, trocada por uma membrana fibrinopurulenta espessa.",
+    "Infiltrado inflamatório misto (neutrófilos, plasmócitos e linfócitos): neutrófilos perto da úlcera, crônicos mais fundo.",
+    "Lesões antigas podem ter áreas mais fibrosas (maturação fibrosa)."
+   ],
+   "achados": [
+    "Muitos vasos neoformados cheios de hemácias",
+    "Vasos agrupados em lóbulos",
+    "Superfície ulcerada com membrana fibrinopurulenta",
+    "Inflamação mista, com neutrófilos perto da úlcera"
+   ],
+   "descricao": "Corte de mucosa com lesão exofítica de superfície ulcerada, recoberta por membrana fibrinopurulenta. No conjuntivo, intensa proliferação de vasos sanguíneos de pequeno e grande calibre, revestidos por endotélio e repletos de hemácias, por vezes organizados em lóbulos, em meio a infiltrado inflamatório misto (neutrófilos junto à úlcera; linfócitos e plasmócitos em profundidade). Diagnóstico: granuloma piogênico."
+  },
+  {
+   "id": "fibroma",
+   "nome": "Hiperplasia fibrosa",
+   "en": "Fibroma (irritation fibroma; focal fibrous hyperplasia)",
+   "unidade": "n12-01",
+   "pista": "Nódulo rosa de colágeno denso, pouca célula e sem cápsula, embaixo de um epitélio esticado.",
+   "criterios": [
+    "Massa nodular de tecido conjuntivo fibroso coberta por epitélio escamoso estratificado.",
+    "Conjuntivo em geral denso e colagenizado (às vezes mais frouxo).",
+    "Não tem cápsula: o tecido fibroso se mistura aos poucos com o conjuntivo vizinho.",
+    "Feixes de colágeno em arranjo radial, circular ou aleatório.",
+    "Epitélio de revestimento muitas vezes com cristas atróficas (achatadas) pela massa de baixo; pode haver hiperceratose pelo trauma.",
+    "Inflamação crônica esparsa (linfócitos e plasmócitos), sobretudo logo abaixo do epitélio."
+   ],
+   "achados": [
+    "Massa nodular de colágeno denso, sem cápsula",
+    "Epitélio com cristas achatadas sobre a massa fibrosa",
+    "Feixes de colágeno em arranjo radial, circular ou aleatório",
+    "Poucas células, com inflamação crônica esparsa"
+   ],
+   "descricao": "Corte de mucosa revestida por epitélio escamoso estratificado com cristas epiteliais achatadas. No conjuntivo, massa nodular, não encapsulada, de tecido conjuntivo fibroso denso, com feixes de colágeno em arranjo aleatório, pouco celular, com raro infiltrado inflamatório crônico subepitelial. Diagnóstico: hiperplasia fibrosa (fibroma de irritação)."
+  },
+  {
+   "id": "papiloma",
+   "nome": "Papiloma escamoso",
+   "en": "Squamous papilloma",
+   "unidade": "n10-01",
+   "pista": "Dedos de epitélio, cada um com um eixo fino de conjuntivo com vasos no meio.",
+   "criterios": [
+    "Proliferação de epitélio escamoso estratificado ceratinizado em projeções digitiformes (em forma de dedos).",
+    "Cada projeção tem um eixo de tecido conjuntivo fibrovascular.",
+    "Em geral pediculada; camada de ceratina mais espessa nas lesões brancas.",
+    "Maturação normal do epitélio (às vezes hiperplasia basal e mitoses, que não são displasia).",
+    "Às vezes coilócitos (células alteradas pelo HPV, núcleo picnótico com halo claro) no alto da camada espinhosa.",
+    "O conjuntivo pode ter inflamação."
+   ],
+   "achados": [
+    "Projeções digitiformes de epitélio escamoso",
+    "Eixos de conjuntivo fibrovascular dentro das projeções",
+    "Lesão pediculada com superfície papilar ceratinizada",
+    "Coilócitos no alto da camada espinhosa"
+   ],
+   "descricao": "Lesão exofítica pediculada formada por proliferação de epitélio escamoso estratificado ceratinizado, disposto em projeções digitiformes, cada uma com eixo central de tecido conjuntivo fibrovascular. Epitélio com maturação normal; podem ser vistos coilócitos na camada espinhosa superficial. Diagnóstico: papiloma escamoso."
+  },
+  {
+   "id": "mucocele",
+   "nome": "Mucocele",
+   "en": "Mucocele (mucus extravasation phenomenon)",
+   "unidade": "n11-01",
+   "pista": "Lago de muco SEM epitélio em volta, cercado de tecido de granulação com macrófagos espumosos.",
+   "criterios": [
+    "Área de muco extravasado (derramado) no conjuntivo.",
+    "Sem revestimento epitelial: é um pseudocisto (o que o separa do cisto do ducto salivar).",
+    "Em volta, resposta de tecido de granulação.",
+    "Inflamação com muitos histiócitos (macrófagos) espumosos.",
+    "Às vezes se vê o ducto rompido levando à área.",
+    "Glândulas salivares menores vizinhas com inflamação crônica e ductos dilatados."
+   ],
+   "achados": [
+    "Muco extravasado numa cavidade sem revestimento epitelial",
+    "Tecido de granulação em volta do muco",
+    "Histiócitos espumosos (macrófagos)",
+    "Glândulas salivares menores vizinhas"
+   ],
+   "descricao": "Corte de mucosa revestida por epitélio escamoso estratificado. No conjuntivo, cavidade preenchida por material mucoide extravasado, sem revestimento epitelial, delimitada por tecido de granulação com numerosos histiócitos espumosos e infiltrado inflamatório crônico. Glândulas salivares menores adjacentes com ductos dilatados e sialoadenite crônica. Diagnóstico: mucocele (fenômeno de extravasamento de muco)."
+  },
+  {
+   "id": "adenoma",
+   "nome": "Adenoma pleomórfico",
+   "en": "Pleomorphic adenoma (benign mixed tumor)",
+   "unidade": "n11-10",
+   "pista": "Tumor encapsulado e \"misto\": ductos e células mioepiteliais num fundo mixoide, condroide ou hialino.",
+   "criterios": [
+    "Tumor bem delimitado e encapsulado (a cápsula pode ser incompleta, sobretudo nas glândulas menores).",
+    "Mistura de epitélio glandular e células mioepiteliais num fundo parecido com mesênquima.",
+    "O epitélio forma ductos, estruturas císticas, ilhas ou lençóis; pode haver células escamosas e mucosas.",
+    "Células mioepiteliais angulosas, fusiformes ou plasmocitoides (núcleo excêntrico e citoplasma eosinofílico hialinizado).",
+    "Estroma mixoide (muco entre as células) e condroide (aspecto de cartilagem), produzido pelas mioepiteliais.",
+    "Áreas de estroma hialinizado eosinofílico; às vezes gordura ou osteoide."
+   ],
+   "achados": [
+    "Tumor bem delimitado e encapsulado",
+    "Ductos e ilhas de epitélio entre células mioepiteliais",
+    "Células mioepiteliais plasmocitoides",
+    "Estroma mixoide e condroide",
+    "Estroma hialinizado eosinofílico"
+   ],
+   "descricao": "Neoplasia bem delimitada, envolta por cápsula fibrosa, formada por células epiteliais que formam estruturas ductais e por células mioepiteliais (fusiformes, angulosas e plasmocitoides), dispostas em ilhas e lençóis em meio a estroma mixoide, condroide e áreas hialinizadas. Diagnóstico: adenoma pleomórfico."
+  }
+ ],
+ "parecidas": [
+  {
+   "id": "fibroma-cg",
+   "nome": "Fibroma de células gigantes",
+   "parece": "fibroma",
+   "unidade": "n12-01",
+   "diferenca": "Conjuntivo fibroso mais frouxo e vascular com fibroblastos grandes, estrelados e às vezes multinucleados perto da superfície; cristas epiteliais alongadas."
+  },
+  {
+   "id": "epulis",
+   "nome": "Épulis fissurado",
+   "parece": "fibroma",
+   "unidade": "n12-01",
+   "diferenca": "Hiperplasia fibrosa em DOBRAS e sulcos (pela prótese), epitélio com cristas irregulares e ulceração no fundo dos sulcos."
+  },
+  {
+   "id": "gpcg",
+   "nome": "Granuloma periférico de células gigantes",
+   "parece": "granuloma",
+   "unidade": "n12-04",
+   "diferenca": "Células gigantes multinucleadas num fundo de células ovoides e fusiformes, muita hemorragia e hemossiderina; o granuloma piogênico não tem as gigantes."
+  },
+  {
+   "id": "verruga",
+   "nome": "Verruga vulgar",
+   "parece": "papiloma",
+   "unidade": "n10-02",
+   "diferenca": "Projeções pontudas com hiperceratose, camada granulosa proeminente (grânulos grosseiros de querato-hialina), muitos coilócitos e cristas que convergem para o centro."
+  },
+  {
+   "id": "condiloma",
+   "nome": "Condiloma acuminado",
+   "parece": "papiloma",
+   "unidade": "n10-02",
+   "diferenca": "Projeções largas e rombas, epitélio acantótico e coilócitos na camada espinhosa."
+  },
+  {
+   "id": "cisto-ducto",
+   "nome": "Cisto do ducto salivar",
+   "parece": "mucocele",
+   "unidade": "n11-02",
+   "diferenca": "Cisto VERDADEIRO, revestido por epitélio (cuboide, colunar ou escamoso); a mucocele não tem epitélio."
+  },
+  {
+   "id": "mucinose",
+   "nome": "Mucinose oral focal",
+   "parece": "mucocele",
+   "unidade": "n12-03",
+   "diferenca": "Área frouxa e mixomatosa do próprio conjuntivo, sem cápsula, com poucos vasos e sem inflamação; não tem tecido de granulação nem macrófagos espumosos."
+  },
+  {
+   "id": "oncocitoma",
+   "nome": "Oncocitoma",
+   "parece": "adenoma",
+   "unidade": "n11-11",
+   "diferenca": "Lençóis de oncócitos grandes, de citoplasma eosinofílico granular; sem o estroma mixoide ou condroide do adenoma pleomórfico."
+  },
+  {
+   "id": "warthin",
+   "nome": "Tumor de Warthin",
+   "parece": "adenoma",
+   "unidade": "n11-12",
+   "diferenca": "Espaços císticos e papilas revestidos por fileira dupla de oncócitos sobre um estroma linfoide denso."
+  }
+ ],
+ "laminas": [
+  {
+   "id": "lam-12-6",
+   "lesao": "fibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-6.jpg",
+   "aumento": "pequeno",
+   "legenda": "Pequeno aumento: massa nodular exofítica de tecido conjuntivo fibroso denso, coberta por epitélio.",
+   "achados": [
+    "Massa nodular de colágeno denso, sem cápsula",
+    "Epitélio com cristas achatadas sobre a massa fibrosa"
+   ],
+   "fonte": {
+    "figura": "12.6",
+    "pagina": 521
+   }
+  },
+  {
+   "id": "lam-12-7",
+   "lesao": "fibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-7.jpg",
+   "aumento": "médio",
+   "legenda": "Aumento maior: colágeno denso logo abaixo do epitélio de superfície.",
+   "achados": [
+    "Massa nodular de colágeno denso, sem cápsula",
+    "Feixes de colágeno em arranjo radial, circular ou aleatório",
+    "Poucas células, com inflamação crônica esparsa"
+   ],
+   "fonte": {
+    "figura": "12.7",
+    "pagina": 521
+   }
+  },
+  {
+   "id": "lam-12-39",
+   "lesao": "granuloma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-39.jpg",
+   "aumento": "pequeno",
+   "legenda": "Pequeno aumento: massa exofítica de tecido parecido com tecido de granulação, de superfície ulcerada; proliferação endotelial lobular no conjuntivo mais profundo.",
+   "achados": [
+    "Vasos agrupados em lóbulos",
+    "Superfície ulcerada com membrana fibrinopurulenta"
+   ],
+   "fonte": {
+    "figura": "12.39",
+    "pagina": 532
+   }
+  },
+  {
+   "id": "lam-12-40",
+   "lesao": "granuloma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-40.jpg",
+   "aumento": "grande",
+   "legenda": "Aumento maior: capilares cheios de hemácias e inflamação esparsa.",
+   "achados": [
+    "Muitos vasos neoformados cheios de hemácias",
+    "Inflamação mista, com neutrófilos perto da úlcera"
+   ],
+   "fonte": {
+    "figura": "12.40",
+    "pagina": 532
+   }
+  },
+  {
+   "id": "lam-10-4",
+   "lesao": "papiloma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-4.jpg",
+   "aumento": "pequeno",
+   "legenda": "Pequeno aumento: proliferação pediculada de epitélio escamoso, com muitas projeções papilares de eixo conjuntivo fibrovascular.",
+   "achados": [
+    "Projeções digitiformes de epitélio escamoso",
+    "Eixos de conjuntivo fibrovascular dentro das projeções",
+    "Lesão pediculada com superfície papilar ceratinizada"
+   ],
+   "fonte": {
+    "figura": "10.4",
+    "pagina": 362
+   }
+  },
+  {
+   "id": "lam-11-6",
+   "lesao": "mucocele",
+   "img": "conteudo/patologia/neville/figuras/fig-11-6.jpg",
+   "aumento": "pequeno",
+   "legenda": "Cavidade cheia de muco abaixo da superfície da mucosa (parece cisto, mas sem epitélio); glândulas salivares menores abaixo e ao lado do muco.",
+   "achados": [
+    "Muco extravasado numa cavidade sem revestimento epitelial",
+    "Glândulas salivares menores vizinhas"
+   ],
+   "fonte": {
+    "figura": "11.6",
+    "pagina": 467
+   }
+  },
+  {
+   "id": "lam-11-7",
+   "lesao": "mucocele",
+   "img": "conteudo/patologia/neville/figuras/fig-11-7.jpg",
+   "aumento": "grande",
+   "legenda": "Aumento maior: muco extravasado com tecido de granulação e histiócitos espumosos.",
+   "achados": [
+    "Tecido de granulação em volta do muco",
+    "Histiócitos espumosos (macrófagos)"
+   ],
+   "fonte": {
+    "figura": "11.7",
+    "pagina": 467
+   }
+  },
+  {
+   "id": "lam-11-40",
+   "lesao": "adenoma",
+   "img": "conteudo/patologia/neville/figuras/fig-11-40.jpg",
+   "aumento": "pequeno",
+   "legenda": "Pequeno aumento: tumor bem delimitado e encapsulado; já se nota o padrão variado.",
+   "achados": [
+    "Tumor bem delimitado e encapsulado"
+   ],
+   "fonte": {
+    "figura": "11.40",
+    "pagina": 491
+   }
+  },
+  {
+   "id": "lam-11-41",
+   "lesao": "adenoma",
+   "img": "conteudo/patologia/neville/figuras/fig-11-41.jpg",
+   "aumento": "grande",
+   "legenda": "Células mioepiteliais plasmocitoides (núcleo excêntrico, citoplasma eosinofílico).",
+   "achados": [
+    "Células mioepiteliais plasmocitoides"
+   ],
+   "fonte": {
+    "figura": "11.41",
+    "pagina": 491
+   }
+  },
+  {
+   "id": "lam-11-42",
+   "lesao": "adenoma",
+   "img": "conteudo/patologia/neville/figuras/fig-11-42.jpg",
+   "aumento": "médio",
+   "legenda": "Estruturas ductais (à esquerda) com estroma mixomatoso (à direita).",
+   "achados": [
+    "Ductos e ilhas de epitélio entre células mioepiteliais",
+    "Estroma mixoide e condroide"
+   ],
+   "fonte": {
+    "figura": "11.42",
+    "pagina": 491
+   }
+  },
+  {
+   "id": "lam-11-43",
+   "lesao": "adenoma",
+   "img": "conteudo/patologia/neville/figuras/fig-11-43.jpg",
+   "aumento": "médio",
+   "legenda": "Material condroide (à direita) com epitélio ductal e células mioepiteliais ao lado.",
+   "achados": [
+    "Estroma mixoide e condroide",
+    "Ductos e ilhas de epitélio entre células mioepiteliais"
+   ],
+   "fonte": {
+    "figura": "11.43",
+    "pagina": 491
+   }
+  },
+  {
+   "id": "lam-11-44",
+   "lesao": "adenoma",
+   "img": "conteudo/patologia/neville/figuras/fig-11-44.jpg",
+   "aumento": "médio",
+   "legenda": "Ductos e células mioepiteliais cercados por estroma hialinizado eosinofílico.",
+   "achados": [
+    "Estroma hialinizado eosinofílico",
+    "Ductos e ilhas de epitélio entre células mioepiteliais"
+   ],
+   "fonte": {
+    "figura": "11.44",
+    "pagina": 492
+   }
+  },
+  {
+   "id": "lam-12-11",
+   "lesao": "fibroma-cg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-11.jpg",
+   "aumento": "grande",
+   "legenda": "Fibroma de células gigantes: fibroblastos grandes e estrelados no conjuntivo.",
+   "achados": [],
+   "fonte": {
+    "figura": "12.11",
+    "pagina": 522
+   }
+  },
+  {
+   "id": "lam-12-16",
+   "lesao": "epulis",
+   "img": "conteudo/patologia/neville/figuras/fig-12-16.jpg",
+   "aumento": "pequeno",
+   "legenda": "Épulis fissurado: dobras de conjuntivo fibrovascular hiperplásico cobertas por epitélio.",
+   "achados": [],
+   "fonte": {
+    "figura": "12.16",
+    "pagina": 524
+   }
+  },
+  {
+   "id": "lam-12-43",
+   "lesao": "gpcg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-43.jpg",
+   "aumento": "pequeno",
+   "legenda": "Granuloma periférico de células gigantes: proliferação nodular de células gigantes multinucleadas na gengiva.",
+   "achados": [],
+   "fonte": {
+    "figura": "12.43",
+    "pagina": 533
+   }
+  },
+  {
+   "id": "lam-12-44",
+   "lesao": "gpcg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-44.jpg",
+   "aumento": "grande",
+   "legenda": "Granuloma periférico de células gigantes: gigantes multinucleadas num fundo hemorrágico de células ovoides e fusiformes.",
+   "achados": [],
+   "fonte": {
+    "figura": "12.44",
+    "pagina": 533
+   }
+  },
+  {
+   "id": "lam-10-8",
+   "lesao": "verruga",
+   "img": "conteudo/patologia/neville/figuras/fig-10-8.jpg",
+   "aumento": "grande",
+   "legenda": "Verruga vulgar: camada granulosa com grânulos grosseiros e coilócitos.",
+   "achados": [],
+   "fonte": {
+    "figura": "10.8",
+    "pagina": 363
+   }
+  },
+  {
+   "id": "lam-10-10",
+   "lesao": "condiloma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-10.jpg",
+   "aumento": "médio",
+   "legenda": "Condiloma acuminado: epitélio acantótico formando uma projeção romba.",
+   "achados": [],
+   "fonte": {
+    "figura": "10.10",
+    "pagina": 364
+   }
+  },
+  {
+   "id": "lam-10-11",
+   "lesao": "condiloma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-11.jpg",
+   "aumento": "grande",
+   "legenda": "Condiloma acuminado: coilócitos na camada espinhosa.",
+   "achados": [],
+   "fonte": {
+    "figura": "10.11",
+    "pagina": 364
+   }
+  },
+  {
+   "id": "lam-11-11",
+   "lesao": "cisto-ducto",
+   "img": "conteudo/patologia/neville/figuras/fig-11-11.jpg",
+   "aumento": "grande",
+   "legenda": "Cisto do ducto salivar: cavidade revestida por epitélio cuboide fino.",
+   "achados": [],
+   "fonte": {
+    "figura": "11.11",
+    "pagina": 469
+   }
+  },
+  {
+   "id": "lam-12-32",
+   "lesao": "mucinose",
+   "img": "conteudo/patologia/neville/figuras/fig-12-32.jpg",
+   "aumento": "pequeno",
+   "legenda": "Mucinose oral focal: massa nodular de conjuntivo frouxo e mixomatoso.",
+   "achados": [],
+   "fonte": {
+    "figura": "12.32",
+    "pagina": 530
+   }
+  },
+  {
+   "id": "lam-11-45",
+   "lesao": "oncocitoma",
+   "img": "conteudo/patologia/neville/figuras/fig-11-45.jpg",
+   "aumento": "grande",
+   "legenda": "Oncocitoma: lençol de oncócitos grandes e eosinofílicos.",
+   "achados": [],
+   "fonte": {
+    "figura": "11.45",
+    "pagina": 492
+   }
+  },
+  {
+   "id": "lam-11-48",
+   "lesao": "warthin",
+   "img": "conteudo/patologia/neville/figuras/fig-11-48.jpg",
+   "aumento": "pequeno",
+   "legenda": "Tumor de Warthin: tumor papilar e cístico com estroma linfoide.",
+   "achados": [],
+   "fonte": {
+    "figura": "11.48",
+    "pagina": 494
+   }
+  },
+  {
+   "id": "lam-11-49",
+   "lesao": "warthin",
+   "img": "conteudo/patologia/neville/figuras/fig-11-49.jpg",
+   "aumento": "grande",
+   "legenda": "Tumor de Warthin: fileira dupla de oncócitos e estroma linfoide ao lado.",
+   "achados": [],
+   "fonte": {
+    "figura": "11.49",
+    "pagina": 495
+   }
+  }
+ ],
+ "midia": [
+  "conteudo/patologia/neville/figuras/fig-12-6.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-7.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-39.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-40.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-4.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-6.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-7.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-40.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-41.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-42.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-43.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-44.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-11.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-16.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-43.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-44.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-8.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-10.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-11.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-11.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-32.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-45.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-48.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-49.jpg"
+ ]
+}

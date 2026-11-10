@@ -1,0 +1,72 @@
+/* ---------- Aba Treino (telaTreino.js, treino.js; 04/11/2026) ---------- */
+.tr-dia { margin-bottom: 14px; }
+.tr-dia-topo { display: flex; gap: 12px; align-items: center; }
+.tr-dia-topo h2 { font-size: 20px; margin: 0; }
+.tr-dia-topo .sub { margin: 2px 0 0; display: block; }
+.tr-resumo { margin: 10px 0 12px; font-size: 14px; line-height: 1.4; color: var(--tinta); }
+
+.tr-prova { margin-bottom: 10px; padding: 12px 14px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.tr-prova-cab { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.tr-prova-cab .rx-tit { min-width: 0; }
+.tr-notas { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; color: var(--tinta-2); }
+.tr-nota { font: 800 13px var(--display); padding: 2px 8px; border-radius: 99px; background: var(--errado-fundo, #FDE3E5); color: var(--errado); }
+.tr-nota.medio { background: color-mix(in srgb, #E5A100 18%, var(--superficie)); color: #A06F00; }
+.tr-nota.bom { background: var(--certo-fundo); color: var(--certo); }
+.tr-bts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.tr-rever-ultimo { justify-self: start; padding: 2px 0; font-size: 14px; }
+.tr-det summary { cursor: pointer; font-weight: 700; font-size: 14px; color: var(--acento-tinta); padding: 4px 0; }
+.tr-det .rx-lista { margin-bottom: 0; }
+
+.tr-discs { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; margin: 0 -2px; scrollbar-width: none; }
+.tr-discs::-webkit-scrollbar { display: none; }
+.tr-chip { flex: none; display: flex; align-items: center; gap: 8px; padding: 7px 12px 7px 8px; border-radius: 14px; border: 2px solid var(--linha); background: var(--superficie); color: var(--tinta); text-align: left; font: inherit; }
+.tr-chip .ico3d { width: 28px; height: 28px; }
+.tr-chip b, .tr-chip small { display: block; line-height: 1.2; }
+.tr-chip b { font-size: 14px; }
+.tr-chip small { font-size: 11.5px; color: var(--tinta-2); }
+.tr-chip.on { border-color: var(--acento); background: var(--acento-suave); }
+.tr-caps { padding: 8px 10px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; max-height: 52vh; overflow-y: auto; }
+.tr-fonte { margin: 2px 4px 6px; font-size: 12.5px; color: var(--tinta-2); }
+.tr-linha { display: flex; align-items: center; gap: 10px; padding: 8px 6px; border-radius: 12px; cursor: pointer; min-width: 0; }
+.tr-linha:active { background: var(--superficie-2, var(--acento-suave)); }
+.tr-linha.tr-u { padding-left: 22px; }
+.tr-caixa { flex: none; width: 22px; height: 22px; border-radius: 7px; border: 2px solid var(--linha); display: grid; place-items: center; }
+.tr-linha.on .tr-caixa { background: var(--acento); border-color: var(--acento); }
+.tr-linha.on .tr-caixa::after { content: ""; width: 10px; height: 6px; border: solid #fff; border-width: 0 0 3px 3px; transform: translateY(-1px) rotate(-45deg); }
+.tr-txt { flex: 1; min-width: 0; }
+.tr-txt b, .tr-txt > small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tr-txt b { font-size: 14.5px; }
+.tr-txt b small { color: var(--tinta-2); font-weight: 600; }
+.tr-txt > small { font-size: 12px; color: var(--tinta-2); }
+.tr-pct { flex: none; font: 800 14px var(--display); color: var(--errado); min-width: 38px; text-align: right; }
+.tr-pct.medio { color: #C88A00; } .tr-pct.bom { color: var(--certo); } .tr-pct.nunca { color: var(--tinta-2); }
+.tr-abre { flex: none; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--linha); background: var(--superficie); color: var(--tinta-2); font-size: 13px; transition: transform .2s; }
+.tr-abre.aberto { transform: rotate(180deg); }
+.tr-unis { border-left: 2px solid var(--linha); margin-left: 16px; }
+.tr-unis .tr-linha.tr-u { padding-left: 8px; }
+.tr-rodape { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 10px 0 8px; }
+.tr-qtd { display: flex; gap: 6px; }
+.tr-aleatorio { display: flex; align-items: center; gap: 12px; margin-top: 24px; margin-bottom: 16px; }
+.tr-aleatorio > span { flex: 1; min-width: 0; }
+.tr-aleatorio b, .tr-aleatorio small { display: block; }
+.tr-aleatorio small { color: var(--tinta-2); font-size: 12.5px; }
+.tr-aleatorio .botao { width: auto; flex: none; padding-left: 18px; padding-right: 18px; }
+
+/* modo prova da lição (licao.js): relógio, pular e a nota no fim */
+.prova-relogio { flex: none; font: 800 16px var(--display); font-variant-numeric: tabular-nums; padding: 4px 10px; border-radius: 99px; background: var(--acento-suave); color: var(--acento-tinta); min-width: 62px; text-align: center; }
+.prova-relogio.pouco { background: var(--errado-fundo, #FDE3E5); color: var(--errado); animation: pulsa-relogio 1s ease-in-out infinite; }
+@keyframes pulsa-relogio { 50% { transform: scale(1.08); } }
+.prova-pular { display: block; margin: -4px auto 6px; font-size: 14px; }
+.fim-prova { justify-content: flex-start; }
+.prova-nota { width: 116px; height: 116px; border-radius: 50%; display: grid; place-content: center; border: 6px solid var(--errado); background: var(--superficie); margin-top: 8px; }
+.prova-nota b { font: 800 40px/1 var(--display); color: var(--errado); }
+.prova-nota small { font-size: 12px; color: var(--tinta-2); }
+.prova-nota.medio { border-color: #E5A100; } .prova-nota.medio b { color: #C88A00; }
+.prova-nota.bom { border-color: var(--certo); } .prova-nota.bom b { color: var(--certo); }
+.fim-prova .placar b { font-size: 18px; }
+.tr-por-u { width: 100%; text-align: left; }
+.tr-por-u h3 { font-size: 16px; margin: 4px 0 0; }
+.licao-rodape .prova-rever { margin-bottom: 8px; }
+@media (prefers-reduced-motion: reduce) { .prova-relogio.pouco { animation: none; } }
+.tr-linha.parte .tr-caixa { border-color: var(--acento); }
+.tr-linha.parte .tr-caixa::after { content: ""; width: 10px; height: 3px; border-radius: 2px; background: var(--acento); }

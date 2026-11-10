@@ -1,0 +1,3032 @@
+{
+ "versao": 1,
+ "livro": "Neville, Oral and Maxillofacial Pathology, 5ª ed.",
+ "grupos": {
+  "dev": "Variações da normalidade e desenvolvimento",
+  "cisto": "Cistos de tecido mole",
+  "infec": "Infecções",
+  "epitelio": "Lesões epiteliais e pigmentadas",
+  "mole": "Tumores e hiperplasias de tecido mole",
+  "fisico": "Agentes físicos e químicos",
+  "imuno": "Imunológicas e dermatológicas",
+  "saliva": "Glândulas salivares",
+  "endo": "Infecções de origem dentária"
+ },
+ "lesoes": [
+  {
+   "id": "fordyce",
+   "grupo": "dev",
+   "nome": "Grânulos de Fordyce",
+   "pista": "Pápulas amarelas pequenas e múltiplas na mucosa jugal e no vermelhão: glândulas sebáceas fora do lugar, sem tratamento.",
+   "unidade": "n01-01"
+  },
+  {
+   "id": "leucoedema",
+   "grupo": "dev",
+   "nome": "Leucoedema",
+   "pista": "Mucosa jugal esbranquiçada e opalescente, dos dois lados, que some ao esticar a bochecha.",
+   "unidade": "n01-02"
+  },
+  {
+   "id": "fissurada",
+   "grupo": "dev",
+   "nome": "Língua fissurada",
+   "pista": "Sulcos no dorso da língua; muitas vezes junto da língua geográfica.",
+   "unidade": "n01-04"
+  },
+  {
+   "id": "pilosa",
+   "grupo": "dev",
+   "nome": "Língua pilosa",
+   "pista": "Papilas filiformes alongadas no dorso da língua, pretas, marrons ou brancas.",
+   "unidade": "n01-04"
+  },
+  {
+   "id": "geografica",
+   "grupo": "dev",
+   "nome": "Língua geográfica (eritema migratório)",
+   "pista": "Áreas vermelhas sem papilas filiformes, cercadas por bordas brancas, que mudam de lugar em dias.",
+   "unidade": "n16-12"
+  },
+  {
+   "id": "toro-pal",
+   "grupo": "dev",
+   "nome": "Tórus palatino",
+   "pista": "Massa óssea na linha média do palato duro, coberta por mucosa normal.",
+   "unidade": "n01-07"
+  },
+  {
+   "id": "toro-mand",
+   "grupo": "dev",
+   "nome": "Tórus mandibular",
+   "pista": "Nódulos ósseos na face lingual da mandíbula, na altura dos pré-molares, quase sempre dos dois lados.",
+   "unidade": "n01-07"
+  },
+  {
+   "id": "varicosidade",
+   "grupo": "dev",
+   "nome": "Varicosidades",
+   "pista": "Veias dilatadas, roxas, no ventre da língua ou no lábio, em idosos.",
+   "unidade": "n01-05"
+  },
+  {
+   "id": "anquiloglossia",
+   "grupo": "dev",
+   "nome": "Anquiloglossia",
+   "pista": "Freio lingual curto que prende a ponta da língua.",
+   "unidade": "n01-03"
+  },
+  {
+   "id": "nasolabial",
+   "grupo": "cisto",
+   "nome": "Cisto nasolabial",
+   "pista": "Aumento de volume no lábio superior, ao lado da linha média, que apaga o sulco nasolabial.",
+   "unidade": "n01-09"
+  },
+  {
+   "id": "linfoepitelial",
+   "grupo": "cisto",
+   "nome": "Cisto linfoepitelial oral",
+   "pista": "Nódulo amarelado pequeno no assoalho da boca ou na borda lateral posterior da língua.",
+   "unidade": "n01-13"
+  },
+  {
+   "id": "dermoide",
+   "grupo": "cisto",
+   "nome": "Cisto dermoide",
+   "pista": "Aumento de volume pastoso na linha média do assoalho da boca, em jovens.",
+   "unidade": "n01-12"
+  },
+  {
+   "id": "erupcao",
+   "grupo": "cisto",
+   "nome": "Cisto de erupção",
+   "pista": "Aumento de volume azulado e flutuante sobre um dente em erupção.",
+   "unidade": "n15-02"
+  },
+  {
+   "id": "gengival-rn",
+   "grupo": "cisto",
+   "nome": "Cisto gengival do recém-nascido",
+   "pista": "Nódulos brancos pequenos no rebordo do recém-nascido; somem sozinhos.",
+   "unidade": "n01-09"
+  },
+  {
+   "id": "pseudomembranosa",
+   "grupo": "infec",
+   "nome": "Candidíase pseudomembranosa",
+   "pista": "Placas brancas, como leite coalhado, que saem ao raspar e deixam a mucosa vermelha.",
+   "unidade": "n06-02"
+  },
+  {
+   "id": "eritematosa",
+   "grupo": "infec",
+   "nome": "Candidíase eritematosa",
+   "pista": "Áreas vermelhas, sobretudo no palato e no dorso da língua (atrofia das papilas).",
+   "unidade": "n06-02"
+  },
+  {
+   "id": "queilite-angular",
+   "grupo": "infec",
+   "nome": "Queilite angular",
+   "pista": "Fissuras vermelhas e crostas nas comissuras labiais.",
+   "unidade": "n06-02"
+  },
+  {
+   "id": "estomatite-protetica",
+   "grupo": "infec",
+   "nome": "Estomatite protética",
+   "pista": "Eritema no palato sob a prótese, restrito à área que ela cobre.",
+   "unidade": "n06-02"
+  },
+  {
+   "id": "herpes-labial",
+   "grupo": "infec",
+   "nome": "Herpes labial",
+   "pista": "Vesículas agrupadas no vermelhão que rompem e viram crosta; volta no mesmo lugar.",
+   "unidade": "n07-02"
+  },
+  {
+   "id": "zoster",
+   "grupo": "infec",
+   "nome": "Herpes-zóster",
+   "pista": "Vesículas e úlceras de um lado só, no trajeto de um ramo do trigêmeo, parando na linha média.",
+   "unidade": "n07-04"
+  },
+  {
+   "id": "leuco-pilosa",
+   "grupo": "infec",
+   "nome": "Leucoplasia pilosa",
+   "pista": "Placa branca com estrias verticais na borda lateral da língua, que não sai ao raspar (vírus Epstein-Barr).",
+   "unidade": "n07-11"
+  },
+  {
+   "id": "mao-pe-boca",
+   "grupo": "infec",
+   "nome": "Doença mão-pé-boca",
+   "pista": "Úlceras na boca e vesículas nas mãos e nos pés, em crianças (coxsackievírus).",
+   "unidade": "n07-07"
+  },
+  {
+   "id": "paracoco",
+   "grupo": "infec",
+   "nome": "Paracoccidioidomicose",
+   "pista": "Úlceras de fundo granular com pontinhos vermelhos (estomatite moriforme); comum no Brasil, em trabalhadores rurais.",
+   "unidade": "n06-05"
+  },
+  {
+   "id": "papiloma",
+   "grupo": "epitelio",
+   "nome": "Papiloma escamoso",
+   "pista": "Lesão exofítica pediculada com projeções em forma de dedo, branca ou rosada.",
+   "unidade": "n10-01"
+  },
+  {
+   "id": "verruga",
+   "grupo": "epitelio",
+   "nome": "Verruga vulgar",
+   "pista": "Pápula branca, áspera e papilar, de base séssil; comum nos lábios e nos dedos.",
+   "unidade": "n10-01"
+  },
+  {
+   "id": "heck",
+   "grupo": "epitelio",
+   "nome": "Hiperplasia epitelial multifocal",
+   "pista": "Muitas pápulas lisas e achatadas, da cor da mucosa, em crianças (doença de Heck, HPV 13 e 32).",
+   "unidade": "n10-03"
+  },
+  {
+   "id": "leucoplasia",
+   "grupo": "epitelio",
+   "nome": "Leucoplasia",
+   "pista": "Placa branca que não sai ao raspar e não se encaixa em outro diagnóstico: lesão potencialmente maligna.",
+   "unidade": "n10-13"
+  },
+  {
+   "id": "pvl",
+   "grupo": "epitelio",
+   "nome": "Leucoplasia verrucosa proliferativa",
+   "pista": "Placas brancas múltiplas e verrucosas que se espalham devagar; risco alto de câncer.",
+   "unidade": "n10-14"
+  },
+  {
+   "id": "eritroplasia",
+   "grupo": "epitelio",
+   "nome": "Eritroplasia",
+   "pista": "Placa vermelha aveludada e bem delimitada: a lesão potencialmente maligna mais perigosa.",
+   "unidade": "n10-14"
+  },
+  {
+   "id": "queilite-actinica",
+   "grupo": "epitelio",
+   "nome": "Queilite actínica",
+   "pista": "Lábio inferior com vermelhão atrófico e manchado, limite apagado com a pele, por exposição ao sol.",
+   "unidade": "n10-18"
+  },
+  {
+   "id": "nicotinica",
+   "grupo": "epitelio",
+   "nome": "Estomatite nicotínica",
+   "pista": "Palato branco e espesso com pontos vermelhos (ductos das glândulas), em fumantes de cachimbo.",
+   "unidade": "n10-18"
+  },
+  {
+   "id": "ceratose-tabaco",
+   "grupo": "epitelio",
+   "nome": "Ceratose do tabaco de mascar",
+   "pista": "Mucosa branca e enrugada no lugar onde fica o tabaco.",
+   "unidade": "n10-16"
+  },
+  {
+   "id": "cec",
+   "grupo": "epitelio",
+   "nome": "Carcinoma espinocelular",
+   "pista": "Úlcera endurecida de bordas elevadas, ou placa branca e vermelha, sobretudo na borda lateral da língua, no assoalho e no lábio inferior.",
+   "unidade": "n07-13"
+  },
+  {
+   "id": "verrucoso",
+   "grupo": "epitelio",
+   "nome": "Carcinoma verrucoso",
+   "pista": "Placa branca espessa e verrucosa, de crescimento lento, em idosos que usam tabaco.",
+   "unidade": "n10-25"
+  },
+  {
+   "id": "melanoma",
+   "grupo": "epitelio",
+   "nome": "Melanoma",
+   "pista": "Mancha ou massa preta ou marrom de bordas irregulares; na boca, sobretudo no palato e na gengiva superior.",
+   "unidade": "n10-32"
+  },
+  {
+   "id": "macula-melanotica",
+   "grupo": "epitelio",
+   "nome": "Mácula melanótica oral",
+   "pista": "Mancha marrom pequena, plana e uniforme no lábio inferior ou na gengiva.",
+   "unidade": "n10-08"
+  },
+  {
+   "id": "nevo",
+   "grupo": "epitelio",
+   "nome": "Nevo melanocítico",
+   "pista": "Pápula ou mácula marrom a azulada, bem delimitada; na boca, sobretudo no palato.",
+   "unidade": "n10-10"
+  },
+  {
+   "id": "basocelular",
+   "grupo": "epitelio",
+   "nome": "Carcinoma basocelular",
+   "pista": "Pápula perolada na pele exposta ao sol, com úlcera no centro e vasinhos (telangiectasias).",
+   "unidade": "n10-30"
+  },
+  {
+   "id": "fibroma",
+   "grupo": "mole",
+   "nome": "Hiperplasia fibrosa (fibroma de irritação)",
+   "pista": "Nódulo liso, firme, da cor da mucosa, onde há trauma (mucosa jugal na linha de oclusão, língua, lábio).",
+   "unidade": "n12-01"
+  },
+  {
+   "id": "fibroma-cg",
+   "grupo": "mole",
+   "nome": "Fibroma de células gigantes",
+   "pista": "Pápula pequena de superfície papilar, sobretudo na gengiva, em jovens.",
+   "unidade": "n12-01"
+  },
+  {
+   "id": "epulis-fissurado",
+   "grupo": "mole",
+   "nome": "Épulis fissurado",
+   "pista": "Dobras de tecido no vestíbulo onde a borda de uma prótese mal adaptada encosta.",
+   "unidade": "n12-01"
+  },
+  {
+   "id": "hpi",
+   "grupo": "mole",
+   "nome": "Hiperplasia papilar inflamatória",
+   "pista": "Palato coberto por pápulas vermelhas pequenas, sob a prótese.",
+   "unidade": "n12-02"
+  },
+  {
+   "id": "granuloma-piogenico",
+   "grupo": "mole",
+   "nome": "Granuloma piogênico",
+   "pista": "Nódulo vermelho, muitas vezes ulcerado, que sangra fácil, sobretudo na gengiva; comum na gravidez.",
+   "unidade": "n12-03"
+  },
+  {
+   "id": "gpcg",
+   "grupo": "mole",
+   "nome": "Granuloma periférico de células gigantes",
+   "pista": "Nódulo vermelho-arroxeado na gengiva ou no rebordo, anterior aos molares.",
+   "unidade": "n12-04"
+  },
+  {
+   "id": "fop",
+   "grupo": "mole",
+   "nome": "Fibroma ossificante periférico",
+   "pista": "Nódulo gengival vermelho ou rosado que nasce da papila interdental, em adolescentes e adultos jovens.",
+   "unidade": "n12-04"
+  },
+  {
+   "id": "lipoma",
+   "grupo": "mole",
+   "nome": "Lipoma",
+   "pista": "Nódulo mole e amarelado, de crescimento lento, sobretudo na mucosa jugal.",
+   "unidade": "n12-05"
+  },
+  {
+   "id": "neurofibroma",
+   "grupo": "mole",
+   "nome": "Neurofibroma",
+   "pista": "Nódulo mole e indolor; muitos, com manchas café com leite, na neurofibromatose tipo 1.",
+   "unidade": "n12-07"
+  },
+  {
+   "id": "celulas-granulares",
+   "grupo": "mole",
+   "nome": "Tumor de células granulares",
+   "pista": "Nódulo firme e amarelado no dorso da língua.",
+   "unidade": "n12-10"
+  },
+  {
+   "id": "epulide-congenita",
+   "grupo": "mole",
+   "nome": "Epúlide congênita",
+   "pista": "Massa no rebordo anterior de um recém-nascido, quase sempre menina.",
+   "unidade": "n12-11"
+  },
+  {
+   "id": "hemangioma",
+   "grupo": "mole",
+   "nome": "Hemangioma ou malformação venosa",
+   "pista": "Lesão roxa ou vermelha que empalidece quando comprimida (vitropressão).",
+   "unidade": "n12-11"
+  },
+  {
+   "id": "linfatica",
+   "grupo": "mole",
+   "nome": "Malformação linfática",
+   "pista": "Vesículas translúcidas e avermelhadas no dorso da língua, como ovas de sapo.",
+   "unidade": "n12-12"
+  },
+  {
+   "id": "kaposi",
+   "grupo": "mole",
+   "nome": "Sarcoma de Kaposi",
+   "pista": "Manchas ou nódulos roxos no palato ou na gengiva, sobretudo em pessoas com HIV.",
+   "unidade": "n07-11"
+  },
+  {
+   "id": "neuroma",
+   "grupo": "mole",
+   "nome": "Neuroma traumático",
+   "pista": "Nódulo que dói ao toque, perto do forame mentual ou numa área de extração.",
+   "unidade": "n12-05"
+  },
+  {
+   "id": "linea-alba",
+   "grupo": "fisico",
+   "nome": "Linha alba",
+   "pista": "Linha branca na mucosa jugal, na altura do plano oclusal.",
+   "unidade": "n08-01"
+  },
+  {
+   "id": "morsicatio",
+   "grupo": "fisico",
+   "nome": "Mordiscamento crônico (morsicatio)",
+   "pista": "Áreas brancas, ásperas e esfiapadas na mucosa jugal ou na borda da língua, onde a pessoa morde.",
+   "unidade": "n08-01"
+  },
+  {
+   "id": "ulcera-traumatica",
+   "grupo": "fisico",
+   "nome": "Úlcera traumática",
+   "pista": "Úlcera com halo branco e uma causa visível (dente quebrado, prótese, mordida).",
+   "unidade": "n08-01"
+  },
+  {
+   "id": "queimadura",
+   "grupo": "fisico",
+   "nome": "Queimadura química ou térmica",
+   "pista": "Área branca necrótica que se solta, ligada a um produto (aspirina, fenol, peróxido) ou a algo quente.",
+   "unidade": "n08-02"
+  },
+  {
+   "id": "tatuagem-amalgama",
+   "grupo": "fisico",
+   "nome": "Tatuagem por amálgama",
+   "pista": "Mancha cinza-azulada e plana perto de uma restauração de amálgama ou de uma extração.",
+   "unidade": "n08-09"
+  },
+  {
+   "id": "melanose-tabaco",
+   "grupo": "fisico",
+   "nome": "Melanose do fumante",
+   "pista": "Pigmentação marrom difusa na gengiva vestibular anterior, em fumantes.",
+   "unidade": "n08-12"
+  },
+  {
+   "id": "osteonecrose",
+   "grupo": "fisico",
+   "nome": "Osteonecrose associada a medicamentos",
+   "pista": "Osso exposto na boca por mais de 8 semanas em quem usa antirreabsortivos (bisfosfonatos, denosumabe), sem radioterapia.",
+   "unidade": "n08-05"
+  },
+  {
+   "id": "osteorradionecrose",
+   "grupo": "fisico",
+   "nome": "Osteorradionecrose",
+   "pista": "Osso exposto que não cicatriza numa área que recebeu radioterapia.",
+   "unidade": "n08-03"
+  },
+  {
+   "id": "mucosite",
+   "grupo": "fisico",
+   "nome": "Mucosite por radio ou quimioterapia",
+   "pista": "Eritema e úlceras extensas e dolorosas durante o tratamento do câncer.",
+   "unidade": "n08-03"
+  },
+  {
+   "id": "petequia",
+   "grupo": "fisico",
+   "nome": "Petéquias, púrpura e hematoma",
+   "pista": "Manchas vermelhas a roxas que não empalidecem na vitropressão (sangue fora dos vasos).",
+   "unidade": "n08-09"
+  },
+  {
+   "id": "afta-menor",
+   "grupo": "imuno",
+   "nome": "Afta menor",
+   "pista": "Úlceras rasas de menos de 1 cm, redondas, com halo vermelho, em mucosa não queratinizada; voltam.",
+   "unidade": "n09-02"
+  },
+  {
+   "id": "afta-maior",
+   "grupo": "imuno",
+   "nome": "Afta maior",
+   "pista": "Úlceras profundas de mais de 1 cm, que duram semanas e deixam cicatriz.",
+   "unidade": "n09-02"
+  },
+  {
+   "id": "afta-herpetiforme",
+   "grupo": "imuno",
+   "nome": "Estomatite aftosa herpetiforme",
+   "pista": "Dezenas de úlceras pequenas agrupadas, que podem se juntar.",
+   "unidade": "n09-02"
+  },
+  {
+   "id": "behcet",
+   "grupo": "imuno",
+   "nome": "Síndrome de Behçet",
+   "pista": "Aftas recorrentes na boca com úlceras genitais e inflamação nos olhos.",
+   "unidade": "n09-03"
+  },
+  {
+   "id": "liquen",
+   "grupo": "imuno",
+   "nome": "Líquen plano",
+   "pista": "Estrias brancas rendilhadas (estrias de Wickham) nos dois lados da mucosa jugal; a forma erosiva dói.",
+   "unidade": "n16-14"
+  },
+  {
+   "id": "penfigo",
+   "grupo": "imuno",
+   "nome": "Pênfigo vulgar",
+   "pista": "Erosões extensas e dolorosas, bolhas que rompem logo; sinal de Nikolsky positivo.",
+   "unidade": "n16-09"
+  },
+  {
+   "id": "penfigoide",
+   "grupo": "imuno",
+   "nome": "Penfigoide das membranas mucosas",
+   "pista": "Gengivite descamativa e bolhas que às vezes ficam inteiras; pode cicatrizar os olhos.",
+   "unidade": "n16-10"
+  },
+  {
+   "id": "eritema-multiforme",
+   "grupo": "imuno",
+   "nome": "Eritema multiforme",
+   "pista": "Crostas com sangue nos lábios e úlceras na boca de início súbito; lesões em alvo na pele.",
+   "unidade": "n16-12"
+  },
+  {
+   "id": "lupus",
+   "grupo": "imuno",
+   "nome": "Lúpus eritematoso",
+   "pista": "Lesão com centro vermelho e estrias brancas que irradiam; na pele, eritema em asa de borboleta.",
+   "unidade": "n16-17"
+  },
+  {
+   "id": "gvhd",
+   "grupo": "imuno",
+   "nome": "Doença do enxerto contra o hospedeiro",
+   "pista": "Lesões liquenoides e úlceras em quem fez transplante de medula.",
+   "unidade": "n16-15"
+  },
+  {
+   "id": "angioedema",
+   "grupo": "imuno",
+   "nome": "Angioedema",
+   "pista": "Inchaço difuso e rápido do lábio ou da face, sem dor, que some em horas a dias.",
+   "unidade": "n09-11"
+  },
+  {
+   "id": "granulomatose-orofacial",
+   "grupo": "imuno",
+   "nome": "Granulomatose orofacial",
+   "pista": "Aumento persistente e indolor do lábio (queilite granulomatosa).",
+   "unidade": "n09-05"
+  },
+  {
+   "id": "canela",
+   "grupo": "imuno",
+   "nome": "Estomatite de contato pela canela",
+   "pista": "Placas brancas e vermelhas na mucosa jugal e na língua ligadas a balas, chicletes ou cremes com canela.",
+   "unidade": "n09-10"
+  },
+  {
+   "id": "mucocele",
+   "grupo": "saliva",
+   "nome": "Mucocele",
+   "pista": "Bolha azulada e flutuante no lábio inferior, que aparece e some.",
+   "unidade": "n11-01"
+  },
+  {
+   "id": "ranula",
+   "grupo": "saliva",
+   "nome": "Rânula",
+   "pista": "Aumento de volume azulado de um lado do assoalho da boca.",
+   "unidade": "n11-01"
+  },
+  {
+   "id": "sialometaplasia",
+   "grupo": "saliva",
+   "nome": "Sialometaplasia necrosante",
+   "pista": "Úlcera profunda no palato, que parece câncer mas cicatriza sozinha em semanas.",
+   "unidade": "n11-08"
+  },
+  {
+   "id": "adenoma-pleomorfico",
+   "grupo": "saliva",
+   "nome": "Adenoma pleomórfico",
+   "pista": "Nódulo firme e indolor, de crescimento lento, na parótida ou no palato (ao lado da linha média).",
+   "unidade": "n11-10"
+  },
+  {
+   "id": "mucoepidermoide",
+   "grupo": "saliva",
+   "nome": "Carcinoma mucoepidermoide",
+   "pista": "Aumento de volume no palato, às vezes azulado, parecendo mucocele.",
+   "unidade": "n11-14"
+  },
+  {
+   "id": "sjogren",
+   "grupo": "saliva",
+   "nome": "Síndrome de Sjögren",
+   "pista": "Boca e olhos secos e aumento das parótidas, em mulheres adultas.",
+   "unidade": "n11-06"
+  },
+  {
+   "id": "parulide",
+   "grupo": "endo",
+   "nome": "Parúlide (fístula)",
+   "pista": "Pápula avermelhada na gengiva por onde drena um abscesso dentário.",
+   "unidade": "n03-04"
+  },
+  {
+   "id": "polipo-pulpar",
+   "grupo": "endo",
+   "nome": "Pulpite hiperplásica crônica (pólipo pulpar)",
+   "pista": "Tecido vermelho saindo da câmara pulpar de um molar com cárie grande, em jovens.",
+   "unidade": "n03-01"
+  },
+  {
+   "id": "celulite",
+   "grupo": "endo",
+   "nome": "Celulite de origem dentária",
+   "pista": "Inchaço difuso e endurecido da face ou do assoalho, a partir de um dente infectado.",
+   "unidade": "n03-05"
+  },
+  {
+   "id": "fistula-cutanea",
+   "grupo": "endo",
+   "nome": "Fístula cutânea de origem dentária",
+   "pista": "Ferida na pele da face que drena um abscesso de dente.",
+   "unidade": "n03-04"
+  }
+ ],
+ "fotos": [
+  {
+   "id": "gal-1.11",
+   "lesao": "fordyce",
+   "img": "conteudo/patologia/neville/figuras/fig-1-11.jpg",
+   "legenda": "Yellow papules on the vermilion of the upper lip.",
+   "fonte": {
+    "figura": "1.11",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "gal-1.12",
+   "lesao": "fordyce",
+   "img": "conteudo/patologia/neville/figuras/fig-1-12.jpg",
+   "legenda": "Lesions on the buccal mucosa.",
+   "fonte": {
+    "figura": "1.12",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "gal-1.13",
+   "lesao": "fordyce",
+   "img": "conteudo/patologia/neville/figuras/fig-1-13.jpg",
+   "legenda": "Multiple sebaceous glands below the surface epithelium.",
+   "fonte": {
+    "figura": "1.13",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "gal-1.14",
+   "lesao": "leucoedema",
+   "img": "conteudo/patologia/neville/figuras/fig-1-14.jpg",
+   "legenda": "White, wrinkled appearance of the buccal mucosa.",
+   "fonte": {
+    "figura": "1.14",
+    "pagina": 14
+   }
+  },
+  {
+   "id": "gal-1.15",
+   "lesao": "leucoedema",
+   "img": "conteudo/patologia/neville/figuras/fig-1-15.jpg",
+   "legenda": "A, Diffuse white appearance of the buccal mucosa. B, Whiteness disappears when the cheek is stretched.",
+   "fonte": {
+    "figura": "1.15",
+    "pagina": 14
+   }
+  },
+  {
+   "id": "gal-1.22",
+   "lesao": "fissurada",
+   "img": "conteudo/patologia/neville/figuras/fig-1-22.jpg",
+   "legenda": "Extensive fissuring involving the entire dorsal tongue surface. (Courtesy of Chris Neville.)",
+   "fonte": {
+    "figura": "1.22",
+    "pagina": 18
+   }
+  },
+  {
+   "id": "gal-1.23",
+   "lesao": "pilosa",
+   "img": "conteudo/patologia/neville/figuras/fig-1-23.jpg",
+   "legenda": "Elongated, brown filiform papillae on the midline dorsal surface of the tongue.",
+   "fonte": {
+    "figura": "1.23",
+    "pagina": 19
+   }
+  },
+  {
+   "id": "gal-16.84",
+   "lesao": "geografica",
+   "img": "conteudo/patologia/neville/figuras/fig-16-84.jpg",
+   "legenda": "Theerythematous,well-demarcated areas of papillary atrophy are characteristic of erythema migrans affecting thetongue(benignmigratoryglossitis).Notetheasymmetricaldistribution and the tendency to involve the lateral aspects of the tongue.",
+   "fonte": {
+    "figura": "16.84",
+    "pagina": 789
+   }
+  },
+  {
+   "id": "gal-16.85",
+   "lesao": "geografica",
+   "img": "conteudo/patologia/neville/figuras/fig-16-85.jpg",
+   "legenda": "Lingual mucosa of a different patient than the one in Fig. 16.84. The lateral distribution of the lesions is shown.",
+   "fonte": {
+    "figura": "16.85",
+    "pagina": 789
+   }
+  },
+  {
+   "id": "gal-16.86",
+   "lesao": "geografica",
+   "img": "conteudo/patologia/neville/figuras/fig-16-86.jpg",
+   "legenda": "Striking involvement of the dorsal and lateral surfaces of the tongue.",
+   "fonte": {
+    "figura": "16.86",
+    "pagina": 790
+   }
+  },
+  {
+   "id": "gal-16.87",
+   "lesao": "geografica",
+   "img": "conteudo/patologia/neville/figuras/fig-16-87.jpg",
+   "legenda": "Lesions of the lower labial mucosa.",
+   "fonte": {
+    "figura": "16.87",
+    "pagina": 790
+   }
+  },
+  {
+   "id": "gal-1.41",
+   "lesao": "toro-pal",
+   "img": "conteudo/patologia/neville/figuras/fig-1-41.jpg",
+   "legenda": "Massive bilat- eral palatal exostoses in a patient with a large palatal torus.",
+   "fonte": {
+    "figura": "1.41",
+    "pagina": 27
+   }
+  },
+  {
+   "id": "gal-1.43",
+   "lesao": "toro-pal",
+   "img": "conteudo/patologia/neville/figuras/fig-1-43.jpg",
+   "legenda": "Midline bony nodule of the palatal vault.",
+   "fonte": {
+    "figura": "1.43",
+    "pagina": 28
+   }
+  },
+  {
+   "id": "gal-1.44",
+   "lesao": "toro-pal",
+   "img": "conteudo/patologia/neville/figuras/fig-1-44.jpg",
+   "legenda": "Large, lobulated palatal mass.",
+   "fonte": {
+    "figura": "1.44",
+    "pagina": 28
+   }
+  },
+  {
+   "id": "gal-1.45",
+   "lesao": "toro-mand",
+   "img": "conteudo/patologia/neville/figuras/fig-1-45.jpg",
+   "legenda": "Bilateral lobulated bony protuber- ances of the mandibular lingual alveolar ridge.",
+   "fonte": {
+    "figura": "1.45",
+    "pagina": 29
+   }
+  },
+  {
+   "id": "gal-1.46",
+   "lesao": "toro-mand",
+   "img": "conteudo/patologia/neville/figuras/fig-1-46.jpg",
+   "legenda": "Massive “kissing” tori meet in the midline.",
+   "fonte": {
+    "figura": "1.46",
+    "pagina": 29
+   }
+  },
+  {
+   "id": "gal-1.28",
+   "lesao": "varicosidade",
+   "img": "conteudo/patologia/neville/figuras/fig-1-28.jpg",
+   "legenda": "Multiple purple dilated veins on the ventral and lateral surface of the tongue.",
+   "fonte": {
+    "figura": "1.28",
+    "pagina": 21
+   }
+  },
+  {
+   "id": "gal-1.29",
+   "lesao": "varicosidade",
+   "img": "conteudo/patologia/neville/figuras/fig-1-29.jpg",
+   "legenda": "Firm, thrombosed varix on the lower lip.",
+   "fonte": {
+    "figura": "1.29",
+    "pagina": 21
+   }
+  },
+  {
+   "id": "gal-1.20",
+   "lesao": "anquiloglossia",
+   "img": "conteudo/patologia/neville/figuras/fig-1-20.jpg",
+   "legenda": "Abnormal attachment of the lingual fre- num, limiting tongue mobility.",
+   "fonte": {
+    "figura": "1.20",
+    "pagina": 17
+   }
+  },
+  {
+   "id": "gal-1.56",
+   "lesao": "nasolabial",
+   "img": "conteudo/patologia/neville/figuras/fig-1-56.jpg",
+   "legenda": "A, Enlargement of the left upper lip with elevation of the ala of the nose. B, Intraoral swelling fills the maxillary labial fold. (Courtesy of Dr. Jim Weir.)",
+   "fonte": {
+    "figura": "1.56",
+    "pagina": 33
+   }
+  },
+  {
+   "id": "gal-1.78",
+   "lesao": "linfoepitelial",
+   "img": "conteudo/patologia/neville/figuras/fig-1-78.jpg",
+   "legenda": "Small yellow-white nodule of the tonsillar fossa.",
+   "fonte": {
+    "figura": "1.78",
+    "pagina": 43
+   }
+  },
+  {
+   "id": "gal-1.79",
+   "lesao": "linfoepitelial",
+   "img": "conteudo/patologia/neville/figuras/fig-1-79.jpg",
+   "legenda": "Small yellow-white papule of the posterior lateral border of the tongue.",
+   "fonte": {
+    "figura": "1.79",
+    "pagina": 43
+   }
+  },
+  {
+   "id": "gal-1.71",
+   "lesao": "dermoide",
+   "img": "conteudo/patologia/neville/figuras/fig-1-71.jpg",
+   "legenda": "Fluctuant midline swelling in the floor of the mouth. (From Budnick SD: Handbook of pediatric oral pathology, Chicago, 1981, Year Book Medical.)",
+   "fonte": {
+    "figura": "1.71",
+    "pagina": 40
+   }
+  },
+  {
+   "id": "gal-15.12",
+   "lesao": "erupcao",
+   "img": "conteudo/patologia/neville/figuras/fig-15-12.jpg",
+   "legenda": "This soft gingival swelling contains con- siderable blood and can also be designated as an eruption hematoma.",
+   "fonte": {
+    "figura": "15.12",
+    "pagina": 694
+   }
+  },
+  {
+   "id": "gal-1.55",
+   "lesao": "gengival-rn",
+   "img": "conteudo/patologia/neville/figuras/fig-1-55.jpg",
+   "legenda": "Small keratin-filled cysts at the junction of the hard and soft palates. (Courtesy of Tristan Neville.)",
+   "fonte": {
+    "figura": "1.55",
+    "pagina": 33
+   }
+  },
+  {
+   "id": "gal-15.36",
+   "lesao": "gengival-rn",
+   "img": "conteudo/patologia/neville/figuras/fig-15-36.jpg",
+   "legenda": "Multiple whitish papules on the alveolar ridge of a newborn infant.",
+   "fonte": {
+    "figura": "15.36",
+    "pagina": 703
+   }
+  },
+  {
+   "id": "gal-6.1",
+   "lesao": "pseudomembranosa",
+   "img": "conteudo/patologia/neville/figuras/fig-6-1.jpg",
+   "legenda": "A, Multiple white linear and circular plaques with associ- ated erythema on the soft palate. B, Same patient, 2 weeks later, following a course of clotrimazole oral troches.",
+   "fonte": {
+    "figura": "6.1",
+    "pagina": 207
+   }
+  },
+  {
+   "id": "gal-6.2",
+   "lesao": "pseudomembranosa",
+   "img": "conteudo/patologia/neville/figuras/fig-6-2.jpg",
+   "legenda": "A, White plaques on an erythematous base, characteristic of pseudomembranous candidia- sis. B, Removal of several of the pseudomembranous plaques reveals a mildly erythematous mucosal surface but no evidence of bleeding.",
+   "fonte": {
+    "figura": "6.2",
+    "pagina": 208
+   }
+  },
+  {
+   "id": "gal-7.33",
+   "lesao": "pseudomembranosa",
+   "img": "conteudo/patologia/neville/figuras/fig-7-33.jpg",
+   "legenda": "Extensive removable white plaques of the left buccal mucosa.",
+   "fonte": {
+    "figura": "7.33",
+    "pagina": 257
+   }
+  },
+  {
+   "id": "gal-6.3",
+   "lesao": "eritematosa",
+   "img": "conteudo/patologia/neville/figuras/fig-6-3.jpg",
+   "legenda": "The diffuse erythema with a smooth atrophic appearance of the dorsal tongue represents erythem- atous candidiasis.",
+   "fonte": {
+    "figura": "6.3",
+    "pagina": 208
+   }
+  },
+  {
+   "id": "gal-6.4",
+   "lesao": "eritematosa",
+   "img": "conteudo/patologia/neville/figuras/fig-6-4.jpg",
+   "legenda": "This asymptomatic, ovoid, erythematous patch on the posterior dorsal tongue is commonly caused by chronic infection by Candida albicans. The fungiform papillae appear prominent because the filiform papillae have been destroyed by the can- d",
+   "fonte": {
+    "figura": "6.4",
+    "pagina": 208
+   }
+  },
+  {
+   "id": "gal-6.5",
+   "lesao": "eritematosa",
+   "img": "conteudo/patologia/neville/figuras/fig-6-5.jpg",
+   "legenda": "A, Severe presentation of central papillary atrophy. In this patient, the lesion was asymptomatic. B, Marked regeneration of the dorsal tongue papillae occurred 2 weeks after antifungal therapy with fluconazole.",
+   "fonte": {
+    "figura": "6.5",
+    "pagina": 209
+   }
+  },
+  {
+   "id": "gal-6.7",
+   "lesao": "queilite-angular",
+   "img": "conteudo/patologia/neville/figuras/fig-6-7.jpg",
+   "legenda": "Characteristic lesions appear as mildly fissured, erythematous alterations of the skin at the corners of the mouth.",
+   "fonte": {
+    "figura": "6.7",
+    "pagina": 209
+   }
+  },
+  {
+   "id": "gal-6.9",
+   "lesao": "estomatite-protetica",
+   "img": "conteudo/patologia/neville/figuras/fig-6-9.jpg",
+   "legenda": "A, Maxillary denture with incomplete palatal vault associated with midline tissue hyperplasia. B, Mucositis corresponds to the outline of the prosthesis. C, Resolution of mucositis after antifungal therapy and appropriate denture cleansing.",
+   "fonte": {
+    "figura": "6.9",
+    "pagina": 210
+   }
+  },
+  {
+   "id": "gal-6.10",
+   "lesao": "estomatite-protetica",
+   "img": "conteudo/patologia/neville/figuras/fig-6-10.jpg",
+   "legenda": "Denture stomatitis, not associated with Candida albicans, confined to the denture-bearing mucosa of a maxillary partial denture framework.",
+   "fonte": {
+    "figura": "6.10",
+    "pagina": 211
+   }
+  },
+  {
+   "id": "gal-7.5",
+   "lesao": "herpes-labial",
+   "img": "conteudo/patologia/neville/figuras/fig-7-5.jpg",
+   "legenda": "Multiple fluid-filled vesicles on the lip vermilion.",
+   "fonte": {
+    "figura": "7.5",
+    "pagina": 237
+   }
+  },
+  {
+   "id": "gal-7.6",
+   "lesao": "herpes-labial",
+   "img": "conteudo/patologia/neville/figuras/fig-7-6.jpg",
+   "legenda": "Multiple sites of recurrent herpetic infec- tion secondary to spread of viral fluid over cracked lips.",
+   "fonte": {
+    "figura": "7.6",
+    "pagina": 237
+   }
+  },
+  {
+   "id": "gal-7.17",
+   "lesao": "zoster",
+   "img": "conteudo/patologia/neville/figuras/fig-7-17.jpg",
+   "legenda": "Cluster of vesicles with surrounding erythema of the skin.",
+   "fonte": {
+    "figura": "7.17",
+    "pagina": 243
+   }
+  },
+  {
+   "id": "gal-7.18",
+   "lesao": "zoster",
+   "img": "conteudo/patologia/neville/figuras/fig-7-18.jpg",
+   "legenda": "Numerous crusting facial vesicles that extend to the midline.",
+   "fonte": {
+    "figura": "7.18",
+    "pagina": 244
+   }
+  },
+  {
+   "id": "gal-7.19",
+   "lesao": "zoster",
+   "img": "conteudo/patologia/neville/figuras/fig-7-19.jpg",
+   "legenda": "Numerous white opaque vesicles on the right buccal mucosa of the same patient depicted in Fig. 7.18.",
+   "fonte": {
+    "figura": "7.19",
+    "pagina": 244
+   }
+  },
+  {
+   "id": "gal-7.20",
+   "lesao": "zoster",
+   "img": "conteudo/patologia/neville/figuras/fig-7-20.jpg",
+   "legenda": "White opaque to focally clear vesicles on the right palatal mucosa with extension to the midline. (Courtesy of Dr. Molly Rosebush.)",
+   "fonte": {
+    "figura": "7.20",
+    "pagina": 244
+   }
+  },
+  {
+   "id": "gal-7.35",
+   "lesao": "leuco-pilosa",
+   "img": "conteudo/patologia/neville/figuras/fig-7-35.jpg",
+   "legenda": "Vertical streaks of keratin along the lateral border of the tongue.",
+   "fonte": {
+    "figura": "7.35",
+    "pagina": 259
+   }
+  },
+  {
+   "id": "gal-7.25",
+   "lesao": "mao-pe-boca",
+   "img": "conteudo/patologia/neville/figuras/fig-7-25.jpg",
+   "legenda": "Multiple vesicles of the skin of the toe. (Courtesy of Dr. Samuel J. Jasper.)",
+   "fonte": {
+    "figura": "7.25",
+    "pagina": 250
+   }
+  },
+  {
+   "id": "gal-7.26",
+   "lesao": "mao-pe-boca",
+   "img": "conteudo/patologia/neville/figuras/fig-7-26.jpg",
+   "legenda": "Numerous cutaneous vesicles on the sides of the fingers.",
+   "fonte": {
+    "figura": "7.26",
+    "pagina": 250
+   }
+  },
+  {
+   "id": "gal-7.27",
+   "lesao": "mao-pe-boca",
+   "img": "conteudo/patologia/neville/figuras/fig-7-27.jpg",
+   "legenda": "Multiple aphthous-like ulcerations of the mucobuccal fold.",
+   "fonte": {
+    "figura": "7.27",
+    "pagina": 250
+   }
+  },
+  {
+   "id": "gal-6.28",
+   "lesao": "paracoco",
+   "img": "conteudo/patologia/neville/figuras/fig-6-28.jpg",
+   "legenda": "This granular, erythematous, and ulcerated lesion of the maxillary alveolus represents infection by Paracoccidioides brasiliensis. (Courtesy of Dr. Ricardo Santiago Gomez.)",
+   "fonte": {
+    "figura": "6.28",
+    "pagina": 221
+   }
+  },
+  {
+   "id": "gal-10.1",
+   "lesao": "papiloma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-1.jpg",
+   "legenda": "An exophytic lesion of the soft palate with multiple short, white surface projections.",
+   "fonte": {
+    "figura": "10.1",
+    "pagina": 361
+   }
+  },
+  {
+   "id": "gal-10.2",
+   "lesao": "papiloma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-2.jpg",
+   "legenda": "A pedunculated lingual mass with numerous long, pointed, and white surface projections. Note the smaller projections around the base of the lesion.",
+   "fonte": {
+    "figura": "10.2",
+    "pagina": 361
+   }
+  },
+  {
+   "id": "gal-10.3",
+   "lesao": "papiloma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-3.jpg",
+   "legenda": "A pedunculated mass of the buccal commissure, exhibiting short or blunted surface projections and minimal white coloration.",
+   "fonte": {
+    "figura": "10.3",
+    "pagina": 361
+   }
+  },
+  {
+   "id": "gal-10.5",
+   "lesao": "verruga",
+   "img": "conteudo/patologia/neville/figuras/fig-10-5.jpg",
+   "legenda": "Several warts on the finger, exhibiting a rough, papillary surface.",
+   "fonte": {
+    "figura": "10.5",
+    "pagina": 362
+   }
+  },
+  {
+   "id": "gal-10.6",
+   "lesao": "verruga",
+   "img": "conteudo/patologia/neville/figuras/fig-10-6.jpg",
+   "legenda": "Nodular lesion of the skin exhibiting numerous short papillary projections.",
+   "fonte": {
+    "figura": "10.6",
+    "pagina": 362
+   }
+  },
+  {
+   "id": "gal-10.7",
+   "lesao": "verruga",
+   "img": "conteudo/patologia/neville/figuras/fig-10-7.jpg",
+   "legenda": "White, papillary lesion on the upper lip vermilion. (Courtesy of Dr. Laura Summers.)",
+   "fonte": {
+    "figura": "10.7",
+    "pagina": 362
+   }
+  },
+  {
+   "id": "gal-10.12",
+   "lesao": "heck",
+   "img": "conteudo/patologia/neville/figuras/fig-10-12.jpg",
+   "legenda": "Multiple, flat-topped papules and nodules of normal coloration are seen on the lower lip of a child. (Courtesy of Dr. Mark Casafrancisco.)",
+   "fonte": {
+    "figura": "10.12",
+    "pagina": 365
+   }
+  },
+  {
+   "id": "gal-10.13",
+   "lesao": "heck",
+   "img": "conteudo/patologia/neville/figuras/fig-10-13.jpg",
+   "legenda": "The lesions may demonstrate a papillary surface change and paleness, as demonstrated on this child’s tongue. (Courtesy of Dr. Román Carlos.)",
+   "fonte": {
+    "figura": "10.13",
+    "pagina": 365
+   }
+  },
+  {
+   "id": "gal-10.60",
+   "lesao": "leucoplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-10-60.jpg",
+   "legenda": "A thin, white plaque on the right ventral tongue.",
+   "fonte": {
+    "figura": "10.60",
+    "pagina": 388
+   }
+  },
+  {
+   "id": "gal-10.61",
+   "lesao": "leucoplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-10-61.jpg",
+   "legenda": "A diffuse, corru- gated white plaque on the right ventral surface of the tongue and floor of mouth.",
+   "fonte": {
+    "figura": "10.61",
+    "pagina": 389
+   }
+  },
+  {
+   "id": "gal-10.68",
+   "lesao": "leucoplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-10-68.jpg",
+   "legenda": "Extensive ventral and lateral tongue lesion with areas representing various possible phases or clinical appearances (compare with Fig. 10.69).",
+   "fonte": {
+    "figura": "10.68",
+    "pagina": 390
+   }
+  },
+  {
+   "id": "gal-10.65",
+   "lesao": "pvl",
+   "img": "conteudo/patologia/neville/figuras/fig-10-65.jpg",
+   "legenda": "Extensive white plaque with an irregular, rough surface on the mandibular facial gingiva and alveolar mucosa.",
+   "fonte": {
+    "figura": "10.65",
+    "pagina": 390
+   }
+  },
+  {
+   "id": "gal-10.66",
+   "lesao": "pvl",
+   "img": "conteudo/patologia/neville/figuras/fig-10-66.jpg",
+   "legenda": "Large, thickened white plaque on the buccal mucosa. Leukoplakia also is present on the ventrolateral tongue.",
+   "fonte": {
+    "figura": "10.66",
+    "pagina": 390
+   }
+  },
+  {
+   "id": "gal-10.64",
+   "lesao": "eritroplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-10-64.jpg",
+   "legenda": "Red and white plaque on the ventrolateral tongue.",
+   "fonte": {
+    "figura": "10.64",
+    "pagina": 389
+   }
+  },
+  {
+   "id": "gal-10.77",
+   "lesao": "eritroplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-10-77.jpg",
+   "legenda": "Well-circumscribed red patch on the posterior lateral hard and soft palate. (From Neville BW, Chi AC, Jeter M: Diagnostic challenge: a red lesion on the palate, J Am Dent Assoc 137:1537–1538, 2006.)",
+   "fonte": {
+    "figura": "10.77",
+    "pagina": 395
+   }
+  },
+  {
+   "id": "gal-10.86",
+   "lesao": "queilite-actinica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-86.jpg",
+   "legenda": "Diffuse, irregular white plaque at the wet line of the lower lip vermilion.",
+   "fonte": {
+    "figura": "10.86",
+    "pagina": 400
+   }
+  },
+  {
+   "id": "gal-10.87",
+   "lesao": "queilite-actinica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-87.jpg",
+   "legenda": "Crusted and ulcerated lesions of the lower lip vermilion.",
+   "fonte": {
+    "figura": "10.87",
+    "pagina": 400
+   }
+  },
+  {
+   "id": "gal-10.93",
+   "lesao": "nicotinica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-93.jpg",
+   "legenda": "Palatal mucosa showing white change and numerous scattered papules with red punctate centers.",
+   "fonte": {
+    "figura": "10.93",
+    "pagina": 403
+   }
+  },
+  {
+   "id": "gal-10.94",
+   "lesao": "nicotinica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-94.jpg",
+   "legenda": "Close-up of the inflamed ductal openings of involved salivary glands of the hard palate. Note the white keratotic ring at the lip of many of the inflamed ducts.",
+   "fonte": {
+    "figura": "10.94",
+    "pagina": 403
+   }
+  },
+  {
+   "id": "gal-10.79",
+   "lesao": "ceratose-tabaco",
+   "img": "conteudo/patologia/neville/figuras/fig-10-79.jpg",
+   "legenda": "A soft, fissured, gray- white lesion of the lower labial mucosa located in the area of chronic snuff placement. The gingival melanosis is racial pigmentation and not asso- ciated with the keratosis.",
+   "fonte": {
+    "figura": "10.79",
+    "pagina": 397
+   }
+  },
+  {
+   "id": "gal-10.80",
+   "lesao": "ceratose-tabaco",
+   "img": "conteudo/patologia/neville/figuras/fig-10-80.jpg",
+   "legenda": "A somewhat leathery, white, fissured plaque of the right mandibular vestibule, which was located in the area of chronic chewing tobacco placement.",
+   "fonte": {
+    "figura": "10.80",
+    "pagina": 397
+   }
+  },
+  {
+   "id": "gal-10.83",
+   "lesao": "ceratose-tabaco",
+   "img": "conteudo/patologia/neville/figuras/fig-10-83.jpg",
+   "legenda": "A, Moderately severe lesion of the lower anterior vestibule and lip in a 15-year-old male. There is a gray-white, fissured surface. The patient had placed snuff in the area for several years. B, Two weeks after cessation of the tobacco habi",
+   "fonte": {
+    "figura": "10.83",
+    "pagina": 398
+   }
+  },
+  {
+   "id": "gal-7.60",
+   "lesao": "cec",
+   "img": "conteudo/patologia/neville/figuras/fig-7-60.jpg",
+   "legenda": "Ulcerated mass with raised, indurated borders on the ventrolateral tongue.",
+   "fonte": {
+    "figura": "7.60",
+    "pagina": 268
+   }
+  },
+  {
+   "id": "gal-10.100",
+   "lesao": "cec",
+   "img": "conteudo/patologia/neville/figuras/fig-10-100.jpg",
+   "legenda": "Leukoplakic lesion with a granular surface on the left ventrolateral tongue. (Courtesy of Dr. Larry Cunningham.)",
+   "fonte": {
+    "figura": "10.100",
+    "pagina": 411
+   }
+  },
+  {
+   "id": "gal-10.102",
+   "lesao": "cec",
+   "img": "conteudo/patologia/neville/figuras/fig-10-102.jpg",
+   "legenda": "An exophytic lesion of the posterior lateral tongue demonstrates surface nodularity and minimal surface keratin production. It is painless and indurated.",
+   "fonte": {
+    "figura": "10.102",
+    "pagina": 412
+   }
+  },
+  {
+   "id": "gal-10.103",
+   "lesao": "cec",
+   "img": "conteudo/patologia/neville/figuras/fig-10-103.jpg",
+   "legenda": "An exophytic buccal lesion shows a roughened and irregular surface with areas of erythema admixed with small areas of white keratosis. Surface ulceration is evident.",
+   "fonte": {
+    "figura": "10.103",
+    "pagina": 412
+   }
+  },
+  {
+   "id": "gal-10.124",
+   "lesao": "verrucoso",
+   "img": "conteudo/patologia/neville/figuras/fig-10-124.jpg",
+   "legenda": "Extensive papillary, white mass of the lower labial mucosa and mandibular alveolar ridge. (Courtesy of Dr. Ashleigh Briody.)",
+   "fonte": {
+    "figura": "10.124",
+    "pagina": 427
+   }
+  },
+  {
+   "id": "gal-10.125",
+   "lesao": "verrucoso",
+   "img": "conteudo/patologia/neville/figuras/fig-10-125.jpg",
+   "legenda": "Large, exophytic, papillary mass of the maxillary alveolar ridge.",
+   "fonte": {
+    "figura": "10.125",
+    "pagina": 427
+   }
+  },
+  {
+   "id": "gal-10.142",
+   "lesao": "melanoma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-142.jpg",
+   "legenda": "This lesion on the neck demonstrates the ABCDE warning signs of melanoma: Asymme- try, Border irregularity, Color variegation, Diameter larger than a pencil eraser, and Evolving larger size. (Courtesy of Dr. Mark Bowden.)",
+   "fonte": {
+    "figura": "10.142",
+    "pagina": 441
+   }
+  },
+  {
+   "id": "gal-10.143",
+   "lesao": "melanoma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-143.jpg",
+   "legenda": "A slowly evolving pig- mented lesion of the facial skin in an older adult man.",
+   "fonte": {
+    "figura": "10.143",
+    "pagina": 441
+   }
+  },
+  {
+   "id": "gal-10.145",
+   "lesao": "melanoma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-145.jpg",
+   "legenda": "Diffuse, splotchy area of pigmenta- tion of the lateral hard palate. (Courtesy of Dr. Len Morrow.)",
+   "fonte": {
+    "figura": "10.145",
+    "pagina": 442
+   }
+  },
+  {
+   "id": "gal-10.146",
+   "lesao": "melanoma",
+   "img": "conteudo/patologia/neville/figuras/fig-10-146.jpg",
+   "legenda": "Extensive, pigmented mass of the palate and maxillary alveolar ridge. An exophytic component is evident.",
+   "fonte": {
+    "figura": "10.146",
+    "pagina": 442
+   }
+  },
+  {
+   "id": "gal-10.38",
+   "lesao": "macula-melanotica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-38.jpg",
+   "legenda": "A single small, uniformly pig- mented brown macule on the lower lip vermilion.",
+   "fonte": {
+    "figura": "10.38",
+    "pagina": 377
+   }
+  },
+  {
+   "id": "gal-10.39",
+   "lesao": "macula-melanotica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-39.jpg",
+   "legenda": "A well-demarcated brown macule of the gingival mucosa.",
+   "fonte": {
+    "figura": "10.39",
+    "pagina": 377
+   }
+  },
+  {
+   "id": "gal-10.40",
+   "lesao": "macula-melanotica",
+   "img": "conteudo/patologia/neville/figuras/fig-10-40.jpg",
+   "legenda": "A brown macule on the soft palate. Smoker’s melanosis may exhibit a similar clinical appearance and could be a consideration in the clinical differential diagnosis, although this patient denied any history of tobacco use.",
+   "fonte": {
+    "figura": "10.40",
+    "pagina": 377
+   }
+  },
+  {
+   "id": "gal-10.45",
+   "lesao": "nevo",
+   "img": "conteudo/patologia/neville/figuras/fig-10-45.jpg",
+   "legenda": "A brown nodule on the facial skin with a papillomatous surface and protruding hairs.",
+   "fonte": {
+    "figura": "10.45",
+    "pagina": 380
+   }
+  },
+  {
+   "id": "gal-10.46",
+   "lesao": "nevo",
+   "img": "conteudo/patologia/neville/figuras/fig-10-46.jpg",
+   "legenda": "A well-demarcated, lightly pigmented, dome-shaped papule is seen at the edge of the vermilion border of the upper lip.",
+   "fonte": {
+    "figura": "10.46",
+    "pagina": 381
+   }
+  },
+  {
+   "id": "gal-10.47",
+   "lesao": "nevo",
+   "img": "conteudo/patologia/neville/figuras/fig-10-47.jpg",
+   "legenda": "Pigmented lesion of the anterior hard palate. (Courtesy of Dr. Lewis Claman.)",
+   "fonte": {
+    "figura": "10.47",
+    "pagina": 381
+   }
+  },
+  {
+   "id": "gal-10.48",
+   "lesao": "nevo",
+   "img": "conteudo/patologia/neville/figuras/fig-10-48.jpg",
+   "legenda": "This intramucosal nevus of the mandibular gingiva is nonpig- mented. (Courtesy of Dr. James Jacobs.)",
+   "fonte": {
+    "figura": "10.48",
+    "pagina": 381
+   }
+  },
+  {
+   "id": "gal-10.135",
+   "lesao": "basocelular",
+   "img": "conteudo/patologia/neville/figuras/fig-10-135.jpg",
+   "legenda": "Early noduloulcerative basal cell carcinoma of the forehead showing raised, rolled borders and focal ulceration. Fine, telangiectatic blood vessels can be seen on the surface.",
+   "fonte": {
+    "figura": "10.135",
+    "pagina": 436
+   }
+  },
+  {
+   "id": "gal-10.136",
+   "lesao": "basocelular",
+   "img": "conteudo/patologia/neville/figuras/fig-10-136.jpg",
+   "legenda": "Noduloulcerative lesion of the upper lip demonstrating telangiectasia and small ulceration.",
+   "fonte": {
+    "figura": "10.136",
+    "pagina": 436
+   }
+  },
+  {
+   "id": "gal-10.137",
+   "lesao": "basocelular",
+   "img": "conteudo/patologia/neville/figuras/fig-10-137.jpg",
+   "legenda": "This tumor was neglected for many years and became exceptionally large. (Courtesy of Dr. Terry Day.)",
+   "fonte": {
+    "figura": "10.137",
+    "pagina": 436
+   }
+  },
+  {
+   "id": "gal-10.138",
+   "lesao": "basocelular",
+   "img": "conteudo/patologia/neville/figuras/fig-10-138.jpg",
+   "legenda": "Pigmented basal cell carci- noma of the cheek.",
+   "fonte": {
+    "figura": "10.138",
+    "pagina": 436
+   }
+  },
+  {
+   "id": "gal-12.1",
+   "lesao": "fibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-1.jpg",
+   "legenda": "Pink nodule of the posterior buccal mucosa near the level of the occlusal plane.",
+   "fonte": {
+    "figura": "12.1",
+    "pagina": 520
+   }
+  },
+  {
+   "id": "gal-12.2",
+   "lesao": "fibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-2.jpg",
+   "legenda": "Black patient with a smooth-surfaced pigmented nodule on the buccal mucosa near the commissure.",
+   "fonte": {
+    "figura": "12.2",
+    "pagina": 520
+   }
+  },
+  {
+   "id": "gal-12.3",
+   "lesao": "fibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-3.jpg",
+   "legenda": "Lesion on the lateral border of the tongue.",
+   "fonte": {
+    "figura": "12.3",
+    "pagina": 520
+   }
+  },
+  {
+   "id": "gal-12.4",
+   "lesao": "fibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-4.jpg",
+   "legenda": "Smooth-surfaced, pink nodular mass of the palatal gingiva between the cuspid and first bicuspid.",
+   "fonte": {
+    "figura": "12.4",
+    "pagina": 520
+   }
+  },
+  {
+   "id": "gal-12.8",
+   "lesao": "fibroma-cg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-8.jpg",
+   "legenda": "Exophytic nodule on the dorsum of the tongue.",
+   "fonte": {
+    "figura": "12.8",
+    "pagina": 521
+   }
+  },
+  {
+   "id": "gal-12.9",
+   "lesao": "fibroma-cg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-9.jpg",
+   "legenda": "Papillary growth on the lingual man- dibular gingiva. Because of the rough surface, this lesion would be easily mistaken for a papilloma.",
+   "fonte": {
+    "figura": "12.9",
+    "pagina": 521
+   }
+  },
+  {
+   "id": "gal-12.12",
+   "lesao": "epulis-fissurado",
+   "img": "conteudo/patologia/neville/figuras/fig-12-12.jpg",
+   "legenda": "Hyperplastic folds of tissue in the anterior maxillary vestibule.",
+   "fonte": {
+    "figura": "12.12",
+    "pagina": 523
+   }
+  },
+  {
+   "id": "gal-12.13",
+   "lesao": "epulis-fissurado",
+   "img": "conteudo/patologia/neville/figuras/fig-12-13.jpg",
+   "legenda": "A, Several folds of hyperplastic tis- sue in the maxillary vestibule. B, An ill-fitting denture fits into the fissure between two of the folds. (Courtesy of Dr. William Bruce.)",
+   "fonte": {
+    "figura": "12.13",
+    "pagina": 523
+   }
+  },
+  {
+   "id": "gal-12.14",
+   "lesao": "epulis-fissurado",
+   "img": "conteudo/patologia/neville/figuras/fig-12-14.jpg",
+   "legenda": "Redundant folds of tissue arising in the floor of the mouth in association with a mandibular denture.",
+   "fonte": {
+    "figura": "12.14",
+    "pagina": 523
+   }
+  },
+  {
+   "id": "gal-12.17",
+   "lesao": "hpi",
+   "img": "conteudo/patologia/neville/figuras/fig-12-17.jpg",
+   "legenda": "A, Erythematous, pebbly appearance of the palatal vault. B, Resolution of the erythema following antifungal therapy.",
+   "fonte": {
+    "figura": "12.17",
+    "pagina": 524
+   }
+  },
+  {
+   "id": "gal-12.18",
+   "lesao": "hpi",
+   "img": "conteudo/patologia/neville/figuras/fig-12-18.jpg",
+   "legenda": "An advanced case exhibiting more pronounced papular lesions of the hard palate.",
+   "fonte": {
+    "figura": "12.18",
+    "pagina": 525
+   }
+  },
+  {
+   "id": "gal-12.34",
+   "lesao": "granuloma-piogenico",
+   "img": "conteudo/patologia/neville/figuras/fig-12-34.jpg",
+   "legenda": "Erythematous, hemorrhagic mass arising from the maxillary anterior gingiva.",
+   "fonte": {
+    "figura": "12.34",
+    "pagina": 531
+   }
+  },
+  {
+   "id": "gal-12.35",
+   "lesao": "granuloma-piogenico",
+   "img": "conteudo/patologia/neville/figuras/fig-12-35.jpg",
+   "legenda": "Ulcerated and lobulated mass on the dorsum of the tongue.",
+   "fonte": {
+    "figura": "12.35",
+    "pagina": 531
+   }
+  },
+  {
+   "id": "gal-12.36",
+   "lesao": "granuloma-piogenico",
+   "img": "conteudo/patologia/neville/figuras/fig-12-36.jpg",
+   "legenda": "Unusually large lesion arising from the palatal gingiva in association with an orthodontic band. The patient was pregnant.",
+   "fonte": {
+    "figura": "12.36",
+    "pagina": 531
+   }
+  },
+  {
+   "id": "gal-12.37",
+   "lesao": "granuloma-piogenico",
+   "img": "conteudo/patologia/neville/figuras/fig-12-37.jpg",
+   "legenda": "A, Large gingival mass in a preg- nant woman just before childbirth. B, The mass has decreased in size and undergone fibrous maturation 3 months after childbirth. (Courtesy of Dr. George Blozis.)",
+   "fonte": {
+    "figura": "12.37",
+    "pagina": 532
+   }
+  },
+  {
+   "id": "gal-12.41",
+   "lesao": "gpcg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-41.jpg",
+   "legenda": "Nodular blue-purple mass of the mandibular gingiva.",
+   "fonte": {
+    "figura": "12.41",
+    "pagina": 533
+   }
+  },
+  {
+   "id": "gal-12.42",
+   "lesao": "gpcg",
+   "img": "conteudo/patologia/neville/figuras/fig-12-42.jpg",
+   "legenda": "Ulcerated mass of the mandibular gingiva.",
+   "fonte": {
+    "figura": "12.42",
+    "pagina": 533
+   }
+  },
+  {
+   "id": "gal-12.45",
+   "lesao": "fop",
+   "img": "conteudo/patologia/neville/figuras/fig-12-45.jpg",
+   "legenda": "This red, ulcerated mass of the maxillary gingiva has recurred twice. Such ulcerated lesions are easily mistaken for a pyogenic granuloma.",
+   "fonte": {
+    "figura": "12.45",
+    "pagina": 534
+   }
+  },
+  {
+   "id": "gal-12.46",
+   "lesao": "fop",
+   "img": "conteudo/patologia/neville/figuras/fig-12-46.jpg",
+   "legenda": "Pink, nonulcerated mass arising from the maxillary gingiva. The remaining roots of the first molar are present.",
+   "fonte": {
+    "figura": "12.46",
+    "pagina": 534
+   }
+  },
+  {
+   "id": "gal-12.49",
+   "lesao": "lipoma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-49.jpg",
+   "legenda": "Soft, yellow nodular mass in the floor of the mouth. (Courtesy of Dr. Michael Tabor.)",
+   "fonte": {
+    "figura": "12.49",
+    "pagina": 536
+   }
+  },
+  {
+   "id": "gal-12.50",
+   "lesao": "lipoma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-50.jpg",
+   "legenda": "Nodular mass of the posterior buccal mucosa.",
+   "fonte": {
+    "figura": "12.50",
+    "pagina": 536
+   }
+  },
+  {
+   "id": "gal-12.62",
+   "lesao": "neurofibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-62.jpg",
+   "legenda": "Smooth-surfaced, nodular mass of the maxillary gingiva and alveolar mucosa. (Courtesy of Dr. Neal Lemmerman.)",
+   "fonte": {
+    "figura": "12.62",
+    "pagina": 541
+   }
+  },
+  {
+   "id": "gal-12.66",
+   "lesao": "neurofibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-66.jpg",
+   "legenda": "Multiple tumors of the trunk and arms.",
+   "fonte": {
+    "figura": "12.66",
+    "pagina": 543
+   }
+  },
+  {
+   "id": "gal-12.67",
+   "lesao": "neurofibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-67.jpg",
+   "legenda": "Baggy, pendulous neuro- fibroma of the lower neck.",
+   "fonte": {
+    "figura": "12.67",
+    "pagina": 543
+   }
+  },
+  {
+   "id": "gal-12.68",
+   "lesao": "neurofibroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-68.jpg",
+   "legenda": "Same patient as depicted in Fig. 12.66. Note the caf\u0001e au lait pigmentation on the arm.",
+   "fonte": {
+    "figura": "12.68",
+    "pagina": 543
+   }
+  },
+  {
+   "id": "gal-12.84",
+   "lesao": "celulas-granulares",
+   "img": "conteudo/patologia/neville/figuras/fig-12-84.jpg",
+   "legenda": "Submucosal nodule on the dor- sum of the tongue.",
+   "fonte": {
+    "figura": "12.84",
+    "pagina": 550
+   }
+  },
+  {
+   "id": "gal-12.85",
+   "lesao": "celulas-granulares",
+   "img": "conteudo/patologia/neville/figuras/fig-12-85.jpg",
+   "legenda": "Nodular mass of the buccal mucosa near the commissure.",
+   "fonte": {
+    "figura": "12.85",
+    "pagina": 550
+   }
+  },
+  {
+   "id": "gal-12.88",
+   "lesao": "epulide-congenita",
+   "img": "conteudo/patologia/neville/figuras/fig-12-88.jpg",
+   "legenda": "Polypoid mass of the anterior max- illary alveolar ridge in a newborn.",
+   "fonte": {
+    "figura": "12.88",
+    "pagina": 551
+   }
+  },
+  {
+   "id": "gal-12.92",
+   "lesao": "hemangioma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-92.jpg",
+   "legenda": "Infant with two red, nodular masses on the posterior scalp and neck (“strawberry” hemangioma).",
+   "fonte": {
+    "figura": "12.92",
+    "pagina": 553
+   }
+  },
+  {
+   "id": "gal-12.93",
+   "lesao": "hemangioma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-93.jpg",
+   "legenda": "Nodular, red mass on the upper lip ver- milion in a 4-year-old child. (Courtesy of Dr. Lynn Wallace.)",
+   "fonte": {
+    "figura": "12.93",
+    "pagina": 553
+   }
+  },
+  {
+   "id": "gal-12.94",
+   "lesao": "hemangioma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-94.jpg",
+   "legenda": "Blue-purple mass of the anterior tongue.",
+   "fonte": {
+    "figura": "12.94",
+    "pagina": 553
+   }
+  },
+  {
+   "id": "gal-12.109",
+   "lesao": "linfatica",
+   "img": "conteudo/patologia/neville/figuras/fig-12-109.jpg",
+   "legenda": "Young boy with a cystic hygroma primarily involving the right side of the face. (Courtesy of Dr. Frank Kendrick.)",
+   "fonte": {
+    "figura": "12.109",
+    "pagina": 559
+   }
+  },
+  {
+   "id": "gal-12.110",
+   "lesao": "linfatica",
+   "img": "conteudo/patologia/neville/figuras/fig-12-110.jpg",
+   "legenda": "Pebbly, vesicle-like appear- ance of a tumor of the right lateral tongue.",
+   "fonte": {
+    "figura": "12.110",
+    "pagina": 559
+   }
+  },
+  {
+   "id": "gal-12.111",
+   "lesao": "linfatica",
+   "img": "conteudo/patologia/neville/figuras/fig-12-111.jpg",
+   "legenda": "Dorsal tongue lesion dem- onstrating a purple color, which can be caused by secondary hemor- rhage or an associated hemangiomatous component.",
+   "fonte": {
+    "figura": "12.111",
+    "pagina": 559
+   }
+  },
+  {
+   "id": "gal-12.114",
+   "lesao": "linfatica",
+   "img": "conteudo/patologia/neville/figuras/fig-12-114.jpg",
+   "legenda": "Lesion from the neck showing markedly dilated lymphatic vessels.",
+   "fonte": {
+    "figura": "12.114",
+    "pagina": 560
+   }
+  },
+  {
+   "id": "gal-7.39",
+   "lesao": "kaposi",
+   "img": "conteudo/patologia/neville/figuras/fig-7-39.jpg",
+   "legenda": "Multiple purple macules on the right side of the face.",
+   "fonte": {
+    "figura": "7.39",
+    "pagina": 260
+   }
+  },
+  {
+   "id": "gal-7.40",
+   "lesao": "kaposi",
+   "img": "conteudo/patologia/neville/figuras/fig-7-40.jpg",
+   "legenda": "Large zones of KS appearing as flat, brownish, and M-shaped discoloration of the hard palate.",
+   "fonte": {
+    "figura": "7.40",
+    "pagina": 260
+   }
+  },
+  {
+   "id": "gal-7.41",
+   "lesao": "kaposi",
+   "img": "conteudo/patologia/neville/figuras/fig-7-41.jpg",
+   "legenda": "Raised, dark- red enlargement of the left mandibular anterior facial gingiva.",
+   "fonte": {
+    "figura": "7.41",
+    "pagina": 260
+   }
+  },
+  {
+   "id": "gal-7.42",
+   "lesao": "kaposi",
+   "img": "conteudo/patologia/neville/figuras/fig-7-42.jpg",
+   "legenda": "Diffuse, red-blue nodular enlargement of the left hard palate.",
+   "fonte": {
+    "figura": "7.42",
+    "pagina": 260
+   }
+  },
+  {
+   "id": "gal-12.53",
+   "lesao": "neuroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-53.jpg",
+   "legenda": "Painful nodule of the mental nerve as it exits the mental foramen (arrow).",
+   "fonte": {
+    "figura": "12.53",
+    "pagina": 537
+   }
+  },
+  {
+   "id": "gal-12.54",
+   "lesao": "neuroma",
+   "img": "conteudo/patologia/neville/figuras/fig-12-54.jpg",
+   "legenda": "Note the irregular nodular prolifer- ation along the mental nerve that is being exposed at the time of surgery.",
+   "fonte": {
+    "figura": "12.54",
+    "pagina": 537
+   }
+  },
+  {
+   "id": "gal-8.1",
+   "lesao": "linea-alba",
+   "img": "conteudo/patologia/neville/figuras/fig-8-1.jpg",
+   "legenda": "White line of hyperkeratosis on the right buccal mucosa at the level of the occlusal plane.",
+   "fonte": {
+    "figura": "8.1",
+    "pagina": 278
+   }
+  },
+  {
+   "id": "gal-8.2",
+   "lesao": "morsicatio",
+   "img": "conteudo/patologia/neville/figuras/fig-8-2.jpg",
+   "legenda": "Thickened, shredded areas of white hyperkeratosis of the left buccal mucosa.",
+   "fonte": {
+    "figura": "8.2",
+    "pagina": 278
+   }
+  },
+  {
+   "id": "gal-8.3",
+   "lesao": "morsicatio",
+   "img": "conteudo/patologia/neville/figuras/fig-8-3.jpg",
+   "legenda": "Thickened, rough areas of white hyperkeratosis of the lateral border of the tongue on the left side.",
+   "fonte": {
+    "figura": "8.3",
+    "pagina": 278
+   }
+  },
+  {
+   "id": "gal-8.5",
+   "lesao": "ulcera-traumatica",
+   "img": "conteudo/patologia/neville/figuras/fig-8-5.jpg",
+   "legenda": "Well-circumscribed ulceration of the posterior buccal mucosa on the left side.",
+   "fonte": {
+    "figura": "8.5",
+    "pagina": 279
+   }
+  },
+  {
+   "id": "gal-8.6",
+   "lesao": "ulcera-traumatica",
+   "img": "conteudo/patologia/neville/figuras/fig-8-6.jpg",
+   "legenda": "Mucosal ulceration with a faintly hyperkeratotic collar located on the left ventral lateral surface of the tongue.",
+   "fonte": {
+    "figura": "8.6",
+    "pagina": 279
+   }
+  },
+  {
+   "id": "gal-8.7",
+   "lesao": "ulcera-traumatica",
+   "img": "conteudo/patologia/neville/figuras/fig-8-7.jpg",
+   "legenda": "Exophytic ulcerated mass on the ventrolateral tongue associated with multiple jagged teeth.",
+   "fonte": {
+    "figura": "8.7",
+    "pagina": 279
+   }
+  },
+  {
+   "id": "gal-8.8",
+   "lesao": "ulcera-traumatica",
+   "img": "conteudo/patologia/neville/figuras/fig-8-8.jpg",
+   "legenda": "Newborn with traumatic ulceration of anterior ventral surface of the tongue. Mucosal damage occurred from contact of tongue with adjacent tooth during breastfeeding.",
+   "fonte": {
+    "figura": "8.8",
+    "pagina": 280
+   }
+  },
+  {
+   "id": "gal-8.11",
+   "lesao": "queimadura",
+   "img": "conteudo/patologia/neville/figuras/fig-8-11.jpg",
+   "legenda": "Yellow charred area of necrosis along the left oral commissure. (Courtesy of Dr. Patricia Hagen.)",
+   "fonte": {
+    "figura": "8.11",
+    "pagina": 282
+   }
+  },
+  {
+   "id": "gal-8.12",
+   "lesao": "queimadura",
+   "img": "conteudo/patologia/neville/figuras/fig-8-12.jpg",
+   "legenda": "Area of yellow-white epithelial necro- sis of the left posterior hard palate. Damage was the result of attempted ingestion of a hot pizza roll.",
+   "fonte": {
+    "figura": "8.12",
+    "pagina": 282
+   }
+  },
+  {
+   "id": "gal-8.15",
+   "lesao": "queimadura",
+   "img": "conteudo/patologia/neville/figuras/fig-8-15.jpg",
+   "legenda": "Extensive area of white epithelial necrosis of the left buccal mucosa caused by aspirin placement in an attempt to alleviate dental pain.",
+   "fonte": {
+    "figura": "8.15",
+    "pagina": 283
+   }
+  },
+  {
+   "id": "gal-8.16",
+   "lesao": "queimadura",
+   "img": "conteudo/patologia/neville/figuras/fig-8-16.jpg",
+   "legenda": "Extensive epithelial necrosis of the anterior maxillary gingiva secondary to interproximal placement of hydrogen peroxide with cotton swabs.",
+   "fonte": {
+    "figura": "8.16",
+    "pagina": 284
+   }
+  },
+  {
+   "id": "gal-8.50",
+   "lesao": "tatuagem-amalgama",
+   "img": "conteudo/patologia/neville/figuras/fig-8-50.jpg",
+   "legenda": "Linear strips of mucosal pigmentation that align with the interdental papillae. The patient used dental floss on the mandibular first molar immediately after the placement of the amalgam restoration. Because the area was still anes- thetize",
+   "fonte": {
+    "figura": "8.50",
+    "pagina": 303
+   }
+  },
+  {
+   "id": "gal-8.51",
+   "lesao": "tatuagem-amalgama",
+   "img": "conteudo/patologia/neville/figuras/fig-8-51.jpg",
+   "legenda": "Multifocal areas of mucosal discoloration overlying the maxillary anterior incisors, which have been treated with apical retrofill procedures.",
+   "fonte": {
+    "figura": "8.51",
+    "pagina": 303
+   }
+  },
+  {
+   "id": "gal-8.52",
+   "lesao": "tatuagem-amalgama",
+   "img": "conteudo/patologia/neville/figuras/fig-8-52.jpg",
+   "legenda": "Area of mucosal discoloration of the floor of the mouth on the patient’s left side.",
+   "fonte": {
+    "figura": "8.52",
+    "pagina": 304
+   }
+  },
+  {
+   "id": "gal-8.66",
+   "lesao": "melanose-tabaco",
+   "img": "conteudo/patologia/neville/figuras/fig-8-66.jpg",
+   "legenda": "Light, diffuse melanin pigmentation in a white female who is a heavy smoker. Pigmentary changes are limited to the anterior facial gingiva.",
+   "fonte": {
+    "figura": "8.66",
+    "pagina": 312
+   }
+  },
+  {
+   "id": "gal-8.29",
+   "lesao": "osteonecrose",
+   "img": "conteudo/patologia/neville/figuras/fig-8-29.jpg",
+   "legenda": "Bilateral necrotic exposed bone of the mandible in a patient receiving zoledronic acid for metastatic breast cancer. (Courtesy of Dr. Brent Mortenson.)",
+   "fonte": {
+    "figura": "8.29",
+    "pagina": 293
+   }
+  },
+  {
+   "id": "gal-8.30",
+   "lesao": "osteonecrose",
+   "img": "conteudo/patologia/neville/figuras/fig-8-30.jpg",
+   "legenda": "Necrotic exposed bone of the left anterior maxilla in a cancer patient receiving denosu- mab. (Courtesy of Dr. Martin Steed).",
+   "fonte": {
+    "figura": "8.30",
+    "pagina": 293
+   }
+  },
+  {
+   "id": "gal-8.31",
+   "lesao": "osteonecrose",
+   "img": "conteudo/patologia/neville/figuras/fig-8-31.jpg",
+   "legenda": "Multifocal areas of exposed necrotic bone of the mandible in a patient receiving zoledronic acid for cancer.",
+   "fonte": {
+    "figura": "8.31",
+    "pagina": 294
+   }
+  },
+  {
+   "id": "gal-8.32",
+   "lesao": "osteonecrose",
+   "img": "conteudo/patologia/neville/figuras/fig-8-32.jpg",
+   "legenda": "Lobulated palatal torus with an area of exposed necrotic bone in a patient taking alendro- nate for osteoporosis.",
+   "fonte": {
+    "figura": "8.32",
+    "pagina": 294
+   }
+  },
+  {
+   "id": "gal-8.25",
+   "lesao": "osteorradionecrose",
+   "img": "conteudo/patologia/neville/figuras/fig-8-25.jpg",
+   "legenda": "Ulceration overlying left body of the mandible with exposure and sequestration of superficial alveolar bone.",
+   "fonte": {
+    "figura": "8.25",
+    "pagina": 288
+   }
+  },
+  {
+   "id": "gal-8.27",
+   "lesao": "osteorradionecrose",
+   "img": "conteudo/patologia/neville/figuras/fig-8-27.jpg",
+   "legenda": "Same patient as depicted in Fig. 8.26. Note fistula formation of the left submandibular area resulting from ORN of the mandibular body.",
+   "fonte": {
+    "figura": "8.27",
+    "pagina": 289
+   }
+  },
+  {
+   "id": "gal-8.20",
+   "lesao": "mucosite",
+   "img": "conteudo/patologia/neville/figuras/fig-8-20.jpg",
+   "legenda": "Vermilion border of the lower lip exhibiting epithelial necrosis and ulceration in a patient receiving systemic chemotherapy.",
+   "fonte": {
+    "figura": "8.20",
+    "pagina": 286
+   }
+  },
+  {
+   "id": "gal-8.21",
+   "lesao": "mucosite",
+   "img": "conteudo/patologia/neville/figuras/fig-8-21.jpg",
+   "legenda": "Ulceration of the right lateral border of the tongue in a patient receiving systemic chemotherapy.",
+   "fonte": {
+    "figura": "8.21",
+    "pagina": 286
+   }
+  },
+  {
+   "id": "gal-8.22",
+   "lesao": "mucosite",
+   "img": "conteudo/patologia/neville/figuras/fig-8-22.jpg",
+   "legenda": "A, Squamous cell carcinoma before radiation therapy. Granular erythroplakia of the floor of the mouth on the patient’s right side. B, Same lesion after initiation of radiation therapy. Note the large, irregular area of epithelial necrosis a",
+   "fonte": {
+    "figura": "8.22",
+    "pagina": 287
+   }
+  },
+  {
+   "id": "gal-8.45",
+   "lesao": "petequia",
+   "img": "conteudo/patologia/neville/figuras/fig-8-45.jpg",
+   "legenda": "Submucosal hemorrhage of the soft palate caused by violent coughing.",
+   "fonte": {
+    "figura": "8.45",
+    "pagina": 301
+   }
+  },
+  {
+   "id": "gal-8.46",
+   "lesao": "petequia",
+   "img": "conteudo/patologia/neville/figuras/fig-8-46.jpg",
+   "legenda": "Submucosal hemorrhage of the lower labial mucosa on the left side secondary to blunt trauma.",
+   "fonte": {
+    "figura": "8.46",
+    "pagina": 301
+   }
+  },
+  {
+   "id": "gal-8.47",
+   "lesao": "petequia",
+   "img": "conteudo/patologia/neville/figuras/fig-8-47.jpg",
+   "legenda": "A, Dark-purple nodular mass of the buccal mucosa in a patient on Coumadin therapy. B, Near resolution of the lesion 8 days later after discontinuation of the medication. (Courtesy of Dr. Charles Ferguson.)",
+   "fonte": {
+    "figura": "8.47",
+    "pagina": 302
+   }
+  },
+  {
+   "id": "gal-9.4",
+   "lesao": "afta-menor",
+   "img": "conteudo/patologia/neville/figuras/fig-9-4.jpg",
+   "legenda": "Erythematous halo encircling a yellowish ulceration of the soft palate on the left side.",
+   "fonte": {
+    "figura": "9.4",
+    "pagina": 328
+   }
+  },
+  {
+   "id": "gal-9.5",
+   "lesao": "afta-menor",
+   "img": "conteudo/patologia/neville/figuras/fig-9-5.jpg",
+   "legenda": "Two ulcerations located on the mandibular labial mucosa.",
+   "fonte": {
+    "figura": "9.5",
+    "pagina": 328
+   }
+  },
+  {
+   "id": "gal-9.6",
+   "lesao": "afta-menor",
+   "img": "conteudo/patologia/neville/figuras/fig-9-6.jpg",
+   "legenda": "Single ulceration of the ante- rior buccal mucosa.",
+   "fonte": {
+    "figura": "9.6",
+    "pagina": 329
+   }
+  },
+  {
+   "id": "gal-9.7",
+   "lesao": "afta-maior",
+   "img": "conteudo/patologia/neville/figuras/fig-9-7.jpg",
+   "legenda": "Large, deep, and irregular ulceration of the posterior buccal mucosa. Note extensive scarring of the anterior buccal mucosa from previous ulcerations.",
+   "fonte": {
+    "figura": "9.7",
+    "pagina": 329
+   }
+  },
+  {
+   "id": "gal-9.8",
+   "lesao": "afta-maior",
+   "img": "conteudo/patologia/neville/figuras/fig-9-8.jpg",
+   "legenda": "Large, irregular ulceration of the soft palate.",
+   "fonte": {
+    "figura": "9.8",
+    "pagina": 329
+   }
+  },
+  {
+   "id": "gal-9.10",
+   "lesao": "afta-maior",
+   "img": "conteudo/patologia/neville/figuras/fig-9-10.jpg",
+   "legenda": "A, Large ulceration of the left anterior buccal mucosa. B, Same lesion after 5 days of therapy with betamethasone syrup used in a swish-and-swallow method. The patient was free of pain by the second day of therapy. The ulceration healed com",
+   "fonte": {
+    "figura": "9.10",
+    "pagina": 330
+   }
+  },
+  {
+   "id": "gal-9.9",
+   "lesao": "afta-herpetiforme",
+   "img": "conteudo/patologia/neville/figuras/fig-9-9.jpg",
+   "legenda": "Numerous pinhead ulcerations of the ventral surface of the tongue, several of which have coalesced into larger, more irregular areas of ulceration.",
+   "fonte": {
+    "figura": "9.9",
+    "pagina": 329
+   }
+  },
+  {
+   "id": "gal-9.11",
+   "lesao": "behcet",
+   "img": "conteudo/patologia/neville/figuras/fig-9-11.jpg",
+   "legenda": "Diffuse erythema surrounding numer- ous irregular ulcerations of the soft palate.",
+   "fonte": {
+    "figura": "9.11",
+    "pagina": 332
+   }
+  },
+  {
+   "id": "gal-9.13",
+   "lesao": "behcet",
+   "img": "conteudo/patologia/neville/figuras/fig-9-13.jpg",
+   "legenda": "Sterile pustule of the skin that devel- oped 1 day after injection of saline. This reaction is termed cutaneous pathergy.",
+   "fonte": {
+    "figura": "9.13",
+    "pagina": 332
+   }
+  },
+  {
+   "id": "gal-16.91",
+   "lesao": "liquen",
+   "img": "conteudo/patologia/neville/figuras/fig-16-91.jpg",
+   "legenda": "The cutaneous lesions on the wrist appear as purple, polygonal papules.",
+   "fonte": {
+    "figura": "16.91",
+    "pagina": 792
+   }
+  },
+  {
+   "id": "gal-16.92",
+   "lesao": "liquen",
+   "img": "conteudo/patologia/neville/figuras/fig-16-92.jpg",
+   "legenda": "Closer view of a skin lesion of lichen pla- nus. Careful examination shows a network of fine white lines (Wickham striae) on the surface of the papules.",
+   "fonte": {
+    "figura": "16.92",
+    "pagina": 792
+   }
+  },
+  {
+   "id": "gal-16.93",
+   "lesao": "liquen",
+   "img": "conteudo/patologia/neville/figuras/fig-16-93.jpg",
+   "legenda": "The interlacing white lines and papules are typical of reticular lichen planus involving the buccal mucosa, the most common site of oral involvement.",
+   "fonte": {
+    "figura": "16.93",
+    "pagina": 793
+   }
+  },
+  {
+   "id": "gal-16.94",
+   "lesao": "liquen",
+   "img": "conteudo/patologia/neville/figuras/fig-16-94.jpg",
+   "legenda": "In persons of color who develop lichen planus, it is not unusual to see patchy areas of reactive (benign) melano- sis develop in the lesions, presumably due to stimulation of the melano- cytes in this area by the inflammatory cells that cau",
+   "fonte": {
+    "figura": "16.94",
+    "pagina": 793
+   }
+  },
+  {
+   "id": "gal-16.50",
+   "lesao": "penfigo",
+   "img": "conteudo/patologia/neville/figuras/fig-16-50.jpg",
+   "legenda": "Multiple erosions of the left buccal mucosa and soft palate.",
+   "fonte": {
+    "figura": "16.50",
+    "pagina": 777
+   }
+  },
+  {
+   "id": "gal-16.51",
+   "lesao": "penfigo",
+   "img": "conteudo/patologia/neville/figuras/fig-16-51.jpg",
+   "legenda": "Large, irregularly shaped ulcera- tions involving the floor of the mouth and ventral tongue.",
+   "fonte": {
+    "figura": "16.51",
+    "pagina": 777
+   }
+  },
+  {
+   "id": "gal-16.52",
+   "lesao": "penfigo",
+   "img": "conteudo/patologia/neville/figuras/fig-16-52.jpg",
+   "legenda": "Multiple erosions affecting the marginal gingiva.",
+   "fonte": {
+    "figura": "16.52",
+    "pagina": 777
+   }
+  },
+  {
+   "id": "gal-16.53",
+   "lesao": "penfigo",
+   "img": "conteudo/patologia/neville/figuras/fig-16-53.jpg",
+   "legenda": "The patient, with a known diagno- sis of pemphigus vulgaris, had been treated with immunosuppressive therapy. The oral erosions shown here were the only persistent manifes- tation of her disease.",
+   "fonte": {
+    "figura": "16.53",
+    "pagina": 777
+   }
+  },
+  {
+   "id": "gal-16.63",
+   "lesao": "penfigoide",
+   "img": "conteudo/patologia/neville/figuras/fig-16-63.jpg",
+   "legenda": "Although cutaneous lesions are not common, tense bullae such as these may develop on the skin of 20% of affected patients. (Courtesy of Dr. Charles Camisa.)",
+   "fonte": {
+    "figura": "16.63",
+    "pagina": 781
+   }
+  },
+  {
+   "id": "gal-16.64",
+   "lesao": "penfigoide",
+   "img": "conteudo/patologia/neville/figuras/fig-16-64.jpg",
+   "legenda": "One or more intraoral vesicles, as seen on the soft palate, may be detected in patients with mucous membrane pemphigoid. Usually, shallow ulcerations of the oral mucosa are also present, as seen in the midline posterior soft palate, where o",
+   "fonte": {
+    "figura": "16.64",
+    "pagina": 781
+   }
+  },
+  {
+   "id": "gal-16.65",
+   "lesao": "penfigoide",
+   "img": "conteudo/patologia/neville/figuras/fig-16-65.jpg",
+   "legenda": "Large, irregular oral ulcerations characterize the lesions after the initial bullae rupture.",
+   "fonte": {
+    "figura": "16.65",
+    "pagina": 781
+   }
+  },
+  {
+   "id": "gal-16.67",
+   "lesao": "penfigoide",
+   "img": "conteudo/patologia/neville/figuras/fig-16-67.jpg",
+   "legenda": "Although the earliest ocular changes are difficult to identify, patients with ocular involvement may show adhesions (symblepharons) between the bulbar and palpebral conjunctivae before severe ocular damage occurs.",
+   "fonte": {
+    "figura": "16.67",
+    "pagina": 782
+   }
+  },
+  {
+   "id": "gal-16.76",
+   "lesao": "eritema-multiforme",
+   "img": "conteudo/patologia/neville/figuras/fig-16-76.jpg",
+   "legenda": "Focal hemorrhagic crusting of the lips is seen in conjunction with diffuse shallow ulcerations and ero- sions involving this patient’s mandibular labial mucosa.",
+   "fonte": {
+    "figura": "16.76",
+    "pagina": 787
+   }
+  },
+  {
+   "id": "gal-16.77",
+   "lesao": "eritema-multiforme",
+   "img": "conteudo/patologia/neville/figuras/fig-16-77.jpg",
+   "legenda": "Same patient as Fig. 16.76. Dif- fuse shallow ulcerations of varying sizes are noted on the right buccal mucosa. The patient had finished a course of sulfamethoxazole and tri- methoprim for a urinary tract infection a few days before the on",
+   "fonte": {
+    "figura": "16.77",
+    "pagina": 787
+   }
+  },
+  {
+   "id": "gal-16.115",
+   "lesao": "lupus",
+   "img": "conteudo/patologia/neville/figuras/fig-16-115.jpg",
+   "legenda": "The erythem- atous patches seen in the malar regions are a characteristic sign.",
+   "fonte": {
+    "figura": "16.115",
+    "pagina": 803
+   }
+  },
+  {
+   "id": "gal-16.116",
+   "lesao": "lupus",
+   "img": "conteudo/patologia/neville/figuras/fig-16-116.jpg",
+   "legenda": "This ulcera- tion of the buccal mucosa exhibits fine radiating white striae at its periph- ery, clinically appearing similar to erosive lichen planus.",
+   "fonte": {
+    "figura": "16.116",
+    "pagina": 803
+   }
+  },
+  {
+   "id": "gal-16.117",
+   "lesao": "lupus",
+   "img": "conteudo/patologia/neville/figuras/fig-16-117.jpg",
+   "legenda": "The skin lesions are characterized by scaling, atrophy, and pigmentary disturbances, which are most evident on sun-exposed skin.",
+   "fonte": {
+    "figura": "16.117",
+    "pagina": 804
+   }
+  },
+  {
+   "id": "gal-16.118",
+   "lesao": "lupus",
+   "img": "conteudo/patologia/neville/figuras/fig-16-118.jpg",
+   "legenda": "Radiating keratotic striae surround erythematous zones of the buccal mucosa. These features are similar to those of erosive lichen planus.",
+   "fonte": {
+    "figura": "16.118",
+    "pagina": 804
+   }
+  },
+  {
+   "id": "gal-16.108",
+   "lesao": "gvhd",
+   "img": "conteudo/patologia/neville/figuras/fig-16-108.jpg",
+   "legenda": "Confluent, inter- lacing white linear lesions of the vermilion zone superficially resemble oral lichen planus.",
+   "fonte": {
+    "figura": "16.108",
+    "pagina": 800
+   }
+  },
+  {
+   "id": "gal-16.109",
+   "lesao": "gvhd",
+   "img": "conteudo/patologia/neville/figuras/fig-16-109.jpg",
+   "legenda": "Lichenoid and erosive lesions of the left buccal mucosa.",
+   "fonte": {
+    "figura": "16.109",
+    "pagina": 800
+   }
+  },
+  {
+   "id": "gal-16.110",
+   "lesao": "gvhd",
+   "img": "conteudo/patologia/neville/figuras/fig-16-110.jpg",
+   "legenda": "Involvement of the tongue showing erosions and ulcerations that resemble erosive lichen planus.",
+   "fonte": {
+    "figura": "16.110",
+    "pagina": 800
+   }
+  },
+  {
+   "id": "gal-9.50",
+   "lesao": "angioedema",
+   "img": "conteudo/patologia/neville/figuras/fig-9-50.jpg",
+   "legenda": "Diffuse upper lip swelling that arose rapidly.",
+   "fonte": {
+    "figura": "9.50",
+    "pagina": 354
+   }
+  },
+  {
+   "id": "gal-9.51",
+   "lesao": "angioedema",
+   "img": "conteudo/patologia/neville/figuras/fig-9-51.jpg",
+   "legenda": "A, Soft, nontender tissue swelling of the face arose relatively rapidly after dental treatment. B, Facial appearance after resolution of edematous facial enlargement.",
+   "fonte": {
+    "figura": "9.51",
+    "pagina": 355
+   }
+  },
+  {
+   "id": "gal-9.19",
+   "lesao": "granulomatose-orofacial",
+   "img": "conteudo/patologia/neville/figuras/fig-9-19.jpg",
+   "legenda": "Nontender, persistent enlargement of the upper lip. (From Allen CM, Camisa C: Diseases of the mouth and lips. In Sams WM, Lynch P, edi- tors: Principles of dermatology, New York, 1990, Churchill Livingstone.)",
+   "fonte": {
+    "figura": "9.19",
+    "pagina": 336
+   }
+  },
+  {
+   "id": "gal-9.20",
+   "lesao": "granulomatose-orofacial",
+   "img": "conteudo/patologia/neville/figuras/fig-9-20.jpg",
+   "legenda": "Persistent enlargement of the lower lip. (Courtesy of Dr. Richard Ziegler.)",
+   "fonte": {
+    "figura": "9.20",
+    "pagina": 336
+   }
+  },
+  {
+   "id": "gal-9.21",
+   "lesao": "granulomatose-orofacial",
+   "img": "conteudo/patologia/neville/figuras/fig-9-21.jpg",
+   "legenda": "Same patient as depicted in Fig. 9.20. Note numerous furrows on the dorsal surface of the tongue. (Courtesy of Dr. Richard Ziegler.)",
+   "fonte": {
+    "figura": "9.21",
+    "pagina": 337
+   }
+  },
+  {
+   "id": "gal-9.22",
+   "lesao": "granulomatose-orofacial",
+   "img": "conteudo/patologia/neville/figuras/fig-9-22.jpg",
+   "legenda": "Hyperplastic mucosa noted bilaterally in the mandibular mucobuccal fold. (Courtesy of Dr. Steven A. Anderson.)",
+   "fonte": {
+    "figura": "9.22",
+    "pagina": 337
+   }
+  },
+  {
+   "id": "gal-9.42",
+   "lesao": "canela",
+   "img": "conteudo/patologia/neville/figuras/fig-9-42.jpg",
+   "legenda": "Oblong area of sensitive erythema with overlying shaggy hyperkeratosis.",
+   "fonte": {
+    "figura": "9.42",
+    "pagina": 350
+   }
+  },
+  {
+   "id": "gal-9.43",
+   "lesao": "canela",
+   "img": "conteudo/patologia/neville/figuras/fig-9-43.jpg",
+   "legenda": "Sensi- tive and thickened hyperkeratosis of the lateral and dorsal surface of the tongue on the right side.",
+   "fonte": {
+    "figura": "9.43",
+    "pagina": 350
+   }
+  },
+  {
+   "id": "gal-9.44",
+   "lesao": "canela",
+   "img": "conteudo/patologia/neville/figuras/fig-9-44.jpg",
+   "legenda": "Left lat- eral border of the tongue demonstrating linear rows of hyperkeratosis that resemble oral hairy leukoplakia (OHL).",
+   "fonte": {
+    "figura": "9.44",
+    "pagina": 350
+   }
+  },
+  {
+   "id": "gal-9.46",
+   "lesao": "canela",
+   "img": "conteudo/patologia/neville/figuras/fig-9-46.jpg",
+   "legenda": "Peri- vascular inflammatory infiltrate consisting predominantly of lymphocytes and plasma cells.",
+   "fonte": {
+    "figura": "9.46",
+    "pagina": 350
+   }
+  },
+  {
+   "id": "gal-11.2",
+   "lesao": "mucocele",
+   "img": "conteudo/patologia/neville/figuras/fig-11-2.jpg",
+   "legenda": "Blue-pigmented nodule on the lower lip.",
+   "fonte": {
+    "figura": "11.2",
+    "pagina": 466
+   }
+  },
+  {
+   "id": "gal-11.3",
+   "lesao": "mucocele",
+   "img": "conteudo/patologia/neville/figuras/fig-11-3.jpg",
+   "legenda": "Nodule on the posterior buccal mucosa.",
+   "fonte": {
+    "figura": "11.3",
+    "pagina": 466
+   }
+  },
+  {
+   "id": "gal-11.4",
+   "lesao": "mucocele",
+   "img": "conteudo/patologia/neville/figuras/fig-11-4.jpg",
+   "legenda": "Exophytic lesion on the anterior ventral tongue.",
+   "fonte": {
+    "figura": "11.4",
+    "pagina": 466
+   }
+  },
+  {
+   "id": "gal-11.5",
+   "lesao": "mucocele",
+   "img": "conteudo/patologia/neville/figuras/fig-11-5.jpg",
+   "legenda": "Vesicle-like lesion on the soft palate.",
+   "fonte": {
+    "figura": "11.5",
+    "pagina": 467
+   }
+  },
+  {
+   "id": "gal-11.8",
+   "lesao": "ranula",
+   "img": "conteudo/patologia/neville/figuras/fig-11-8.jpg",
+   "legenda": "Blue-pigmented swelling in the left floor of the mouth.",
+   "fonte": {
+    "figura": "11.8",
+    "pagina": 468
+   }
+  },
+  {
+   "id": "gal-11.9",
+   "lesao": "ranula",
+   "img": "conteudo/patologia/neville/figuras/fig-11-9.jpg",
+   "legenda": "Soft swelling in the neck.",
+   "fonte": {
+    "figura": "11.9",
+    "pagina": 468
+   }
+  },
+  {
+   "id": "gal-11.31",
+   "lesao": "sialometaplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-11-31.jpg",
+   "legenda": "Early lesion demonstrat- ing swelling of the posterior lateral hard palate. (From Allen CM, Camisa C: Diseases of the mouth and lips. In Sams WM, Lynch P, editors: Prin- ciples of dermatology, New York, 1990, Churchill Livingstone.)",
+   "fonte": {
+    "figura": "11.31",
+    "pagina": 483
+   }
+  },
+  {
+   "id": "gal-11.32",
+   "lesao": "sialometaplasia",
+   "img": "conteudo/patologia/neville/figuras/fig-11-32.jpg",
+   "legenda": "Later-stage lesion show- ing craterlike defect of the posterior palate.",
+   "fonte": {
+    "figura": "11.32",
+    "pagina": 483
+   }
+  },
+  {
+   "id": "gal-11.34",
+   "lesao": "adenoma-pleomorfico",
+   "img": "conteudo/patologia/neville/figuras/fig-11-34.jpg",
+   "legenda": "Small, firm nodule located below the left ear in the parotid gland. (Courtesy of Dr. Mike Hansen.)",
+   "fonte": {
+    "figura": "11.34",
+    "pagina": 489
+   }
+  },
+  {
+   "id": "gal-11.35",
+   "lesao": "adenoma-pleomorfico",
+   "img": "conteudo/patologia/neville/figuras/fig-11-35.jpg",
+   "legenda": "Slowly growing tumor of the parotid gland.",
+   "fonte": {
+    "figura": "11.35",
+    "pagina": 489
+   }
+  },
+  {
+   "id": "gal-11.36",
+   "lesao": "adenoma-pleomorfico",
+   "img": "conteudo/patologia/neville/figuras/fig-11-36.jpg",
+   "legenda": "Tumor of the submandibular gland. (Courtesy of Dr. Román Carlos.)",
+   "fonte": {
+    "figura": "11.36",
+    "pagina": 490
+   }
+  },
+  {
+   "id": "gal-11.38",
+   "lesao": "adenoma-pleomorfico",
+   "img": "conteudo/patologia/neville/figuras/fig-11-38.jpg",
+   "legenda": "Firm mass of the hard palate lateral to the midline.",
+   "fonte": {
+    "figura": "11.38",
+    "pagina": 490
+   }
+  },
+  {
+   "id": "gal-11.57",
+   "lesao": "mucoepidermoide",
+   "img": "conteudo/patologia/neville/figuras/fig-11-57.jpg",
+   "legenda": "Blue-pigmented mass of the posterior lateral hard palate. (Courtesy of Dr. James F. Drummond.)",
+   "fonte": {
+    "figura": "11.57",
+    "pagina": 499
+   }
+  },
+  {
+   "id": "gal-11.58",
+   "lesao": "mucoepidermoide",
+   "img": "conteudo/patologia/neville/figuras/fig-11-58.jpg",
+   "legenda": "Mass of the tongue.",
+   "fonte": {
+    "figura": "11.58",
+    "pagina": 499
+   }
+  },
+  {
+   "id": "gal-11.25",
+   "lesao": "sjogren",
+   "img": "conteudo/patologia/neville/figuras/fig-11-25.jpg",
+   "legenda": "Dry and fissured tongue. (Courtesy of Dr. David Schaffner.)",
+   "fonte": {
+    "figura": "11.25",
+    "pagina": 479
+   }
+  },
+  {
+   "id": "gal-11.26",
+   "lesao": "sjogren",
+   "img": "conteudo/patologia/neville/figuras/fig-11-26.jpg",
+   "legenda": "Benign lymphoepithelial lesion of the parotid gland. (Courtesy of Dr. David Schaffner.)",
+   "fonte": {
+    "figura": "11.26",
+    "pagina": 479
+   }
+  },
+  {
+   "id": "gal-3.34",
+   "lesao": "parulide",
+   "img": "conteudo/patologia/neville/figuras/fig-3-34.jpg",
+   "legenda": "Erythematous mass of granulation tissue overlying the left maxillary central incisor. Note discoloration of the maxillary right central incisor.",
+   "fonte": {
+    "figura": "3.34",
+    "pagina": 135
+   }
+  },
+  {
+   "id": "gal-3.38",
+   "lesao": "parulide",
+   "img": "conteudo/patologia/neville/figuras/fig-3-38.jpg",
+   "legenda": "Asymptomatic yellow-red nodule of the anterior mandibular alveolar mucosa. The adjacent teeth were asymptomatic and appeared clinically normal.",
+   "fonte": {
+    "figura": "3.38",
+    "pagina": 136
+   }
+  },
+  {
+   "id": "gal-3.1",
+   "lesao": "polipo-pulpar",
+   "img": "conteudo/patologia/neville/figuras/fig-3-1.jpg",
+   "legenda": "Erythematous granulation tissue extruding from the pulp chamber of the mandibular first molar.",
+   "fonte": {
+    "figura": "3.1",
+    "pagina": 123
+   }
+  },
+  {
+   "id": "gal-3.41",
+   "lesao": "celulite",
+   "img": "conteudo/patologia/neville/figuras/fig-3-41.jpg",
+   "legenda": "Soft tissue swelling of the right subman- dibular region. (Courtesy of Dr. Brian Blocher.)",
+   "fonte": {
+    "figura": "3.41",
+    "pagina": 138
+   }
+  },
+  {
+   "id": "gal-3.42",
+   "lesao": "celulite",
+   "img": "conteudo/patologia/neville/figuras/fig-3-42.jpg",
+   "legenda": "Erythematous and edematous enlargement of the left side of the face with involvement of the eyelids and conjunctiva. Patients with odontogenic infections involv- ing the canine space are at risk for cavernous sinus thrombosis. (Courtesy of ",
+   "fonte": {
+    "figura": "3.42",
+    "pagina": 139
+   }
+  },
+  {
+   "id": "gal-3.37",
+   "lesao": "fistula-cutanea",
+   "img": "conteudo/patologia/neville/figuras/fig-3-37.jpg",
+   "legenda": "Erythematous and sensitive mass of granulation tissue noted on the cutaneous surface of the chin.",
+   "fonte": {
+    "figura": "3.37",
+    "pagina": 136
+   }
+  }
+ ],
+ "midia": [
+  "conteudo/patologia/neville/figuras/fig-1-11.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-12.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-13.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-14.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-15.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-20.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-22.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-23.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-28.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-29.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-41.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-43.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-44.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-45.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-46.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-55.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-56.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-71.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-78.jpg",
+  "conteudo/patologia/neville/figuras/fig-1-79.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-1.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-100.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-102.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-103.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-12.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-124.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-125.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-13.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-135.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-136.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-137.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-138.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-142.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-143.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-145.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-146.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-2.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-3.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-38.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-39.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-40.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-45.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-46.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-47.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-48.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-5.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-6.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-60.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-61.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-64.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-65.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-66.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-68.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-7.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-77.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-79.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-80.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-83.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-86.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-87.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-93.jpg",
+  "conteudo/patologia/neville/figuras/fig-10-94.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-2.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-25.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-26.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-3.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-31.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-32.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-34.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-35.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-36.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-38.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-4.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-5.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-57.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-58.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-8.jpg",
+  "conteudo/patologia/neville/figuras/fig-11-9.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-1.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-109.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-110.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-111.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-114.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-12.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-13.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-14.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-17.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-18.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-2.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-3.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-34.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-35.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-36.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-37.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-4.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-41.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-42.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-45.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-46.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-49.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-50.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-53.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-54.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-62.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-66.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-67.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-68.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-8.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-84.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-85.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-88.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-9.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-92.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-93.jpg",
+  "conteudo/patologia/neville/figuras/fig-12-94.jpg",
+  "conteudo/patologia/neville/figuras/fig-15-12.jpg",
+  "conteudo/patologia/neville/figuras/fig-15-36.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-108.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-109.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-110.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-115.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-116.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-117.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-118.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-50.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-51.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-52.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-53.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-63.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-64.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-65.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-67.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-76.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-77.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-84.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-85.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-86.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-87.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-91.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-92.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-93.jpg",
+  "conteudo/patologia/neville/figuras/fig-16-94.jpg",
+  "conteudo/patologia/neville/figuras/fig-3-1.jpg",
+  "conteudo/patologia/neville/figuras/fig-3-34.jpg",
+  "conteudo/patologia/neville/figuras/fig-3-37.jpg",
+  "conteudo/patologia/neville/figuras/fig-3-38.jpg",
+  "conteudo/patologia/neville/figuras/fig-3-41.jpg",
+  "conteudo/patologia/neville/figuras/fig-3-42.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-1.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-10.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-2.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-28.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-3.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-4.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-5.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-7.jpg",
+  "conteudo/patologia/neville/figuras/fig-6-9.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-17.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-18.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-19.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-20.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-25.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-26.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-27.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-33.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-35.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-39.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-40.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-41.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-42.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-5.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-6.jpg",
+  "conteudo/patologia/neville/figuras/fig-7-60.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-1.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-11.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-12.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-15.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-16.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-2.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-20.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-21.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-22.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-25.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-27.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-29.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-3.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-30.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-31.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-32.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-45.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-46.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-47.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-5.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-50.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-51.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-52.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-6.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-66.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-7.jpg",
+  "conteudo/patologia/neville/figuras/fig-8-8.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-10.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-11.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-13.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-19.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-20.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-21.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-22.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-4.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-42.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-43.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-44.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-46.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-5.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-50.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-51.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-6.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-7.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-8.jpg",
+  "conteudo/patologia/neville/figuras/fig-9-9.jpg"
+ ]
+}

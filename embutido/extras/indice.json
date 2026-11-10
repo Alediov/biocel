@@ -1,0 +1,79 @@
+{
+ "arquivos": [
+  {
+   "id": "jogo:anestesico",
+   "caminho": "extras/jogos/anestesico.json",
+   "hash": "7fdd84e674a7"
+  },
+  {
+   "id": "jogo:consulta",
+   "caminho": "extras/jogos/consulta.json",
+   "hash": "cfbaf4a330a4"
+  },
+  {
+   "id": "jogo:detetive",
+   "caminho": "extras/jogos/detetive.json",
+   "hash": "227733179ac4"
+  },
+  {
+   "id": "jogo:doses-andrade",
+   "caminho": "extras/jogos/doses-andrade.json",
+   "hash": "ef29b4719f90"
+  },
+  {
+   "id": "jogo:doses",
+   "caminho": "extras/jogos/doses.json",
+   "hash": "4d1d5ac90df6"
+  },
+  {
+   "id": "jogo:galeria",
+   "caminho": "extras/jogos/galeria.json",
+   "hash": "53a66f08e1f1"
+  },
+  {
+   "id": "jogo:laminas",
+   "caminho": "extras/jogos/laminas.json",
+   "hash": "9bfe62756ac8"
+  },
+  {
+   "id": "jogo:lesoes",
+   "caminho": "extras/jogos/lesoes.json",
+   "hash": "42ce023c26e4"
+  },
+  {
+   "id": "jogo:mira",
+   "caminho": "extras/jogos/mira.json",
+   "hash": "9db73c7bdd7c"
+  },
+  {
+   "id": "jogo:perio",
+   "caminho": "extras/jogos/perio.json",
+   "hash": "0b62476c3993"
+  },
+  {
+   "id": "jogo:receitas",
+   "caminho": "extras/jogos/receitas.json",
+   "hash": "05f28395f288"
+  },
+  {
+   "id": "jogo:receituario-unioeste",
+   "caminho": "extras/jogos/receituario-unioeste.json",
+   "hash": "3217700edf5a"
+  },
+  {
+   "id": "jogo:tecnicas",
+   "caminho": "extras/jogos/tecnicas.json",
+   "hash": "d08794020b2c"
+  },
+  {
+   "id": "jogo:glossario",
+   "caminho": "conteudo/patologia/glossario.json",
+   "hash": "5ed121f7a0eb"
+  },
+  {
+   "id": "jogo:glossario-estomato",
+   "caminho": "conteudo/estomatologia/glossario.json",
+   "hash": "673a138c5bd3"
+  }
+ ]
+}

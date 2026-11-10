@@ -1,0 +1,215 @@
+/* Gravação das aulas (gravacao/gravacao.js e gravacao/telaGravacao.js; docs/plano-gravacao.md). Carregado na abertura. */
+
+/* ponto vermelho de "gravando" */
+.gr-rec { display: inline-block; width: .7em; height: .7em; border-radius: 50%; background: var(--errado); vertical-align: -.02em; box-shadow: 0 0 0 3px color-mix(in srgb, var(--errado) 22%, transparent); flex: none; }
+
+/* pílula por cima de tudo enquanto grava (o foco fica no canto direito; esta, no esquerdo) */
+.grav-pilula { position: fixed; z-index: 39; left: 12px; bottom: calc(env(safe-area-inset-bottom) + 84px); display: flex; align-items: center; gap: 8px; padding: 7px 14px 7px 10px; border: 0; border-radius: 99px;
+  background: #1B2340; color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.28); font: inherit; cursor: pointer; max-width: calc(100vw - 120px); }
+.grav-pilula .gp-ponto { width: 12px; height: 12px; border-radius: 50%; background: #FF4B55; animation: gp-pulsa 1.4s ease-in-out infinite; flex: none; }
+.grav-pilula.pausada .gp-ponto { background: #FFC24B; animation: none; }
+.grav-pilula .gp-t { font: 800 16px var(--display); font-variant-numeric: tabular-nums; }
+.grav-pilula .gp-d { font-size: 12px; opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@keyframes gp-pulsa { 50% { box-shadow: 0 0 0 6px rgba(255, 75, 85, 0); opacity: .55; } 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 75, 85, .55); } }
+body:has(.camada-leitura, .camada-xadrez, .camada-musicas, .camada-scan, .jogo-camada, #camada-licao:not([hidden])) .grav-pilula { bottom: calc(env(safe-area-inset-bottom) + 16px); }
+body.com-ouvinte .grav-pilula { bottom: calc(env(safe-area-inset-bottom) + 160px); }
+html.tablet .grav-pilula { zoom: var(--z, 1); }
+
+/* Agenda: atalho no alto e botão no cartão da aula */
+.agenda-atalhos { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+.gr-ev { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px; width: 100%; padding: 7px 12px; border-radius: 12px; cursor: pointer;
+  border: 2px solid color-mix(in srgb, var(--errado) 45%, var(--linha)); background: var(--errado-fundo); color: var(--errado-texto); font: 700 13.5px var(--texto); }
+.gr-ev.gravando .gr-rec { animation: gp-pulsa 1.4s ease-in-out infinite; }
+.perfil-extras #bt-aulas { grid-column: 1 / -1; }
+
+/* tela principal */
+.gr-intro { font-size: 13px; margin: 0 0 12px; }
+/* minmax(0, 1fr): sem ele, o título longo de uma aula (nowrap) alargava a coluna e a tela inteira saía da largura */
+.gr-corpo { display: grid; gap: 0; grid-template-columns: minmax(0, 1fr); }
+.gr-corpo > *, .gr-corpo .cartao, .gr-corpo .secao { min-width: 0; }
+.gr-abas { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 16px; background: var(--superficie-2); margin-bottom: 4px; }
+.gr-abas button { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 8px; border: 0; border-radius: 12px; background: none;
+  color: var(--tinta-2); font: 700 14.5px var(--texto); cursor: pointer; }
+.gr-abas button.on { background: var(--superficie); color: var(--tinta); box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+.gr-abas .ico-inline { width: 20px; height: 20px; }
+.gr-status { margin-top: 12px; }
+.gr-status-txt { margin: 0; font-size: 14px; line-height: 1.45; }
+.gr-status-txt .ico-inline { vertical-align: -4px; }
+.gr-status > .botao { margin-top: 10px; width: 100%; }
+.gr-status .gr-tr-agora:empty { display: none; }
+.gr-status .gr-tr-agora .botao { width: 100%; }
+.gr-aulas h2 small { font: 700 13px var(--texto); color: var(--tinta-2); margin-left: 4px; }
+.gr-corpo .linha-cfg { display: flex; align-items: center; gap: 12px; }
+.gr-corpo .linha-cfg span { flex: 1; min-width: 0; }
+.gr-corpo .linha-cfg input { flex: none; }
+.gr-corpo .campo select { max-width: 100%; }
+.gr-meio small { display: block; overflow-wrap: anywhere; }
+.gr-grupo h3 { overflow-wrap: anywhere; }
+.gr-agora .botao { flex-wrap: wrap; text-align: center; }
+.gr-gravar-cab > div { min-width: 0; }
+.gr-corpo > .cartao:first-child { margin-top: 12px; }
+.gr-gravar-cab { display: flex; gap: 12px; align-items: center; }
+.gr-gravar-cab .ico3d { width: 46px; height: 46px; flex: none; }
+.gr-gravar-cab h2 { font-size: 18px; margin: 0 0 2px; }
+.gr-gravar-cab .sub { margin: 0; font-size: 13px; }
+.gr-agora { display: grid; gap: 10px; margin-top: 12px; }
+.gr-agora .botao { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.gr-agora .botao small { font-weight: 600; opacity: .8; }
+.gr-agora .botao:not(.secundario) .gr-rec { background: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.3); }
+.gr-nota { font-size: 12.5px; margin: 0; }
+
+/* ao vivo */
+.gr-vivo { border-color: color-mix(in srgb, var(--errado) 55%, var(--linha)); text-align: center; }
+.gr-vivo.pausada { border-color: color-mix(in srgb, var(--parcial) 60%, var(--linha)); }
+.gr-vivo-cab { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; }
+.gr-vivo-cab span { color: var(--tinta-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gr-vivo .gr-vivo-cab .gr-rec { animation: gp-pulsa 1.4s ease-in-out infinite; }
+.gr-vivo.pausada .gr-rec { background: var(--parcial); animation: none; box-shadow: none; }
+.gr-tempo { font: 800 56px/1.05 var(--display); font-variant-numeric: tabular-nums; letter-spacing: -.02em; margin: 10px 0 8px; }
+.gr-nivel { height: 10px; border-radius: 99px; background: var(--superficie-2); overflow: hidden; margin: 0 6px; }
+.gr-nivel i { display: block; height: 100%; transform-origin: left center; transform: scaleX(.03); border-radius: 99px;
+  background: linear-gradient(90deg, var(--certo) 0 55%, var(--parcial) 75%, var(--errado)); background-size: 100% 100%; transition: transform .25s ease-out; }
+.gr-para { font-size: 12.5px; margin: 8px 0 0; }
+.gr-marcar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0 12px; }
+.gr-marcar button { position: relative; display: flex; align-items: center; gap: 8px; padding: 12px 10px; border-radius: 16px; border: 2px solid var(--linha); background: var(--superficie-2);
+  color: var(--tinta); font: 700 14px var(--texto); cursor: pointer; text-align: left; box-shadow: 0 3px 0 var(--linha); }
+.gr-marcar button:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--linha); }
+.gr-marcar button .ico-inline { width: 22px; height: 22px; }
+.gr-marcar button b { position: absolute; top: -7px; right: -5px; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: var(--acento); color: #fff; font: 800 12px/22px var(--texto); text-align: center; }
+.gr-marcar button b:empty { display: none; }
+.gr-marcar button.ok { animation: gr-ok .45s ease; }
+@keyframes gr-ok { 30% { transform: scale(1.06); border-color: var(--certo); background: var(--certo-fundo); } }
+.gr-ctl { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.gr-parar { background: var(--errado); box-shadow: 0 4px 0 var(--errado-escuro); }
+.gr-lista-marc { list-style: none; margin: 10px 0 0; padding: 0; text-align: left; font-size: 13px; color: var(--tinta-2); }
+.gr-lista-marc li { display: flex; align-items: center; gap: 6px; padding: 3px 0; }
+.gr-lista-marc li span { margin-left: auto; font-variant-numeric: tabular-nums; }
+
+/* lista */
+.gr-vazio { display: flex; gap: 12px; align-items: center; }
+.gr-vazio .ico3d { width: 40px; height: 40px; flex: none; opacity: .7; }
+.gr-vazio p { margin: 0; font-size: 14px; color: var(--tinta-2); }
+.gr-grupo { margin-bottom: 14px; }
+.gr-grupo h3 { font-size: 15px; margin: 0 0 8px; }
+.gr-grupo h3 small { color: var(--tinta-2); font-weight: 600; font-size: 12.5px; }
+.gr-aula { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 11px 12px; margin-bottom: 8px; border-radius: 16px; border: 2px solid var(--linha);
+  background: var(--superficie); color: var(--tinta); font: inherit; cursor: pointer; }
+.gr-aula:active { transform: scale(.99); }
+.gr-data { flex: none; width: 3.4em; }
+.gr-data b, .gr-data small { display: block; }
+.gr-data small { color: var(--tinta-2); font-size: 12px; text-transform: capitalize; }
+.gr-meio { flex: 1; min-width: 0; }
+.gr-meio b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; line-height: 1.3; }
+.gr-meio small { color: var(--tinta-2); font-size: 12.5px; }
+.gr-chip { flex: none; font: 700 11.5px var(--texto); padding: 4px 9px; border-radius: 99px; background: var(--superficie-2); color: var(--tinta-2); white-space: nowrap; }
+.gr-chip.fila { background: var(--acento-suave); color: var(--acento-tinta); }
+.gr-chip.andamento { background: var(--parcial-fundo); color: var(--parcial-texto); }
+.gr-chip.feita { background: var(--certo-fundo); color: var(--certo-texto); }
+.gr-chip.erro, .gr-chip.ao-vivo { background: var(--errado-fundo); color: var(--errado-texto); }
+
+/* transcrição */
+.gr-tr h4, .gr-teste h4 { margin: 14px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--tinta-2); }
+.gr-motor { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 10px 12px; border-radius: 14px; font-weight: 700; font-size: 14px; }
+.gr-motor small { flex-basis: 100%; font-weight: 500; font-size: 12.5px; color: var(--tinta-2); }
+.gr-motor.ok { background: var(--certo-fundo); }
+.gr-motor.falta { background: var(--parcial-fundo); }
+.gr-modelos { display: grid; gap: 8px; }
+.gr-modelo { display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 14px; border: 2px solid var(--linha); cursor: pointer; }
+.gr-modelo.sel { border-color: var(--acento); background: var(--acento-suave); }
+.gr-modelo input { accent-color: var(--acento); width: 18px; height: 18px; }
+.gr-modelo b, .gr-modelo small { display: block; }
+.gr-modelo small { color: var(--tinta-2); font-size: 12.5px; }
+.gr-baixar { margin: 10px 0 4px; }
+.gr-baixar .sub { font-size: 12.5px; margin: 6px 0 0; }
+.gr-prog { height: 8px; border-radius: 99px; background: var(--superficie-2); overflow: hidden; }
+.gr-prog i { display: block; height: 100%; background: var(--acento); transform-origin: left center; transform: scaleX(0); transition: transform .4s ease; }
+.gr-hora { margin: 6px 0; }
+.gr-aviso { margin: 10px 0; padding: 10px 12px; border-radius: 14px; background: var(--parcial-fundo); color: var(--tinta); font-size: 13.5px; }
+.gr-aviso.erro { background: var(--errado-fundo); }
+.gr-tr-agora { margin-top: 12px; }
+.gr-tr-agora .sub { font-size: 12.5px; margin: 6px 0 0; }
+.gr-andamento .link { margin-top: 4px; }
+/* andamento detalhado da transcrição, com as estimativas (estimativa.js; 05/11/2026) */
+.gr-eta { margin-top: 12px; border-top: 1px solid var(--linha); padding-top: 10px; }
+.gr-eta[hidden] { display: none; }
+.gr-eta > summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; }
+.gr-eta > summary::-webkit-details-marker { display: none; }
+.gr-eta-fim { flex: 1; min-width: 0; font-weight: 700; font-size: 14px; line-height: 1.4; }
+.gr-eta-fim .ico-inline { vertical-align: -4px; }
+.gr-eta > summary small { flex: none; color: var(--acento-tinta, var(--acento)); font-weight: 700; font-size: 12.5px; }
+.gr-eta-corpo { display: grid; gap: 8px; margin-top: 10px; min-width: 0; }
+.gr-eta-atual { padding: 10px 12px; border-radius: 14px; background: var(--superficie-2); display: grid; gap: 5px; min-width: 0; }
+.gr-eta-atual > b { font-size: 14px; overflow-wrap: anywhere; }
+.gr-eta-atual > small { color: var(--tinta-2); font-size: 12px; margin-top: -4px; }
+.gr-eta-l { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; color: var(--tinta-2); margin-top: 3px; }
+.gr-eta-l b { color: var(--tinta); font-variant-numeric: tabular-nums; }
+.gr-prog.fina { height: 6px; background: var(--superficie); }
+.gr-eta-resta { margin: 4px 0 0; font-size: 13.5px; }
+.gr-eta h4 { margin: 4px 0 0; font-size: 13.5px; }
+.gr-eta h4 small { color: var(--tinta-2); font-weight: 600; font-size: 12px; margin-left: 4px; }
+.gr-eta-fila { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; counter-reset: fila; }
+.gr-eta-fila li { display: grid; gap: 2px; padding: 8px 10px 8px 34px; border-radius: 12px; border: 1px solid var(--linha); position: relative; font-size: 13px; min-width: 0; counter-increment: fila; }
+.gr-eta-fila li::before { content: counter(fila); position: absolute; left: 10px; top: 8px; width: 18px; height: 18px; border-radius: 50%; background: var(--superficie-2); display: grid; place-items: center; font-size: 11px; font-weight: 800; color: var(--tinta-2); }
+.gr-eta-fila li span { overflow-wrap: anywhere; }
+.gr-eta-fila small { color: var(--tinta-2); font-size: 12px; }
+.gr-eta-vel, .gr-eta-noite { margin: 0; font-size: 13px; line-height: 1.45; }
+.gr-eta-vel .ico-inline, .gr-eta-noite .ico-inline { vertical-align: -4px; }
+.gr-eta-nota { margin: 0; font-size: 11.5px; color: var(--tinta-2); }
+.gr-res { font-size: 14px; margin: 0 0 8px; }
+.gr-res b { font-family: var(--display); }
+.gr-amostra { margin: 0 0 10px; padding: 8px 12px; border-left: 3px solid var(--linha); color: var(--tinta-2); font-size: 13px; font-style: italic; }
+.gr-teste .botao { margin-top: 4px; width: 100%; }
+.gr-h2-vel { margin-top: 22px; }
+
+/* pasta, opções, conselhos */
+.gr-pasta p { margin: 0 0 8px; }
+.gr-pasta code { font-size: 12px; background: var(--superficie-2); padding: 1px 5px; border-radius: 6px; word-break: break-word; }
+.gr-botoes { display: grid; gap: 8px; }
+.gr-opcoes .linha-cfg span { font-size: 14.5px; }
+.gr-conselhos summary { list-style: none; cursor: pointer; }
+.gr-conselhos summary::-webkit-details-marker { display: none; }
+.gr-conselhos summary h2 { display: inline-flex; align-items: center; gap: 6px; }
+.gr-conselhos summary h2::after { content: "›"; margin-left: 4px; color: var(--tinta-2); transition: transform .2s; }
+.gr-conselhos[open] summary h2::after { transform: rotate(90deg); }
+.gr-conselhos ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 14px; }
+
+/* uma aula */
+.gr-tit { display: flex; align-items: flex-start; gap: 8px; }
+.gr-tit h1 { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.gr-lapis { flex: none; border: 2px solid var(--linha); background: var(--superficie); border-radius: 12px; padding: 6px 8px; cursor: pointer; margin-top: 4px; }
+.gr-tocador { margin-top: 12px; }
+.gr-tl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.gr-play { width: 54px; height: 54px; border-radius: 50%; border: 0; background: var(--acento); color: #fff; font: 800 18px var(--texto); box-shadow: 0 4px 0 var(--acento-escuro); cursor: pointer; flex: none; }
+.gr-play:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--acento-escuro); }
+.gr-tempos { flex: 1; min-width: 0; white-space: nowrap; }
+.gr-tempos b { font: 800 22px var(--display); font-variant-numeric: tabular-nums; }
+.gr-tempos small { color: var(--tinta-2); font-variant-numeric: tabular-nums; margin-left: 4px; }
+.gr-pulo, .gr-vel { border: 2px solid var(--linha); background: var(--superficie); color: var(--tinta); border-radius: 99px; padding: 6px 8px; font: 700 12.5px var(--texto); cursor: pointer; }
+.gr-trilho { position: relative; margin: 14px 2px 4px; }
+.gr-trilho input { width: 100%; accent-color: var(--acento); margin: 0; position: relative; z-index: 1; }
+.gr-ticks { position: absolute; left: 8px; right: 8px; top: -6px; height: 6px; pointer-events: none; }
+.gr-ticks i { position: absolute; top: 0; width: 4px; height: 8px; margin-left: -2px; border-radius: 3px; background: var(--acento); }
+.gr-ticks i.t-prova, .gr-seg-marc.t-prova { --cor-m: var(--ouro); }
+.gr-ticks i.t-duvida, .gr-seg-marc.t-duvida { --cor-m: var(--errado); }
+.gr-ticks i.t-exemplo, .gr-seg-marc.t-exemplo { --cor-m: var(--certo); }
+.gr-ticks i { background: var(--cor-m, var(--acento)); }
+.gr-marcs { display: grid; gap: 2px; padding: 6px 10px; }
+.gr-marc { display: flex; align-items: center; gap: 4px; }
+.gr-marc-ir { flex: 1; display: flex; align-items: center; gap: 8px; padding: 8px 4px; border: 0; background: none; color: var(--tinta); font: 600 14px var(--texto); text-align: left; cursor: pointer; }
+.gr-marc-ir b { margin-left: auto; font-variant-numeric: tabular-nums; color: var(--tinta-2); }
+.gr-marc-x { border: 0; background: none; color: var(--tinta-2); font-size: 20px; padding: 4px 8px; cursor: pointer; }
+.gr-marcar-aqui { margin-top: 10px; }
+.gr-tr-info { font-size: 12.5px; margin: 0 0 8px; }
+.gr-segs { display: grid; gap: 2px; max-height: 60vh; overflow: auto; overscroll-behavior: contain; margin: 0 -6px; padding: 0 6px; }
+.gr-seg { display: grid; grid-template-columns: 3.4em 1fr; gap: 8px; text-align: left; padding: 6px 6px; border: 0; border-radius: 10px; background: none; color: var(--tinta); font: 400 14.5px/1.45 var(--texto); cursor: pointer; }
+.gr-seg small { color: var(--tinta-2); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.gr-seg.agora { background: var(--acento-suave); }
+.gr-seg-marc { margin: 6px 0 2px; padding: 4px 10px; border-radius: 99px; justify-self: start; font: 700 12px var(--texto); background: color-mix(in srgb, var(--cor-m, var(--acento)) 18%, var(--superficie)); }
+.gr-apagar { display: block; margin: 22px auto 8px; color: var(--errado-texto); }
+
+@media (prefers-reduced-motion: reduce) {
+  .grav-pilula .gp-ponto, .gr-vivo .gr-rec, .gr-ev.gravando .gr-rec, .gr-marcar button.ok { animation: none; }
+  .gr-nivel i, .gr-prog i { transition: none; }
+}
+/* na própria tela da gravação ao vivo, a pílula repetiria o mesmo tempo */
+body:has(.gr-vivo) .grav-pilula { display: none; }
