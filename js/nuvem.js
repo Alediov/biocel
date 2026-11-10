@@ -24,18 +24,28 @@ function css() {
   if (document.getElementById("bc-css")) return;
   const st = document.createElement("style"); st.id = "bc-css";
   st.textContent = `
-.bc-tela{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:var(--fundo,#f5f6fb);padding:24px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));overflow:auto}
+.bc-tela{position:fixed;inset:0;z-index:60;display:grid;place-items:center;background:var(--fundo);color:var(--tinta);padding:24px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));overflow:auto}
 .bc-cx{width:min(420px,100%);display:grid;gap:14px;text-align:center}
-.bc-cx h1{margin:0;font-size:1.7rem}.bc-cx p{margin:0;color:var(--texto-suave,#5b6275);line-height:1.45}
-.bc-cx input{font:inherit;font-size:1.05rem;padding:13px 14px;border-radius:14px;border:2px solid var(--borda,#dde1ec);background:var(--cartao,#fff);color:inherit;text-align:center}
-.bc-cx .botao{width:100%}.bc-erro{color:#d33;font-weight:600;min-height:1.2em}
+.bc-cx h1{margin:0;font-size:1.7rem}.bc-cx p{margin:0;color:var(--tinta-2,var(--tinta));line-height:1.45}
+.bc-cx input{font:inherit;font-size:1.05rem;padding:13px 14px;border-radius:14px;border:2px solid var(--linha);background:var(--superficie);color:var(--tinta);text-align:center}
+.bc-cx .botao{width:100%}.bc-erro{color:var(--errado-texto);font-weight:600;min-height:1.2em}
 .bc-google{display:flex;align-items:center;justify-content:center;gap:10px}
 .bc-rank{display:grid;gap:6px;margin:8px 0 0;padding:0;list-style:none;text-align:left;max-height:60vh;overflow:auto}
-.bc-rank li{display:grid;grid-template-columns:2.2em 1fr auto;gap:8px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--cartao,#fff)}
-.bc-rank li.eu{outline:2px solid var(--cor,#2f6bff)}.bc-rank b{font-variant-numeric:tabular-nums}.bc-rank small{color:var(--texto-suave,#5b6275)}
-.bc-abas{display:flex;gap:6px;justify-content:center}.bc-abas button{font:inherit;padding:6px 12px;border-radius:999px;border:0;background:var(--borda,#e6e8f0);color:inherit;cursor:pointer}
-.bc-abas button.ativo{background:var(--cor,#2f6bff);color:#fff}`;
+.bc-rank li{display:grid;grid-template-columns:2.2em 1fr auto;gap:8px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--superficie);color:var(--tinta);border:1px solid var(--linha)}
+.bc-rank li.eu{outline:2px solid var(--acento)}.bc-rank b{font-variant-numeric:tabular-nums}.bc-rank small{color:var(--tinta-2,var(--tinta))}
+.bc-abas{display:flex;gap:6px;justify-content:center}.bc-abas button{font:inherit;padding:6px 12px;border-radius:999px;border:1px solid var(--linha);background:var(--superficie);color:var(--tinta);cursor:pointer}
+.bc-aviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;padding:12px 14px;border-radius:14px;background:var(--errado-fundo);color:var(--errado-texto);border:1px solid var(--errado);font-size:.9rem}
+.bc-abas button.ativo{background:var(--acento);border-color:var(--acento);color:#fff}`;
   document.head.append(st);
+}
+
+let ultimoErro = "";
+function avisar(msg) {
+  ultimoErro = msg; css();
+  document.querySelector(".bc-aviso")?.remove();
+  const a = document.createElement("div"); a.className = "bc-aviso"; a.setAttribute("role", "alert");
+  a.textContent = msg + " (toque para fechar)"; a.onclick = () => a.remove();
+  document.body.append(a); setTimeout(() => a.remove(), 15000);
 }
 
 function telaCheia(html) {
@@ -118,7 +128,7 @@ async function sincronizar() {
 function agendar() { clearTimeout(timer); timer = setTimeout(() => sincronizar().catch(e => console.warn("nuvem:", e)), 10000); }
 
 export async function abrirRanking() {
-  if (!sb || !membro) { telaRanking([], "O ranking aparece quando o app estiver ligado à turma."); return; }
+  if (!sb || !membro) { telaRanking([], ultimoErro || "O ranking aparece quando o app estiver ligado à turma."); return; }
   const { data, error } = await sb.from("ranking").select("apelido, xp, xp_semana, licoes, ofensiva").order("xp_semana", { ascending: false }).limit(200);
   telaRanking(error ? [] : data, error ? "Não deu para carregar o ranking agora." : "");
 }
@@ -142,13 +152,18 @@ export async function sair() { if (sb) await sb.auth.signOut(); try { localStora
 async function iniciar() {
   window.addEventListener("biocel-ranking", () => abrirRanking());
   if (!URL_SUPABASE || !CHAVE_SUPABASE) return;          // sem nuvem: só no aparelho
-  try { await carregarScript("vendor/supabase.js"); } catch (e) { console.warn(e); return; }
+  try { await carregarScript("vendor/supabase.js"); } catch (e) { avisar("Não carregou o login: " + e.message); return; }
   sb = window.supabase.createClient(URL_SUPABASE, CHAVE_SUPABASE, { auth: { persistSession: true, detectSessionInUrl: true, flowType: "pkce" } });
   const { data: { session } } = await sb.auth.getSession();
   if (!session) { pedirLogin(); return; }
   usuario = session.user;
-  let { data: m } = await sb.from("membros").select("apelido, turma").eq("user_id", usuario.id).maybeSingle();
-  if (!m) { await pedirTurma(); ({ data: m } = await sb.from("membros").select("apelido, turma").eq("user_id", usuario.id).maybeSingle()); }
+  let { data: m, error: e1 } = await sb.from("membros").select("apelido, turma").eq("user_id", usuario.id).maybeSingle();
+  if (e1) { avisar("Não deu para ligar à turma: " + e1.message); return; }
+  if (!m) {
+    await pedirTurma();
+    let e2; ({ data: m, error: e2 } = await sb.from("membros").select("apelido, turma").eq("user_id", usuario.id).maybeSingle());
+    if (e2 || !m) { avisar("Não deu para ligar à turma: " + (e2?.message || "cadastro não encontrado")); return; }
+  }
   membro = m;
   // a Leitura (caps. 18 e 19) vem do bucket privado "leitura": só para quem está na turma
   globalThis.__baixarLeitura = async (caminho) => {
@@ -160,7 +175,7 @@ async function iniciar() {
   try {
     const mudou = await sincronizar();
     if (mudou && !sessionStorage.getItem("biocel.recarregou")) { sessionStorage.setItem("biocel.recarregou", "1"); location.reload(); }
-  } catch (e) { console.warn("nuvem:", e); }
+  } catch (e) { console.warn("nuvem:", e); avisar("O progresso não foi salvo na nuvem: " + (e.message || e)); }
 }
 
 iniciar().catch(e => console.warn("nuvem:", e));
