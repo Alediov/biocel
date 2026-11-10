@@ -38,6 +38,30 @@ function css() {
 .bc-sim{display:grid;gap:8px;margin:0;padding:0;list-style:none;text-align:left}
 .bc-sim a{display:grid;gap:2px;padding:14px;border-radius:14px;text-decoration:none;background:color-mix(in srgb,var(--tinta) 7%,var(--fundo));color:var(--tinta);border:1px solid color-mix(in srgb,var(--tinta) 14%,transparent)}
 .bc-sim a b::after{content:" ›";color:var(--acento)}.bc-sim small{color:var(--tinta-2,var(--tinta))}
+.bc-rk{place-items:start center;background:var(--fundo-solido,var(--fundo))}
+.bc-rk-cx{width:min(520px,100%);display:grid;gap:16px}
+.bc-rk header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.bc-rk h1{margin:0;font-size:1.5rem}
+.bc-rk header small{color:var(--tinta-2,var(--tinta));font-size:.85rem}
+.bc-x{font:inherit;width:40px;height:40px;flex:none;border-radius:50%;border:1px solid color-mix(in srgb,var(--tinta) 18%,transparent);background:color-mix(in srgb,var(--tinta) 6%,var(--fundo-solido,var(--fundo)));color:var(--tinta);cursor:pointer}
+.bc-seg{display:grid;grid-template-columns:repeat(3,1fr);padding:4px;border-radius:14px;background:color-mix(in srgb,var(--tinta) 8%,var(--fundo-solido,var(--fundo)))}
+.bc-seg button{font:inherit;font-weight:600;font-size:.9rem;padding:9px 4px;border:0;border-radius:10px;background:transparent;color:var(--tinta-2,var(--tinta));cursor:pointer}
+.bc-seg button.ativo{background:var(--acento);color:#fff;box-shadow:0 2px 8px color-mix(in srgb,var(--acento) 40%,transparent)}
+.bc-av{width:var(--t);height:var(--t);flex:none;border-radius:50%;display:grid;place-items:center;background:var(--c);color:#fff;font-weight:800;font-size:calc(var(--t)*.38);letter-spacing:.02em;box-shadow:0 0 0 3px var(--fundo-solido,var(--fundo)),0 0 0 5px color-mix(in srgb,var(--c) 45%,transparent)}
+.bc-podio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:8px;padding-top:6px}
+.bc-pd{display:grid;justify-items:center;gap:4px;text-align:center;min-width:0}
+.bc-pd-n{font-size:.95rem;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bc-pd-n i,.bc-nm i{font-style:normal;font-weight:500;color:var(--tinta-2,var(--tinta))}
+.bc-pd-v{font-size:.85rem;font-weight:700;color:var(--tinta-2,var(--tinta));font-variant-numeric:tabular-nums}
+.bc-pd-base{width:100%;border-radius:12px 12px 4px 4px;display:grid;place-items:start center;padding-top:8px;font-weight:900;font-size:1.4rem;color:#fff;margin-top:4px}
+.bc-pd.p1 .bc-pd-base{height:96px;background:linear-gradient(#F2B33D,#D4920F)}.bc-pd.p2 .bc-pd-base{height:70px;background:linear-gradient(#B9C3D3,#8B97AB)}.bc-pd.p3 .bc-pd-base{height:52px;background:linear-gradient(#D69A63,#A8693A)}
+.bc-pd.eu .bc-pd-base{outline:3px solid var(--acento);outline-offset:2px}
+.bc-lst{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.bc-lst li{display:grid;grid-template-columns:2em auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:color-mix(in srgb,var(--tinta) 6%,var(--fundo-solido,var(--fundo)));border:1px solid color-mix(in srgb,var(--tinta) 12%,transparent)}
+.bc-lst li.eu{border-color:var(--acento);background:color-mix(in srgb,var(--acento) 14%,var(--fundo-solido,var(--fundo)))}
+.bc-pos{font-weight:800;text-align:center;color:var(--tinta-2,var(--tinta));font-variant-numeric:tabular-nums}
+.bc-nm{display:grid;gap:3px;min-width:0}.bc-nm b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bc-nm small{font-size:.78rem;color:var(--tinta-2,var(--tinta))}
+.bc-bar{display:block;height:5px;border-radius:9px;background:color-mix(in srgb,var(--tinta) 12%,transparent);overflow:hidden}.bc-bar i{display:block;height:100%;border-radius:9px;background:var(--acento)}
+.bc-val{font-variant-numeric:tabular-nums;white-space:nowrap}
+.bc-vazio{display:block!important;text-align:center;color:var(--tinta-2,var(--tinta))}.bc-rk-aviso{margin:0;text-align:center;color:var(--tinta-2,var(--tinta))}
 .bc-abas button.ativo{background:var(--acento);border-color:var(--acento);color:#fff}`;
   document.head.append(st);
 }
@@ -161,16 +185,37 @@ export async function abrirRanking() {
   telaRanking(error ? [] : data, error ? "Não deu para carregar o ranking agora." : "");
 }
 
+const CORES_AV = ["#2F6BFF", "#E2557A", "#12A37A", "#E0A512", "#8B5CF6", "#E0434A", "#0EA5B7", "#C2502A"];
+const corDe = (n) => CORES_AV[[...n].reduce((a, c) => a + c.charCodeAt(0), 0) % CORES_AV.length];
+const iniciais = (n) => n.trim().split(/\s+/).slice(0, 2).map(p => [...p][0] || "").join("").toUpperCase();
+const avatarR = (n, tam) => `<span class="bc-av" style="--c:${corDe(n)};--t:${tam}px">${esc(iniciais(n))}</span>`;
+const valorR = (r, por) => por === "ofensiva" ? `${r.ofensiva || 0} ${r.ofensiva === 1 ? "dia" : "dias"}` : `${(r[por] || 0).toLocaleString("pt-BR")} XP`;
+
 function telaRanking(lista, aviso) {
   let por = "xp_semana";
-  const t = telaCheia(`<h1>Ranking da turma</h1><div class="bc-abas"><button data-por="xp_semana" class="ativo">Esta semana</button><button data-por="xp">Total</button><button data-por="ofensiva">Ofensiva</button></div>
-    <ol class="bc-rank" id="bc-lista"></ol><p>${esc(aviso)}</p><button class="botao" id="bc-fechar">Fechar</button>`);
+  css();
+  document.querySelector(".bc-tela")?.remove();
+  const t = document.createElement("div"); t.className = "bc-tela bc-rk"; t.setAttribute("role", "dialog"); t.setAttribute("aria-label", "Ranking da turma");
+  t.innerHTML = `<div class="bc-rk-cx">
+    <header><div><h1>Ranking da turma</h1><small>${lista.length} ${lista.length === 1 ? "colega" : "colegas"} na turma</small></div><button class="bc-x" aria-label="Fechar">✕</button></header>
+    <div class="bc-seg" role="tablist"><button data-por="xp_semana" class="ativo">Esta semana</button><button data-por="xp">Total</button><button data-por="ofensiva">Ofensiva</button></div>
+    <div id="bc-podio"></div><ol class="bc-lst" id="bc-lista"></ol>${aviso ? `<p class="bc-rk-aviso">${esc(aviso)}</p>` : ""}</div>`;
+  document.body.append(t);
+  const fechar = () => t.remove();
+  t.querySelector(".bc-x").onclick = fechar;
   const pintar = () => {
-    const l = [...lista].sort((a, b) => (b[por] || 0) - (a[por] || 0));
-    t.querySelector("#bc-lista").innerHTML = l.map((r, i) => `<li class="${membro && r.apelido === membro.apelido ? "eu" : ""}"><b>${i + 1}º</b><span>${esc(r.apelido)}<br><small>${r.licoes} ${r.licoes === 1 ? "lição" : "lições"} · 🔥 ${r.ofensiva}</small></span><b>${por === "ofensiva" ? r.ofensiva + " d" : (r[por] || 0) + " XP"}</b></li>`).join("") || "<li><span></span><span>Ninguém ainda.</span></li>";
+    const l = [...lista].sort((a, b) => (b[por] || 0) - (a[por] || 0) || a.apelido.localeCompare(b.apelido));
+    const max = Math.max(1, ...l.map(r => r[por] || 0)), eu = (r) => membro && r.apelido === membro.apelido;
+    const ordem = [1, 0, 2].filter(i => l[i]);
+    t.querySelector("#bc-podio").innerHTML = l.length ? `<div class="bc-podio">${ordem.map(i => { const r = l[i];
+      return `<div class="bc-pd p${i + 1} ${eu(r) ? "eu" : ""}">${avatarR(r.apelido, i === 0 ? 64 : 52)}<b class="bc-pd-n">${esc(r.apelido)}${eu(r) ? " <i>(você)</i>" : ""}</b><span class="bc-pd-v">${valorR(r, por)}</span><div class="bc-pd-base"><span>${i + 1}</span></div></div>`; }).join("")}</div>` : "";
+    t.querySelector("#bc-lista").innerHTML = l.slice(3).map((r, k) => `<li class="${eu(r) ? "eu" : ""}"><span class="bc-pos">${k + 4}</span>${avatarR(r.apelido, 38)}
+      <span class="bc-nm"><b>${esc(r.apelido)}${eu(r) ? " <i>(você)</i>" : ""}</b><small>${r.licoes || 0} ${r.licoes === 1 ? "lição" : "lições"} · 🔥 ${r.ofensiva || 0}</small><i class="bc-bar"><i style="width:${Math.round((r[por] || 0) / max * 100)}%"></i></i></span>
+      <b class="bc-val">${valorR(r, por)}</b></li>`).join("") || (l.length > 3 ? "" : l.length ? "" : `<li class="bc-vazio">Ninguém da turma ainda.</li>`);
+    const meu = l.findIndex(eu);
+    t.querySelector("header small").textContent = `${l.length} ${l.length === 1 ? "colega" : "colegas"} na turma${meu >= 0 ? ` · você está em ${meu + 1}º` : ""}`;
   };
   t.querySelectorAll("[data-por]").forEach(b => b.onclick = () => { por = b.dataset.por; t.querySelectorAll("[data-por]").forEach(x => x.classList.toggle("ativo", x === b)); pintar(); });
-  t.querySelector("#bc-fechar").onclick = () => t.remove();
   pintar();
 }
 

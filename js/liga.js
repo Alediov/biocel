@@ -86,7 +86,7 @@ export function classificacao(sem = liga().semana, div = liga().divisao, ritmo =
   const T = globalThis.__turmaLiga, cartas = Object.keys(CARTAS);
   const reais = T && T.semana === sem ? T.lista.filter(x => !x.eu).map(x => ({ nome: x.apelido, carta: cartas[[...x.apelido].reduce((a, c) => a + c.charCodeAt(0), 0) % cartas.length], xp: x.xp_semana || 0, voce: false, real: true })) : [];
   const lista = [...reais, ...rivais(sem, div, ritmo).slice(0, Math.max(0, 9 - reais.length)).map(rv => ({ nome: rv.nome, carta: rv.carta, xp: xpRival(rv, sem, agora), voce: false, bot: true }))];
-  lista.push({ nome: E().avatar?.nome || "Você", xp: xpDaSemana(sem), voce: true });
+  lista.push({ nome: T?.lista?.find(x => x.eu)?.apelido || E().avatar?.nome || "Você", xp: xpDaSemana(sem), voce: true });
   return lista.sort((a, b) => b.xp - a.xp || (a.voce ? -1 : 1));
 }
 export const minhaPosicao = (cl = classificacao()) => cl.findIndex(x => x.voce) + 1;
