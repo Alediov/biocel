@@ -595,7 +595,7 @@ export function telaPerfil() {
     <div class="secao"><h2>Últimas 5 semanas</h2><div class="cartao"><div class="calendario">${cal}</div></div></div>
     <div class="secao"><h2>Pontos para reforçar</h2><div class="cartao">${fracos.length ? `<ul class="fracos">${fracos.map(([c, v]) => `<li><span>${escapar(c.replace(/[._]/g, " "))}</span><b>${v.e}/${v.n} erros</b></li>`).join("")}</ul>` : `<p class="sub" style="margin:0">Aparecem aqui quando você errar alguma questão.</p>`}</div></div>
     <div class="secao"><h2>Preferências</h2><div class="cartao" id="prefs"></div></div>
-    ${DEMO ? `<div class="secao"><h2>Sobre esta versão</h2><div class="cartao" id="sobre"><p class="sub" style="margin:0 0 12px">BioCel: lições e a leitura do ciclo celular (cap. 18) e da meiose (cap. 19) do Alberts, para a 4ª prova. Feito pelo monitor; é um jeito extra de estudar, não substitui o livro nem as aulas.</p></div></div>` : `<div class="secao"><h2>Sincronização</h2><div class="cartao" id="sync"></div></div>`}
+    ${DEMO ? `<div class="secao"><h2>Sobre o BioCel</h2><div class="cartao" id="sobre"><p class="sub" style="margin:0 0 12px">BioCel: lições e a leitura do ciclo celular (cap. 18) e da meiose (cap. 19) do Alberts, para a 4ª prova. Feito pelo monitor; é um jeito extra de estudar, não substitui o livro nem as aulas.</p></div></div>` : `<div class="secao"><h2>Sincronização</h2><div class="cartao" id="sync"></div></div>`}
     <p class="sub" style="text-align:center;margin-top:24px">${DEMO ? "BioCel" : "Órbita"}</p>`;
 
   const abrirAvatar = () => telaAvatar(() => telaPerfil(), aoMudar);
@@ -651,12 +651,11 @@ export function telaPerfil() {
   const bf = document.createElement("button"); bf.className = `chave ${est.config.musicaFundo ? "on" : ""}`; bf.setAttribute("aria-label", "Continuar tocando fora do app");
   bf.onclick = () => { est.config.musicaFundo = !est.config.musicaFundo; salvar(); bf.classList.toggle("on"); atualizarFundoNativo(); };
   lf.append(bf); lm.append(lf);
-  prefs.append(lm); infoMusica();
+  prefs.append(lm); infoMusica(); ll.remove(); lf.remove();
   if (DEMO) chave("Vibração", "vibrar");
-  chave("Lembretes às 6h40, 12h e 18h50", "lembretes", () => window.dispatchEvent(new Event("oq-lembretes")));
   // tema, fundo (liso ou uma das imagens) e bolhas, iguais em todos os subapps (aparencia.js)
   const tema = document.createElement("div"); tema.className = "linha-cfg"; tema.style.marginTop = "12px";
-  tema.innerHTML = `<span>Aparência<small class="sub" style="display:block;font-size:12px">Tema claro ou AMOLED, fundo liso ou com imagem e as bolhas, em todos os subapps</small></span><button class="botao secundario" style="width:auto;padding:8px 14px">Mudar</button>`;
+  tema.innerHTML = `<span>Aparência<small class="sub" style="display:block;font-size:12px">Tema claro ou escuro, fundo liso ou com imagem e as bolhas</small></span><button class="botao secundario" style="width:auto;padding:8px 14px">Mudar</button>`;
   tema.querySelector("button").onclick = () => import("./aparencia.js").then(m => m.abrirAparencia({ aoTema: aplicarTema }));
   const meta = document.createElement("label"); meta.className = "campo";
   meta.innerHTML = DEMO ? `Meta diária<select><option value="5">5 lições</option><option value="10">10 lições</option><option value="15">15 lições</option></select>` : `Meta diária<select><option value="5">5 lições (uma sessão)</option><option value="10">10 lições (duas sessões)</option><option value="15">15 lições (manhã, tarde e noite)</option><option value="auto">Automática, pelo tamanho do dia (6, 9 ou 12)</option></select><span class="dica">Automática: a Agenda decide se o dia é corrido, normal ou livre (dá para trocar no Meu dia).</span>`;
@@ -671,13 +670,12 @@ export function telaPerfil() {
   can.innerHTML = `Caneta nas lições<select><option value="auto">Automático: no tablet ou depois de usar uma caneta</option><option value="sempre">Sempre mostrar o botão</option><option value="nunca">Nunca mostrar</option></select><span class="dica">Calculadora, caderno e marca-texto aparecem em todos os exercícios; a caneta escreve por cima do exercício.</span>`;
   const sc = can.querySelector("select"); sc.value = est.config.canetaLicoes || "auto";
   sc.onchange = () => { est.config.canetaLicoes = sc.value; salvar(); };
-  prefs.append(...(DEMO ? [tema] : []), meta, wid, can);
+  prefs.append(tema, meta, can);
   if (DEMO) {
     const ab = document.createElement("label"); ab.className = "campo";
     ab.innerHTML = `Ao abrir o app<select><option value="home">A Home do Órbita, com todas as áreas</option><option value="ultima">A última área usada</option></select><span class="dica">Voltar ao app sem fechá-lo continua onde você estava; os widgets abrem direto a área deles.</span>`;
     const sa = ab.querySelector("select"); sa.value = est.config.abrirEm || "home";
     sa.onchange = () => { est.config.abrirEm = sa.value; salvar(); };
-    prefs.append(ab);
   }
   if (DEMO && temNotificacoes()) {
     const bx = document.createElement("button"); bx.className = "botao secundario"; bx.style.marginTop = "6px"; bx.textContent = "Permitir lembretes no horário exato";
@@ -693,7 +691,7 @@ export function telaPerfil() {
       try { localStorage.clear(); } catch (e) { /* sem armazenamento */ }
       location.reload();
     };
-    t.querySelector("#sobre").append(bz);
+    import("./nuvem.js").then(m => m.contaNoPerfil(t.querySelector("#sobre")));
     return;
   }
   // a conta do GitHub, o backup e a atualização ficam nos Ajustes do Órbita (ajustes.js); aqui só o Sincronizar e um atalho

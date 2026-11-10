@@ -28,10 +28,10 @@ export async function telaTrilhas() {
 
   const zonaBaus = document.createElement("div"); t.append(zonaBaus); desenharSlots(zonaBaus);
   const atalhos = document.createElement("div"); atalhos.className = "atalhos-trilha";
-  for (const [k, [aba, ic, rot]] of [["leitura", "📖", "Leitura"], ["treino", "🎯", "Treino"], ["jogos", "🎮", "Jogos"], ["ranking", "🏆", "Ranking"]].entries()) {
+  for (const [k, [aba, ic, rot]] of [["leitura", "📖", "Leitura"], ["treino", "🎯", "Treino"], ["jogos", "🎮", "Jogos"], ["simulados", "📝", "Simulados"], ["ranking", "🏆", "Ranking"]].entries()) {
     const b = document.createElement("button"); b.style.setProperty("--k", k);
     b.className = `atalho ${aba === "jardim" && !regouHoje() ? "alerta" : ""}`; b.innerHTML = `${icone(ic, "ico3d")}<span>${rot}</span>`;
-    b.onclick = () => window.dispatchEvent(["ranking", "leitura"].includes(aba) ? new Event("biocel-" + aba) : new CustomEvent("oq-ir", { detail: aba }));
+    b.onclick = () => window.dispatchEvent(["ranking", "leitura", "simulados"].includes(aba) ? new Event("biocel-" + aba) : new CustomEvent("oq-ir", { detail: aba }));
     atalhos.append(b);
   }
   t.append(atalhos, faixaLiga(), faixaTemporada());
@@ -66,7 +66,7 @@ export async function telaTrilhas() {
   });
   if (anteriorOk) {
     const outra = trilhas.find(x => !x.sessoes.every(s => s.licoes.every(l => feito(l.id))));
-    t.insertAdjacentHTML("beforeend", `<div class="vazio trilha-fim">${moli("uau")}<h2>Trilha concluída!</h2><p>${outra ? `Que tal seguir para ${escapar(outra.nome)}? As questões desta trilha continuam no Treino e nos jogos.` : "Você fechou todas as trilhas da Demo. As questões continuam no Treino e nos jogos."}</p></div>`);
+    t.insertAdjacentHTML("beforeend", `<div class="vazio trilha-fim">${moli("uau")}<h2>Trilha concluída!</h2><p>${outra ? `Que tal seguir para ${escapar(outra.nome)}? As questões desta trilha continuam no Treino e nos jogos.` : "Você fechou as duas trilhas do BioCel. As questões continuam no Treino e nos jogos."}</p></div>`);
   }
   const atual = t.querySelector(".no.atual");
   if (atual) atual.scrollIntoView({ block: "center" });

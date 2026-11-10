@@ -31,6 +31,19 @@ const METAS = {
   presencas: { nome: "Confirme {n} presenças na agenda", ico: "🏫", alvo: 16, pts: 80 },
   revisao: { nome: "Faça {n} treinos de revisão", ico: "🔁", alvo: 10, pts: 100 },
 };
+// BioCel: uma temporada só, até a prova; metas para uma semana e para as 36 lições das duas trilhas
+const FIM_BIO = "2026-11-16";
+const METAS_BIO = ["licoes", "dias", "perfeitas", "xp", "revisao", "jogos", "ofensiva", "meta"];
+Object.assign(METAS, {
+  licoes: { nome: "Conclua {n} lições das trilhas", ico: "📖", alvo: 30, pts: 150 },
+  dias: { nome: "Estude em {n} dias diferentes", ico: "🔥", alvo: 5, pts: 150 },
+  perfeitas: { nome: "Faça {n} lições perfeitas", ico: "⭐", alvo: 10, pts: 120 },
+  xp: { nome: "Ganhe {n} XP", ico: "⚡", alvo: 800, pts: 120 },
+  revisao: { nome: "Faça {n} treinos de revisão", ico: "🔁", alvo: 5, pts: 100 },
+  jogos: { nome: "Jogue {n} partidas dos minijogos", ico: "🎮", alvo: 6, pts: 80 },
+  ofensiva: { nome: "Chegue a {n} dias de ofensiva", ico: "📅", alvo: 5, pts: 100, absoluto: true },
+  meta: { nome: "Bata a meta do dia {n} vezes", ico: "🎯", alvo: 4, pts: 120 },
+});
 // 8 metas por mês: as 4 primeiras sempre; as outras variam (novembro puxa a Mira, por causa da prova)
 const FIXAS = ["dias", "licoes", "xp", "perfeitas"];
 const VARIAVEIS = { 10: ["mira", "revisao", "meta", "ofensiva"], 11: ["meta", "jogos", "ofensiva", "baus"] };
@@ -68,6 +81,7 @@ function temp() {
     T.atual = { mes, fator, base: contadores(), metas: [...FIXAS, ...extras], resgatados: [], maxOfensiva: e.ofensiva.atual, concluidas: [] };
     salvar();
   }
+  if (T.atual.bio !== 1) { Object.assign(T.atual, { bio: 1, fator: 1, metas: [...METAS_BIO] }); salvar(); }
   return T.atual;
 }
 function encerrar(A) {
@@ -140,7 +154,7 @@ function resgatar(i) {
 }
 
 // ---------- telas ----------
-const fimEm = () => { const h = new Date(), f = new Date(h.getFullYear(), h.getMonth() + 1, 1); const d = Math.ceil((f - h) / 86400000); return d <= 1 ? "termina hoje" : `termina em ${d} dias`; };
+const fimEm = () => { const h = new Date(), f = new Date(FIM_BIO + "T23:59:59"); if (h > f) return "terminou na prova"; const d = Math.ceil((f - h) / 86400000); return d <= 1 ? "a prova é hoje" : `faltam ${d} dias`; };
 export function faixaTemporada() {
   const A = temp(), [, m] = A.mes.split("-").map(Number), tema = TEMAS[m - 1], metas = progressoMetas(), pts = metas.filter(x => x.feita).reduce((s, x) => s + x.pts, 0);
   const prox = TRILHA.find(p => p.pts > pts), pend = TRILHA.filter((p, i) => pts >= p.pts && !A.resgatados.includes(i)).length;
@@ -155,7 +169,7 @@ export function telaTemporada(voltar) {
   t.innerHTML = "";
   const v = document.createElement("button"); v.className = "voltar"; v.textContent = "‹ Trilha"; v.onclick = voltar; t.append(v);
   const cab = document.createElement("div"); cab.className = "temp-cab"; cab.style.setProperty("--cor-div", tema.cor);
-  cab.innerHTML = `<div class="temp-cab-ico">${icone(tema.ico, "ico3d")}</div><div><small>${MESES[m - 1][0].toUpperCase() + MESES[m - 1].slice(1)} de ${ano} · ${fimEm()}</small><h1>Temporada ${tema.nome}</h1><p><b>${pts}</b> de ${max} pontos</p></div>`;
+  cab.innerHTML = `<div class="temp-cab-ico">${icone(tema.ico, "ico3d")}</div><div><small>Até a prova de 16/11 · ${fimEm()}</small><h1>Temporada ${tema.nome}</h1><p><b>${pts}</b> de ${max} pontos</p></div>`;
   t.append(cab);
   if (A.fator < 1) t.insertAdjacentHTML("beforeend", `<p class="sub">Primeira temporada: as metas foram ajustadas para os dias que faltam no mês.</p>`);
   // trilha de prêmios
@@ -177,7 +191,7 @@ export function telaTemporada(voltar) {
   }
   // metas
   const sec = document.createElement("div"); sec.className = "secao";
-  sec.innerHTML = `<h2>Metas do mês</h2>`;
+  sec.innerHTML = `<h2>Metas da semana</h2>`;
   const lista = document.createElement("div"); lista.className = "temp-metas";
   for (const x of metas) {
     const pct = Math.min(100, x.valor / x.alvo * 100);

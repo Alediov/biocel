@@ -35,6 +35,9 @@ function css() {
 .bc-rank li.eu{outline:2px solid var(--acento)}.bc-rank b{font-variant-numeric:tabular-nums}.bc-rank small{color:var(--tinta-2,var(--tinta))}
 .bc-abas{display:flex;gap:6px;justify-content:center}.bc-abas button{font:inherit;padding:6px 12px;border-radius:999px;border:1px solid color-mix(in srgb,var(--tinta) 22%,transparent);background:transparent;color:var(--tinta);cursor:pointer}
 .bc-aviso{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;padding:12px 14px;border-radius:14px;background:var(--errado-fundo);color:var(--errado-texto);border:1px solid var(--errado);font-size:.9rem}
+.bc-sim{display:grid;gap:8px;margin:0;padding:0;list-style:none;text-align:left}
+.bc-sim a{display:grid;gap:2px;padding:14px;border-radius:14px;text-decoration:none;background:color-mix(in srgb,var(--tinta) 7%,var(--fundo));color:var(--tinta);border:1px solid color-mix(in srgb,var(--tinta) 14%,transparent)}
+.bc-sim a b::after{content:" ›";color:var(--acento)}.bc-sim small{color:var(--tinta-2,var(--tinta))}
 .bc-abas button.ativo{background:var(--acento);border-color:var(--acento);color:#fff}`;
   document.head.append(st);
 }
@@ -119,13 +122,38 @@ async function sincronizar() {
     const { error: e2 } = await sb.from("progresso").upsert({ user_id: usuario.id, estado: novo, rev, ...r, atualizado: new Date().toISOString() });
     if (e2) throw e2;
     gravar(K_BASE, novo); gravar(K_REV, rev);
+    atualizarLiga().catch(() => {});
     if (mudouLocal) { substituirEstado({ ...clonar(novo), config: E().config }); window.dispatchEvent(new Event("oq-topo")); }
     return mudouLocal;
   })().finally(() => { enviando = null; });
   return enviando;
 }
 
+/** A turma desta semana para a liga (apelido e XP da semana), guardada para abrir sem rede. */
+const K_LIGA = "biocel.turmaLiga";
+try { const t = JSON.parse(localStorage.getItem(K_LIGA) || "null"); if (t) globalThis.__turmaLiga = t; } catch {}
+async function atualizarLiga() {
+  if (!sb || !membro) return;
+  const { data, error } = await sb.from("ranking").select("apelido, xp_semana").limit(300);
+  if (error || !data) return;
+  const hoje = hojeISO(), d = new Date(hoje + "T12:00:00"), semana = somaDias(hoje, -((d.getDay() + 6) % 7));
+  const t = { semana, em: Date.now(), lista: data.map(r => ({ apelido: r.apelido, xp_semana: r.xp_semana || 0, eu: r.apelido === membro.apelido })) };
+  globalThis.__turmaLiga = t; gravar(K_LIGA, t);
+}
+
 function agendar() { clearTimeout(timer); timer = setTimeout(() => sincronizar().catch(e => console.warn("nuvem:", e)), 10000); }
+
+/** Simulados para imprimir (PDF no próprio site, com o gabarito na última página). */
+export async function abrirSimulados() {
+  let lista = [];
+  try { lista = await (await fetch("simulados/lista.json", { cache: "no-cache" })).json(); } catch { /* sem rede */ }
+  const t = telaCheia(`<h1>Simulados para imprimir</h1><p>Imprima, faça à mão e sem consultar, marcando o tempo, como na prova. O gabarito está na última página de cada um.</p>
+    <ul class="bc-sim">${lista.length ? lista.map(s => `<li><a href="simulados/${esc(s.arq)}" target="_blank" rel="noopener"><b>${esc(s.titulo)}</b><small>${esc(s.sub)} · cerca de ${s.tempo} min · PDF A4</small></a></li>`).join("")
+      : "<li><small>Não deu para carregar a lista agora. Confira a internet e tente de novo.</small></li>"}</ul>
+    <p style="font-size:.85rem">Dica: faça o 1 e o 2 durante a semana e deixe o 3 (revisão final) para a véspera da prova.</p>
+    <button class="botao" data-fechar>Fechar</button>`);
+  t.querySelector("[data-fechar]").onclick = () => t.remove();
+}
 
 export async function abrirRanking() {
   if (!sb || !membro) { telaRanking([], ultimoErro || "O ranking aparece quando o app estiver ligado à turma."); return; }
@@ -146,11 +174,30 @@ function telaRanking(lista, aviso) {
   pintar();
 }
 
+/** No Perfil: a conta (apelido, e-mail) e Sair. */
+export function contaNoPerfil(el) {
+  if (!el) return;
+  const d = document.createElement("div"); d.className = "bc-conta";
+  if (!sb || !usuario) { d.innerHTML = `<p class="sub" style="margin:0">Sem login: o progresso fica só neste aparelho.</p>`; el.append(d); return; }
+  d.innerHTML = `<div class="linha-cfg"><span>Apelido na turma<small class="sub" style="display:block;font-size:12px">${esc(membro?.apelido || "")}</small></span></div>
+    <div class="linha-cfg"><span>Conta<small class="sub" style="display:block;font-size:12px">${esc(usuario.email || "")}</small></span></div>
+    <button class="botao secundario" type="button">Sair desta conta</button>`;
+  d.querySelector("button").onclick = () => sair();
+  el.append(d);
+}
+
 export function situacao() { return { ligado: !!sb, usuario: usuario?.email || null, apelido: membro?.apelido || null }; }
-export async function sair() { if (sb) await sb.auth.signOut(); try { localStorage.removeItem(K_BASE); } catch (e) {} location.reload(); }
+export async function sair() {
+  try { await sincronizar(); } catch (e) { /* sem internet: o que já subiu fica */ }
+  if (sb) await sb.auth.signOut();
+  // o progresso está na nuvem: o aparelho fica limpo para a próxima pessoa
+  try { for (const k of [K_BASE, K_REV, "oq.estado.v1"]) localStorage.removeItem(k); } catch (e) {}
+  location.reload();
+}
 
 async function iniciar() {
   window.addEventListener("biocel-ranking", () => abrirRanking());
+  window.addEventListener("biocel-simulados", () => abrirSimulados());
   if (!URL_SUPABASE || !CHAVE_SUPABASE) return;          // sem nuvem: só no aparelho
   try { await carregarScript("vendor/supabase.js"); } catch (e) { avisar("Não carregou o login: " + e.message); return; }
   sb = window.supabase.createClient(URL_SUPABASE, CHAVE_SUPABASE, { auth: { persistSession: true, detectSessionInUrl: true, flowType: "pkce" } });

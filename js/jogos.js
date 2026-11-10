@@ -13,6 +13,7 @@ import { icone } from "./icones.js";
 import { tocar, vibrar } from "./sons.js";
 import { modal, toast, confete, escapar } from "./ui.js";
 import { jogarDefesa } from "./jogos/defesa.js";
+import { jogarFases, jogarDNA } from "./jogos/biocel.js";
 import { jogarMasmorra } from "./jogos/masmorra.js";
 import { jogarReceita } from "./jogos/receita.js";
 import { jogarMira } from "./jogos/mira.js";
@@ -88,8 +89,10 @@ const JOGOS = [
   { id: "defesa", cat: "aventuras", nome: "Defesa do Sorriso", fonte: "Próxima prova ou todas as trilhas", icone: "🛡️", desc: "Dois reinos: o Vale das Gosmas e a Cripta das Aranhas. Posicione seus companheiros da Coleção; perguntas certas rendem energia e quebram o selo dos chefes.", jogar: () => jogarDefesa() },
   { id: "masmorra", cat: "aventuras", nome: "Masmorra do Siso", fonte: "Próxima prova ou todas as trilhas", icone: "⚔️", desc: "Joystick, ataque e esquiva. Desça ao covil de Sisorath, o Dragão do Siso, ou à Cripta do Lich, com esqueletos e fantasmas; descanse na fogueira respondendo questões.", jogar: () => jogarMasmorra() },
 ];
-JOGOS.splice(0, JOGOS.length, ...JOGOS.filter(j => ["blitz", "defesa", "masmorra"].includes(j.id)));
-CATEGORIAS.splice(0, CATEGORIAS.length, ...CATEGORIAS.filter(c => ["gerais", "aventuras"].includes(c.id)));
+JOGOS.splice(0, JOGOS.length, ...JOGOS.filter(j => ["blitz"].includes(j.id)),
+  { id: "fases", cat: "biocel", nome: "Que Fase É?", fonte: "Alberts · Painel 18-1 e cap. 19", icone: "🔬", desc: "Uma célula desenhada em cada estágio da mitose e da meiose: diga qual é.", jogar: () => jogarFases() },
+  { id: "dna", cat: "biocel", nome: "Conte o DNA", fonte: "Alberts · caps. 18 e 19", icone: "🧮", desc: "Cromossomos, moléculas de DNA, quantidade de DNA (C) e bivalentes em cada fase.", jogar: () => jogarDNA() });
+CATEGORIAS.splice(0, CATEGORIAS.length, { id: "biocel", nome: "Ciclo celular e meiose", icone: "🔬", cor: "#2F6BFF", sub: "Alberts, caps. 18 e 19" }, ...CATEGORIAS.filter(c => ["gerais"].includes(c.id)));
 // Ids antigos → [jogo juntado, conteúdo]: lições-jogo de dias já montados, o "Jogar de novo" e os recordes antigos.
 const JOGO_ANTIGO = {
   "dose-malamed": ["dose", "malamed"], "dose-andrade": ["dose", "andrade"], "dose-criancas": ["receita", "pediatrica"],
@@ -194,6 +197,8 @@ export function jogarComoLicao(l, dia, periodo) {
       detetive: () => jogarDetetive(modo || esc.detetive || "pato"),
       memoria: () => jogarMemoria(modo || esc.memoria || "glos"),
       blitz: () => jogarBlitz(),
+      fases: () => jogarFases({ quantas: 8 }),
+      dna: () => jogarDNA({ quantas: 8 }),
       consulta: () => jogarConsulta({ quantas: 3 }),
       laminas: () => jogarLaminas({ quantas: 6 }),
       galeria: () => jogarGaleria({ quantas: 6 }),

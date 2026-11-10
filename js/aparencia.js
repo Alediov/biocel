@@ -110,7 +110,7 @@ export function iniciarAparencia() {
 export function abrirAparencia({ aoTema } = {}) {
   const c = cfg();
   migrar();
-  const p = modal({ titulo: "", html: htmlFolha(c, { porArea: AREAS_VISUAL }), botoes: [{ texto: "Pronto", valor: true }] });
+  const p = modal({ titulo: "", html: htmlFolha(c, { sub: "" }), botoes: [{ texto: "Pronto", valor: true }] });
   const m = document.getElementById("modal");
   ligarFolha(m, c, { aoTema: () => aoTema?.(), aoMudar: () => { salvar(); aplicarAparencia(); } });
   return p;

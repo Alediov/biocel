@@ -19,7 +19,8 @@ export const PREMIOS = [
   { gemas: 15, bau: "ouro" }, { gemas: 10, bau: "prata" }, { gemas: 5, bau: "prata" },
   { moedas: 40 }, { moedas: 40 }, { moedas: 40 }, { moedas: 40 }, {}, {}, {},
 ];
-const NOMES = ["Dentina Veloz", "Gengiva Ninja", "Esmalte de Ferro", "Lady Anestesia", "Bisturi Bandido", "Prof. Tártaro", "Molar Sombrio", "Cúspide Feliz",
+const NOMES = ["Fuso Mitótico", "Cromátide Irmã", "Cinetocoro Kid", "Ciclina B", "Coesina Forte", "Centrossomo", "Quiasma Quente", "Sinaptonema", "Prófase Prado", "Anel Contrátil", "Securina", "Separase", "Lâmina Nuclear", "Mitose Max", "Fase S", "Interfase Iza", "Bivalente", "Crossing Over", "Condensina", "Placa Metafásica", "Telófase Tati", "Áster", "Cdk1", "APC/C"];
+const _NOMES_DEMO = ["Dentina Veloz", "Gengiva Ninja", "Esmalte de Ferro", "Lady Anestesia", "Bisturi Bandido", "Prof. Tártaro", "Molar Sombrio", "Cúspide Feliz",
   "Ana Tomia", "Zigomático", "Mandíbulo", "Pulpo Rex", "Fio Dental Flash", "Sr. Articaína", "Dona Mepivacaína", "Lido Caína", "Capitão Cárie",
   "Raiz Profunda", "Coroa de Ouro", "Bochecha Brava", "Palato Mole", "Língua Ligeira", "Biópsia Bia", "Neville Jr.", "Malamed Mirim",
   "Tubete Turbo", "Agulha Curta", "Forame Mental", "Dra. Oclusão", "Profilaxia Max", "Siso Rebelde", "Nervo Alveolar", "Gaze Estéril"];
@@ -82,7 +83,9 @@ function xpRival(rv, sem, agora) {
 
 /** Classificação: [{ nome, xp, voce, carta }] ordenada. */
 export function classificacao(sem = liga().semana, div = liga().divisao, ritmo = liga().ritmo, agora = Date.now()) {
-  const lista = rivais(sem, div, ritmo).map(rv => ({ nome: rv.nome, carta: rv.carta, xp: xpRival(rv, sem, agora), voce: false }));
+  const T = globalThis.__turmaLiga, cartas = Object.keys(CARTAS);
+  const reais = T && T.semana === sem ? T.lista.filter(x => !x.eu).map(x => ({ nome: x.apelido, carta: cartas[[...x.apelido].reduce((a, c) => a + c.charCodeAt(0), 0) % cartas.length], xp: x.xp_semana || 0, voce: false, real: true })) : [];
+  const lista = [...reais, ...rivais(sem, div, ritmo).slice(0, Math.max(0, 9 - reais.length)).map(rv => ({ nome: rv.nome, carta: rv.carta, xp: xpRival(rv, sem, agora), voce: false, bot: true }))];
   lista.push({ nome: E().avatar?.nome || "Você", xp: xpDaSemana(sem), voce: true });
   return lista.sort((a, b) => b.xp - a.xp || (a.voce ? -1 : 1));
 }
@@ -97,9 +100,10 @@ export function atualizarLiga() {
   const de = L.divisao;
   let resultado = "fica";
   if (pos <= 3 && de < DIVISOES.length - 1) resultado = "sobe";
-  else if (pos >= 8 && de > 0) resultado = "desce";
+  else if (pos > cl.length - 3 && de > 0) resultado = "desce";
   if (xp === 0 && de > 0) resultado = "desce";
-  const premio = xp > 0 ? PREMIOS[pos - 1] : {};
+  resultado = "fica";
+  const premio = xp > 0 ? (PREMIOS[pos - 1] || {}) : {};
   if (premio.gemas) ganharGemas(premio.gemas);
   if (premio.moedas) E().moedas += premio.moedas;
   const bau = premio.bau ? ganharBau(premio.bau, "liga") : null;
@@ -136,8 +140,8 @@ export function faixaLiga() {
   const L = liga(), cl = classificacao(), pos = minhaPosicao(cl);
   const b = document.createElement("button"); b.className = "faixa-liga";
   b.style.setProperty("--cor-div", DIVISOES[L.divisao].cor);
-  const zona = pos <= 3 ? "sobe" : pos >= 8 && L.divisao > 0 ? "desce" : "";
-  b.innerHTML = `${escudo(L.divisao, 34)}<div><b>Liga ${DIVISOES[L.divisao].nome}</b><small>${pos}º lugar · ${cl[pos - 1].xp} XP · termina em ${fimEm()}</small></div><span class="zona ${zona}">${zona === "sobe" ? "▲" : zona === "desce" ? "▼" : "›"}</span>`;
+  const zona = pos <= 3 ? "sobe" : false ? "desce" : "";
+  b.innerHTML = `${escudo(L.divisao, 34)}<div><b>Liga da Turma</b><small>${pos}º lugar · ${cl[pos - 1].xp} XP · termina em ${fimEm()}</small></div><span class="zona ${zona}">${zona === "sobe" ? "▲" : zona === "desce" ? "▼" : "›"}</span>`;
   b.onclick = () => window.dispatchEvent(new CustomEvent("oq-ir", { detail: "liga" }));
   return b;
 }
@@ -149,25 +153,25 @@ export function telaLiga(voltar) {
   t.innerHTML = "";
   if (voltar) { const v = document.createElement("button"); v.className = "voltar"; v.textContent = "‹ Trilha"; v.onclick = voltar; t.append(v); }
   const linhas = cl.map((x, i) => {
-    const p = i + 1, zona = p <= 3 && L.divisao < DIVISOES.length - 1 ? "sobe" : p >= 8 && L.divisao > 0 ? "desce" : "";
-    const sep = p === 4 && L.divisao < DIVISOES.length - 1 ? `<li class="sep-liga sobe">▲ zona de promoção</li>` : p === 8 && L.divisao > 0 ? `<li class="sep-liga desce">▼ zona de rebaixamento</li>` : "";
+    const p = i + 1, zona = p <= 3 ? "sobe" : false ? "desce" : "";
+    const sep = p === 4 ? `<li class="sep-liga sobe">▲ pódio da semana</li>` : false ? "" : "";
     const av = x.voce ? `<span class="av-liga voce">${arteAvatar()}</span>` : `<span class="av-liga">${arteCarta(x.carta, { semFundo: true })}</span>`;
-    return `${sep}<li class="${x.voce ? "eu" : ""} ${zona}"><span class="pos ${p <= 3 ? `med m${p}` : ""}">${p}</span>${av}<span class="nome">${escapar(x.voce && x.nome !== "Você" ? `${x.nome} (você)` : x.nome)}</span><b>${x.xp} XP</b></li>`;
+    return `${sep}<li class="${x.voce ? "eu" : ""} ${zona}"><span class="pos ${p <= 3 ? `med m${p}` : ""}">${p}</span>${av}<span class="nome">${escapar(x.voce && x.nome !== "Você" ? `${x.nome} (você)` : x.nome)}${x.bot ? ' <small class="sub">· simulado</small>' : ""}</span><b>${x.xp} XP</b></li>`;
   }).join("");
   const proximo = pos > 1 ? cl[pos - 2].xp - cl[pos - 1].xp + 1 : 0;
   t.insertAdjacentHTML("beforeend", `
     <div class="liga-topo" style="--cor-div:${D.cor}">
       ${escudo(L.divisao, 64)}
-      <div><h1 class="titulo-tela">Liga ${D.nome}</h1><p class="sub">Termina em <b>${fimEm()}</b>. Os 3 primeiros sobem; os 3 últimos descem.</p></div>
+      <div><h1 class="titulo-tela">Liga da Turma</h1><p class="sub">Termina em <b>${fimEm()}</b>. O pódio da semana ganha gemas e baús.</p></div>
     </div>
     <div class="cartao dica-liga">${pos === 1 ? "Você está em 1º! Continue estudando para segurar a liderança." : `Faltam <b>${proximo} XP</b> para passar ${escapar(cl[pos - 2].nome)}.`}</div>
     <ol class="ranking-liga">${linhas}</ol>
     <div class="secao"><h2>Prêmios da semana</h2><div class="cartao premios-liga">
       <div><span><i class="med m1">1</i> 1º lugar</span><b>${premioTxt(PREMIOS[0])}</b></div><div><span><i class="med m2">2</i> 2º lugar</span><b>${premioTxt(PREMIOS[1])}</b></div>
       <div><span><i class="med m3">3</i> 3º lugar</span><b>${premioTxt(PREMIOS[2])}</b></div><div><span><i class="med m0">4</i> 4º a 7º</span><b>${premioTxt(PREMIOS[3])}</b></div></div></div>
-    <div class="secao"><h2>Divisões</h2><div class="cartao divisoes-liga">${DIVISOES.map((d, i) => `<div class="${i === L.divisao ? "atual" : i > L.melhor ? "bloq" : ""}">${escudo(i, 36)}<small>${d.nome}</small></div>`).join("")}</div></div>
-    ${L.historico.length ? `<div class="secao"><h2>Semanas anteriores</h2><div class="cartao"><ul class="hist-liga">${L.historico.slice(0, 6).map(h => `<li><span>${dataBR(h.semana)} · Liga ${DIVISOES[h.divisao].nome}</span><b>${h.posicao}º · ${h.xp} XP ${h.resultado === "sobe" ? "▲" : h.resultado === "desce" ? "▼" : ""}</b></li>`).join("")}</ul></div></div>` : ""}
-    <p class="sub" style="text-align:center;margin:16px 0 24px" data-fim>Os rivais são simulados a partir do seu ritmo das últimas semanas (cerca de ${L.ritmo} XP por semana) e ficam mais fortes nas divisões altas.</p>`);
+    <div hidden><h2>Divisões</h2><div class="cartao divisoes-liga">${DIVISOES.map((d, i) => `<div class="${i === L.divisao ? "atual" : i > L.melhor ? "bloq" : ""}">${escudo(i, 36)}<small>${d.nome}</small></div>`).join("")}</div></div>
+    ${L.historico.length ? `<div class="secao"><h2>Semanas anteriores</h2><div class="cartao"><ul class="hist-liga">${L.historico.slice(0, 6).map(h => `<li><span>${dataBR(h.semana)}</span><b>${h.posicao}º · ${h.xp} XP ${h.resultado === "sobe" ? "▲" : h.resultado === "desce" ? "▼" : ""}</b></li>`).join("")}</ul></div></div>` : ""}
+    <p class="sub" style="text-align:center;margin:16px 0 24px" data-fim>${cl.some(x => x.real) ? `Na liga estão os colegas da turma.` : `Os colegas aparecem aqui quando o app estiver ligado à turma.`}${cl.some(x => x.bot) ? ` Enquanto faltarem colegas para 10, completam a liga rivais simulados (marcados).` : ""}</p>`);
   revelarEmSequencia(t.querySelectorAll(".ranking-liga li"), { passo: 45 });
 }
 
@@ -178,13 +182,13 @@ export async function mostrarResultadoLiga() {
   if (!r || document.querySelector("#modal:not([hidden])")) return;
   L.pendente = null; salvar();
   const nova = DIVISOES[L.divisao];
-  const frase = r.resultado === "sobe" ? `Você subiu para a Liga ${nova.nome}!` : r.resultado === "desce" ? `Você desceu para a Liga ${nova.nome}. Dá para voltar já nesta semana.` : `Você continua na Liga ${nova.nome}.`;
+  const frase = r.resultado === "sobe" ? `Você subiu para a Liga ${nova.nome}!` : r.resultado === "desce" ? `Você desceu para a Liga ${nova.nome}. Dá para voltar já nesta semana.` : `Começou uma semana nova na Liga da Turma.`;
   const premio = r.premio && Object.keys(r.premio).length ? ` Prêmio: ${premioTxt(r.premio)}${r.bauCheio ? ` (slots cheios: o baú virou ${r.bauCheio} moedas)` : ""}.` : "";
   if (r.posicao <= 3) { confete(); tocar("fim"); }
   await modal({
     titulo: r.posicao <= 3 ? `${r.posicao}º lugar na semana!` : `Semana encerrada: ${r.posicao}º lugar`,
     html: `<div style="text-align:center">${escudo(L.divisao, 72)}</div>`,
-    texto: `Liga ${DIVISOES[r.divisao].nome}, com ${r.xp} XP. ${frase}${premio}`,
+    texto: `Liga da Turma, com ${r.xp} XP. ${frase}${premio}`,
     botoes: [{ texto: "Bora!", valor: true }],
   });
 }

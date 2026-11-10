@@ -2425,3 +2425,7 @@ html.tablet .camada-ajustes .aj-corpo, html.tablet .camada-ajustes .aj-cab { zoo
 .voz-bts { display: grid; gap: 8px; }
 .voz-bts .botao + .botao, .voz-caixa .voz-fechar { margin-top: 0 !important; }
 .voz-caixa .voz-fechar { margin-top: 14px !important; width: 100%; }
+
+/* BioCel: 5 atalhos na trilha */
+.atalhos-trilha { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.atalhos-trilha .atalho span { font-size: 11px; }
